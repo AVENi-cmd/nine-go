@@ -6,13 +6,13 @@
   <title>مغسلة ناين قو | NINE GO CAR WASH - الأحساء</title>
   <meta name="description" content="مغسلة ناين قو بالأحساء (فرع المبرز بمحاسن / فرع الهفوف بالنايفية). غسيل واكس، غسيل ملوكي، وبخار. أوقات العمل: 8 ص - 1 م / 3 م - 3 ص. 0564927977">
 
-  <!-- التحميل المسبق الفوري لجميع الصور لمنع أي تأخير في الظهور -->
+  <!-- التحميل المسبق الفوري للفيديو الجديد والصور -->
+  <link rel="preload" as="video" href="assets/hero-video.mp4%20.MP4" type="video/mp4">
   <link rel="preload" as="image" href="assets/hero-bg.jpg.PNG" fetchpriority="high">
   <link rel="preload" as="image" href="assets/logo.png%20.JPEG" fetchpriority="high">
   <link rel="preload" as="image" href="assets/classic-bay.jpg%20.PNG" fetchpriority="high">
   <link rel="preload" as="image" href="assets/branch-1.jpg%20.PNG">
   <link rel="preload" as="image" href="assets/branch-2.jpg%20.PNG">
-  <link rel="preload" as="video" href="assets/hero-video.mp4%20.mov" type="video/mp4">
 
   <!-- الخطوط والأيقونات -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,7 +111,7 @@
       font-size: 0.9rem;
     }
 
-    /* واجهة الهيرو لمنع السواد تماماً */
+    /* واجهة الهيرو */
     .hero-banner {
       position: relative;
       width: 100%;
@@ -133,7 +133,6 @@
       background-color: #111318;
     }
 
-    /* صورة ثابتة فورية تظهر دائماً حتى لا يكون هناك أي سواد نهائياً */
     .hero-backdrop-img {
       position: absolute;
       top: 0;
@@ -146,7 +145,6 @@
       display: block;
     }
 
-    /* الفيديو يظهر بنعومة فور بدء تشغيله */
     .hero-bg-visual video {
       position: absolute;
       top: 0;
@@ -266,7 +264,7 @@
       gap: 6px;
     }
 
-    /* شريط مميزات الغسيل */
+    /* شريط المميزات */
     .features-strip {
       background: #111319;
       border-top: 1px solid var(--border);
@@ -305,7 +303,7 @@
       color: var(--gray);
     }
 
-    /* الأقسام العامة */
+    /* الأقسام */
     .section-block {
       padding: 65px 0;
     }
@@ -332,7 +330,7 @@
       font-size: 1rem;
     }
 
-    /* لائحة الأسعار */
+    /* لائحة الأسعار حسب فئات السيارات */
     .official-pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -441,7 +439,6 @@
       object-fit: cover;
     }
 
-    /* إظهار السيارة الكلاسيكية في المنتصف تماماً */
     .classic-car-view {
       object-position: center 85% !important;
     }
@@ -487,7 +484,7 @@
       border-color: var(--wa);
     }
 
-    /* الفروع: كلا الفرعين بإطار أحمر وتوقيت العمل الجديد */
+    /* الفروع */
     .branches-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -731,13 +728,12 @@
   </header>
 
   <main>
-    <!-- واجهة الهيرو (صورة أساسية فورية + فيديو يتلاشى بسلاسة لمنع أي شاشة سوداء) -->
+    <!-- واجهة الهيرو: مقطع الفيديو الجديد (12 ثانية عالي الجودة) -->
     <section class="hero-banner" id="hero">
       <div class="hero-bg-visual">
         <img src="assets/hero-bg.jpg.PNG" alt="خلفية ناين قو" class="hero-backdrop-img" decoding="async" fetchpriority="high">
         <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="auto">
-          <source src="assets/hero-video.mp4%20.mov" type="video/quicktime">
-          <source src="assets/hero-video.mp4%20.mov" type="video/mp4">
+          <source src="assets/hero-video.mp4%20.MP4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
       </div>
@@ -757,7 +753,7 @@
           نظافة تفاصيل تصنع الفرق. نعتني بمركبتك عبر مسارات مجهزة بأحدث المضخات ورغوة ثلجية آمنة في فرعي المبرز والهفوف.
         </p>
 
-        <!-- كروت الفروع السريعة (الفرع 1 فرع المبرز بدون رقم 2) -->
+        <!-- كروت الفروع السريعة على الواجهة -->
         <div class="branches-quick-grid">
           <div class="quick-branch-item featured">
             <div class="branch-meta">
@@ -929,7 +925,7 @@
       </div>
     </section>
 
-    <!-- قسم الفروع (حذف رقم 2 من فرع المبرز) -->
+    <!-- قسم الفروع -->
     <section class="section-block" id="branches">
       <div class="container">
         <div class="section-title">
@@ -939,7 +935,7 @@
         </div>
 
         <div class="branches-grid">
-          <!-- الفرع 1: فرع المبرز بدون رقم 2 -->
+          <!-- الفرع 1: فرع المبرز -->
           <div class="branch-card">
             <div class="branch-cover">
               <img src="assets/branch-1.jpg%20.PNG" alt="فرع المبرز ناين GO" decoding="async">
@@ -1039,7 +1035,7 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- كود تشغيل الفيديو الفوري بدون شاشة سوداء وتكراره المستمر -->
+  <!-- كود تشغيل الفيديو الفوري وتكراره بدون توقف وبدون شاشة سوداء -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var v = document.getElementById('heroVideo');
@@ -1053,6 +1049,7 @@
 
         v.addEventListener('playing', showVideo);
         v.addEventListener('canplay', showVideo);
+        v.addEventListener('loadeddata', showVideo);
 
         var p = v.play();
         if (p !== undefined) {
