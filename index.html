@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>مغسلة ناين قو | NINE GO CAR WASH - الأحساء</title>
-  <meta name="description" content="مغسلة ناين قو بالأحساء (فرع الهفوف بالنايفية / فرع المبرز بمحاسن). وين ما كنت.. ناين أقرب لك! 0564927977">
+  <meta name="description" content="مغسلة ناين قو بالأحساء (فرع المبرز بمحاسن / فرع الهفوف بالنايفية). غسيل داخلي وخارجي مع شامبو وواكس. وين ما كنت.. ناين أقرب لك! 0564927977">
 
-  <!-- الخط العربي وأيقونات السيارات -->
+  <!-- تسريع تحميل الصور الأساسية فوراً -->
+  <link rel="preload" as="image" href="assets/logo.png%20.JPEG">
+  <link rel="preload" as="image" href="assets/hero-bg.jpg.PNG">
+
+  <!-- الخطوط والأيقونات -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
-    /* ==================== أساسيات العرض الكامل (Full-Width Edge-to-Edge) ==================== */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -54,6 +57,14 @@
       color: inherit;
     }
 
+    .phone-text {
+      direction: ltr !important;
+      unicode-bidi: isolate !important;
+      display: inline-block;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+    }
+
     .container {
       width: 100%;
       max-width: 1200px;
@@ -61,12 +72,12 @@
       padding: 0 16px;
     }
 
-    /* ==================== الشريط العلوي ==================== */
+    /* الشريط العلوي */
     .site-header {
       position: sticky;
       top: 0;
       width: 100%;
-      background: rgba(12, 13, 17, 0.95);
+      background: rgba(12, 13, 17, 0.96);
       border-bottom: 2px solid var(--red);
       padding: 10px 0;
       z-index: 999;
@@ -93,18 +104,17 @@
       color: #fff;
       padding: 8px 16px;
       border-radius: 8px;
-      font-weight: 800;
       font-size: 0.9rem;
     }
 
-    /* ==================== واجهة الهيرو السينمائية الشاملة ==================== */
+    /* واجهة الهيرو */
     .hero-banner {
       position: relative;
       width: 100%;
-      min-height: 90vh;
+      min-height: 85vh;
       display: flex;
       align-items: center;
-      padding: 40px 0 60px 0;
+      padding: 40px 0 50px 0;
       overflow: hidden;
     }
 
@@ -115,13 +125,7 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-    }
-
-    .hero-bg-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 60%;
+      background-color: #000;
     }
 
     .hero-bg-visual video {
@@ -137,7 +141,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(12, 13, 17, 0.88) 0%, rgba(12, 13, 17, 0.94) 75%, var(--dark-bg) 100%);
+      background: linear-gradient(180deg, rgba(12, 13, 17, 0.75) 0%, rgba(12, 13, 17, 0.92) 75%, var(--dark-bg) 100%);
     }
 
     .hero-content {
@@ -151,7 +155,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(229, 30, 43, 0.18);
+      background: rgba(229, 30, 43, 0.2);
       border: 1px solid var(--red);
       color: #fff;
       padding: 6px 16px;
@@ -166,7 +170,6 @@
       font-weight: 900;
       line-height: 1.2;
       margin-bottom: 16px;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     }
 
     .hero-heading span {
@@ -181,7 +184,6 @@
       line-height: 1.8;
     }
 
-    /* بطاقات الفروع السريعة على الواجهة */
     .branches-quick-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -203,7 +205,6 @@
 
     .quick-branch-item.featured {
       border-color: var(--red);
-      box-shadow: 0 8px 25px rgba(229, 30, 43, 0.2);
     }
 
     .branch-meta h4 {
@@ -230,7 +231,7 @@
       gap: 6px;
     }
 
-    /* ==================== شريط مميزات الغسيل ==================== */
+    /* شريط مميزات الغسيل */
     .features-strip {
       background: #111319;
       border-top: 1px solid var(--border);
@@ -269,9 +270,9 @@
       color: var(--gray);
     }
 
-    /* ==================== الأقسام العامة ==================== */
+    /* الأقسام */
     .section-block {
-      padding: 70px 0;
+      padding: 65px 0;
     }
 
     .section-title {
@@ -296,7 +297,90 @@
       font-size: 1rem;
     }
 
-    /* ==================== كروت الخدمات بالصور ==================== */
+    /* جدول الأسعار الحقيقي حسب فئات السيارات */
+    .official-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .official-price-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .official-price-card.featured {
+      border: 2px solid var(--red);
+      background: #1A1D26;
+      box-shadow: 0 10px 30px rgba(229, 30, 43, 0.2);
+    }
+
+    .car-category-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 800;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    .official-price-card.featured .car-category-badge {
+      background: var(--red);
+    }
+
+    .car-category-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .car-service-label {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 18px;
+    }
+
+    .car-price-number {
+      font-size: 3.6rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .car-price-number span {
+      font-size: 1.1rem;
+      color: var(--red);
+    }
+
+    .btn-order-category {
+      background: var(--red);
+      color: #fff;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-order-category:hover {
+      background: var(--red-dark);
+    }
+
+    /* كروت الخدمات بالصور */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -325,16 +409,9 @@
       object-fit: cover;
     }
 
-    .service-price-chip {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      background: var(--red);
-      color: #fff;
-      font-size: 1.05rem;
-      font-weight: 900;
-      padding: 4px 14px;
-      border-radius: 8px;
+    /* إظهار السيارة الكلاسيكية بشكل كامل وواضح */
+    .classic-car-view {
+      object-position: center 85% !important;
     }
 
     .service-info {
@@ -345,7 +422,7 @@
     }
 
     .service-info h3 {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 800;
       margin-bottom: 8px;
     }
@@ -354,7 +431,7 @@
       color: var(--gray);
       font-size: 0.92rem;
       line-height: 1.7;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       flex-grow: 1;
     }
 
@@ -378,7 +455,7 @@
       border-color: var(--wa);
     }
 
-    /* ==================== قسم الفروع ==================== */
+    /* الفروع بالترتيب والصور المعكوسة */
     .branches-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -472,95 +549,13 @@
       gap: 6px;
     }
 
-    /* ==================== قائمة الأسعار ==================== */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .price-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 34px 24px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .price-card.popular {
-      border: 2px solid var(--red);
-      background: #1B1E28;
-      position: relative;
-    }
-
-    .popular-tag {
-      position: absolute;
-      top: -14px;
-      right: 50%;
-      transform: translateX(50%);
-      background: var(--red);
-      color: #fff;
-      padding: 4px 18px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 800;
-    }
-
-    .price-card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 6px;
-    }
-
-    .price-card p {
-      color: var(--gray);
-      font-size: 0.9rem;
-      margin-bottom: 18px;
-    }
-
-    .price-amount {
-      font-size: 3.2rem;
-      font-weight: 900;
-      margin-bottom: 22px;
-    }
-
-    .price-amount span {
-      font-size: 1.2rem;
-      color: var(--red);
-    }
-
-    .price-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 28px;
-      flex-grow: 1;
-      font-size: 0.92rem;
-    }
-
-    .price-features li i {
-      color: var(--red);
-      margin-left: 8px;
-    }
-
-    .btn-choose-plan {
-      display: block;
-      text-align: center;
-      background: var(--red);
-      color: #fff;
-      padding: 13px;
-      border-radius: 8px;
-      font-weight: 800;
-    }
-
-    /* ==================== البانر والفوتر ==================== */
+    /* البانر والفوتر */
     .cta-banner {
       background: linear-gradient(rgba(12, 13, 17, 0.9), rgba(12, 13, 17, 0.9)), url('assets/hero-bg.jpg.PNG');
       background-size: cover;
       background-position: center;
       border-top: 2px solid var(--red);
-      padding: 60px 0;
+      padding: 55px 0;
       text-align: center;
     }
 
@@ -573,7 +568,7 @@
     .cta-banner p {
       color: var(--gray);
       font-size: 1.1rem;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
     .banner-actions {
@@ -662,7 +657,6 @@
       z-index: 9999;
     }
 
-    /* ==================== التجاوب الذكي للجوال ==================== */
     @media (max-width: 900px) {
       .hero-banner {
         min-height: auto;
@@ -674,7 +668,7 @@
       .features-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      .services-grid, .branches-grid, .pricing-grid, .footer-grid {
+      .official-pricing-grid, .services-grid, .branches-grid, .footer-grid {
         grid-template-columns: 1fr;
       }
       .banner-actions {
@@ -693,22 +687,22 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#hero">
-        <img src="assets/logo.png .JPEG" alt="مغسلة ناين قو" class="brand-logo-img" onerror="this.src='https://placehold.co/140x44/0C0D11/E51E2B?text=NINE+GO'">
+        <img src="assets/logo.png%20.JPEG" alt="مغسلة ناين قو" class="brand-logo-img" onerror="this.src='https://placehold.co/140x44/0C0D11/E51E2B?text=NINE+GO'">
       </a>
       <a href="tel:0564927977" class="header-call-btn">
         <i class="fa-solid fa-phone"></i>
-        <span>056 492 7977</span>
+        <span class="phone-text">056 492 7977</span>
       </a>
     </div>
   </header>
 
   <main>
-    <!-- واجهة الهيرو العريضة -->
+    <!-- واجهة الهيرو مع تشغيل المقطع تلقائياً واستمراره بدون توقف -->
     <section class="hero-banner" id="hero">
       <div class="hero-bg-visual">
-        <video autoplay muted loop playsinline poster="assets/hero-bg.jpg.PNG">
-          <source src="assets/hero-video.mp4 .mov" type="video/quicktime">
-          <source src="assets/hero-video.mp4 .mov" type="video/mp4">
+        <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline poster="assets/hero-bg.jpg.PNG">
+          <source src="assets/hero-video.mp4%20.mov" type="video/quicktime">
+          <source src="assets/hero-video.mp4%20.mov" type="video/mp4">
           <img src="assets/hero-bg.jpg.PNG" alt="بورش كايمن ناين قو">
         </video>
         <div class="hero-overlay"></div>
@@ -726,27 +720,27 @@
         </h1>
 
         <p class="hero-subtext">
-          نظافة تفاصيل تصنع الفرق. نعتني بمركبتك عبر مسارات مجهزة بأحدث المضخات ورغوة ثلجية آمنة في فرعي الهفوف والمبرز.
+          نظافة تفاصيل تصنع الفرق. نعتني بمركبتك عبر مسارات مجهزة بأحدث المضخات ورغوة ثلجية آمنة في فرعي المبرز والهفوف.
         </p>
 
-        <!-- كروت الفروع المباشرة على الواجهة -->
+        <!-- كروت الفروع المباشرة على الواجهة (الفرع 1 المبرز ثم الفرع 2 الهفوف) -->
         <div class="branches-quick-grid">
-          <div class="quick-branch-item">
+          <div class="quick-branch-item featured">
             <div class="branch-meta">
-              <h4>فرع الهفوف (ناين 1)</h4>
-              <p>النايفية – طريق الأمير نايف</p>
+              <h4>الفرع 1: فرع المبرز</h4>
+              <p>محاسن – محطة الفرسان</p>
             </div>
-            <a href="https://maps.app.goo.gl/9rNaJa47Uy6F3JWRA?g_st=ic" target="_blank" class="map-chip">
+            <a href="https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic" target="_blank" class="map-chip">
               <i class="fa-solid fa-location-arrow"></i> الخريطة
             </a>
           </div>
 
-          <div class="quick-branch-item featured">
+          <div class="quick-branch-item">
             <div class="branch-meta">
-              <h4>فرع المبرز (ناين 2)</h4>
-              <p>محاسن – محطة الفرسان</p>
+              <h4>الفرع 2: فرع الهفوف</h4>
+              <p>النايفية – طريق الأمير نايف</p>
             </div>
-            <a href="https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic" target="_blank" class="map-chip">
+            <a href="https://maps.app.goo.gl/9rNaJa47Uy6F3JWRA?g_st=ic" target="_blank" class="map-chip">
               <i class="fa-solid fa-location-arrow"></i> الخريطة
             </a>
           </div>
@@ -760,15 +754,15 @@
         <div class="feature-card">
           <i class="fa-solid fa-soap"></i>
           <div>
-            <strong>رغوة ثلجية آمنة</strong>
-            <span>خالية من الكاوية</span>
+            <strong>شامبو وواكس إيطالي</strong>
+            <span>حماية ولمعان للطلاء</span>
           </div>
         </div>
         <div class="feature-card">
           <i class="fa-solid fa-hand-sparkles"></i>
           <div>
             <strong>غسيل يدوي ناعم</strong>
-            <span>قفازات مايكروفايبر</span>
+            <span>مايكروفايبر بدون خدوش</span>
           </div>
         </div>
         <div class="feature-card">
@@ -788,57 +782,57 @@
       </div>
     </section>
 
-    <!-- خدمات الغسيل بالصور الحقيقية -->
-    <section class="section-block" id="services">
+    <!-- باقات وأسعار الغسيل الرسمية من لوحة المغسلة -->
+    <section class="section-block" id="pricing">
       <div class="container">
         <div class="section-title">
-          <span class="title-pill">خدماتنا</span>
-          <h2 class="main-title">العناية المتكاملة بسيارتك</h2>
-          <p class="sub-title">أعلى مستوى نظافة وتلميع في الأحساء</p>
+          <span class="title-pill">قائمة الأسعار المعتمدة</span>
+          <h2 class="main-title">غسيل داخلي وخارجي مع شامبو وواكس</h2>
+          <p class="sub-title">تسعيرة المغسلة الرسمية حسب فئة وحجم سيارتك</p>
         </div>
 
-        <div class="services-grid">
-          <!-- خدمة 1: غسيل شامل -->
-          <div class="service-box">
-            <div class="service-cover">
-              <img src="assets/classic-bay.jpg .PNG" alt="غسيل شامل" loading="lazy">
-              <span class="service-price-chip">65 ر.س</span>
+        <div class="official-pricing-grid">
+          <!-- السيارة الصغيرة -->
+          <div class="official-price-card">
+            <div>
+              <span class="car-category-badge">اقتصادية</span>
+              <h3 class="car-category-title">السيارة الصغيرة</h3>
+              <p class="car-service-label">غسيل داخلي وخارجي مع شامبو وواكس</p>
             </div>
-            <div class="service-info">
-              <h3>الغسيل الشامل</h3>
-              <p>غسيل رغوي خارجي، كنس عميق للفرش، مسح الطبلون، تنظيف الزجاج وتسويد الإطارات مع تعطير فاخر.</p>
-              <a href="https://wa.me/966564927977?text=أرغب%20في%20حجز:%20الغسيل%20الشامل%20(65%20ريال)" target="_blank" class="service-btn">
-                <i class="fa-brands fa-whatsapp"></i> طلب الخدمة عبر واتساب
+            <div>
+              <div class="car-price-number">25 <span>ر.س</span></div>
+              <a href="https://wa.me/966564927977?text=أرغب%20في%20غسيل%20سيارة%20صغيرة%20(25%20ريال)%20داخلي%20وخارجي%20مع%20شامبو%20وواكس" target="_blank" class="btn-order-category">
+                <i class="fa-brands fa-whatsapp"></i> طلب الغسيل
               </a>
             </div>
           </div>
 
-          <!-- خدمة 2: غسيل سريع -->
-          <div class="service-box">
-            <div class="service-cover">
-              <img src="assets/branch-1.jpg .PNG" alt="غسيل سريع" loading="lazy">
-              <span class="service-price-chip">35 ر.س</span>
+          <!-- السيارة الوسط -->
+          <div class="official-price-card featured">
+            <div>
+              <span class="car-category-badge">الأكثر طلباً</span>
+              <h3 class="car-category-title">السيارة الوسط</h3>
+              <p class="car-service-label">غسيل داخلي وخارجي مع شامبو وواكس</p>
             </div>
-            <div class="service-info">
-              <h3>الغسيل السريع الخارجي</h3>
-              <p>شامبو متوازن عالي الرغوة، غسيل الجنوط والرفارف بضغط الماء وتجفيف بمناشف ناعمة مع تلميع كفرات.</p>
-              <a href="https://wa.me/966564927977?text=أرغب%20في%20حجز:%20الغسيل%20السريع%20(35%20ريال)" target="_blank" class="service-btn">
-                <i class="fa-brands fa-whatsapp"></i> طلب الخدمة عبر واتساب
+            <div>
+              <div class="car-price-number">30 <span>ر.س</span></div>
+              <a href="https://wa.me/966564927977?text=أرغب%20في%20غسيل%20سيارة%20وسط%20(30%20ريال)%20داخلي%20وخارجي%20مع%20شامبو%20وواكس" target="_blank" class="btn-order-category">
+                <i class="fa-brands fa-whatsapp"></i> طلب الغسيل
               </a>
             </div>
           </div>
 
-          <!-- خدمة 3: VIP بالبخار -->
-          <div class="service-box">
-            <div class="service-cover">
-              <img src="assets/hero-bg.jpg.PNG" alt="باقة VIP والبخار" loading="lazy">
-              <span class="service-price-chip">190 ر.س</span>
+          <!-- السيارة الكبيرة -->
+          <div class="official-price-card">
+            <div>
+              <span class="car-category-badge">جيوب وعائلية</span>
+              <h3 class="car-category-title">السيارة الكبيرة</h3>
+              <p class="car-service-label">غسيل داخلي وخارجي مع شامبو وواكس</p>
             </div>
-            <div class="service-info">
-              <h3>باقة VIP والبخار</h3>
-              <p>تنظيف المراتب والأرضيات بالبخار الحار 100° لإزالة البقع والروائح، مع طبقة شمع حماية للطلاء وتنظيف المحرك.</p>
-              <a href="https://wa.me/966564927977?text=أرغب%20في%20حجز:%20باقة%20VIP%20وبخار%20(190%20ريال)" target="_blank" class="service-btn">
-                <i class="fa-brands fa-whatsapp"></i> طلب الخدمة عبر واتساب
+            <div>
+              <div class="car-price-number">35 <span>ر.س</span></div>
+              <a href="https://wa.me/966564927977?text=أرغب%20في%20غسيل%20سيارة%20كبيرة%20(35%20ريال)%20داخلي%20وخارجي%20مع%20شامبو%20وواكس" target="_blank" class="btn-order-category">
+                <i class="fa-brands fa-whatsapp"></i> طلب الغسيل
               </a>
             </div>
           </div>
@@ -846,27 +840,106 @@
       </div>
     </section>
 
-    <!-- قسم الفروع بالصور الواقعية -->
-    <section class="section-block" id="branches" style="background:#0F1015;">
+    <!-- خدمات المغسلة بالصور (مع تعديل ظهور السيارة الكلاسيك بالكامل) -->
+    <section class="section-block" id="services" style="background:#101117;">
       <div class="container">
         <div class="section-title">
-          <span class="title-pill">الفروع</span>
+          <span class="title-pill">خدماتنا المتخصصة</span>
+          <h2 class="main-title">العناية المتكاملة لسيارتك</h2>
+          <p class="sub-title">نظافة تفاصيل تعيد لسيارتك بريق الوكالة</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- كرت السيارة الكلاسيك مع إظهار السيارة بالكامل -->
+          <div class="service-box">
+            <div class="service-cover">
+              <img src="assets/classic-bay.jpg%20.PNG" alt="السيارة الكلاسيكية في ناين قو" class="classic-car-view" loading="lazy">
+            </div>
+            <div class="service-info">
+              <h3>عناية السيارات الخاصة والكلاسيكية</h3>
+              <p>مسارات وتجهيزات إضاءة متطورة وعناية فائقة مخصصة للسيارات الكلاسيكية والرياضية لحماية طلائها النادر.</p>
+              <a href="https://wa.me/966564927977?text=استفسار%20عن%20عناية%20السيارات%20الخاصة" target="_blank" class="service-btn">
+                <i class="fa-brands fa-whatsapp"></i> استفسار عبر واتساب
+              </a>
+            </div>
+          </div>
+
+          <!-- خدمة البخار الفندقي -->
+          <div class="service-box">
+            <div class="service-cover">
+              <img src="assets/hero-bg.jpg.PNG" alt="تلميع وبخار ناين قو" loading="lazy">
+            </div>
+            <div class="service-info">
+              <h3>التعقيم والتنظيف بالبخار 100°</h3>
+              <p>تنظيف عميق للمراتب والأرضيات ومجاري التكييف بالبخار الحار لإزالة البقع المستعصية والروائح الكريهة نهائياً.</p>
+              <a href="https://wa.me/966564927977?text=أرغب%20في%20حجز%20خدمة%20البخار%20والتعقيم" target="_blank" class="service-btn">
+                <i class="fa-brands fa-whatsapp"></i> حجز خدمة البخار
+              </a>
+            </div>
+          </div>
+
+          <!-- خدمة حماية الشمع والواكس -->
+          <div class="service-box">
+            <div class="service-cover">
+              <img src="assets/branch-1.jpg%20.PNG" alt="تلميع الشمع والواكس" loading="lazy">
+            </div>
+            <div class="service-info">
+              <h3>تلميع الشمع وحماية الطلاء</h3>
+              <p>طبقة واكس تمنح البودي ملمساً زجاجياً فائق النعومة مع خاصية طرد مياه الأمطار والأتربة لحماية لمعان السيارة.</p>
+              <a href="https://wa.me/966564927977?text=أرغب%20في%20تلميع%20الشمع%20والحماية" target="_blank" class="service-btn">
+                <i class="fa-brands fa-whatsapp"></i> حجز تلميع الشمع
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الفروع (الفرع 1 المبرز والفرع 2 الهفوف مع عكس الصور) -->
+    <section class="section-block" id="branches">
+      <div class="container">
+        <div class="section-title">
+          <span class="title-pill">فروع ناين قو</span>
           <h2 class="main-title">وين ما كنت.. ناين أقرب لك! 🧽✨</h2>
-          <p class="sub-title">فروعنا في الأحساء جاهزة لاستقبالكم يومياً</p>
+          <p class="sub-title">تفضل بزيارة الفرع الأقرب إليك في الأحساء</p>
         </div>
 
         <div class="branches-grid">
-          <!-- فرع الهفوف -->
-          <div class="branch-card">
+          <!-- الفرع 1: فرع المبرز (محاسن) بالصورة المعكوسة -->
+          <div class="branch-card active">
             <div class="branch-cover">
-              <img src="assets/branch-1.jpg .PNG" alt="فرع الهفوف ناين قو">
+              <img src="assets/branch-1.jpg%20.PNG" alt="فرع المبرز ناين 2 GO">
             </div>
             <div class="branch-content">
-              <h3>مغسلة ناين GO (الهفوف)</h3>
-              <p class="branch-address"><i class="fa-solid fa-map-pin"></i> النايفية – طريق الأمير نايف</p>
+              <h3>الفرع 1: مغسلة ناين 2 GO (المبرز)</h3>
+              <p class="branch-address"><i class="fa-solid fa-map-pin"></i> <strong>المبرز – محاسن محطة الفرسان</strong></p>
+              <ul class="branch-data-list">
+                <li><i class="fa-solid fa-clock"></i> يومياً: 8:00 ص – 11:30 م (الجمعة بعد الصلاة)</li>
+                <li><i class="fa-solid fa-phone"></i> <span class="phone-text">056 492 7977</span></li>
+                <li><i class="fa-solid fa-lightbulb"></i> مسارات إضاءة ليد ذكية مجهزة بالكامل</li>
+              </ul>
+              <div class="branch-actions">
+                <a href="https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic" target="_blank" class="btn-maps">
+                  <i class="fa-solid fa-location-arrow"></i> فتح الخريطة
+                </a>
+                <a href="https://wa.me/966564927977?text=أنا%20متوجه%20إلى%20فرع%20المبرز%20(محاسن)" target="_blank" class="btn-wa">
+                  <i class="fa-brands fa-whatsapp"></i> واتساب الفرع
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- الفرع 2: فرع الهفوف (النايفية) بالصورة المعكوسة -->
+          <div class="branch-card">
+            <div class="branch-cover">
+              <img src="assets/branch-2.jpg%20.PNG" alt="فرع الهفوف ناين GO">
+            </div>
+            <div class="branch-content">
+              <h3>الفرع 2: مغسلة ناين GO (الهفوف)</h3>
+              <p class="branch-address"><i class="fa-solid fa-map-pin"></i> <strong>الهفوف – النايفية طريق الأمير نايف</strong></p>
               <ul class="branch-data-list">
                 <li><i class="fa-solid fa-clock"></i> يومياً: 8:00 ص – 11:30 م</li>
-                <li><i class="fa-solid fa-phone"></i> 056 492 7977</li>
+                <li><i class="fa-solid fa-phone"></i> <span class="phone-text">056 492 7977</span></li>
                 <li><i class="fa-solid fa-shield"></i> سجل تجاري: 2031118858</li>
               </ul>
               <div class="branch-actions">
@@ -879,86 +952,6 @@
               </div>
             </div>
           </div>
-
-          <!-- فرع المبرز -->
-          <div class="branch-card active">
-            <div class="branch-cover">
-              <img src="assets/branch-2.jpg .PNG" alt="فرع المبرز ناين 2 GO">
-            </div>
-            <div class="branch-content">
-              <h3>مغسلة ناين 2 GO (المبرز)</h3>
-              <p class="branch-address"><i class="fa-solid fa-map-pin"></i> محاسن – محطة الفرسان</p>
-              <ul class="branch-data-list">
-                <li><i class="fa-solid fa-clock"></i> يومياً: 8:00 ص – 11:30 م (الجمعة بعد الصلاة)</li>
-                <li><i class="fa-solid fa-phone"></i> 056 492 7977</li>
-                <li><i class="fa-solid fa-lightbulb"></i> مسارات إضاءة ليد ذكية متطورة</li>
-              </ul>
-              <div class="branch-actions">
-                <a href="https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic" target="_blank" class="btn-maps">
-                  <i class="fa-solid fa-location-arrow"></i> فتح الخريطة
-                </a>
-                <a href="https://wa.me/966564927977?text=أنا%20متوجه%20إلى%20فرع%20المبرز%20(محاسن)" target="_blank" class="btn-wa">
-                  <i class="fa-brands fa-whatsapp"></i> واتساب الفرع
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- قائمة الأسعار -->
-    <section class="section-block" id="pricing">
-      <div class="container">
-        <div class="section-title">
-          <span class="title-pill">الأسعار</span>
-          <h2 class="main-title">باقات غسيل واضحة ومباشرة</h2>
-          <p class="sub-title">اختر ما يناسبك بضمان نظافة يبيض الوجه</p>
-        </div>
-
-        <div class="pricing-grid">
-          <div class="price-card">
-            <h3>الغسيل السريع</h3>
-            <p>للنظافة اليومية السريعة</p>
-            <div class="price-amount">35 <span>ر.س</span></div>
-            <ul class="price-features">
-              <li><i class="fa-solid fa-check"></i> غسيل خارجي شامبو متوازن pH</li>
-              <li><i class="fa-solid fa-check"></i> غسيل الجنوط والرفارف بضغط الماء</li>
-              <li><i class="fa-solid fa-check"></i> تجفيف بمناشف مايكروفايبر</li>
-              <li><i class="fa-solid fa-check"></i> تلميع إطارات سريع</li>
-            </ul>
-            <a href="https://wa.me/966564927977?text=حجز%20غسيل%20سريع%2035%20ريال" target="_blank" class="btn-choose-plan">طلب الباقة</a>
-          </div>
-
-          <div class="price-card popular">
-            <div class="popular-tag">الأكثر طلباً بالأحساء</div>
-            <h3>الباقة الشاملة</h3>
-            <p>نظافة كاملة للداخلية والخارجية</p>
-            <div class="price-amount">65 <span>ر.س</span></div>
-            <ul class="price-features">
-              <li><i class="fa-solid fa-check"></i> غسيل يدوي رغوة ثلجية ناعمة</li>
-              <li><i class="fa-solid fa-check"></i> كنس عميق للأرضيات والمراتب</li>
-              <li><i class="fa-solid fa-check"></i> مسح وتلميع الطبلون والأبواب</li>
-              <li><i class="fa-solid fa-check"></i> تنظيف كامل لزجاج المركبة الداخلي</li>
-              <li><i class="fa-solid fa-check"></i> تسويد وتلميع كفرات فاخر</li>
-              <li><i class="fa-solid fa-check"></i> تعطير خاص مجاناً</li>
-            </ul>
-            <a href="https://wa.me/966564927977?text=حجز%20الباقة%20الشاملة%2065%20ريال" target="_blank" class="btn-choose-plan">طلب الباقة الشاملة</a>
-          </div>
-
-          <div class="price-card">
-            <h3>VIP والبخار</h3>
-            <p>تعقيم داخلي عميق وحماية للبودي</p>
-            <div class="price-amount">190 <span>ر.س</span></div>
-            <ul class="price-features">
-              <li><i class="fa-solid fa-check"></i> جميع مزايا الباقة الشاملة</li>
-              <li><i class="fa-solid fa-check"></i> تعقيم المراتب والأرضيات بالبخار 100°</li>
-              <li><i class="fa-solid fa-check"></i> إزالة البقع المستعصية والروائح</li>
-              <li><i class="fa-solid fa-check"></i> تنظيف وتلميع المحرك جافاً</li>
-              <li><i class="fa-solid fa-check"></i> طبقة شمع Carnauba لحماية الطلاء</li>
-            </ul>
-            <a href="https://wa.me/966564927977?text=حجز%20باقة%20VIP%20190%20ريال" target="_blank" class="btn-choose-plan">طلب باقة VIP</a>
-          </div>
         </div>
       </div>
     </section>
@@ -967,13 +960,13 @@
     <section class="cta-banner">
       <div class="container">
         <h2>سيارتك تستاهل عناية ناين قو</h2>
-        <p>فريقنا بانتظارك في فرعي الهفوف والمبرز لتقديم أفضل تجربة غسيل في الأحساء</p>
+        <p>فريقنا بانتظارك في فرعي المبرز والهفوف لتقديم أفضل تجربة غسيل في الأحساء</p>
         <div class="banner-actions">
           <a href="https://wa.me/966564927977" target="_blank" class="btn-banner-wa">
-            <i class="fa-brands fa-whatsapp"></i> راسلنا عبر واتساب: 0564927977
+            <i class="fa-brands fa-whatsapp"></i> راسلنا عبر واتساب: <span class="phone-text">056 492 7977</span>
           </a>
           <a href="tel:0564927977" class="btn-banner-phone">
-            <i class="fa-solid fa-phone"></i> اتصال مباشر: 0564927977
+            <i class="fa-solid fa-phone"></i> اتصال مباشر: <span class="phone-text">056 492 7977</span>
           </a>
         </div>
       </div>
@@ -985,32 +978,46 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="assets/logo.png .JPEG" alt="مغسلة ناين قو" class="footer-logo" onerror="this.src='https://placehold.co/140x44/0C0D11/E51E2B?text=NINE+GO'">
+          <img src="assets/logo.png%20.JPEG" alt="مغسلة ناين قو" class="footer-logo" onerror="this.src='https://placehold.co/140x44/0C0D11/E51E2B?text=NINE+GO'">
           <p>الأحساء 📍 وين ما كنت.. ناين أقرب لك! 🧽✨</p>
           <p>سجل تجاري: 2031118858</p>
         </div>
         <div>
           <h4>فروعنا</h4>
-          <p>فرع الهفوف: النايفية – طريق الأمير نايف</p>
-          <p>فرع المبرز: محاسن – محطة الفرسان</p>
-          <p>ساعات العمل: يومياً 8:00 ص – 11:30 م</p>
+          <p><strong>الفرع 1:</strong> المبرز – محاسن محطة الفرسان</p>
+          <p><strong>الفرع 2:</strong> الهفوف – النايفية طريق الأمير نايف</p>
+          <p>أوقات العمل: يومياً 8:00 ص – 11:30 م</p>
         </div>
         <div>
           <h4>خدمة العملاء</h4>
-          <p><i class="fa-solid fa-phone"></i> 056 492 7977</p>
+          <p><i class="fa-solid fa-phone"></i> <a href="tel:0564927977" class="phone-text">056 492 7977</a></p>
           <p><i class="fa-brands fa-whatsapp"></i> متاحون على الواتساب طوال اليوم</p>
         </div>
       </div>
       <div class="footer-copy">
-        <p>جميع الحقوق محفوظة &copy; مغسلة ناين قو (NINE GO CAR WASH)</p>
+        <p>جميع الحقوق محفوظة &copy; مغسلة ناين قو للسيارات (NINE GO CAR WASH)</p>
       </div>
     </div>
   </footer>
 
-  <!-- زر واتساب العائم -->
+  <!-- زر واتساب العائم المباشر -->
   <a href="https://wa.me/966564927977" target="_blank" class="floating-wa" aria-label="واتساب ناين قو">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
+  <!-- كود تشغيل الفيديو وضمان دورانه بدون توقف -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var video = document.getElementById('heroVideo');
+      if (video) {
+        video.muted = true;
+        video.play().catch(function() {});
+        video.addEventListener('ended', function() {
+          video.currentTime = 0;
+          video.play();
+        });
+      }
+    });
+  </script>
 </body>
 </html>
