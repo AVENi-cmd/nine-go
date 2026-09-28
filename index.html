@@ -10,11 +10,12 @@
   <meta property="og:description" content="واكس إيطالي فائق اللمعان، مسارات سريعة، وعناية تليق بمركبتك في الأحساء">
   <meta property="og:type" content="website">
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050B14'/%3E%3Ccircle cx='16' cy='12.5' r='5.5' stroke='%230EA5E9' stroke-width='3' fill='none'/%3E%3Cpath d='M21.5 12.5V19C21.5 22.5 18.5 24.5 15 24.5C12.5 24.5 11 23.5 10.5 22.5' stroke='%230EA5E9' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='16' cy='12.5' r='1.5' fill='%23FFFFFF'/%3E%3C/svg%3E">
+  <!-- تم تحديث الأيقونة لتناسب الألوان الجديدة -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23F1F5F9'/%3E%3Ccircle cx='16' cy='12.5' r='5.5' stroke='%230284C7' stroke-width='3' fill='none'/%3E%3Cpath d='M21.5 12.5V19C21.5 22.5 18.5 24.5 15 24.5C12.5 24.5 11 23.5 10.5 22.5' stroke='%230284C7' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='16' cy='12.5' r='1.5' fill='%230EA5E9'/%3E%3C/svg%3E">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-  <meta name="theme-color" content="#050B14">
+  <meta name="theme-color" content="#F1F5F9">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,27 +25,35 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     
     :root {
-      /* ثيم أزرق السيراميك والمياه - يعكس الفخامة والنظافة */
-      --bg-base: #050B14; 
-      --bg-surface: #0B1320;
-      --bg-card: rgba(255, 255, 255, 0.03);
-      --bg-card-hover: rgba(255, 255, 255, 0.06);
-      --brand-primary: #0EA5E9; /* لون سماوي مائي فخم */
-      --brand-primary-hover: #38BDF8;
-      --brand-primary-glow: rgba(14, 165, 233, 0.35);
-      --brand-primary-subtle: rgba(14, 165, 233, 0.15);
-      --text-highlight: #7DD3FC; /* لون النصوص البارزة */
-      --accent-gold: #F59E0B;
-      --wa-green: #22C55E;
+      /* ثيم اللؤلؤي المائي - فخم، مريح للعين، يعكس النظافة (ليس أبيض فاقع) */
+      --bg-base: #F1F5F9; /* لون لؤلؤي/رمادي مزرق فاتح مريح جداً */
+      --bg-surface: #E2E8F0;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #F8FAFC;
+      
+      --brand-primary: #0284C7; /* أزرق بحري فخم */
+      --brand-primary-hover: #0369A1;
+      --brand-primary-glow: rgba(2, 132, 199, 0.25);
+      --brand-primary-subtle: rgba(2, 132, 199, 0.1);
+      
+      --accent-color: #0EA5E9; /* أزرق سماوي للتفاصيل */
+      --accent-gold: #D97706;
+      --wa-green: #16A34A;
+      
       --text-white: #FFFFFF;
-      --text-primary: #F8FAFC;
-      --text-secondary: #94A3B8;
-      --border-subtle: rgba(255, 255, 255, 0.06);
-      --border-glass-top: rgba(255, 255, 255, 0.12);
+      --text-primary: #0F172A; /* كحلي داكن للنصوص بدلاً من الأسود */
+      --text-secondary: #475569;
+      --text-muted: #94A3B8;
+      
+      --border-subtle: rgba(15, 23, 42, 0.08);
+      --border-card: rgba(15, 23, 42, 0.05);
+      
       --radius-sm: 12px;
       --radius-md: 18px;
       --radius-lg: 24px;
       --radius-full: 9999px;
+      --shadow-soft: 0 10px 30px -5px rgba(15, 23, 42, 0.05);
+      --shadow-hover: 0 15px 35px -5px rgba(15, 23, 42, 0.08);
       --transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
@@ -66,69 +75,75 @@
     /* Icons */
     .icon-glass-box {
       width: 50px; height: 50px; border-radius: var(--radius-md);
-      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.01));
-      border: 1px solid var(--border-glass-top);
-      display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--text-white);
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; 
+      color: var(--brand-primary); box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     }
     .icon-glass-box.sm { width: 40px; height: 40px; border-radius: var(--radius-sm); }
-    .icon-glass-box.primary-glow { background: var(--brand-primary-subtle); border-color: rgba(14, 165, 233, 0.4); color: var(--text-highlight); }
-    .icon-glass-box.green-glow { background: rgba(34, 197, 94, 0.15); border-color: rgba(34, 197, 94, 0.4); color: var(--wa-green); }
-    .icon-glass-box.gold-glow { background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: var(--accent-gold); }
+    .icon-glass-box.primary-glow { background: var(--brand-primary-subtle); border-color: rgba(2, 132, 199, 0.2); color: var(--brand-primary); }
+    .icon-glass-box.green-glow { background: rgba(22, 163, 74, 0.1); border-color: rgba(22, 163, 74, 0.2); color: var(--wa-green); }
+    .icon-glass-box.gold-glow { background: rgba(217, 119, 6, 0.1); border-color: rgba(217, 119, 6, 0.2); color: var(--accent-gold); }
 
-    .svg-icon { width: 22px; height: 22px; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; fill: none; display: inline-block; vertical-align: middle; }
+    .svg-icon { width: 22px; height: 22px; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; display: inline-block; vertical-align: middle; }
     .svg-icon-sm { width: 18px; height: 18px; }
 
     /* Typography & Sections */
     .title-pill {
-      display: inline-flex; align-items: center; gap: 8px; color: var(--text-highlight);
-      background: var(--brand-primary-subtle); border: 1px solid rgba(14, 165, 233, 0.3);
+      display: inline-flex; align-items: center; gap: 8px; color: var(--brand-primary);
+      background: var(--brand-primary-subtle); border: 1px solid rgba(2, 132, 199, 0.2);
       padding: 6px 16px; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700; margin-bottom: 16px;
     }
     .section-title { text-align: center; margin-bottom: 40px; }
-    .main-title { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; color: var(--text-white); margin-bottom: 12px; line-height: 1.4; }
+    .main-title { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; color: var(--text-primary); margin-bottom: 12px; line-height: 1.4; }
     .sub-title { color: var(--text-secondary); font-size: 1rem; max-width: 600px; margin: 0 auto; }
-    .section-block { padding: 70px 0; position: relative; }
+    .section-block { padding: 80px 0; position: relative; }
 
     /* Header */
     .site-header {
-      position: sticky; top: 0; width: 100%; background: rgba(5, 11, 20, 0.85);
+      position: sticky; top: 0; width: 100%; background: rgba(241, 245, 249, 0.85);
       backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-subtle); padding: 12px 0; z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
     }
     .header-inner { display: flex; align-items: center; justify-content: space-between; }
     .brand-logo-img { height: 36px; width: auto; max-width: 130px; object-fit: contain; }
     .header-call-btn {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass-top);
-      color: var(--text-white); padding: 8px 16px; border-radius: var(--radius-full); font-size: 0.9rem; font-weight: 700;
+      background: #FFFFFF; border: 1px solid var(--border-subtle);
+      color: var(--brand-primary); padding: 8px 16px; border-radius: var(--radius-full); font-size: 0.9rem; font-weight: 700;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
-    .header-call-btn:hover { background: var(--brand-primary); border-color: var(--brand-primary); box-shadow: 0 4px 15px var(--brand-primary-glow); }
+    .header-call-btn:hover { background: var(--brand-primary); color: var(--text-white); border-color: var(--brand-primary); }
 
-    /* Hero Banner - Autoplay Video */
+    /* Hero Banner - Dark overlay fading into light background */
     .hero-banner {
       position: relative; width: 100%; min-height: 85vh; display: flex; align-items: center;
-      padding: 60px 0; overflow: hidden;
+      padding: 60px 0 100px 0; overflow: hidden;
     }
-    .hero-bg-visual { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; background: #000; }
+    .hero-bg-visual { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; background: #0F172A; }
     .hero-bg-visual video {
       width: 100%; height: 100%; object-fit: cover; object-position: center;
-      opacity: 0.5; pointer-events: none;
+      opacity: 0.6; pointer-events: none;
     }
-    .hero-overlay { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; background: linear-gradient(180deg, rgba(5, 11, 20, 0.3) 0%, rgba(5, 11, 20, 0.9) 80%, var(--bg-base) 100%); }
+    .hero-overlay { 
+      position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; 
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.5) 0%, rgba(15, 23, 42, 0.7) 60%, var(--bg-base) 100%); 
+    }
     
     .hero-content { position: relative; z-index: 3; width: 100%; max-width: 800px; }
     .hero-tag {
-      display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.08);
-      border: 1px solid var(--border-glass-top); color: var(--text-white); padding: 6px 16px;
+      display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2); color: var(--text-white); padding: 6px 16px;
       border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700; margin-bottom: 20px; backdrop-filter: blur(10px);
     }
-    .hero-heading { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
-    .hero-heading span { background: linear-gradient(135deg, #7DD3FC 0%, #0EA5E9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero-subtext { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 30px; line-height: 1.7; max-width: 650px; }
+    .hero-heading { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 900; line-height: 1.2; margin-bottom: 16px; color: var(--text-white); }
+    .hero-heading span { background: linear-gradient(135deg, #7DD3FC 0%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-subtext { font-size: 1.1rem; color: #E2E8F0; margin-bottom: 30px; line-height: 1.7; max-width: 650px; }
     
     .branches-quick-strip { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
     .hero-branch-pill {
-      background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border-glass-top);
+      background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: var(--radius-full); padding: 10px 18px; display: inline-flex; align-items: center; gap: 10px;
       backdrop-filter: blur(10px); color: var(--text-white); font-size: 0.9rem; font-weight: 700;
     }
@@ -140,106 +155,125 @@
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .loyalty-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
 
-    /* Cards */
+    /* Cards - Soft & Elegant */
     .bento-card, .official-price-card, .service-box, .branch-unified-card {
-      background: var(--bg-card); border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-      overflow: hidden;
+      background: var(--bg-card); border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);
+      overflow: hidden; transition: var(--transition);
     }
+    .bento-card:hover, .official-price-card:hover, .service-box:hover {
+      transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: rgba(2, 132, 199, 0.15);
+    }
+    
     .bento-card { padding: 30px; display: flex; flex-direction: column; justify-content: space-between; }
-    .bento-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; align-items: center; background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%); border-color: rgba(14, 165, 233, 0.2); }
-    .bento-hero-info h3 { font-size: 1.8rem; font-weight: 800; color: var(--text-white); margin-bottom: 12px; }
+    .bento-hero { 
+      grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; align-items: center; 
+      background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%); 
+      border: 1px solid rgba(2, 132, 199, 0.15); 
+    }
+    .bento-hero-info h3 { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px; }
     .bento-hero-info p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; }
     .bento-features-list { display: flex; gap: 16px; flex-wrap: wrap; }
     .bento-feature-item { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 700; color: var(--text-primary); }
-    .bento-hero-badge-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; background: rgba(0, 0, 0, 0.3); border-radius: var(--radius-md); padding: 24px; }
+    .bento-hero-badge-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; background: #F1F5F9; border-radius: var(--radius-md); padding: 24px; border: 1px solid var(--border-subtle); }
     
-    .bento-card-compact h4 { font-size: 1.2rem; font-weight: 700; color: var(--text-white); margin: 16px 0 8px 0; }
+    .bento-card-compact h4 { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin: 16px 0 8px 0; }
     .bento-card-compact p { color: var(--text-secondary); font-size: 0.9rem; }
-    .bento-tag { font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); background: rgba(255, 255, 255, 0.08); color: var(--text-secondary); }
+    .bento-tag { font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); background: var(--bg-surface); color: var(--text-secondary); }
 
     /* Pricing */
     .official-price-card { padding: 30px 24px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
-    .official-price-card.featured { border-color: rgba(14, 165, 233, 0.4); background: linear-gradient(180deg, rgba(14, 165, 233, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%); box-shadow: 0 10px 30px var(--brand-primary-glow); }
-    .car-category-badge { display: inline-block; background: rgba(255, 255, 255, 0.1); color: var(--text-primary); font-size: 0.8rem; font-weight: 700; padding: 4px 16px; border-radius: var(--radius-full); margin-bottom: 16px; }
+    .official-price-card.featured { 
+      border-color: var(--brand-primary); 
+      background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%); 
+      box-shadow: 0 15px 35px var(--brand-primary-glow); 
+      transform: scale(1.02);
+    }
+    .car-category-badge { display: inline-block; background: var(--bg-surface); color: var(--text-secondary); font-size: 0.8rem; font-weight: 700; padding: 4px 16px; border-radius: var(--radius-full); margin-bottom: 16px; }
     .official-price-card.featured .car-category-badge { background: var(--brand-primary); color: var(--text-white); }
-    .car-category-title { font-size: 1.4rem; font-weight: 800; color: var(--text-white); margin-bottom: 8px; }
+    .car-category-title { font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px; }
     .car-service-label { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px; }
-    .pricing-points-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--brand-primary-subtle); color: var(--text-highlight); font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: 20px; border: 1px solid rgba(14, 165, 233, 0.2); }
+    .pricing-points-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--brand-primary-subtle); color: var(--brand-primary); font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: 20px; border: 1px solid rgba(2, 132, 199, 0.1); }
     .car-price-number-wrap { display: flex; align-items: baseline; justify-content: center; gap: 6px; margin-bottom: 24px; }
-    .car-price-number { font-size: 3.2rem; font-weight: 900; color: var(--text-white); line-height: 1; }
+    .car-price-number { font-size: 3.2rem; font-weight: 900; color: var(--text-primary); line-height: 1; }
     .car-price-currency { font-size: 1.1rem; font-weight: 700; color: var(--brand-primary); }
-    .btn-order-category { background: var(--brand-primary); color: var(--text-white); padding: 12px 20px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; }
+    .btn-order-category { background: var(--bg-surface); color: var(--text-primary); padding: 12px 20px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+    .official-price-card.featured .btn-order-category { background: var(--brand-primary); color: var(--text-white); }
+    .btn-order-category:hover { background: var(--brand-primary); color: var(--text-white); }
 
-    /* Loyalty */
-    .loyalty-section { background: radial-gradient(circle at 80% 20%, #0F1A2A 0%, var(--bg-base) 75%); }
-    .loyalty-pass-card { background: linear-gradient(145deg, #101A2C 0%, #060B14 100%); border: 1px solid rgba(14, 165, 233, 0.4); border-radius: var(--radius-lg); padding: 24px; }
+    /* Loyalty - Keeps a premium dark feel for the card itself */
+    .loyalty-section { background: #E2E8F0; border-top: 1px solid #CBD5E1; border-bottom: 1px solid #CBD5E1; }
+    .loyalty-pass-card { background: linear-gradient(145deg, #0F172A 0%, #1E293B 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); color: #FFFFFF; }
     .pass-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed rgba(255, 255, 255, 0.15); padding-bottom: 16px; margin-bottom: 20px; }
-    .pass-type-badge { background: var(--brand-primary-subtle); color: var(--text-highlight); padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700; }
-    .stamps-title { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px; display: flex; justify-content: space-between; }
+    .pass-type-badge { background: rgba(14, 165, 233, 0.2); color: #7DD3FC; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700; }
+    .stamps-title { font-size: 0.9rem; color: #94A3B8; margin-bottom: 12px; display: flex; justify-content: space-between; }
     .stamps-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
     .stamp-slot { aspect-ratio: 1; background: rgba(0,0,0,0.3); border: 1px dashed rgba(255, 255, 255, 0.15); border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4px; }
-    .stamp-slot.active { border-style: solid; border-color: var(--brand-primary); background: var(--brand-primary-subtle); }
-    .stamp-slot.gift { border-color: var(--accent-gold); background: rgba(245, 158, 11, 0.15); }
-    .stamp-number { font-size: 0.7rem; font-weight: 700; color: var(--text-secondary); margin-top: 2px; }
-    .stamp-slot.active .stamp-number { color: var(--brand-primary); }
-    .stamp-slot.gift .stamp-number { color: var(--accent-gold); }
-    .pass-footer-strip { background: rgba(0, 0, 0, 0.4); border-radius: var(--radius-sm); padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); margin-top: 20px; }
-    .loyalty-details h3 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; color: var(--text-white); margin-bottom: 16px; }
+    .stamp-slot.active { border-style: solid; border-color: #0EA5E9; background: rgba(14, 165, 233, 0.15); }
+    .stamp-slot.gift { border-color: #F59E0B; background: rgba(245, 158, 11, 0.15); }
+    .stamp-number { font-size: 0.7rem; font-weight: 700; color: #94A3B8; margin-top: 2px; }
+    .stamp-slot.active .stamp-number { color: #38BDF8; }
+    .stamp-slot.gift .stamp-number { color: #FBBF24; }
+    .pass-footer-strip { background: rgba(0, 0, 0, 0.4); border-radius: var(--radius-sm); padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; color: #94A3B8; margin-top: 20px; }
+    
+    .loyalty-details h3 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; color: var(--text-primary); margin-bottom: 16px; }
     .loyalty-details h3 span { color: var(--brand-primary); }
     .loyalty-desc { font-size: 1rem; color: var(--text-secondary); margin-bottom: 24px; }
     .loyalty-perks { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
     .loyalty-perks li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; color: var(--text-primary); }
-    .btn-apple-wallet { display: inline-flex; align-items: center; gap: 10px; background: #000; border: 1px solid rgba(255, 255, 255, 0.3); color: #fff; padding: 12px 24px; border-radius: 12px; font-weight: 700; font-size: 1rem; }
+    .btn-apple-wallet { display: inline-flex; align-items: center; gap: 10px; background: #000; color: #fff; padding: 12px 24px; border-radius: 12px; font-weight: 700; font-size: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
     /* Services */
     .service-cover { height: 200px; width: 100%; overflow: hidden; background-color: var(--bg-surface); }
     .service-cover img { width: 100%; height: 100%; object-fit: cover; }
     .service-info { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
-    .service-info h3 { font-size: 1.2rem; font-weight: 700; color: var(--text-white); margin-bottom: 8px; }
+    .service-info h3 { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
     .service-info p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; flex-grow: 1; }
-    .service-btn { background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass-top); color: var(--text-white); padding: 10px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.9rem; text-align: center; }
-    .service-btn:hover { background: var(--brand-primary); border-color: var(--brand-primary); }
+    .service-btn { background: var(--bg-surface); color: var(--text-primary); padding: 10px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.9rem; text-align: center; }
+    .service-btn:hover { background: var(--brand-primary); color: var(--text-white); }
 
     /* Branches */
-    .segmented-control-wrapper { max-width: 500px; margin: 0 auto 30px auto; background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-subtle); border-radius: var(--radius-full); padding: 6px; display: flex; }
+    .segmented-control-wrapper { max-width: 500px; margin: 0 auto 30px auto; background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-full); padding: 6px; display: flex; box-shadow: var(--shadow-soft); }
     .segment-btn { flex: 1; padding: 10px; border-radius: var(--radius-full); font-size: 0.9rem; font-weight: 700; color: var(--text-secondary); text-align: center; }
     .segment-btn.active { color: var(--text-white); background: var(--brand-primary); }
-    .branch-unified-card { display: grid; grid-template-columns: 1fr 1fr; }
+    .branch-unified-card { display: grid; grid-template-columns: 1fr 1fr; background: #FFFFFF; }
     .branch-photo-holder { min-height: 350px; }
     .branch-photo-holder img { width: 100%; height: 100%; object-fit: cover; }
     .branch-unified-content { padding: 30px; display: flex; flex-direction: column; justify-content: space-between; }
-    .branch-status-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(34, 197, 94, 0.15); color: var(--wa-green); font-size: 0.85rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: 16px; }
+    .branch-status-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(22, 163, 74, 0.1); color: var(--wa-green); font-size: 0.85rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: 16px; border: 1px solid rgba(22, 163, 74, 0.2); }
     .status-dot-pulse { width: 8px; height: 8px; background: var(--wa-green); border-radius: 50%; box-shadow: 0 0 8px var(--wa-green); }
-    .branch-title { font-size: 1.5rem; font-weight: 800; color: var(--text-white); margin-bottom: 6px; }
-    .branch-location-text { color: var(--text-highlight); font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
-    .hours-organized-box { background: rgba(0, 0, 0, 0.2); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin-bottom: 20px; }
-    .hours-title { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 700; color: var(--text-white); margin-bottom: 10px; }
+    .branch-title { font-size: 1.5rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px; }
+    .branch-location-text { color: var(--brand-primary); font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
+    .hours-organized-box { background: var(--bg-base); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin-bottom: 20px; }
+    .hours-title { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; }
     .period-line { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 0.85rem; color: var(--text-secondary); }
-    .period-line strong { color: var(--text-white); }
+    .period-line strong { color: var(--text-primary); }
     .branch-unified-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
     .btn-branch-map, .btn-branch-wa { padding: 12px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
-    .btn-branch-map { background: var(--text-white); color: var(--bg-base); }
-    .btn-branch-wa { background: rgba(34, 197, 94, 0.15); color: var(--wa-green); border: 1px solid rgba(34, 197, 94, 0.3); }
+    .btn-branch-map { background: var(--bg-surface); color: var(--text-primary); }
+    .btn-branch-map:hover { background: var(--brand-primary); color: var(--text-white); }
+    .btn-branch-wa { background: rgba(22, 163, 74, 0.1); color: var(--wa-green); border: 1px solid rgba(22, 163, 74, 0.2); }
+    .btn-branch-wa:hover { background: var(--wa-green); color: white; }
 
     /* CTA & Footer */
-    .cta-banner { background: radial-gradient(circle at 50% 50%, #0F1A2A 0%, var(--bg-base) 100%); border-top: 1px solid rgba(14, 165, 233, 0.2); padding: 60px 0; text-align: center; }
-    .cta-banner h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; color: var(--text-white); margin-bottom: 12px; }
-    .cta-banner p { color: var(--text-secondary); font-size: 1rem; margin-bottom: 24px; }
+    .cta-banner { background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); color: white; padding: 60px 0; text-align: center; }
+    .cta-banner h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 12px; }
+    .cta-banner p { font-size: 1rem; margin-bottom: 24px; opacity: 0.9; }
     .banner-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
-    .btn-banner-wa { background: var(--wa-green); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; }
-    .btn-banner-phone { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass-top); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; }
-    .footer { background: #03060C; padding: 50px 0 20px 0; border-top: 1px solid var(--border-subtle); }
+    .btn-banner-wa { background: var(--wa-green); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    .btn-banner-phone { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.3); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; }
+    
+    .footer { background: #0F172A; color: white; padding: 50px 0 20px 0; }
     .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding-bottom: 30px; }
-    .footer h4 { font-size: 1.1rem; color: var(--text-highlight); font-weight: 700; margin-bottom: 14px; }
-    .footer p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px; }
-    .footer-copy { border-top: 1px solid var(--border-subtle); padding-top: 20px; text-align: center; color: var(--text-secondary); font-size: 0.85rem; }
+    .footer h4 { font-size: 1.1rem; color: #7DD3FC; font-weight: 700; margin-bottom: 14px; }
+    .footer p { color: #94A3B8; font-size: 0.9rem; margin-bottom: 8px; }
+    .footer-copy { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #64748B; font-size: 0.85rem; }
 
     .floating-wa {
       position: fixed; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); left: 20px;
       width: 56px; height: 56px; background: var(--wa-green); color: var(--text-white);
       border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 10px 25px rgba(34,197,94,0.4); z-index: 9999;
+      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.4); z-index: 9999;
     }
 
     /* إصلاحات الجوال */
@@ -248,10 +282,11 @@
     }
     @media (max-width: 768px) {
       .section-block { padding: 50px 0; }
-      .hero-banner { min-height: 70vh; padding: 40px 0; }
+      .hero-banner { min-height: 70vh; padding: 40px 0 80px 0; }
       .bento-grid, .official-pricing-grid, .services-grid, .loyalty-grid, .branch-unified-card, .footer-grid { 
         grid-template-columns: 1fr; 
       }
+      .official-price-card.featured { transform: scale(1); }
       .branch-photo-holder { min-height: 250px; }
       .branch-unified-actions { grid-template-columns: 1fr; }
       .banner-actions { flex-direction: column; width: 100%; }
@@ -265,6 +300,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#hero" class="brand-link" aria-label="الرئيسية">
+        <!-- يُفضل استخدام نسخة الشعار التي تناسب الخلفية الفاتحة إذا توفرت -->
         <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" class="brand-logo-img" width="130" height="36" loading="eager">
       </a>
       <a href="tel:0564927977" class="header-call-btn" aria-label="اتصال هاتفي">
@@ -276,8 +312,8 @@
 
   <main>
     <section class="hero-banner" id="hero">
-      <!-- تمت إضافة disablePictureInPicture مع سكربت إجباري أسفل الصفحة لضمان عمله في iOS -->
       <div class="hero-bg-visual">
+        <!-- تم التأكد من كافة وسوم التشغيل الإجباري -->
         <video id="heroVideo" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture poster="assets/branch-hofuf.jpg.PNG">
           <source src="assets/hero-video.mp4" type="video/mp4">
         </video>
@@ -286,7 +322,7 @@
       
       <div class="container hero-content">
         <div class="hero-tag">
-          <svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary);" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+          <svg class="svg-icon svg-icon-sm" style="color:#7DD3FC;" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
           <span>الأحساء: وين ما كنت.. ناين أقرب لك!</span>
         </div>
 
@@ -306,7 +342,7 @@
       </div>
     </section>
 
-    <section class="section-block" style="background:var(--bg-surface);" id="features">
+    <section class="section-block" id="features">
       <div class="container">
         <div class="section-title">
           <span class="title-pill">هندسة العناية الفائقة</span>
@@ -330,7 +366,7 @@
             </div>
             <div class="bento-hero-badge-wrap">
               <div class="icon-glass-box gold-glow" style="margin-bottom:12px;"><svg class="svg-icon" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
-              <strong style="color:var(--text-white);">معايير إيطالية 100%</strong>
+              <strong style="color:var(--text-primary);">معايير إيطالية 100%</strong>
               <span style="color:var(--text-secondary); font-size:0.85rem; margin-top:4px;">حماية ولمعان يدوم لأيام</span>
             </div>
           </div>
@@ -360,7 +396,7 @@
       </div>
     </section>
 
-    <section class="section-block" id="pricing">
+    <section class="section-block" id="pricing" style="background:var(--bg-card);">
       <div class="container">
         <div class="section-title">
           <span class="title-pill">قائمة الأسعار المعتمدة</span>
@@ -386,7 +422,7 @@
               <span class="car-category-badge">الأكثر طلباً</span>
               <h3 class="car-category-title">السيارة المتوسطة</h3>
               <p class="car-service-label">غسيل شامل بشامبو وواكس إيطالي</p>
-              <div><span class="pricing-points-chip" style="color:var(--text-white); background:var(--brand-primary); border-color:var(--brand-primary);">+ نقطة في بطاقة أبل</span></div>
+              <div><span class="pricing-points-chip" style="color:var(--text-white); background:var(--brand-primary); border:var(--brand-primary);">+ نقطة في بطاقة أبل</span></div>
             </div>
             <div>
               <div class="car-price-number-wrap"><span class="car-price-number">30</span><span class="car-price-currency">ر.س</span></div>
@@ -424,29 +460,30 @@
             <a href="https://wa.me/966564927977" class="btn-apple-wallet">أضف للمحفظة | Apple Wallet</a>
           </div>
 
+          <!-- بطاقة الولاء تم الحفاظ على لونها الداكن لأن بطاقات محفظة أبل تبدو أفخم بهذا الشكل -->
           <div class="loyalty-pass-card">
             <div class="pass-header">
-              <img src="assets/logo.png.JPEG" alt="NINE GO" style="height:28px;">
+              <img src="assets/logo.png.JPEG" alt="NINE GO" style="height:28px; filter: brightness(0) invert(1);">
               <span class="pass-type-badge">بطاقة ولاء</span>
             </div>
-            <div class="stamps-title"><strong>أختام الغسيل</strong><span style="color:var(--brand-primary); font-weight:800;">4 = 1 مجاناً</span></div>
+            <div class="stamps-title"><strong>أختام الغسيل</strong><span style="color:#38BDF8; font-weight:800;">4 = 1 مجاناً</span></div>
             <div class="stamps-grid">
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary);" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary);" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary);" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary);" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
+              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
+              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
+              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
+              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
               <div class="stamp-slot gift active"><span style="font-size:1.4rem;">🎁</span></div>
             </div>
             <div class="pass-footer-strip">
               <span>NG-WALLET</span>
-              <span style="color:var(--text-white); font-weight:700;">صالحة بجميع الفروع</span>
+              <span style="color:#FFFFFF; font-weight:700;">صالحة بجميع الفروع</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-block" style="background:var(--bg-surface);">
+    <section class="section-block">
       <div class="container">
         <div class="section-title">
           <span class="title-pill">فروع ناين قو</span>
@@ -490,7 +527,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:36px; margin-bottom:16px;">
+          <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:36px; margin-bottom:16px; filter: brightness(0) invert(1);">
           <p>تجربة غسيل متطورة بأحدث المضخات وأجود مواد العناية الإيطالية.</p>
         </div>
         <div>
@@ -516,20 +553,50 @@
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // سكربت إجباري لتخطي حظر تشغيل الفيديو في iOS (الآيفون)
+    // السكربت الإجباري الفعّال لتشغيل الفيديو في الآيفون وجميع المتصفحات
     document.addEventListener('DOMContentLoaded', function() {
       var heroVideo = document.getElementById('heroVideo');
+      
       if (heroVideo) {
-        heroVideo.muted = true; // تأكيد الكتم برمجياً
-        heroVideo.play().catch(function(error) {
-          // إذا منعه المتصفح (وضع توفير الطاقة مثلاً)، سيتم تشغيله عند أول لمسة للشاشة
-          document.body.addEventListener('touchstart', function() {
+        // تأكيد إعدادات التشغيل الصامت والآمن برمجياً
+        heroVideo.muted = true;
+        heroVideo.setAttribute('muted', '');
+        heroVideo.setAttribute('playsinline', '');
+        
+        // محاولة التشغيل الفوري المتكررة (لتخطي بطء التحميل)
+        var playAttemptInterval = setInterval(function() {
+          if (heroVideo.paused) {
+            var playPromise = heroVideo.play();
+            if (playPromise !== undefined) {
+              playPromise.then(function() {
+                clearInterval(playAttemptInterval); // نجح التشغيل
+              }).catch(function(error) {
+                // منع المتصفح للتشغيل التلقائي
+              });
+            }
+          } else {
+            clearInterval(playAttemptInterval); // يعمل بالفعل
+          }
+        }, 1000); // المحاولة كل ثانية
+
+        // الخطة البديلة: التشغيل عند أول لمسة أو حركة بالموقع
+        var forcePlayOnAction = function() {
+          if (heroVideo.paused) {
             heroVideo.play();
-          }, { once: true });
-        });
+          }
+          // إزالة المستمعات بعد نجاح التشغيل لعدم استهلاك الموارد
+          document.removeEventListener('touchstart', forcePlayOnAction);
+          document.removeEventListener('scroll', forcePlayOnAction);
+          document.removeEventListener('click', forcePlayOnAction);
+        };
+
+        document.addEventListener('touchstart', forcePlayOnAction, { passive: true });
+        document.addEventListener('scroll', forcePlayOnAction, { passive: true });
+        document.addEventListener('click', forcePlayOnAction, { passive: true });
       }
     });
 
+    // التنقل بين الفروع
     var branchData = {
       mubarraz: {
         title: 'مغسلة ناين GO (فرع المبرز)',
