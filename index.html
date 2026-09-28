@@ -6,9 +6,11 @@
   <title>مغسلة ناين قو | NINE GO CAR WASH - الأحساء</title>
   <meta name="description" content="مغسلة ناين قو بالأحساء (فرع المبرز بمحاسن / فرع الهفوف بالنايفية). غسيل واكس، غسيل ملوكي، وبخار. أوقات العمل: 8 ص - 1 م / 3 م - 3 ص. 0564927977">
 
-  <!-- الخطوط والأيقونات -->
+  <!-- اتصال سريع بمزود الخطوط والأيقونات -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -103,7 +105,7 @@
       font-size: 0.9rem;
     }
 
-    /* واجهة الهيرو بالفيديو الحي والمباشر */
+    /* واجهة الهيرو */
     .hero-banner {
       position: relative;
       width: 100%;
@@ -124,7 +126,6 @@
       z-index: 1;
     }
 
-    /* خلفية صورة البورش موجودة دائماً خلف الفيديو */
     .hero-backdrop-img {
       position: absolute;
       top: 0;
@@ -137,7 +138,6 @@
       display: block;
     }
 
-    /* الفيديو ظاهر ويعمل مباشرة فوق الصورة */
     .hero-bg-visual video {
       position: absolute;
       top: 0;
@@ -318,7 +318,7 @@
       font-size: 1rem;
     }
 
-    /* لائحة الأسعار حسب فئات السيارات */
+    /* لائحة الأسعار */
     .official-pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -472,7 +472,7 @@
       border-color: var(--wa);
     }
 
-    /* الفروع: كلاهما بإطار أحمر وتوقيت العمل */
+    /* الفروع */
     .branches-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -569,11 +569,9 @@
       gap: 6px;
     }
 
-    /* البانر والفوتر */
+    /* البانر السفلي بتدرج لوني فخم وخفيف جداً */
     .cta-banner {
-      background: linear-gradient(rgba(12, 13, 17, 0.9), rgba(12, 13, 17, 0.9)), url('assets/hero-bg.jpg.PNG');
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(135deg, #161822 0%, #1c1f2b 50%, #0d0e13 100%);
       border-top: 2px solid var(--red);
       padding: 55px 0;
       text-align: center;
@@ -716,11 +714,11 @@
   </header>
 
   <main>
-    <!-- واجهة الهيرو: الفيديو مباشر ويعمل تلقائياً -->
+    <!-- واجهة الهيرو: تدفق ذكي بدون حظر المتصفح -->
     <section class="hero-banner" id="hero">
       <div class="hero-bg-visual">
         <img src="assets/hero-bg.jpg.PNG" alt="خلفية ناين قو" class="hero-backdrop-img" decoding="async">
-        <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="auto">
+        <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="metadata">
           <source src="assets/hero-video.mp4%20.MP4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
@@ -858,7 +856,7 @@
       </div>
     </section>
 
-    <!-- خدمات المغسلة بالصور -->
+    <!-- خدمات المغسلة بالتحميل الذكي (Lazy Loading) -->
     <section class="section-block" id="services" style="background:#101117;">
       <div class="container">
         <div class="section-title">
@@ -868,7 +866,7 @@
         </div>
 
         <div class="services-grid">
-          <!-- كرت 1: السيارة الكلاسيك في المنتصف -->
+          <!-- كرت 1: السيارة الكلاسيك مع lazy loading لتسريع الصفحة -->
           <div class="service-box">
             <div class="service-cover">
               <img src="assets/classic-bay.jpg%20.PNG" alt="السيارة الكلاسيكية في ناين قو" class="classic-car-view" loading="lazy" decoding="async">
@@ -913,7 +911,7 @@
       </div>
     </section>
 
-    <!-- قسم الفروع -->
+    <!-- قسم الفروع بالتحميل الذكي -->
     <section class="section-block" id="branches">
       <div class="container">
         <div class="section-title">
