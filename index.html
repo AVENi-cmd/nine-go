@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>مغسلة ناين قو | NINE GO CAR WASH - الأحساء</title>
-  <meta name="description" content="مغسلة ناين قو بالأحساء (فرع المبرز بمحاسن / فرع الهفوف بالنايفية). رغوة ثلجية، واكس فاخر، وغسيل ناين الفاخر. هاتف: 0564927977">
+  <meta name="description" content="مغسلة ناين قو بالأحساء (فرع المبرز بمحاسن / فرع الهفوف بالنايفية). رغوة ثلجية، واكس فاخر، وغسيل سريع. هاتف: 0564927977">
   
   <meta property="og:title" content="مغسلة ناين قو | NINE GO - العناية الفائقة بسيارتك">
-  <meta property="og:description" content="واكس فاخر فائق اللمعان، مسارات سريعة، وعناية تليق بمركبتك في الأحساء">
+  <meta property="og:description" content="مسارات سريعة، عناية متكاملة، وبرنامج ولاء رقمي تليق بمركبتك في الأحساء">
   <meta property="og:type" content="website">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23F1F5F9'/%3E%3Ccircle cx='16' cy='12.5' r='5.5' stroke='%230284C7' stroke-width='3' fill='none'/%3E%3Cpath d='M21.5 12.5V19C21.5 22.5 18.5 24.5 15 24.5C12.5 24.5 11 23.5 10.5 22.5' stroke='%230284C7' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='16' cy='12.5' r='1.5' fill='%230EA5E9'/%3E%3C/svg%3E">
@@ -21,22 +21,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 
   <style>
+    /* 1. Design Tokens & CSS Variables */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     
     :root {
+      /* هوية ناين قو المحدثة لعام 2025 */
       --bg-base: #F1F5F9; 
       --bg-surface: #E2E8F0;
       --bg-card: #FFFFFF;
-      --bg-card-hover: #F8FAFC;
+      --bg-dark: #0A0F1D; /* كحلي داكن عميق جداً */
       
-      --brand-primary: #0284C7; 
-      --brand-primary-hover: #0369A1;
-      --brand-primary-glow: rgba(2, 132, 199, 0.25);
-      --brand-primary-subtle: rgba(2, 132, 199, 0.1);
+      --brand-primary: #0284C7; /* أزرق مائي */
+      --brand-light: #38BDF8; 
+      --brand-glow: rgba(2, 132, 199, 0.25);
       
-      --accent-color: #0EA5E9; 
+      --brand-red: #E11D48; /* لمسات الأحمر الرياضي */
       --accent-gold: #D97706;
-      --wa-green: #16A34A;
+      --wa-green: #10B981;
+      --tiktok-color: #000000;
       
       --text-white: #FFFFFF;
       --text-primary: #0F172A; 
@@ -52,6 +54,7 @@
       --radius-full: 9999px;
       --shadow-soft: 0 10px 30px -5px rgba(15, 23, 42, 0.05);
       --shadow-hover: 0 15px 35px -5px rgba(15, 23, 42, 0.08);
+      --shadow-float: 0 12px 30px rgba(0,0,0,0.15);
       --transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
@@ -68,18 +71,19 @@
     a { text-decoration: none; color: inherit; transition: var(--transition); }
     button { font-family: inherit; border: none; cursor: pointer; background: none; transition: var(--transition); }
     .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+    
+    /* حماية الأرقام والعملات من الانعكاس */
     .ltr-data { direction: ltr !important; unicode-bidi: isolate !important; display: inline-block; font-weight: 700; font-family: system-ui, sans-serif; }
 
+    /* Icons & Badges */
     .icon-glass-box {
       width: 50px; height: 50px; border-radius: var(--radius-md);
-      background: #FFFFFF;
-      border: 1px solid var(--border-subtle);
+      background: #FFFFFF; border: 1px solid var(--border-subtle);
       display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; 
       color: var(--brand-primary); box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     }
     .icon-glass-box.sm { width: 40px; height: 40px; border-radius: var(--radius-sm); }
-    .icon-glass-box.primary-glow { background: var(--brand-primary-subtle); border-color: rgba(2, 132, 199, 0.2); color: var(--brand-primary); }
-    .icon-glass-box.green-glow { background: rgba(22, 163, 74, 0.1); border-color: rgba(22, 163, 74, 0.2); color: var(--wa-green); }
+    .icon-glass-box.primary-glow { background: rgba(2, 132, 199, 0.1); border-color: rgba(2, 132, 199, 0.2); color: var(--brand-primary); }
     .icon-glass-box.gold-glow { background: rgba(217, 119, 6, 0.1); border-color: rgba(217, 119, 6, 0.2); color: var(--accent-gold); }
 
     .svg-icon { width: 22px; height: 22px; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; display: inline-block; vertical-align: middle; }
@@ -87,7 +91,7 @@
 
     .title-pill {
       display: inline-flex; align-items: center; gap: 8px; color: var(--brand-primary);
-      background: var(--brand-primary-subtle); border: 1px solid rgba(2, 132, 199, 0.2);
+      background: rgba(2, 132, 199, 0.1); border: 1px solid rgba(2, 132, 199, 0.2);
       padding: 6px 16px; border-radius: var(--radius-full); font-size: 0.9rem; font-weight: 700; margin-bottom: 16px;
     }
     .section-title { text-align: center; margin-bottom: 40px; }
@@ -95,11 +99,11 @@
     .sub-title { color: var(--text-secondary); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
     .section-block { padding: 80px 0; position: relative; }
 
+    /* Header */
     .site-header {
       position: sticky; top: 0; width: 100%; background: rgba(241, 245, 249, 0.85);
       backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-subtle); padding: 12px 0; z-index: 1000;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
     }
     .header-inner { display: flex; align-items: center; justify-content: space-between; }
     .brand-logo-img { height: 36px; width: auto; max-width: 130px; object-fit: contain; }
@@ -111,19 +115,14 @@
     }
     .header-call-btn:hover { background: var(--brand-primary); color: var(--text-white); border-color: var(--brand-primary); }
 
+    /* Hero */
     .hero-banner {
       position: relative; width: 100%; min-height: 85vh; display: flex; align-items: center;
       padding: 60px 0 100px 0; overflow: hidden;
     }
-    .hero-bg-visual { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; background: #0F172A; }
-    .hero-bg-visual video {
-      width: 100%; height: 100%; object-fit: cover; object-position: center;
-      opacity: 0.6; pointer-events: none;
-    }
-    .hero-overlay { 
-      position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; 
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0.5) 0%, rgba(15, 23, 42, 0.7) 60%, var(--bg-base) 100%); 
-    }
+    .hero-bg-visual { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; background: var(--bg-dark); }
+    .hero-bg-visual video { width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0.6; pointer-events: none; }
+    .hero-overlay { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; background: linear-gradient(180deg, rgba(10, 15, 29, 0.5) 0%, rgba(10, 15, 29, 0.8) 70%, var(--bg-base) 100%); }
     
     .hero-content { position: relative; z-index: 3; width: 100%; max-width: 800px; }
     .hero-tag {
@@ -132,169 +131,199 @@
       border-radius: var(--radius-full); font-size: 0.9rem; font-weight: 700; margin-bottom: 20px; backdrop-filter: blur(10px);
     }
     .hero-heading { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 900; line-height: 1.2; margin-bottom: 16px; color: var(--text-white); }
-    .hero-heading span { background: linear-gradient(135deg, #7DD3FC 0%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-heading span { background: linear-gradient(135deg, #7DD3FC 0%, var(--brand-light) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .hero-subtext { font-size: 1.15rem; color: #E2E8F0; margin-bottom: 30px; line-height: 1.7; max-width: 650px; }
     
-    .branches-quick-strip { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .hero-branch-strip { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
     .hero-branch-pill {
       background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: var(--radius-full); padding: 10px 18px; display: inline-flex; align-items: center; gap: 10px;
-      backdrop-filter: blur(10px); color: var(--text-white); font-size: 0.95rem; font-weight: 700;
+      backdrop-filter: blur(10px); color: var(--text-white); font-size: 0.95rem; font-weight: 700; cursor: pointer;
     }
+    .hero-branch-pill:hover { background: rgba(255,255,255,0.2); }
     .hero-branch-pill .mini-badge { background: var(--brand-primary); color: white; font-size: 0.75rem; padding: 2px 8px; border-radius: var(--radius-full); }
 
-    /* شريط تيك توك */
-    .tiktok-strip {
-      background: linear-gradient(90deg, #0F172A 0%, #1E293B 100%);
-      padding: 18px 0; border-bottom: 1px solid var(--border-subtle);
-    }
-    .tiktok-container {
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
-    }
-    .tiktok-content { display: flex; align-items: center; gap: 12px; }
-    .tiktok-btn {
-      background: linear-gradient(135deg, #FE2C55 0%, #E61B23 100%); color: #FFF;
-      padding: 10px 24px; border-radius: 50px; font-weight: 700; font-size: 0.95rem;
-      box-shadow: 0 4px 15px rgba(254, 44, 85, 0.3); transition: var(--transition);
-    }
-    .tiktok-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(254, 44, 85, 0.5); }
-
+    /* Bento Grids */
     .bento-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .official-pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .loyalty-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
 
-    .bento-card, .official-price-card, .service-box, .branch-unified-card {
+    .bento-card, .official-price-card, .branch-unified-card {
       background: var(--bg-card); border: 1px solid var(--border-card);
       border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);
       overflow: hidden; transition: var(--transition);
     }
-    .bento-card:hover, .official-price-card:hover, .service-box:hover {
-      transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: rgba(2, 132, 199, 0.15);
-    }
+    .bento-card:hover, .official-price-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: rgba(2, 132, 199, 0.2); }
     
     .bento-card { padding: 30px; display: flex; flex-direction: column; justify-content: space-between; }
-    .bento-hero { 
-      grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; align-items: center; 
-      background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%); 
-      border: 1px solid rgba(2, 132, 199, 0.15); 
-    }
+    .bento-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; align-items: center; background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%); border: 1px solid rgba(2, 132, 199, 0.15); }
     .bento-hero-info h3 { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px; }
     .bento-hero-info p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; }
     .bento-features-list { display: flex; gap: 16px; flex-wrap: wrap; }
     .bento-feature-item { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
-    .bento-hero-badge-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; background: #F1F5F9; border-radius: var(--radius-md); padding: 24px; border: 1px solid var(--border-subtle); }
+    .bento-hero-badge-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; background: var(--bg-base); border-radius: var(--radius-md); padding: 24px; border: 1px solid var(--border-subtle); }
     
     .bento-card-compact h4 { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 16px 0 8px 0; }
     .bento-card-compact p { color: var(--text-secondary); font-size: 0.95rem; }
     .bento-tag { font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); background: var(--bg-surface); color: var(--text-secondary); }
 
-    .official-price-card { padding: 30px 24px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
+    /* Pricing Section (Bento Value-based) */
+    .official-price-card { padding: 30px 24px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
     .official-price-card.featured { 
-      border-color: var(--brand-primary); 
+      border: 2px solid var(--brand-primary); 
       background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%); 
-      box-shadow: 0 15px 35px var(--brand-primary-glow); 
+      box-shadow: 0 15px 35px var(--brand-glow); 
       transform: scale(1.02);
     }
+    .promo-banner { position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: var(--brand-primary); color: #FFF; padding: 4px 16px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 800; box-shadow: 0 4px 10px var(--brand-glow); }
+    
     .car-category-badge { display: inline-block; background: var(--bg-surface); color: var(--text-secondary); font-size: 0.85rem; font-weight: 700; padding: 4px 16px; border-radius: var(--radius-full); margin-bottom: 16px; }
-    .official-price-card.featured .car-category-badge { background: var(--brand-primary); color: var(--text-white); }
-    .car-category-title { font-size: 1.5rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px; }
-    .car-service-label { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 16px; }
-    .pricing-points-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--brand-primary-subtle); color: var(--brand-primary); font-size: 0.85rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: 20px; border: 1px solid rgba(2, 132, 199, 0.1); }
+    .car-category-title { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px; }
+    
+    /* القوائم النقطية للأسعار */
+    .price-features-list { list-style: none; text-align: right; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; }
+    .price-features-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.9rem; color: var(--text-secondary); font-weight: 500; }
+    .price-features-list li svg { width: 16px; height: 16px; color: var(--brand-primary); flex-shrink: 0; margin-top: 4px; }
+    
     .car-price-number-wrap { display: flex; align-items: baseline; justify-content: center; gap: 6px; margin-bottom: 24px; }
     .car-price-number { font-size: 3.2rem; font-weight: 900; color: var(--text-primary); line-height: 1; }
     .car-price-currency { font-size: 1.1rem; font-weight: 700; color: var(--brand-primary); }
-    .btn-order-category { background: var(--bg-surface); color: var(--text-primary); padding: 12px 20px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: var(--transition); }
-    .official-price-card.featured .btn-order-category { background: var(--brand-primary); color: var(--text-white); }
+    
+    .btn-order-category { background: var(--bg-surface); color: var(--text-primary); padding: 12px 20px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: var(--transition); width: 100%; }
+    .official-price-card.featured .btn-order-category { background: var(--brand-primary); color: var(--text-white); box-shadow: 0 4px 12px var(--brand-glow); }
     .btn-order-category:hover { background: var(--brand-primary); color: var(--text-white); }
 
-    .loyalty-section { background: #E2E8F0; border-top: 1px solid #CBD5E1; border-bottom: 1px solid #CBD5E1; }
-    .loyalty-pass-card { background: linear-gradient(145deg, #0F172A 0%, #1E293B 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); color: #FFFFFF; }
+    /* Loyalty Section (Apple Wallet Dark Glass Style) */
+    .loyalty-section { background: var(--bg-surface); border-top: 1px solid #CBD5E1; border-bottom: 1px solid #CBD5E1; }
+    .loyalty-pass-card { 
+      background: linear-gradient(145deg, #131B2E 0%, #0B101D 100%); 
+      border: 1px solid rgba(255,255,255,0.08); 
+      border-radius: var(--radius-lg); padding: 28px; 
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4); color: #FFFFFF; 
+      position: relative; overflow: hidden;
+    }
+    /* تأثير انعكاس الزجاج */
+    .loyalty-pass-card::after { content: ''; position: absolute; top: 0; left: -50%; width: 200%; height: 100%; background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0) 100%); transform: skewX(-25deg); pointer-events: none; }
+    
     .pass-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed rgba(255, 255, 255, 0.15); padding-bottom: 16px; margin-bottom: 20px; }
-    .pass-type-badge { background: rgba(14, 165, 233, 0.2); color: #7DD3FC; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700; }
+    .pass-logo-badge { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 6px 12px; border-radius: 8px; display: inline-flex; align-items: center; }
+    .pass-type-badge { background: rgba(14, 165, 233, 0.15); color: #7DD3FC; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(14, 165, 233, 0.3); }
     .stamps-title { font-size: 0.95rem; color: #94A3B8; margin-bottom: 12px; display: flex; justify-content: space-between; }
-    .stamps-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+    .stamps-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 24px; }
     .stamp-slot { aspect-ratio: 1; background: rgba(0,0,0,0.3); border: 1px dashed rgba(255, 255, 255, 0.15); border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4px; }
     .stamp-slot.active { border-style: solid; border-color: #0EA5E9; background: rgba(14, 165, 233, 0.15); }
-    .stamp-slot.gift { border-color: #F59E0B; background: rgba(245, 158, 11, 0.15); }
+    
+    /* الختم الذهبي النابض */
+    .stamp-slot.gift { border: 2px solid #F59E0B; background: rgba(245, 158, 11, 0.15); animation: goldPulse 2s infinite; box-shadow: 0 0 15px rgba(245, 158, 11, 0.2); }
+    @keyframes goldPulse { 0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); } 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); } }
+    
     .stamp-number { font-size: 0.75rem; font-weight: 700; color: #94A3B8; margin-top: 2px; }
     .stamp-slot.active .stamp-number { color: #38BDF8; }
-    .stamp-slot.gift .stamp-number { color: #FBBF24; }
-    .pass-footer-strip { background: rgba(0, 0, 0, 0.4); border-radius: var(--radius-sm); padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; color: #94A3B8; margin-top: 20px; }
+    .stamp-slot.gift .stamp-number { color: #FBBF24; font-size: 0.85rem; }
+    
+    .pass-actions-wrap { display: flex; flex-direction: column; gap: 12px; }
+    .btn-apple-wallet { display: flex; align-items: center; justify-content: center; gap: 10px; background: #000; color: #fff; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; border: 1px solid rgba(255,255,255,0.2); transition: var(--transition); width: 100%; }
+    .btn-apple-wallet:hover { background: #111; box-shadow: 0 4px 15px rgba(255,255,255,0.1); }
+    .btn-android { background: transparent; color: #94A3B8; font-size: 0.9rem; text-decoration: underline; border: none; padding: 5px; cursor: pointer; text-align: center; }
+    .btn-android:hover { color: #FFF; }
     
     .loyalty-details h3 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; color: var(--text-primary); margin-bottom: 16px; }
     .loyalty-details h3 span { color: var(--brand-primary); }
     .loyalty-desc { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 24px; }
     .loyalty-perks { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
     .loyalty-perks li { display: flex; align-items: flex-start; gap: 12px; font-size: 1rem; color: var(--text-primary); }
-    .btn-apple-wallet { display: inline-flex; align-items: center; gap: 10px; background: #000; color: #fff; padding: 12px 24px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-    .service-cover { height: 200px; width: 100%; overflow: hidden; background-color: var(--bg-surface); }
-    .service-cover img { width: 100%; height: 100%; object-fit: cover; }
-    .service-info { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
-    .service-info h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
-    .service-info p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
-    .service-btn { background: var(--bg-surface); color: var(--text-primary); padding: 10px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; text-align: center; }
-    .service-btn:hover { background: var(--brand-primary); color: var(--text-white); }
+    /* Branches (Interactive Sliding Switcher) */
+    .branch-tabs-wrapper { 
+      max-width: 500px; margin: 0 auto 30px auto; background: var(--bg-card); 
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-full); 
+      padding: 6px; display: flex; position: relative; box-shadow: var(--shadow-soft); 
+    }
+    .segment-btn { flex: 1; padding: 12px; border-radius: var(--radius-full); font-size: 0.95rem; font-weight: 700; color: var(--text-secondary); text-align: center; position: relative; z-index: 2; transition: color 0.3s; }
+    .segment-btn.active { color: var(--text-white); }
+    
+    /* Sliding Background */
+    .tab-slider { position: absolute; top: 6px; bottom: 6px; width: calc(50% - 6px); background: var(--brand-primary); border-radius: var(--radius-full); transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1); z-index: 1; box-shadow: 0 4px 10px var(--brand-glow); }
+    .slider-left { transform: translateX(0); } /* للغة العربية RTL اليمين هو الأساس */
+    .slider-right { transform: translateX(-100%); }
 
-    .segmented-control-wrapper { max-width: 500px; margin: 0 auto 30px auto; background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: var(--radius-full); padding: 6px; display: flex; box-shadow: var(--shadow-soft); }
-    .segment-btn { flex: 1; padding: 10px; border-radius: var(--radius-full); font-size: 0.95rem; font-weight: 700; color: var(--text-secondary); text-align: center; }
-    .segment-btn.active { color: var(--text-white); background: var(--brand-primary); }
-    .branch-unified-card { display: grid; grid-template-columns: 1fr 1fr; background: #FFFFFF; }
-    .branch-photo-holder { min-height: 350px; }
-    .branch-photo-holder img { width: 100%; height: 100%; object-fit: cover; }
-    .branch-unified-content { padding: 30px; display: flex; flex-direction: column; justify-content: space-between; }
-    .branch-status-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(22, 163, 74, 0.1); color: var(--wa-green); font-size: 0.9rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: 16px; border: 1px solid rgba(22, 163, 74, 0.2); }
-    .status-dot-pulse { width: 8px; height: 8px; background: var(--wa-green); border-radius: 50%; box-shadow: 0 0 8px var(--wa-green); }
+    .branch-unified-card { display: grid; grid-template-columns: 1fr 1fr; background: var(--bg-card); position: relative; }
+    .branch-speed-badge { position: absolute; top: 20px; right: 20px; background: rgba(10, 15, 29, 0.8); color: #FCD34D; padding: 6px 16px; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700; backdrop-filter: blur(8px); z-index: 10; border: 1px solid rgba(255,255,255,0.1); }
+    .branch-photo-holder { min-height: 380px; position: relative; overflow: hidden; }
+    .branch-photo-holder img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; }
+    .branch-unified-content { padding: 35px; display: flex; flex-direction: column; justify-content: space-between; }
     .branch-title { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px; }
     .branch-location-text { color: var(--brand-primary); font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
+    
     .hours-organized-box { background: var(--bg-base); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin-bottom: 20px; }
     .hours-title { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; }
     .period-line { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 0.9rem; color: var(--text-secondary); }
     .period-line strong { color: var(--text-primary); }
-    .branch-unified-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
-    .btn-branch-map, .btn-branch-wa { padding: 12px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
-    .btn-branch-map { background: var(--bg-surface); color: var(--text-primary); }
-    .btn-branch-map:hover { background: var(--brand-primary); color: var(--text-white); }
-    .btn-branch-wa { background: rgba(22, 163, 74, 0.1); color: var(--wa-green); border: 1px solid rgba(22, 163, 74, 0.2); }
-    .btn-branch-wa:hover { background: var(--wa-green); color: white; }
+    
+    .branch-unified-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }
+    .btn-branch-action { padding: 12px 10px; border-radius: var(--radius-md); font-weight: 700; font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; transition: var(--transition); border: 1px solid var(--border-subtle); background: var(--bg-surface); color: var(--text-primary); }
+    .btn-branch-action svg { width: 20px; height: 20px; }
+    .btn-branch-action.wa { background: rgba(16, 185, 129, 0.1); color: var(--wa-green); border-color: rgba(16, 185, 129, 0.2); }
+    .btn-branch-action.wa:hover { background: var(--wa-green); color: white; }
+    .btn-branch-action:hover { background: var(--brand-primary); color: white; border-color: var(--brand-primary); }
 
+    /* CTA & Footer */
     .cta-banner { background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); color: white; padding: 60px 0; text-align: center; }
     .cta-banner h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 12px; }
     .cta-banner p { font-size: 1.05rem; margin-bottom: 24px; opacity: 0.9; }
     .banner-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
     .btn-banner-wa { background: var(--wa-green); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .btn-banner-phone { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.3); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px; }
     
-    .footer { background: #0F172A; color: white; padding: 50px 0 20px 0; }
+    .footer { background: #0A0F1D; color: white; padding: 50px 0 20px 0; }
     .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding-bottom: 30px; }
     .footer h4 { font-size: 1.15rem; color: #7DD3FC; font-weight: 700; margin-bottom: 14px; }
     .footer p { color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px; }
     .footer-copy { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #64748B; font-size: 0.9rem; }
 
-    .floating-wa {
-      position: fixed; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); left: 20px;
+    /* 9. Floating Dock الموحد (WhatsApp + TikTok) لعدم المزاحمة في الجوال */
+    .nine-floating-dock {
+      position: fixed; bottom: 20px; left: 20px; z-index: 9999;
+      display: flex; align-items: center; gap: 12px; flex-direction: row-reverse;
+    }
+    .dock-tiktok-pill {
+      background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border-subtle);
+      display: flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: var(--radius-full);
+      font-weight: 700; font-size: 0.9rem; box-shadow: var(--shadow-float); transition: var(--transition); text-decoration: none;
+    }
+    .dock-tiktok-pill:hover { transform: translateY(-3px); border-color: #000; }
+    .dock-tiktok-pill svg { width: 20px; height: 20px; fill: #000; }
+    
+    .dock-wa-btn {
       width: 56px; height: 56px; background: var(--wa-green); color: var(--text-white);
       border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.4); z-index: 9999;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4); transition: transform var(--transition);
+      animation: waPulse 2s infinite; flex-shrink: 0;
     }
+    .dock-wa-btn:hover { transform: scale(1.1); animation: none; }
+    @keyframes waPulse { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); } 70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
 
+    /* استجابة الشاشات (Responsive) */
     @media (max-width: 900px) {
       .bento-hero { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
       .section-block { padding: 50px 0; }
-      .hero-banner { min-height: 70vh; padding: 40px 0 80px 0; }
-      .bento-grid, .official-pricing-grid, .services-grid, .loyalty-grid, .branch-unified-card, .footer-grid { 
-        grid-template-columns: 1fr; 
-      }
-      .tiktok-container { justify-content: center; text-align: center; flex-direction: column; }
+      .hero-banner { min-height: 70vh; padding: 40px 0 60px 0; }
+      .bento-grid, .official-pricing-grid, .loyalty-grid, .branch-unified-card, .footer-grid { grid-template-columns: 1fr; }
+      
       .official-price-card.featured { transform: scale(1); }
       .branch-photo-holder { min-height: 250px; }
-      .branch-unified-actions { grid-template-columns: 1fr; }
       .banner-actions { flex-direction: column; width: 100%; }
       .btn-banner-wa, .btn-banner-phone { width: 100%; justify-content: center; }
       .bento-card, .official-price-card, .branch-unified-content, .loyalty-pass-card { padding: 24px 20px; }
+    }
+    @media (max-width: 480px) {
+      /* إخفاء نص تيك توك والاكتفاء بالأيقونة في الشاشات الصغيرة جداً لمنع التزاحم */
+      .dock-tiktok-pill .tiktok-text { display: none; }
+      .dock-tiktok-pill { padding: 10px; border-radius: 50%; width: 44px; height: 44px; justify-content: center; }
+      .dock-tiktok-pill svg { width: 22px; height: 22px; }
+      .dock-wa-btn { width: 50px; height: 50px; }
+      .nine-floating-dock { bottom: 16px; left: 16px; }
     }
   </style>
 </head>
@@ -306,8 +335,7 @@
         <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" class="brand-logo-img" width="130" height="36" loading="eager">
       </a>
       <a href="tel:0564927977" class="header-call-btn" aria-label="اتصال هاتفي">
-        <!-- أيقونة هاتف حديثة واحترافية -->
-        <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+        <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" stroke="currentColor" fill="none">
           <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
         <span class="ltr-data" dir="ltr">056 492 7977</span>
@@ -318,6 +346,7 @@
   <main>
     <section class="hero-banner" id="hero">
       <div class="hero-bg-visual">
+        <!-- تشغيل سريع وثابت للفيديو كخلفية -->
         <video id="heroVideo" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture poster="assets/branch-hofuf.jpg.PNG" preload="auto">
           <source src="assets/hero-video.mp4.mp4" type="video/mp4">
         </video>
@@ -333,29 +362,14 @@
         <h1 class="hero-heading">غسيل باهتمام <br><span>يليق بسيارتك</span></h1>
         <p class="hero-subtext">تفاصيل النظافة تصنع الفرق. نعتني بمركبتك عبر مسارات مجهزة بأحدث المضخات ورغوة ثلجية آمنة في فرعي المبرز والهفوف.</p>
 
-        <div class="branches-quick-strip">
+        <div class="hero-branch-strip">
           <a href="#branches" onclick="switchBranchTab('mubarraz');" class="hero-branch-pill">
-            <span class="mini-badge">الفرع 1</span>
-            <span>المبرز – محاسن</span>
+            <span class="mini-badge">الفرع 1</span> <span>المبرز – محاسن</span>
           </a>
           <a href="#branches" onclick="switchBranchTab('hofuf');" class="hero-branch-pill">
-            <span class="mini-badge">الفرع 2</span>
-            <span>الهفوف – النايفية</span>
+            <span class="mini-badge">الفرع 2</span> <span>الهفوف – النايفية</span>
           </a>
         </div>
-      </div>
-    </section>
-
-    <!-- شريط تيك توك الأنيق -->
-    <section class="tiktok-strip">
-      <div class="container tiktok-container">
-        <div class="tiktok-content">
-          <svg class="svg-icon" style="color:#FFF; width:26px; height:26px;" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-          </svg>
-          <strong style="color:#FFF; font-size:1.05rem;">تابع جديدنا وعروضنا الحصرية</strong>
-        </div>
-        <a href="https://www.tiktok.com/@nine_go9?_r=1&_t=ZS-9A7VZogYGPf" target="_blank" rel="noopener" class="tiktok-btn">تابعنا على تيك توك</a>
       </div>
     </section>
 
@@ -370,7 +384,6 @@
         <div class="bento-grid">
           <div class="bento-card bento-hero">
             <div class="bento-hero-info">
-              <!-- أيقونة نجمة ساطعة تعبر عن العناية الفائقة -->
               <div class="icon-glass-box primary-glow" style="margin-bottom:16px;">
                 <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               </div>
@@ -414,7 +427,8 @@
       </div>
     </section>
 
-    <section class="section-block" id="pricing">
+    <!-- التسعير المبني على القيمة والمقاسات -->
+    <section class="section-block" id="pricing" style="background:var(--neutral-100);">
       <div class="container">
         <div class="section-title">
           <span class="title-pill">قائمة الأسعار المعتمدة</span>
@@ -422,121 +436,160 @@
         </div>
 
         <div class="official-pricing-grid">
-          <!-- تم إضافة كلاس featured لجميع البطاقات لتأخذ شكل الفخامة والوهج الأزرق -->
-          <div class="official-price-card featured">
+          
+          <!-- السيارة الصغيرة -->
+          <div class="official-price-card">
             <div>
               <span class="car-category-badge">اقتصادية</span>
               <h3 class="car-category-title">السيارة الصغيرة</h3>
-              <p class="car-service-label">غسيل شامل بشامبو وواكس فاخر</p>
-              <div><span class="pricing-points-chip" style="color:var(--text-white); background:var(--brand-primary); border-color:var(--brand-primary);">+ نقطة في بطاقة أبل</span></div>
+              <ul class="price-features-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> غسيل خارجي برغوة ثلجية</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> طبقة واكس عالمي فاخر</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> تنظيف داخلي دقيق للمقصورة</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> تلميع إطارات آمن</li>
+              </ul>
             </div>
             <div>
-              <div class="car-price-number-wrap"><span class="car-price-number">25</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977" class="btn-order-category">طلب الغسيل عبر واتساب</a>
+              <div class="car-price-number-wrap"><span class="car-price-number ltr-data">25</span><span class="car-price-currency">ر.س</span></div>
+              <a href="https://wa.me/966564927977?text=أرغب%20في%20طلب%20غسيل%20سيارة%20(صغيرة)%20بـ%2025%20ريال" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
             </div>
           </div>
 
+          <!-- السيارة المتوسطة (مميزة) -->
           <div class="official-price-card featured">
+            <div class="promo-banner">الخيار الأكثر طلباً</div>
             <div>
-              <span class="car-category-badge">الأكثر طلباً</span>
+              <span class="car-category-badge" style="background:var(--brand-primary); color:#FFF;">متوسطة وكروس أوفر</span>
               <h3 class="car-category-title">السيارة المتوسطة</h3>
-              <p class="car-service-label">غسيل شامل بشامبو وواكس فاخر</p>
-              <div><span class="pricing-points-chip" style="color:var(--text-white); background:var(--brand-primary); border-color:var(--brand-primary);">+ نقطة في بطاقة أبل</span></div>
+              <ul class="price-features-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> غسيل خارجي برغوة ثلجية</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> طبقة واكس عالمي فاخر</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> تنظيف داخلي دقيق للمقصورة</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> تلميع إطارات آمن</li>
+              </ul>
             </div>
             <div>
-              <div class="car-price-number-wrap"><span class="car-price-number">30</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977" class="btn-order-category">طلب الغسيل عبر واتساب</a>
+              <div class="car-price-number-wrap"><span class="car-price-number ltr-data">30</span><span class="car-price-currency">ر.س</span></div>
+              <a href="https://wa.me/966564927977?text=أرغب%20في%20طلب%20غسيل%20سيارة%20(متوسطة)%20بـ%2030%20ريال" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
             </div>
           </div>
 
-          <div class="official-price-card featured">
+          <!-- السيارة الكبيرة -->
+          <div class="official-price-card">
             <div>
               <span class="car-category-badge">جيوب وعائلية</span>
               <h3 class="car-category-title">السيارة الكبيرة</h3>
-              <p class="car-service-label">غسيل شامل بشامبو وواكس فاخر</p>
-              <div><span class="pricing-points-chip" style="color:var(--text-white); background:var(--brand-primary); border-color:var(--brand-primary);">+ نقطة في بطاقة أبل</span></div>
+              <ul class="price-features-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> غسيل خارجي برغوة ثلجية</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> طبقة واكس عالمي فاخر</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> تنظيف داخلي دقيق للمقصورة</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> تلميع إطارات آمن</li>
+              </ul>
             </div>
             <div>
-              <div class="car-price-number-wrap"><span class="car-price-number">35</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977" class="btn-order-category">طلب الغسيل عبر واتساب</a>
+              <div class="car-price-number-wrap"><span class="car-price-number ltr-data">35</span><span class="car-price-currency">ر.س</span></div>
+              <a href="https://wa.me/966564927977?text=أرغب%20في%20طلب%20غسيل%20سيارة%20(كبيرة)%20بـ%2035%20ريال" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- الولاء الرقمي (محفظة أبل) -->
     <section class="section-block loyalty-section">
       <div class="container">
         <div class="loyalty-grid">
           <div class="loyalty-details">
-            <span class="title-pill" style="background:rgba(255,255,255,0.8); border:none;">ميزة حصرية لعملائنا</span>
+            <span class="title-pill" style="background:var(--bg-card); border:none;">ميزة حصرية لعملائنا</span>
             <h3>اغسل 4 مرات.. <br><span>والخامسة مجاناً!</span></h3>
-            <p class="loyalty-desc">أضف بطاقة ولاء ناين قو الرقمية مباشرة إلى محفظة أبل (Apple Wallet) واجمع نقاطك بكل سهولة بدون تطبيقات معقدة.</p>
+            <p class="loyalty-desc">أضف بطاقة ولاء ناين قو الرقمية مباشرة إلى محفظة Apple Wallet واجمع نقاطك بكل سهولة بدون الحاجة لتطبيقات إضافية.</p>
             <ul class="loyalty-perks">
-              <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>محفوظة في آيفونك:</strong><span style="display:block; font-size:0.85rem; color:var(--text-secondary);">داخل تطبيق Wallet الرسمي.</span></div></li>
-              <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>تنبيه ذكي للموقع:</strong><span style="display:block; font-size:0.85rem; color:var(--text-secondary);">تظهر البطاقة تلقائياً عند اقترابك للفرع.</span></div></li>
+              <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>محفوظة في هاتفك:</strong><span style="display:block; font-size:0.85rem; color:var(--text-secondary);">تعمل مباشرة عبر تطبيق Wallet الرسمي.</span></div></li>
+              <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>تنبيه مكاني ذكي:</strong><span style="display:block; font-size:0.85rem; color:var(--text-secondary);">تظهر البطاقة تلقائياً على الشاشة عند اقترابك للفرع.</span></div></li>
             </ul>
-            <a href="https://wa.me/966564927977" class="btn-apple-wallet">أضف للمحفظة | Apple Wallet</a>
           </div>
 
           <div class="loyalty-pass-card">
             <div class="pass-header">
-              <!-- المزج البصري للشعار فوق البطاقة الداكنة لتبدو ألوانه مميزة دون خلفية بيضاء قبيحة -->
-              <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 6px 14px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; mix-blend-mode: screen;">
-                <img src="assets/logo.png.JPEG" alt="NINE GO" style="height:22px;">
+              <!-- عرض الشعار بنظام المزج الزجاجي ليتناسق مع الظلام -->
+              <div class="pass-logo-badge">
+                <img src="assets/logo.png.JPEG" alt="NINE GO" style="height:22px; mix-blend-mode: screen; filter: brightness(1.2);">
               </div>
-              <span class="pass-type-badge">بطاقة ولاء</span>
+              <span class="pass-type-badge">بطاقة ولاء العميل - الأحساء</span>
             </div>
+            
             <div class="stamps-title"><strong>أختام الغسيل</strong><span style="color:#38BDF8; font-weight:800;">4 = 1 مجاناً</span></div>
             <div class="stamps-grid">
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
-              <div class="stamp-slot gift active"><span style="font-size:1.4rem;">🎁</span></div>
+              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">1</span></div>
+              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">2</span></div>
+              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">3</span></div>
+              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">4</span></div>
+              <div class="stamp-slot gift"><span style="font-size:1.4rem;">🎁</span><span class="stamp-number">مجاناً</span></div>
             </div>
-            <div class="pass-footer-strip">
-              <span>NG-WALLET</span>
-              <span style="color:#FFFFFF; font-weight:700;">صالحة بجميع الفروع</span>
+            
+            <div class="pass-actions-wrap">
+              <a href="https://wa.me/966564927977?text=أرغب%20في%20رابط%20بطاقة%20أبل%20للولاء" target="_blank" rel="noopener" class="btn-apple-wallet">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.31-.88 3.5-.8 1.19.04 2.26.43 2.98 1.2-3.15 1.83-2.6 6.07.5 7.35-.74 1.82-1.57 3.65-2.06 4.42zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.32 2.4-1.95 4.34-3.74 4.25z"/></svg>
+                أضف إلى محفظة Apple
+              </a>
+              <button class="btn-android" onclick="alert('سيتم تزويدك بالرمز التعريفي (الباركود) عند نقطة الكاشير ليتم حفظه في هاتفك.')">أو اعرض كود الولاء (Android)</button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-block">
+    <!-- الفروع المحدثة والملاحة الذكية -->
+    <section class="section-block" id="branches">
       <div class="container">
         <div class="section-title">
           <span class="title-pill">فروع ناين قو</span>
           <h2 class="main-title">وين ما كنت.. ناين أقرب لك!</h2>
         </div>
 
-        <div class="segmented-control-wrapper">
+        <div class="branch-tabs-wrapper">
+          <div class="tab-slider slider-left" id="tabSliderIndicator"></div>
           <button type="button" class="segment-btn active" id="tabBtnMubarraz" onclick="switchBranchTab('mubarraz')">المبرز (محاسن)</button>
           <button type="button" class="segment-btn" id="tabBtnHofuf" onclick="switchBranchTab('hofuf')">الهفوف (النايفية)</button>
         </div>
 
         <div class="branch-unified-card" id="branchUnifiedCard">
+          <div class="branch-speed-badge">⚡ 15 دقيقة مسار غسيل سريع</div>
           <div class="branch-photo-holder">
             <img src="assets/branch-mubarraz.jpg.PNG" alt="فرع مغسلة ناين قو" id="branchDisplayImage" loading="lazy">
           </div>
           <div class="branch-unified-content">
             <div>
-              <div class="branch-status-badge"><span class="status-dot-pulse"></span><span id="branchStatusText">متاح وسالك الآن</span></div>
               <h3 class="branch-title" id="branchDisplayName">مغسلة ناين GO (فرع المبرز)</h3>
               <div class="branch-location-text">
                 <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                 <span id="branchDisplayAddress">المبرز – محاسن (محطة الفرسان)</span>
               </div>
+              
               <div class="hours-organized-box">
-                <div class="hours-title">أوقات العمل اليومية</div>
-                <div class="period-line"><span>الفترة الصباحية:</span><strong>8:00 ص – 1:00 م</strong></div>
-                <div class="period-line"><span>الفترة المسائية:</span><strong>3:00 م – 3:00 ص</strong></div>
+                <div class="hours-title">
+                  <svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary);" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  أوقات العمل اليومية
+                </div>
+                <div class="period-line"><span>الفترة الصباحية:</span><strong class="ltr-data">8:00 ص – 1:00 م</strong></div>
+                <div class="period-line"><span>الفترة المسائية:</span><strong class="ltr-data">3:00 م – 3:00 ص</strong></div>
               </div>
             </div>
+            
             <div class="branch-unified-actions">
-              <a href="https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic" class="btn-branch-map" id="branchMapDirectLink">موقعنا على Google map</a>
-              <a href="https://wa.me/966564927977" class="btn-branch-wa" id="branchWaDirectLink">تواصل معنا عبر واتساب</a>
+              <a href="https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic" class="btn-branch-action" id="branchMapDirectLink" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Google Maps
+              </a>
+              <!-- Waze Search Link -->
+              <a href="https://waze.com/ul?q=مغسلة%20ناين%20GO%20محاسن" class="btn-branch-action" id="branchWazeDirectLink" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M16 16v-3a4 4 0 0 0-8 0v3"/><path d="M12 12h.01"/></svg>
+                تطبيق Waze
+              </a>
+              <a href="https://wa.me/966564927977" class="btn-branch-action wa" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                واتساب
+              </a>
             </div>
           </div>
         </div>
@@ -547,7 +600,7 @@
   <section class="cta-banner">
     <div class="container">
       <h2>جاهز لتجربة غسيل استثنائية؟</h2>
-      <p>فريقنا في خدمتكم يومياً في فرعي المبرز والهفوف بأرقى المواد عالية الجودة.</p>
+      <p>فريقنا في خدمتكم يومياً في فرعي المبرز والهفوف بأرقى المواد العناية المتطورة.</p>
       <div class="banner-actions">
         <a href="https://wa.me/966564927977" class="btn-banner-wa">تواصل فوري عبر واتساب</a>
         <a href="tel:0564927977" class="btn-banner-phone"><span class="ltr-data" dir="ltr">056 492 7977</span></a>
@@ -559,17 +612,17 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <!-- المزج البصري للشعار في الفوتر -->
+          <!-- إطار الشعار الزجاجي -->
           <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 8px 16px; border-radius: 8px; display: inline-block; margin-bottom: 16px; mix-blend-mode: screen;">
             <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:26px;">
           </div>
-          <p>تجربة غسيل متطورة بأحدث المضخات وأجود مواد العناية العالمية.</p>
+          <p>تجربة غسيل متطورة بأحدث المضخات وأجود مواد العناية العالمية المعتمدة.</p>
         </div>
         <div>
           <h4>الفروع وأوقات العمل</h4>
           <p>الفرع 1: محاسن (محطة الفرسان) – المبرز</p>
           <p>الفرع 2: النايفية (طريق الأمير نايف) – الهفوف</p>
-          <p>أوقات العمل: <span style="color:var(--text-white); font-weight:700;">من 8 ص - 1 م | 3 م - 3 ص</span></p>
+          <p>أوقات العمل: <span style="color:var(--text-white); font-weight:700;" class="ltr-data">8 ص - 1 م | 3 م - 3 ص</span></p>
         </div>
         <div>
           <h4>التواصل المباشر</h4>
@@ -583,18 +636,26 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/966564927977" class="floating-wa" aria-label="واتساب"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+  <!-- Floating Dock (مدمج لتجنب المزاحمة في الجوال) -->
+  <div class="nine-floating-dock">
+    <a href="https://wa.me/966564927977" target="_blank" rel="noopener" class="dock-wa-btn" aria-label="واتساب">
+      <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@nine_go9?_r=1&_t=ZS-9A7VZogYGPf" target="_blank" rel="noopener" class="dock-tiktok-pill" aria-label="تيك توك">
+      <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+      <span class="tiktok-text">عروض تيك توك</span>
+    </a>
+  </div>
 
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+    // تشغيل الفيديو بالبث المباشر 
     document.addEventListener('DOMContentLoaded', function() {
       var heroVideo = document.getElementById('heroVideo');
       if (heroVideo) {
         heroVideo.muted = true; 
-        
         var playPromise = heroVideo.play();
-        
         if (playPromise !== undefined) {
           playPromise.catch(function(error) {
             var forcePlay = function() {
@@ -611,18 +672,21 @@
       }
     });
 
+    // بيانات الفروع التفاعلية والملاحة (Map + Waze)
     var branchData = {
       mubarraz: {
         title: 'مغسلة ناين GO (فرع المبرز)',
         address: 'المبرز – محاسن (محطة الفرسان)',
         image: 'assets/branch-mubarraz.jpg.PNG',
-        mapUrl: 'https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic'
+        mapUrl: 'https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic',
+        wazeUrl: 'https://waze.com/ul?q=محطة%20الفرسان%20المبرز'
       },
       hofuf: {
         title: 'مغسلة ناين GO (فرع الهفوف)',
         address: 'الهفوف – النايفية (طريق الأمير نايف)',
         image: 'assets/branch-hofuf.jpg.PNG',
-        mapUrl: 'https://maps.app.goo.gl/9rNaJa47Uy6F3JWRA?g_st=ic'
+        mapUrl: 'https://maps.app.goo.gl/9rNaJa47Uy6F3JWRA?g_st=ic',
+        wazeUrl: 'https://waze.com/ul?q=النايفية%20الهفوف'
       }
     };
 
@@ -630,16 +694,33 @@
       var data = branchData[branchKey];
       if (!data) return;
       
-      document.getElementById('tabBtnMubarraz').classList.toggle('active', branchKey === 'mubarraz');
-      document.getElementById('tabBtnHofuf').classList.toggle('active', branchKey === 'hofuf');
+      // تحديث مظهر الأزرار والقرص المنزلق
+      var btnMubarraz = document.getElementById('tabBtnMubarraz');
+      var btnHofuf = document.getElementById('tabBtnHofuf');
+      var slider = document.getElementById('tabSliderIndicator');
+      
+      if (branchKey === 'mubarraz') {
+        btnMubarraz.classList.add('active');
+        btnHofuf.classList.remove('active');
+        slider.className = 'tab-slider slider-left';
+      } else {
+        btnHofuf.classList.add('active');
+        btnMubarraz.classList.remove('active');
+        slider.className = 'tab-slider slider-right';
+      }
 
+      // تحديث البيانات بسلاسة (بدون وميض مزعج)
       var img = document.getElementById('branchDisplayImage');
       img.style.opacity = '0.3';
-      setTimeout(function() { img.src = data.image; img.style.opacity = '1'; }, 150);
+      setTimeout(function() { 
+        img.src = data.image; 
+        img.style.opacity = '1'; 
+      }, 150);
       
       document.getElementById('branchDisplayName').textContent = data.title;
       document.getElementById('branchDisplayAddress').textContent = data.address;
       document.getElementById('branchMapDirectLink').href = data.mapUrl;
+      document.getElementById('branchWazeDirectLink').href = data.wazeUrl;
     }
   </script>
 </body>
