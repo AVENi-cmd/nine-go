@@ -1,819 +1,886 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>مغسلة ناين قو | NINE GO CAR WASH - الأحساء</title>
-  <meta name="description" content="مغسلة ناين قو بالأحساء (فرع المبرز بمحاسن / فرع الهفوف بالنايفية). رغوة ثلجية، واكس إيطالي، وغسيل ناين الفاخر. هاتف: 0564927977">
-  
-  <meta property="og:title" content="مغسلة ناين قو | NINE GO - العناية الفائقة بسيارتك">
-  <meta property="og:description" content="واكس إيطالي فائق اللمعان، مسارات سريعة، وعناية تليق بمركبتك في الأحساء">
-  <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نايين جو - خدمة غسيل سيارات احترافية وسريعة">
+    <title>نايين جو | غسيل سيارات احترافي</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Favicon SVG المضمن مباشرة ليعمل فوراً ويدعم الوضعين الداكن والفاتح -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0F17'/%3E%3Ccircle cx='16' cy='12.5' r='5.5' stroke='%23E11D48' stroke-width='3' fill='none'/%3E%3Cpath d='M21.5 12.5V19C21.5 22.5 18.5 24.5 15 24.5C12.5 24.5 11 23.5 10.5 22.5' stroke='%23E11D48' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='16' cy='12.5' r='1.5' fill='%23FFFFFF'/%3E%3C/svg%3E">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-  <meta name="theme-color" content="#0B0F17">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        :root {
+            --primary: #FF1744;
+            --primary-dark: #D50000;
+            --dark: #1a1a1a;
+            --light: #f5f5f5;
+            --text: #333;
+            --border: #e0e0e0;
+        }
 
-  <!-- الخطوط الحديثة -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #fff;
+        }
 
-  <style>
-    /* 2026 Modern Automotive Detailing App Aesthetic */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    :root {
-      --bg-base: #0B0F17;
-      --bg-surface: #111622;
-      --bg-card: rgba(22, 27, 38, 0.75);
-      --bg-card-hover: rgba(28, 35, 49, 0.9);
-      --brand-red: #E11D48;
-      --brand-red-hover: #BE123C;
-      --brand-red-glow: rgba(225, 29, 72, 0.28);
-      --brand-red-subtle: rgba(225, 29, 72, 0.12);
-      --accent-gold: #D4AF37;
-      --wa-green: #22C55E;
-      --wa-green-hover: #16A34A;
-      --wa-green-glow: rgba(34, 197, 94, 0.25);
-      --wa-green-subtle: rgba(34, 197, 94, 0.12);
-      --text-white: #FFFFFF;
-      --text-primary: #F8FAFC;
-      --text-secondary: #94A3B8;
-      --text-muted: #64748B;
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-glass-top: rgba(255, 255, 255, 0.18);
-      --radius-sm: 10px;
-      --radius-md: 14px;
-      --radius-lg: 22px;
-      --radius-full: 9999px;
-      --shadow-md: 0 12px 30px -5px rgba(0, 0, 0, 0.5);
-      --shadow-red: 0 12px 35px -5px var(--brand-red-glow);
-      --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+        /* ===== HEADER ===== */
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
 
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-    body {
-      width: 100%; min-height: 100vh; overflow-x: hidden;
-      background-color: var(--bg-base); color: var(--text-primary);
-      font-family: 'Cairo', system-ui, sans-serif; line-height: 1.65;
-      direction: rtl; text-align: right; -webkit-font-smoothing: antialiased;
-    }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+        }
 
-    img, video { max-width: 100%; height: auto; display: block; }
-    a { text-decoration: none; color: inherit; transition: var(--transition); }
-    button { font-family: inherit; border: none; cursor: pointer; background: none; transition: var(--transition); }
-    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .ltr-data { direction: ltr !important; unicode-bidi: isolate !important; display: inline-block; font-family: system-ui, sans-serif; font-weight: 700; }
+        nav {
+            display: flex;
+            gap: 30px;
+        }
 
-    /* Icons & Glass Boxes */
-    .icon-glass-box {
-      width: 52px; height: 52px; border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass-top);
-      display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--text-white);
-    }
-    .icon-glass-box.sm { width: 40px; height: 40px; border-radius: var(--radius-sm); }
-    .icon-glass-box.red-glow { background: var(--brand-red-subtle); border-color: rgba(225, 29, 72, 0.35); color: #FF5A76; }
-    .icon-glass-box.green-glow { background: var(--wa-green-subtle); border-color: rgba(34, 197, 94, 0.35); color: var(--wa-green); }
-    .icon-glass-box.gold-glow { background: rgba(212, 175, 55, 0.12); border-color: rgba(212, 175, 55, 0.35); color: var(--accent-gold); }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
 
-    .svg-icon {
-      width: 22px; height: 22px; stroke: currentColor; stroke-width: 1.8;
-      stroke-linecap: round; stroke-linejoin: round; fill: none; display: inline-block; vertical-align: middle; flex-shrink: 0;
-    }
-    .svg-icon-sm { width: 17px; height: 17px; }
-    .svg-icon-lg { width: 28px; height: 28px; }
+        nav a:hover {
+            color: var(--primary);
+        }
 
-    .title-pill {
-      display: inline-flex; align-items: center; gap: 8px; color: #FF5A76;
-      background: var(--brand-red-subtle); border: 1px solid rgba(225, 29, 72, 0.3);
-      padding: 5px 16px; border-radius: var(--radius-full); font-size: 0.82rem; font-weight: 800; margin-bottom: 12px;
-    }
-    .section-title { text-align: center; margin-bottom: 45px; }
-    .main-title { font-size: clamp(1.85rem, 3.8vw, 2.6rem); font-weight: 900; color: var(--text-white); margin-bottom: 10px; line-height: 1.3; }
-    .sub-title { color: var(--text-secondary); font-size: 1.05rem; max-width: 620px; margin: 0 auto; line-height: 1.65; }
-    .section-block { padding: 80px 0; position: relative; }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
 
-    /* Header */
-    .site-header {
-      position: sticky; top: 0; width: 100%; background: rgba(11, 15, 23, 0.85);
-      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border-subtle); padding: 12px 0; z-index: 1000;
-    }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; }
-    .brand-logo-img { height: 40px; width: auto; max-width: 140px; object-fit: contain; }
-    .header-call-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass-top);
-      color: var(--text-white); padding: 9px 18px; border-radius: var(--radius-full); font-size: 0.9rem; font-weight: 700;
-    }
-    .header-call-btn:hover { background: var(--brand-red); border-color: var(--brand-red); transform: translateY(-2px); box-shadow: var(--shadow-red); }
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, rgba(0,0,0,0.8) 100%), 
+                        url('car-bg.jpg') center/cover no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    /* Hero */
-    .hero-banner {
-      position: relative; width: 100%; min-height: 84vh; display: flex; align-items: center;
-      padding: 60px 0 75px 0; overflow: hidden; background-color: var(--bg-base);
-    }
-    .hero-bg-visual { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
-    .hero-backdrop-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; filter: brightness(0.35) contrast(1.1); z-index: 1; }
-    .hero-bg-visual video {
-      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%;
-      z-index: 2; opacity: 0; pointer-events: none; transition: opacity 0.6s ease;
-    }
-    .hero-bg-visual video.video-active { opacity: 1; pointer-events: auto; }
-    .hero-overlay { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 3; background: linear-gradient(180deg, rgba(11, 15, 23, 0.45) 0%, rgba(11, 15, 23, 0.8) 65%, var(--bg-base) 100%); }
-    .hero-content { position: relative; z-index: 4; width: 100%; max-width: 820px; }
-    .hero-tag {
-      display: inline-flex; align-items: center; gap: 10px; background: rgba(17, 22, 34, 0.85);
-      border: 1px solid var(--border-glass-top); color: var(--text-white); padding: 8px 18px;
-      border-radius: var(--radius-full); font-size: 0.88rem; font-weight: 700; margin-bottom: 22px; backdrop-filter: blur(12px);
-    }
-    .hero-heading { font-size: clamp(2.3rem, 5.8vw, 4rem); font-weight: 900; line-height: 1.25; margin-bottom: 18px; letter-spacing: -0.5px; }
-    .hero-heading span { background: linear-gradient(135deg, #FF4D6D 0%, #E11D48 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero-subtext { font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 30px; line-height: 1.85; max-width: 680px; }
-    .hero-play-controller {
-      display: inline-flex; align-items: center; gap: 16px; background: rgba(22, 27, 38, 0.85);
-      border: 1px solid var(--border-glass-top); border-top: 1px solid rgba(255, 255, 255, 0.25);
-      padding: 10px 22px 10px 14px; border-radius: var(--radius-full); color: var(--text-white);
-      cursor: pointer; margin-bottom: 28px; box-shadow: var(--shadow-md); backdrop-filter: blur(16px);
-    }
-    .hero-play-controller:hover { transform: translateY(-2px); background: rgba(28, 35, 49, 0.95); box-shadow: var(--shadow-red); }
-    .play-icon-pulse {
-      width: 44px; height: 44px; background: var(--brand-red); border-radius: 50%; display: flex;
-      align-items: center; justify-content: center; color: var(--text-white); animation: red-pulse 2.2s infinite; flex-shrink: 0;
-    }
-    @keyframes red-pulse { 0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7); } 70% { box-shadow: 0 0 0 14px rgba(225, 29, 72, 0); } 100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); } }
-    .play-text-wrap { display: flex; flex-direction: column; text-align: right; }
-    .play-text-wrap strong { font-size: 0.95rem; font-weight: 800; color: var(--text-white); }
-    .play-text-wrap span { font-size: 0.8rem; color: var(--text-secondary); }
+        .hero-content {
+            max-width: 700px;
+            animation: slideIn 0.8s ease;
+        }
 
-    .branches-quick-strip { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-    .hero-branch-pill {
-      background: rgba(22, 27, 38, 0.75); border: 1px solid var(--border-subtle); border-top: 1px solid var(--border-glass-top);
-      border-radius: var(--radius-full); padding: 10px 18px; display: inline-flex; align-items: center; gap: 12px;
-      backdrop-filter: blur(12px); color: var(--text-white); font-size: 0.9rem; font-weight: 700;
-    }
-    .hero-branch-pill:hover { background: rgba(28, 35, 49, 0.9); transform: translateY(-2px); }
-    .hero-branch-pill .mini-badge { background: var(--brand-red-subtle); color: #FF5A76; font-size: 0.75rem; padding: 2px 8px; border-radius: var(--radius-full); font-weight: 800; }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    /* Bento Grid */
-    .bento-section { background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-    .bento-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .bento-card {
-      background: var(--bg-card); border: 1px solid var(--border-subtle); border-top: 1px solid var(--border-glass-top);
-      border-radius: var(--radius-lg); padding: 34px; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      transition: var(--transition); display: flex; flex-direction: column; justify-content: space-between;
-    }
-    .bento-card:hover { background: var(--bg-card-hover); transform: translateY(-4px); box-shadow: var(--shadow-md); }
-    .bento-hero {
-      grid-column: 1 / -1; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; align-items: center;
-      background: linear-gradient(135deg, rgba(28, 35, 49, 0.85) 0%, rgba(17, 22, 34, 0.95) 100%);
-      border: 1px solid rgba(225, 29, 72, 0.25); border-top: 1px solid rgba(255, 255, 255, 0.25);
-    }
-    .bento-hero-info h3 { font-size: clamp(1.4rem, 2.5vw, 1.85rem); font-weight: 900; color: var(--text-white); margin-bottom: 12px; }
-    .bento-hero-info p { color: var(--text-secondary); font-size: 1rem; line-height: 1.75; margin-bottom: 20px; }
-    .bento-features-list { display: flex; gap: 18px; flex-wrap: wrap; }
-    .bento-feature-item { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 700; color: var(--text-primary); }
-    .bento-hero-badge-wrap {
-      display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
-      background: rgba(11, 15, 23, 0.6); border: 1px solid var(--border-glass-top); border-radius: var(--radius-md); padding: 24px;
-    }
-    .bento-card-compact h4 { font-size: 1.3rem; font-weight: 800; color: var(--text-white); margin: 12px 0 6px 0; }
-    .bento-card-compact p { color: var(--text-secondary); font-size: 0.94rem; line-height: 1.7; }
-    .bento-tag { font-size: 0.76rem; font-weight: 800; padding: 3px 10px; border-radius: var(--radius-full); background: rgba(255, 255, 255, 0.06); color: var(--text-secondary); }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
 
-    /* Pricing */
-    .official-pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .official-price-card {
-      background: var(--bg-card); border: 1px solid var(--border-subtle); border-top: 1px solid var(--border-glass-top);
-      border-radius: var(--radius-lg); padding: 36px 26px; text-align: center; display: flex; flex-direction: column;
-      justify-content: space-between; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); transition: var(--transition);
-    }
-    .official-price-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(255, 255, 255, 0.25); }
-    .official-price-card.featured {
-      border: 1px solid rgba(225, 29, 72, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.3);
-      background: linear-gradient(180deg, rgba(28, 35, 49, 0.95) 0%, rgba(22, 27, 38, 0.8) 100%); box-shadow: var(--shadow-red);
-    }
-    .car-category-badge { display: inline-block; background: rgba(255, 255, 255, 0.08); color: var(--text-primary); font-size: 0.8rem; font-weight: 800; padding: 4px 16px; border-radius: var(--radius-full); margin-bottom: 16px; }
-    .official-price-card.featured .car-category-badge { background: var(--brand-red); color: var(--text-white); }
-    .car-category-title { font-size: 1.45rem; font-weight: 800; color: var(--text-white); margin-bottom: 6px; }
-    .car-service-label { font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 16px; }
-    .pricing-points-chip {
-      display: inline-flex; align-items: center; gap: 6px; background: var(--brand-red-subtle);
-      border: 1px solid rgba(225, 29, 72, 0.3); color: #FF5A76; font-size: 0.78rem; font-weight: 800;
-      padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: 20px;
-    }
-    .car-price-number-wrap { display: flex; align-items: baseline; justify-content: center; gap: 8px; margin-bottom: 24px; }
-    .car-price-number { font-size: 3.8rem; font-weight: 900; color: var(--text-white); line-height: 1; }
-    .car-price-currency { font-size: 1.25rem; font-weight: 800; color: var(--brand-red); }
-    .btn-order-category {
-      background: var(--brand-red); color: var(--text-white); padding: 13px 20px; border-radius: var(--radius-sm);
-      font-weight: 800; font-size: 0.94rem; display: flex; align-items: center; justify-content: center; gap: 10px;
-    }
-    .btn-order-category:hover { background: var(--brand-red-hover); transform: translateY(-2px); box-shadow: var(--shadow-red); }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
 
-    /* Loyalty Apple Wallet */
-    .loyalty-section { background: radial-gradient(circle at 80% 20%, #1A2436 0%, var(--bg-surface) 75%); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-    .loyalty-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
-    .loyalty-pass-card {
-      background: linear-gradient(145deg, #131A26 0%, #0A0D14 100%); border: 1px solid rgba(225, 29, 72, 0.3);
-      border-top: 1px solid rgba(255, 255, 255, 0.25); border-radius: var(--radius-lg); padding: 28px; box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7);
-    }
-    .pass-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed rgba(255, 255, 255, 0.12); padding-bottom: 16px; margin-bottom: 20px; }
-    .pass-type-badge { background: var(--brand-red-subtle); border: 1px solid rgba(225, 29, 72, 0.4); color: #FF5A76; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 800; }
-    .stamps-title { font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 14px; display: flex; justify-content: space-between; }
-    .stamps-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
-    .stamp-slot {
-      aspect-ratio: 1; background: var(--bg-surface); border: 2px dashed rgba(255, 255, 255, 0.15);
-      border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6px;
-    }
-    .stamp-slot.active { border-style: solid; border-color: var(--brand-red); background: var(--brand-red-subtle); }
-    .stamp-slot.gift { border-color: var(--accent-gold); background: rgba(212, 175, 55, 0.12); }
-    .stamp-slot.gift.active { background: rgba(212, 175, 55, 0.2); }
-    .stamp-number { font-size: 0.72rem; font-weight: 800; color: var(--text-muted); margin-top: 3px; }
-    .stamp-slot.active .stamp-number { color: var(--brand-red); }
-    .stamp-slot.gift .stamp-number { color: var(--accent-gold); }
-    .pass-footer-strip {
-      background: rgba(0, 0, 0, 0.45); border-radius: var(--radius-sm); padding: 12px 16px;
-      display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; color: var(--text-secondary); margin-top: 22px;
-    }
-    .loyalty-details h3 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 900; color: var(--text-white); margin-bottom: 16px; }
-    .loyalty-details h3 span { background: linear-gradient(135deg, #FF4D6D, #E11D48); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .loyalty-desc { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px; }
-    .loyalty-perks { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
-    .loyalty-perks li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; color: var(--text-primary); }
-    .btn-apple-wallet {
-      display: inline-flex; align-items: center; gap: 14px; background: #000; border: 1.5px solid rgba(255, 255, 255, 0.25);
-      color: #fff; padding: 12px 26px; border-radius: 12px; font-weight: 700;
-    }
-    .btn-apple-wallet:hover { background: #111; transform: translateY(-2px); }
+        .cta-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 16px 50px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 23, 68, 0.4);
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
 
-    /* Services */
-    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-    .service-box {
-      background: var(--bg-card); border: 1px solid var(--border-subtle); border-top: 1px solid var(--border-glass-top);
-      border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; backdrop-filter: blur(16px);
-    }
-    .service-cover { height: 220px; width: 100%; overflow: hidden; background-color: var(--bg-surface); }
-    .service-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-    .service-box:hover .service-cover img { transform: scale(1.05); }
-    .service-info { padding: 26px; display: flex; flex-direction: column; flex-grow: 1; }
-    .service-info h3 { font-size: 1.32rem; font-weight: 800; color: var(--text-white); margin-bottom: 8px; }
-    .service-info p { color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75; margin-bottom: 22px; flex-grow: 1; }
-    .service-btn {
-      display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
-      background: var(--wa-green-subtle); border: 1px solid rgba(34, 197, 94, 0.35); color: var(--wa-green);
-      padding: 12px; border-radius: var(--radius-sm); font-weight: 800; font-size: 0.94rem;
-    }
-    .service-btn:hover { background: var(--wa-green); color: var(--text-white); }
+        .cta-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 23, 68, 0.5);
+        }
 
-    /* Branches (Segmented Control & Unified Card) */
-    .branches-section { background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-    .segmented-control-wrapper {
-      max-width: 580px; margin: 0 auto 36px auto; background: rgba(11, 15, 23, 0.8);
-      border: 1px solid var(--border-glass-top); border-radius: var(--radius-full); padding: 6px; display: flex;
-    }
-    .segment-btn {
-      flex: 1; padding: 12px 20px; border-radius: var(--radius-full); font-size: 0.95rem; font-weight: 800;
-      color: var(--text-secondary); display: flex; align-items: center; justify-content: center; gap: 8px;
-    }
-    .segment-btn.active { color: var(--text-white); background: linear-gradient(135deg, rgba(225, 29, 72, 0.95), rgba(190, 18, 60, 0.95)); box-shadow: 0 4px 18px var(--brand-red-glow); }
-    .branch-unified-card {
-      background: var(--bg-card); border: 1px solid var(--border-subtle); border-top: 1px solid var(--border-glass-top);
-      border-radius: var(--radius-lg); overflow: hidden; display: grid; grid-template-columns: 1fr 1fr;
-    }
-    .branch-photo-holder { width: 100%; height: 100%; min-height: 380px; overflow: hidden; }
-    .branch-photo-holder img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; }
-    .branch-unified-content { padding: 40px; display: flex; flex-direction: column; justify-content: space-between; }
-    .branch-status-badge {
-      display: inline-flex; align-items: center; gap: 8px; background: rgba(34, 197, 94, 0.12);
-      border: 1px solid rgba(34, 197, 94, 0.35); color: var(--wa-green); font-size: 0.85rem; font-weight: 800;
-      padding: 5px 14px; border-radius: var(--radius-full); margin-bottom: 16px; width: fit-content;
-    }
-    .status-dot-pulse { width: 8px; height: 8px; background: var(--wa-green); border-radius: 50%; display: inline-block; }
-    .branch-title { font-size: 1.65rem; font-weight: 900; color: var(--text-white); margin-bottom: 6px; }
-    .branch-location-text { color: #FF5A76; font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 22px; }
-    .hours-organized-box { background: rgba(11, 15, 23, 0.6); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 22px; }
-    .hours-title { display: flex; align-items: center; gap: 8px; font-size: 0.92rem; font-weight: 800; color: var(--text-white); margin-bottom: 10px; }
-    .period-line { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 0.88rem; color: var(--text-secondary); }
-    .period-line strong { color: var(--text-white); }
-    .branch-features-strip { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; color: var(--text-secondary); font-size: 0.9rem; }
-    .branch-unified-actions { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 14px; }
-    .btn-branch-map {
-      background: var(--text-white); color: var(--bg-base); padding: 13px 20px; border-radius: var(--radius-sm);
-      font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 10px;
-    }
-    .btn-branch-wa {
-      background: var(--wa-green-subtle); border: 1px solid rgba(34, 197, 94, 0.35); color: var(--wa-green);
-      padding: 13px 20px; border-radius: var(--radius-sm); font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px;
-    }
+        .cta-primary:active {
+            transform: scale(0.98);
+        }
 
-    /* CTA & Footer */
-    .cta-banner { background: radial-gradient(circle at 50% 50%, #1A2333 0%, var(--bg-surface) 100%); border-top: 1px solid rgba(225, 29, 72, 0.3); padding: 65px 0; text-align: center; }
-    .cta-banner h2 { font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 900; color: var(--text-white); margin-bottom: 10px; }
-    .cta-banner p { color: var(--text-secondary); font-size: 1.15rem; margin-bottom: 30px; }
-    .banner-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
-    .btn-banner-wa {
-      background: var(--wa-green); color: var(--text-white); padding: 14px 30px; border-radius: var(--radius-full);
-      font-weight: 800; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px;
-    }
-    .btn-banner-phone {
-      background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass-top); color: var(--text-white);
-      padding: 14px 30px; border-radius: var(--radius-full); font-weight: 800; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px;
-    }
-    .footer { background: #070A0F; padding: 55px 0 24px 0; border-top: 1px solid var(--border-subtle); }
-    .footer-grid { display: grid; grid-template-columns: 2fr 2fr 1.5fr; gap: 36px; padding-bottom: 36px; }
-    .footer h4 { font-size: 1.15rem; color: #FF5A76; font-weight: 800; margin-bottom: 14px; }
-    .footer p { color: var(--text-secondary); font-size: 0.94rem; margin-bottom: 10px; }
-    .footer-copy { border-top: 1px solid var(--border-subtle); padding-top: 24px; text-align: center; color: var(--text-muted); font-size: 0.88rem; }
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px;
+                min-height: 400px;
+            }
 
-    .floating-wa {
-      position: fixed; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); left: 24px;
-      width: 58px; height: 58px; background: var(--wa-green); color: var(--text-white);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 10px 30px var(--wa-green-glow); z-index: 9999;
-    }
+            .hero h1 {
+                font-size: 32px;
+            }
 
-    /* Responsive */
-    @media (max-width: 992px) {
-      .bento-grid, .official-pricing-grid, .services-grid, .branch-unified-card, .footer-grid, .loyalty-grid { grid-template-columns: 1fr; }
-      .bento-hero { grid-template-columns: 1fr; }
-      .branch-photo-holder { min-height: 250px; }
-    }
-    @media (max-width: 768px) {
-      .container { padding: 0 16px !important; }
-      .section-block { padding: 44px 0 !important; }
-      .section-title { margin-bottom: 26px !important; }
-      .main-title { font-size: 1.65rem !important; }
-      .hero-banner { min-height: auto !important; padding: 28px 0 38px 0 !important; }
-      .hero-heading { font-size: 2rem !important; }
-      .hero-subtext { font-size: 0.94rem !important; }
-      .hero-play-controller { width: 100% !important; padding: 10px 16px !important; }
-      .bento-card { padding: 22px 18px !important; }
-      .official-price-card { padding: 22px 18px !important; }
-      .car-price-number { font-size: 3rem !important; }
-      .branch-unified-content { padding: 22px 18px !important; }
-      .branch-unified-actions { grid-template-columns: 1fr !important; }
-      .loyalty-section { padding: 40px 0 !important; }
-      .loyalty-pass-card { padding: 20px 16px !important; }
-      .stamps-grid { gap: 6px !important; }
-      .banner-actions { flex-direction: column !important; }
-      .btn-banner-wa, .btn-banner-phone { width: 100% !important; justify-content: center !important; }
-      .floating-wa { bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important; left: 16px !important; width: 52px !important; height: 52px !important; }
-    }
-  </style>
+            .hero p {
+                font-size: 16px;
+            }
+        }
+
+        /* ===== BOOKING FORM ===== */
+        .booking-section {
+            background: var(--light);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .booking-section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .booking-form button {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .booking-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 23, 68, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .booking-form {
+                padding: 25px;
+            }
+        }
+
+        /* ===== BRANCHES SECTION ===== */
+        .branches-section {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dark);
+        }
+
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .branch-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            text-align: right;
+        }
+
+        .branch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        }
+
+        .branch-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .branch-card p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .branch-card p icon {
+            color: var(--primary);
+            font-size: 18px;
+        }
+
+        .branch-link {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .branch-link:hover {
+            color: var(--primary-dark);
+        }
+
+        /* ===== FEATURES SECTION ===== */
+        .features-section {
+            background: var(--dark);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            opacity: 0.9;
+            font-size: 15px;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services-section {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            border-right: 4px solid var(--primary);
+            text-align: right;
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .service-card ul {
+            list-style: none;
+        }
+
+        .service-card li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .service-card li:before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* ===== PRICING SECTION ===== */
+        .pricing-section {
+            padding: 60px 20px;
+            background: var(--light);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .price-card.featured {
+            border: 3px solid var(--primary);
+            transform: scale(1.05);
+        }
+
+        .price-card:hover {
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        }
+
+        .price-card h3 {
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .price-card .price {
+            font-size: 32px;
+            color: var(--primary);
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .price-card ul {
+            list-style: none;
+            text-align: right;
+            margin: 20px 0;
+        }
+
+        .price-card li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .price-card li:before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .price-card .cta-primary {
+            margin-top: 20px;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-section {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: right;
+        }
+
+        .testimonial-card .stars {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .testimonial-card p {
+            margin-bottom: 15px;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .testimonial-card .author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            background: linear-gradient(135deg, var(--dark), rgba(0,0,0,0.9));
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-btn {
+            padding: 14px 30px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* ===== FLOATING WHATSAPP BUTTON ===== */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .contact-btn {
+                width: 100%;
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 10px 0;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* ===== UTILITIES ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .success-message {
+            display: none;
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .error-message {
+            display: none;
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- الشريط العلوي الثابت -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand-link" aria-label="الرئيسية - مغسلة ناين قو">
-        <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو بالأحساء" class="brand-logo-img" width="140" height="40" loading="eager" decoding="async">
-      </a>
-      <a href="tel:0564927977" class="header-call-btn" aria-label="اتصال هاتفي سريع">
-        <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span class="ltr-data" dir="ltr">056 492 7977</span>
-      </a>
-    </div>
-  </header>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="logo">🚗 NINE GO</div>
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#branches">الفروع</a>
+            <a href="#services">الخدمات</a>
+            <a href="#pricing">الأسعار</a>
+            <a href="#contact">اتصل بنا</a>
+        </nav>
+    </header>
 
-  <main>
-    <!-- واجهة الهيرو -->
-    <section class="hero-banner" id="hero">
-      <div class="hero-bg-visual">
-        <img src="assets/branch-hofuf.jpg.PNG" alt="فرع الهفوف - مغسلة ناين قو" class="hero-backdrop-img" id="heroBackdropImg" loading="eager" decoding="async">
-        <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="auto">
-          <source src="assets/hero-video.mp4%20.MP4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-      </div>
-
-      <div class="container hero-content">
-        <div class="hero-tag">
-          <svg class="svg-icon svg-icon-sm" style="color:var(--brand-red);" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-          <span>الأحساء: وين ما كنت.. ناين أقرب لك!</span>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>غسيل احترافي لسيارتك في 15 دقيقة</h1>
+            <p>معايير 100% | شامبو وواكس مدرب | معاملة ملكية</p>
+            <button class="cta-primary" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">
+                احجز الآن
+            </button>
         </div>
-
-        <h1 class="hero-heading">غسيل باهتمام <br><span>يليق بسيارتك</span></h1>
-        <p class="hero-subtext">تفاصيل النظافة تصنع الفرق. نعتني بمركبتك عبر مسارات مجهزة بأحدث المضخات ورغوة ثلجية آمنة في فرعي المبرز والهفوف.</p>
-
-        <div>
-          <button type="button" id="toggleHeroVideoBtn" class="hero-play-controller" aria-label="تشغيل مقطع الغسيل الحي">
-            <div class="play-icon-pulse" id="playIconPulse">
-              <svg id="playIconSvg" class="svg-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </div>
-            <div class="play-text-wrap">
-              <strong id="playBtnHeading">تشغيل مقطع الغسيل الحي</strong>
-              <span id="playBtnSub">اضغط للمشاهدة فوق صورة فرع الهفوف</span>
-            </div>
-          </button>
-        </div>
-
-        <div class="branches-quick-strip">
-          <a href="#branches" onclick="switchBranchTab('mubarraz');" class="hero-branch-pill">
-            <span class="mini-badge">الفرع 1</span>
-            <span>المبرز – محاسن</span>
-            <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-          </a>
-          <a href="#branches" onclick="switchBranchTab('hofuf');" class="hero-branch-pill">
-            <span class="mini-badge">الفرع 2</span>
-            <span>الهفوف – النايفية</span>
-            <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-          </a>
-        </div>
-      </div>
     </section>
 
-    <!-- قسم بينتو جريد -->
-    <section class="section-block bento-section" id="features">
-      <div class="container">
-        <div class="section-title">
-          <span class="title-pill">هندسة العناية الفائقة</span>
-          <h2 class="main-title">لماذا ناين قو هي خيارك الأول؟</h2>
-          <p class="sub-title">نجمع بين تقنيات المواد الإيطالية الفاخرة وسرعة الخدمة المتقنة</p>
-        </div>
-
-        <div class="bento-grid">
-          <div class="bento-card bento-hero">
-            <div class="bento-hero-info">
-              <div class="icon-glass-box red-glow" style="margin-bottom:16px;">
-                <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
-              </div>
-              <h3>تقنية الرغوة الثلجية والواكس الإيطالي لحماية النانو سيراميك</h3>
-              <p>نستخدم تركيبة شامبو وواكس إيطالية معتمدة تنتج رغوة ثلجية كثيفة تعزل ذرات الغبار والأتربة عن الطلاء قبل ملامسته، مع حماية فائقة لطبقات النانو سيراميك وطرد دائم لمياه الأمطار.</p>
-              <div class="bento-features-list">
-                <div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-red);" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>عزل جزيئات الغبار بنعومة</span></div>
-                <div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-red);" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>لمعان زجاجي عميق للطلاء</span></div>
-                <div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-red);" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>آمن 100% على النانو سيراميك</span></div>
-              </div>
-            </div>
-            <div class="bento-hero-badge-wrap">
-              <div class="icon-glass-box gold-glow"><svg class="svg-icon" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
-              <strong>معايير إيطالية 100%</strong><span>حماية ولمعان يدوم لأيام</span>
-            </div>
-          </div>
-
-          <div class="bento-card bento-card-compact">
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-              <div class="icon-glass-box"><svg class="svg-icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-              <span class="bento-tag">15 دقيقة فقط</span>
-            </div>
-            <div>
-              <h4>مسار سريع وبدون هدر لوقتك</h4>
-              <p>مسارات مدروسة وفريق عمل مدرب لإنهاء غسيل سيارتك بدقة متناهية خلال 15 دقيقة لتنطلق براحة واطمئنان.</p>
-            </div>
-          </div>
-
-          <div class="bento-card bento-card-compact">
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-              <div class="icon-glass-box"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg></div>
-              <span class="bento-tag">1200 GSM مايكروفايبر</span>
-            </div>
-            <div>
-              <h4>تجفيف يدوي ناعم بدون خدوش</h4>
-              <p>مناشف مايكروفايبر فائقة الكثافة والنعومة مخصصة للبودي وأخرى للجنوط تضمن تجفيفاً زجاجياً بدون دوائر الغسيل.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- قسم الأسعار -->
-    <section class="section-block" id="pricing">
-      <div class="container">
-        <div class="section-title">
-          <span class="title-pill">قائمة الأسعار المعتمدة</span>
-          <h2 class="main-title">غسيل داخلي وخارجي مع شامبو وواكس</h2>
-          <p class="sub-title">تسعيرة واضحة وثابتة حسب فئة وحجم سيارتك</p>
-        </div>
-
-        <div class="official-pricing-grid">
-          <!-- 1. صغيرة -->
-          <div class="official-price-card">
-            <div>
-              <span class="car-category-badge">اقتصادية</span>
-              <h3 class="car-category-title">السيارة الصغيرة</h3>
-              <p class="car-service-label">غسيل داخلي وخارجي مع شامبو وواكس إيطالي</p>
-              <div><span class="pricing-points-chip"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>+ نقطة في بطاقة أبل للمجانية</span></div>
-            </div>
-            <div>
-              <div class="car-price-number-wrap"><span class="car-price-number">25</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%BA%D8%B3%D9%8A%D9%84%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20%D8%B5%D8%BA%D9%8A%D8%B1%D8%A9%20(25%20%D8%B1.%D8%B3)%20%D8%AF%D8%A7%D8%AE%D9%84%D9%8A%20%D9%88%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A" target="_blank" rel="noopener" class="btn-order-category">طلب الغسيل عبر واتساب</a>
-            </div>
-          </div>
-
-          <!-- 2. متوسطة -->
-          <div class="official-price-card featured">
-            <div>
-              <span class="car-category-badge">الأكثر طلباً</span>
-              <h3 class="car-category-title">السيارة المتوسطة</h3>
-              <p class="car-service-label">غسيل داخلي وخارجي مع شامبو وواكس إيطالي</p>
-              <div><span class="pricing-points-chip"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>+ نقطة في بطاقة أبل للمجانية</span></div>
-            </div>
-            <div>
-              <div class="car-price-number-wrap"><span class="car-price-number">30</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%BA%D8%B3%D9%8A%D9%84%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20%D9%85%D8%AA%D9%88%D8%B3%D8%B7%D8%A9%20(30%20%D8%B1.%D8%B3)%20%D8%AF%D8%A7%D8%AE%D9%84%D9%8A%20%D9%88%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A" target="_blank" rel="noopener" class="btn-order-category">طلب الغسيل عبر واتساب</a>
-            </div>
-          </div>
-
-          <!-- 3. كبيرة -->
-          <div class="official-price-card">
-            <div>
-              <span class="car-category-badge">جيوب وعائلية</span>
-              <h3 class="car-category-title">السيارة الكبيرة</h3>
-              <p class="car-service-label">غسيل داخلي وخارجي مع شامبو وواكس إيطالي</p>
-              <div><span class="pricing-points-chip"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>+ نقطة في بطاقة أبل للمجانية</span></div>
-            </div>
-            <div>
-              <div class="car-price-number-wrap"><span class="car-price-number">35</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%BA%D8%B3%D9%8A%D9%84%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20%D9%83%D8%A8%D9%8A%D8%B1%D8%A9%20(35%20%D8%B1.%D8%B3)%20%D8%AF%D8%A7%D8%AE%D9%84%D9%8A%20%D9%88%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A" target="_blank" rel="noopener" class="btn-order-category">طلب الغسيل عبر واتساب</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- قسم بطاقة ولاء أبل -->
-    <section class="section-block loyalty-section" id="loyalty-pass">
-      <div class="container">
-        <div class="loyalty-grid">
-          <div class="loyalty-details">
-            <span class="title-pill">ميزة حصرية لعملاء ناين قو</span>
-            <h3>اغسل 4 مرات.. <span>والخامسة مجاناً!</span></h3>
-            <p class="loyalty-desc">بدون تطبيقات معقدة ولا كروت ورقية تضيع في السيارة! أضف بطاقة ولاء ناين قو الرقمية مباشرة إلى محفظة أبل (Apple Wallet) بجانب بطاقات الدفع ومدى في <strong>آيفونك</strong>، واجمع نقاطك مع كل غسلة.</p>
-            <ul class="loyalty-perks">
-              <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>محفوظة في آيفونك بدون أي تطبيق:</strong><span style="color:var(--text-secondary); display:block; font-size:0.88rem;">تنزل بضغطة زر واحدة داخل تطبيق Wallet الرسمي للآيفون بجانب بطاقات البنك.</span></div></li>
-              <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>تنبيه ذكي على شاشة القفل:</strong><span style="color:var(--text-secondary); display:block; font-size:0.88rem;">تظهر البطاقة تلقائياً عند اقترابك من فرع المبرز (محاسن) أو فرع الهفوف (النايفية).</span></div></li>
-              <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>ختم رقمي فوري عند الكاشير:</strong><span style="color:var(--text-secondary); display:block; font-size:0.88rem;">يمسح الكاشير الباركود بثانية واحدة، وعند الختم الرابع تصبح الغسلة الخامسة مجانية 100%.</span></div></li>
-            </ul>
-            <div>
-              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AA%D9%81%D8%B9%D9%8A%D9%84%20%D8%A8%D8%B7%D8%A7%D9%82%D8%A9%20%D9%88%D9%84%D8%A7%D8%A1%20%D9%86%D8%A7%D9%8A%D9%86%20%D9%82%D9%88%20%D9%81%D9%8A%20%D9%85%D8%AD%D9%81%D8%B8%D8%A9%20%D8%A3%D8%A8%D9%84%20(4%20%D8%BA%D8%B3%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D8%A7%D9%8B)" target="_blank" rel="noopener" class="btn-apple-wallet">Add to Apple Wallet | أضف للمحفظة</a>
-              <span style="display:block; font-size:0.8rem; color:var(--text-muted); margin-top:8px;">* بمجرد إحضار الرابط من الكاشير ستُحمّل البطاقة بلمسة واحدة.</span>
-            </div>
-          </div>
-
-          <div class="loyalty-pass-card">
-            <div class="pass-header">
-              <img src="assets/logo.png.JPEG" alt="NINE GO" style="height:32px; width:auto;">
-              <span class="pass-type-badge">بطاقة ولاء رقمية</span>
-            </div>
-            <div class="stamps-title"><strong>أختام الغسيل المكتملة</strong><span style="color:var(--brand-red); font-weight:800;">4 غسلات = 1 مجاناً</span></div>
-            <div class="stamps-grid">
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-red);" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">غسلة 1</span></div>
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-red);" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">غسلة 2</span></div>
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-red);" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">غسلة 3</span></div>
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-red);" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">غسلة 4</span></div>
-              <div class="stamp-slot gift active"><span style="font-size:1.3rem;">🎁</span><span class="stamp-number">مجاناً!</span></div>
-            </div>
-            <div class="pass-footer-strip">
-              <span>NG-WALLET-PASS</span>
-              <span style="color:var(--text-white); font-weight:700;">صالحة بفرعي المبرز والهفوف</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- قسم الخدمات -->
-    <section class="section-block" id="services" style="background:var(--bg-surface);">
-      <div class="container">
-        <div class="section-title">
-          <span class="title-pill">خدماتنا المتخصصة</span>
-          <h2 class="main-title">العناية المتكاملة لسيارتك</h2>
-          <p class="sub-title">نظافة تفاصيل تعيد لسيارتك بريق الوكالة بأعلى المعايير</p>
-        </div>
-
-        <div class="services-grid">
-          <div class="service-box">
-            <div class="service-cover"><img src="assets/classic-carjpg.PNG" onerror="this.onerror=null; this.src='assets/classic-car.jpg.PNG';" alt="عناية السيارات الخاصة والكلاسيكية" style="object-position:center 85%;" loading="lazy" decoding="async"></div>
-            <div class="service-info">
-              <h3>عناية السيارات الخاصة والكلاسيكية</h3>
-              <p>مسارات وتجهيزات إضاءة متطورة وعناية دقيقة مخصصة للسيارات الكلاسيكية والرياضية لحماية طلائها النادر وبريقها الفاخر.</p>
-              <a href="https://wa.me/966564927977?text=%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%B9%D9%86%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9%20%D9%88%D8%A7%D9%84%D9%83%D9%84%D8%A7%D8%B3%D9%8A%D9%83%D9%8A%D8%A9" target="_blank" rel="noopener" class="service-btn">استفسار عبر واتساب</a>
-            </div>
-          </div>
-
-          <div class="service-box">
-            <div class="service-cover"><img src="assets/royal-wash.jpg.PNG" alt="غسيل ناين الفاخر المتكامل" loading="lazy" decoding="async"></div>
-            <div class="service-info">
-              <h3>غسيل ناين الفاخر المتكامل</h3>
-              <p>عناية استثنائية تعيد لسيارتك هيبة الوكالة. اهتمام بأدق التفاصيل والزوايا، ومسح عميق للديكورات والفرش بأرقى المواد الآمنة مع تعطير يدوم ونظافة تعكس فخامة مركبتك.</p>
-              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%BA%D8%B3%D9%8A%D9%84%20%D9%86%D8%A7%D9%8A%D9%86%20%D8%A7%D9%84%D9%81%D8%A7%D8%AE%D8%B1" target="_blank" rel="noopener" class="service-btn">طلب الغسيل الفاخر</a>
-            </div>
-          </div>
-
-          <div class="service-box">
-            <div class="service-cover"><img src="assets/branch-mubarraz.jpg.PNG" onerror="this.onerror=null; this.src='assets/royal-wash.jpg.PNG';" alt="غسيل واكس وحماية الطلاء" loading="lazy" decoding="async"></div>
-            <div class="service-info">
-              <h3>غسيل واكس وحماية الطلاء</h3>
-              <p>غسيل فاخر برغوة الواكس المزدوجة يمنح طلاء سيارتك ملمساً زجاجياً فائق النعومة، مع لمعان عميق وخاصية طرد مياه الأمطار والأتربة لحماية تدوم.</p>
-              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%BA%D8%B3%D9%8A%D9%84%20%D9%88%D8%A7%D9%83%D8%B3" target="_blank" rel="noopener" class="service-btn">حجز غسيل واكس</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- قسم الفروع بشريط iOS الكبسولي والكرت الفسيح -->
-    <section class="section-block branches-section" id="branches">
-      <div class="container">
-        <div class="section-title">
-          <span class="title-pill">فروع ناين قو</span>
-          <h2 class="main-title">وين ما كنت.. ناين أقرب لك!</h2>
-          <p class="sub-title">اختر الفرع الأقرب إليك واستعرض حالة المسار والموقع المباشر</p>
-        </div>
-
-        <div class="segmented-control-wrapper" role="tablist">
-          <button type="button" class="segment-btn active" id="tabBtnMubarraz" onclick="switchBranchTab('mubarraz')">
-            <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>فرع المبرز (محاسن)</span>
-          </button>
-          <button type="button" class="segment-btn" id="tabBtnHofuf" onclick="switchBranchTab('hofuf')">
-            <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>فرع الهفوف (النايفية)</span>
-          </button>
-        </div>
-
-        <div class="branch-unified-card" id="branchUnifiedCard">
-          <div class="branch-photo-holder">
-            <img src="assets/branch-mubarraz.jpg.PNG" alt="فرع مغسلة ناين قو" id="branchDisplayImage" loading="lazy" decoding="async">
-          </div>
-          <div class="branch-unified-content">
-            <div>
-              <div class="branch-status-badge">
-                <span class="status-dot-pulse"></span>
-                <span id="branchStatusText">المسارات متاحة وسالكة الآن</span>
-              </div>
-              <h3 class="branch-title" id="branchDisplayName">مغسلة ناين GO (فرع المبرز)</h3>
-              <div class="branch-location-text">
-                <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span id="branchDisplayAddress">المبرز – محاسن (محطة الفرسان)</span>
-              </div>
-              <div class="hours-organized-box">
-                <div class="hours-title">
-                  <svg class="svg-icon svg-icon-sm" style="color:var(--brand-red);" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  <span>أوقات العمل اليومية المنظمة</span>
+    <!-- ===== BOOKING SECTION ===== -->
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <h2>احجز خدمتك الآن</h2>
+            <div class="booking-form">
+                <div class="success-message" id="successMessage">
+                    ✓ تم استقبال حجزك بنجاح! سيتم التواصل معك قريباً
                 </div>
-                <div class="period-line"><span>الفترة الصباحية:</span><strong>8:00 ص – 1:00 م</strong></div>
-                <div class="period-line"><span>الفترة المسائية:</span><strong>3:00 م – 3:00 ص</strong></div>
-              </div>
-              <div class="branch-features-strip">
-                <svg class="svg-icon svg-icon-sm" style="color:var(--brand-red);" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-                <span id="branchFeatureExtra">مسارات إضاءة ليد ذكية ومجهزة بالكامل</span>
-              </div>
+                <div class="error-message" id="errorMessage">
+                    ⚠ يرجى ملء جميع الحقول
+                </div>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone" placeholder="5xxxxxxxxxx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">اختر الخدمة</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- اختر الخدمة --</option>
+                            <option value="basic">غسيل عادي - 25 ريال</option>
+                            <option value="deluxe">غسيل ديلوكس + واكس - 50 ريال</option>
+                            <option value="premium">غسيل شامل + عناية داخلية - 75 ريال</option>
+                            <option value="package">باقة 4 غسيل + الخامسة مجاني - 100 ريال</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="branch">اختر الفرع</label>
+                        <select id="branch" name="branch" required>
+                            <option value="">-- اختر الفرع --</option>
+                            <option value="downtown">الفرع الرئيسي - وسط البلد</option>
+                            <option value="north">فرع الشمال</option>
+                            <option value="south">فرع الجنوب</option>
+                            <option value="west">فرع الغرب</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">تأكيد الحجز</button>
+                </form>
             </div>
-            <div class="branch-unified-actions">
-              <a href="https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic" target="_blank" rel="noopener" class="btn-branch-map" id="branchMapDirectLink">
-                <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                <span>فتح الموقع في خرائط Google</span>
-              </a>
-              <a href="https://wa.me/966564927977?text=%D8%A3%D9%86%D8%A7%20%D9%85%D8%AA%D9%88%D8%AC%D9%87%20%D8%A5%D9%84%D9%89%20%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D9%85%D8%A8%D8%B1%D8%B2%20(%D9%85%D8%AD%D8%A7%D8%B3%D9%86)" target="_blank" rel="noopener" class="btn-branch-wa" id="branchWaDirectLink">
-                <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                <span>واتساب الفرع</span>
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- البانر الختامي -->
-    <section class="cta-banner">
-      <div class="container">
-        <h2>جاهز لتجربة غسيل استثنائية؟</h2>
-        <p>فريقنا في خدمتكم يومياً في فرعي المبرز والهفوف بأرقى المواد الإيطالية</p>
-        <div class="banner-actions">
-          <a href="https://wa.me/966564927977" target="_blank" rel="noopener" class="btn-banner-wa">تواصل فوري عبر واتساب</a>
-          <a href="tel:0564927977" class="btn-banner-phone"><span>اتصال هاتفي:</span> <span class="ltr-data" dir="ltr">056 492 7977</span></a>
+    <!-- ===== BRANCHES SECTION ===== -->
+    <section class="branches-section" id="branches">
+        <div class="container">
+            <h2 class="section-title">فروعنا</h2>
+            <div class="branches-grid">
+                <div class="branch-card">
+                    <h3>🏪 الفرع الرئيسي</h3>
+                    <p>📍 وسط البلد - شارع الملك فهد</p>
+                    <p>📞 0505555555</p>
+                    <p>⏰ السبت - الخميس: 8 صباحاً - 10 مساءً</p>
+                    <a href="https://maps.google.com" class="branch-link">عرض على الخريطة →</a>
+                </div>
+
+                <div class="branch-card">
+                    <h3>🏪 فرع الشمال</h3>
+                    <p>📍 منطقة الشمال - حي السامي</p>
+                    <p>📞 0505555556</p>
+                    <p>⏰ السبت - الخميس: 8 صباحاً - 10 مساءً</p>
+                    <a href="https://maps.google.com" class="branch-link">عرض على الخريطة →</a>
+                </div>
+
+                <div class="branch-card">
+                    <h3>🏪 فرع الجنوب</h3>
+                    <p>📍 منطقة الجنوب - حي الجامعة</p>
+                    <p>📞 0505555557</p>
+                    <p>⏰ السبت - الخميس: 8 صباحاً - 10 مساءً</p>
+                    <a href="https://maps.google.com" class="branch-link">عرض على الخريطة →</a>
+                </div>
+
+                <div class="branch-card">
+                    <h3>🏪 فرع الغرب</h3>
+                    <p>📍 منطقة الغرب - حي النوارة</p>
+                    <p>📞 0505555558</p>
+                    <p>⏰ السبت - الخميس: 8 صباحاً - 10 مساءً</p>
+                    <a href="https://maps.google.com" class="branch-link">عرض على الخريطة →</a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <!-- الفوتر -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:38px; margin-bottom:14px;">
-          <p>مغسلة سيارات رائدة بالأحساء، نقدم تجربة غسيل متطورة بأحدث المضخات وأجود مواد العناية الإيطالية لحماية طلاء سيارتك وبريقها.</p>
+    <!-- ===== FEATURES SECTION ===== -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white; margin-bottom: 50px;">لماذا تختار نايين جو؟</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>سرعة فائقة</h3>
+                    <p>غسيل احترافي في 15 دقيقة فقط</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <h3>معايير عالية</h3>
+                    <p>100% ضمان على جودة الخدمة</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">👨‍💼</div>
+                    <h3>فريق مدرب</h3>
+                    <p>متخصصون في الخدمات الاحترافية</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <h3>أسعار منافسة</h3>
+                    <p>أفضل جودة بأرخص الأسعار</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🎁</div>
+                    <h3>عروض مميزة</h3>
+                    <p>4 غسيل + الخامسة مجاني</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🌟</div>
+                    <h3>رضا العملاء</h3>
+                    <p>أكثر من 5000 عميل راضٍ</p>
+                </div>
+            </div>
         </div>
-        <div>
-          <h4>الفروع وأوقات العمل</h4>
-          <p>الفرع 1: محاسن (محطة الفرسان) – المبرز</p>
-          <p>الفرع 2: النايفية (طريق الأمير نايف) – الهفوف</p>
-          <p>أوقات العمل: <span style="color:var(--text-white); font-weight:700;">الفترة الصباحية: 8:00 ص – 1:00 م | الفترة المسائية: 3:00 م – 3:00 ص</span></p>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🚗 غسيل عادي</h3>
+                    <ul>
+                        <li>غسل خارجي كامل</li>
+                        <li>تنظيف العجلات</li>
+                        <li>تجفيف احترافي</li>
+                        <li>الوقت: 10 دقائق</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>✨ غسيل ديلوكس</h3>
+                    <ul>
+                        <li>غسل كامل بشامبو</li>
+                        <li>واكس حماية</li>
+                        <li>تنظيف العجلات</li>
+                        <li>الوقت: 15 دقيقة</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>🌟 غسيل شامل</h3>
+                    <ul>
+                        <li>غسل خارجي شامل</li>
+                        <li>تنظيف داخلي</li>
+                        <li>حماية سيراميك</li>
+                        <li>الوقت: 30 دقيقة</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>💳 باقات الاشتراك</h3>
+                    <ul>
+                        <li>4 غسيل مجدد</li>
+                        <li>الخامسة مجاني</li>
+                        <li>أولوية في الخدمة</li>
+                        <li>توفير 20%</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div>
-          <h4>التواصل المباشر</h4>
-          <p>هاتف: <span class="ltr-data" dir="ltr">056 492 7977</span></p>
-          <p>الأحساء، المملكة العربية السعودية</p>
-        </div>
-      </div>
-      <div class="footer-copy">
-        <p>© <span id="currentYear">2026</span> مغسلة ناين قو (NINE GO CAR WASH). جميع الحقوق محفوظة.</p>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <a href="https://wa.me/966564927977" target="_blank" rel="noopener" class="floating-wa" aria-label="واتساب"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+    <!-- ===== PRICING SECTION ===== -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">الأسعار</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>غسيل عادي</h3>
+                    <div class="price">25 ر.س</div>
+                    <ul>
+                        <li>غسل خارجي</li>
+                        <li>تنظيف العجلات</li>
+                        <li>10 دقائق</li>
+                    </ul>
+                    <button class="cta-primary" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">
+                        احجز الآن
+                    </button>
+                </div>
 
-  <script>
-    (function() {
-      var yr = document.getElementById('currentYear');
-      if (yr) yr.textContent = new Date().getFullYear();
-    })();
+                <div class="price-card featured">
+                    <h3>✨ غسيل ديلوكس</h3>
+                    <div class="price">50 ر.س</div>
+                    <ul>
+                        <li>غسل بشامبو</li>
+                        <li>واكس حماية</li>
+                        <li>15 دقيقة</li>
+                        <li>⭐ الأكثر طلباً</li>
+                    </ul>
+                    <button class="cta-primary" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">
+                        احجز الآن
+                    </button>
+                </div>
 
-    (function() {
-      var v = document.getElementById('heroVideo');
-      var btn = document.getElementById('toggleHeroVideoBtn');
-      var icon = document.getElementById('playIconSvg');
-      var heading = document.getElementById('playBtnHeading');
-      var sub = document.getElementById('playBtnSub');
-      if (!v || !btn) return;
-      var isPlaying = false;
-      btn.addEventListener('click', function() {
-        if (!isPlaying) {
-          v.classList.add('video-active'); v.muted = false;
-          v.play().then(function() {
-            isPlaying = true;
-            if (icon) icon.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
-            if (heading) heading.textContent = 'إيقاف المقطع مؤقتاً';
-            if (sub) sub.textContent = 'انقر للعودة لصورة فرع الهفوف';
-          }).catch(function() {
-            v.muted = true; v.play(); isPlaying = true;
-            if (icon) icon.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
-          });
-        } else {
-          v.pause(); v.classList.remove('video-active'); isPlaying = false;
-          if (icon) icon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
-          if (heading) heading.textContent = 'تشغيل مقطع الغسيل الحي';
-          if (sub) sub.textContent = 'اضغط للمشاهدة فوق صورة فرع الهفوف';
-        }
-      });
-      v.addEventListener('ended', function() {
-        v.classList.remove('video-active'); isPlaying = false;
-        if (icon) icon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
-        if (heading) heading.textContent = 'إعادة تشغيل المقطع';
-      });
-    })();
+                <div class="price-card">
+                    <h3>🌟 غسيل شامل</h3>
+                    <div class="price">75 ر.س</div>
+                    <ul>
+                        <li>غسل شامل</li>
+                        <li>تنظيف داخلي</li>
+                        <li>30 دقيقة</li>
+                    </ul>
+                    <button class="cta-primary" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">
+                        احجز الآن
+                    </button>
+                </div>
 
-    var branchData = {
-      mubarraz: {
-        title: 'مغسلة ناين GO (فرع المبرز)',
-        address: 'المبرز – محاسن (محطة الفرسان)',
-        status: 'المسارات متاحة وسالكة الآن',
-        image: 'assets/branch-mubarraz.jpg.PNG',
-        feature: 'مسارات إضاءة ليد ذكية ومجهزة بالكامل',
-        mapUrl: 'https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic',
-        waUrl: 'https://wa.me/966564927977?text=%D8%A3%D9%86%D8%A7%20%D9%85%D8%AA%D9%88%D8%AC%D9%87%20%D8%A5%D9%84%D9%89%20%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D9%85%D8%A8%D8%B1%D8%B2%20(%D9%85%D8%AD%D8%A7%D8%B3%D9%86)'
-      },
-      hofuf: {
-        title: 'مغسلة ناين GO (فرع الهفوف)',
-        address: 'الهفوف – النايفية (طريق الأمير نايف)',
-        status: 'المسارات متاحة وسالكة الآن',
-        image: 'assets/branch-hofuf.jpg.PNG',
-        feature: 'غسيل إلكتروني و مسارات مزدوجة',
-        mapUrl: 'https://maps.app.goo.gl/9rNaJa47Uy6F3JWRA?g_st=ic',
-        waUrl: 'https://wa.me/966564927977?text=%D8%A3%D9%86%D8%A7%20%D9%85%D8%AA%D9%88%D8%AC%D9%87%20%D8%A5%D9%84%D9%89%20%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D9%87%D9%81%D9%88%D9%81%20(%D8%A7%D9%84%D9%86%D8%A7%D9%8A%D9%81%D9%8A%D8%A9)'
-      }
-    };
-
-    function switchBranchTab(branchKey) {
-      var data = branchData[branchKey];
-      if (!data) return;
-      var btnM = document.getElementById('tabBtnMubarraz');
-      var btnH = document.getElementById('tabBtnHofuf');
-      var img = document.getElementById('branchDisplayImage');
-      var title = document.getElementById('branchDisplayName');
-      var address = document.getElementById('branchDisplayAddress');
-      var status = document.getElementById('branchStatusText');
-      var feature = document.getElementById('branchFeatureExtra');
-      var mapLink = document.getElementById('branchMapDirectLink');
-      var waLink = document.getElementById('branchWaDirectLink');
-
-      if (branchKey === 'mubarraz') {
-        btnM.classList.add('active'); btnH.classList.remove('active');
-      } else {
-        btnH.classList.add('active'); btnM.classList.remove('active');
-      }
-
-      if (img) {
-        img.style.opacity = '0.3';
-        setTimeout(function() { img.src = data.image; img.style.opacity = '1'; }, 150);
-      }
-      if (title) title.textContent = data.title;
-      if (address) address.textContent = data.address;
-      if (status) status.textContent = data.status;
-      if (feature) feature.textContent = data.feature;
-      if (mapLink) mapLink.href = data.mapUrl;
-      if (waLink) waLink.href = data.waUrl;
-    }
-  </script>
-</body>
-</html>
-
+                <div class="price-card featured">
+                    <h3>💳 باقة شهرية</h3>
+                    <div class="price">100 ر.س</div>
+                    <ul>
+                        <li>4 غسيل ديلوكس</li>
