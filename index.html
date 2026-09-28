@@ -124,7 +124,7 @@
       z-index: 1;
     }
 
-    /* صورة الواجهة الأساسية */
+    /* خلفية صورة البورش موجودة دائماً خلف الفيديو */
     .hero-backdrop-img {
       position: absolute;
       top: 0;
@@ -137,7 +137,7 @@
       display: block;
     }
 
-    /* الفيديو يعمل بسلاسة فوق صورة الفرع عند الضغط على زر التشغيل */
+    /* الفيديو ظاهر ويعمل مباشرة فوق الصورة */
     .hero-bg-visual video {
       position: absolute;
       top: 0;
@@ -197,7 +197,7 @@
     }
 
     .play-icon-pulse i {
-      margin-right: -2px;
+      margin-right: -2px; /* visual center */
     }
 
     @keyframes red-pulse {
@@ -273,7 +273,7 @@
     .hero-subtext {
       font-size: 1.15rem;
       color: #E2E4EB;
-      margin-bottom: 24px;
+      margin-bottom: 30px;
       line-height: 1.8;
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
     }
@@ -780,7 +780,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#hero">
-        <img src="assets/logo.png%202.JPEG" alt="مغسلة ناين قو" class="brand-logo-img" decoding="async" onerror="this.onerror=null; this.src='assets/logo.png';">
+        <img src="assets/logo.png%202.JPEG" onerror="this.onerror=null; this.src='assets/logo.png';" alt="مغسلة ناين قو" class="brand-logo-img" decoding="async">
       </a>
       <a href="tel:0564927977" class="header-call-btn">
         <i class="fa-solid fa-phone"></i>
@@ -790,12 +790,12 @@
   </header>
 
   <main>
-    <!-- واجهة الهيرو: صورة فرع الهفوف مع أيقونة تشغيل المقطع الحي -->
+    <!-- واجهة الهيرو: الفيديو مباشر ويعمل تلقائياً -->
     <section class="hero-banner" id="hero">
       <div class="hero-bg-visual">
         <!-- صورة فرع الهفوف بالواجهة كخلفية رئيسية بدلاً من صورة البورش -->
         <img src="assets/branch-2.jpg%202.PNG" alt="فرع الهفوف - مغسلة ناين قو" class="hero-backdrop-img" id="heroBackdropImg" decoding="async" onerror="this.onerror=null; this.src='assets/branch-2.jpg';">
-        <video id="heroVideo" playsinline webkit-playsinline preload="auto">
+        <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="auto">
           <source src="assets/hero-video.mp4%20.MP4" type="video/mp4">
           <source src="assets/hero-video.mp4" type="video/mp4">
         </video>
@@ -960,7 +960,7 @@
           <!-- كرت 1: السيارة الكلاسيك في المنتصف -->
           <div class="service-box">
             <div class="service-cover">
-              <img src="assets/classic-bay.jpg%202.PNG" alt="السيارة الكلاسيكية في ناين قو" class="classic-car-view" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/classic-bay.jpg';">
+              <img src="assets/classic-bay.jpg%202.PNG" onerror="this.onerror=null; this.src='assets/classic-bay.jpg';" alt="السيارة الكلاسيكية في ناين قو" class="classic-car-view" loading="lazy" decoding="async">
             </div>
             <div class="service-info">
               <h3>عناية السيارات الخاصة والكلاسيكية</h3>
@@ -974,7 +974,7 @@
           <!-- كرت 2: غسيل ناين الملوكي -->
           <div class="service-box">
             <div class="service-cover">
-              <img src="assets/hero-bg.jpg%202.PNG" alt="غسيل ناين الملوكي" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/hero-bg.jpg';">
+              <img src="assets/hero-bg.jpg%202.PNG" onerror="this.onerror=null; this.src='assets/hero-bg.jpg';" alt="غسيل ناين الملوكي" loading="lazy" decoding="async">
             </div>
             <div class="service-info">
               <h3>غسيل ناين الملوكي المتكامل</h3>
@@ -988,7 +988,7 @@
           <!-- كرت 3: غسيل واكس -->
           <div class="service-box">
             <div class="service-cover">
-              <img src="assets/branch-1.jpg%202.PNG" alt="غسيل واكس وحماية الطلاء" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/branch-1.jpg';">
+              <img src="assets/branch-1.jpg%202.PNG" onerror="this.onerror=null; this.src='assets/branch-1.jpg';" alt="غسيل واكس وحماية الطلاء" loading="lazy" decoding="async">
             </div>
             <div class="service-info">
               <h3>غسيل واكس وحماية الطلاء</h3>
@@ -1015,7 +1015,7 @@
           <!-- الفرع 1: فرع المبرز -->
           <div class="branch-card">
             <div class="branch-cover">
-              <img src="assets/branch-1.jpg%202.PNG" alt="فرع المبرز ناين GO" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/branch-1.jpg';">
+              <img src="assets/branch-1.jpg%202.PNG" onerror="this.onerror=null; this.src='assets/branch-1.jpg';" alt="فرع المبرز ناين GO" loading="lazy" decoding="async">
             </div>
             <div class="branch-content">
               <h3>الفرع 1: مغسلة ناين GO (المبرز)</h3>
@@ -1039,7 +1039,7 @@
           <!-- الفرع 2: فرع الهفوف -->
           <div class="branch-card">
             <div class="branch-cover">
-              <img src="assets/branch-2.jpg%202.PNG" alt="فرع الهفوف ناين GO" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/branch-2.jpg';">
+              <img src="assets/branch-2.jpg%202.PNG" onerror="this.onerror=null; this.src='assets/branch-2.jpg';" alt="فرع الهفوف ناين GO" loading="lazy" decoding="async">
             </div>
             <div class="branch-content">
               <h3>الفرع 2: مغسلة ناين GO (الهفوف)</h3>
@@ -1066,14 +1066,14 @@
     <!-- البانر النهائي -->
     <section class="cta-banner">
       <div class="container">
-        <h2>سيارتك تستاهل عناية ناين قو</h2>
-        <p>فريقنا بانتظارك في فرعي المبرز والهفوف لتقديم أفضل تجربة غسيل في الأحساء</p>
+        <h2>جاهز لتجربة غسيل استثنائية؟</h2>
+        <p>فريقنا في خدمتكم يومياً في فرعي المبرز والهفوف</p>
         <div class="banner-actions">
           <a href="https://wa.me/966564927977" target="_blank" class="btn-banner-wa">
-            <i class="fa-brands fa-whatsapp"></i> راسلنا عبر واتساب: <span class="phone-text">056 492 7977</span>
+            <i class="fa-brands fa-whatsapp"></i> تواصل عبر واتساب
           </a>
           <a href="tel:0564927977" class="btn-banner-phone">
-            <i class="fa-solid fa-phone"></i> اتصال مباشر: <span class="phone-text">056 492 7977</span>
+            <i class="fa-solid fa-phone"></i> <span class="phone-text">056 492 7977</span>
           </a>
         </div>
       </div>
@@ -1085,24 +1085,23 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="assets/logo.png%202.JPEG" alt="مغسلة ناين قو" class="footer-logo" onerror="this.onerror=null; this.src='assets/logo.png';">
-          <p>الأحساء 📍 وين ما كنت.. ناين أقرب لك!</p>
-          <p>سجل تجاري: 2031118858</p>
+          <img src="assets/logo.png%202.JPEG" onerror="this.onerror=null; this.src='assets/logo.png';" alt="ناين قو" class="footer-logo">
+          <p>مغسلة سيارات رائدة بالأحساء، نقدم تجربة غسيل متطورة بأحدث التقنيات وأفضل مواد العناية الإيطالية.</p>
         </div>
         <div>
-          <h4>فروعنا</h4>
-          <p><strong>الفرع 1:</strong> المبرز – محاسن محطة الفرسان</p>
-          <p><strong>الفرع 2:</strong> الهفوف – النايفية طريق الأمير نايف</p>
-          <p><strong>أوقات العمل:</strong> من 8:00 ص إلى 1:00 م / ومن 3:00 م إلى 3:00 ص</p>
+          <h4>الفروع وأوقات العمل</h4>
+          <p>فرع 1: محاسن (محطة الفرسان) - المبرز</p>
+          <p>فرع 2: النايفية (طريق الأمير نايف) - الهفوف</p>
+          <p>أوقات العمل: 8:00 ص - 1:00 م / 3:00 م - 3:00 ص</p>
         </div>
         <div>
-          <h4>خدمة العملاء</h4>
-          <p><i class="fa-solid fa-phone"></i> <a href="tel:0564927977" class="phone-text">056 492 7977</a></p>
-          <p><i class="fa-brands fa-whatsapp"></i> متاحون على الواتساب طوال اليوم</p>
+          <h4>التواصل</h4>
+          <p>هاتف: <span class="phone-text">056 492 7977</span></p>
+          <p>الأحساء، المملكة العربية السعودية</p>
         </div>
       </div>
       <div class="footer-copy">
-        <p>جميع الحقوق محفوظة &copy; مغسلة ناين قو للسيارات (NINE GO CAR WASH)</p>
+        <p>© 2026 مغسلة ناين قو (NINE GO). جميع الحقوق محفوظة.</p>
       </div>
     </div>
   </footer>
@@ -1133,34 +1132,34 @@
           if (playPromise !== undefined) {
             playPromise.then(function() {
               isPlaying = true;
-              icon.className = 'fa-solid fa-pause';
-              heading.textContent = 'إيقاف المقطع مؤقتاً';
-              sub.textContent = 'انقر للعودة لصورة فرع الهفوف';
+              if (icon) icon.className = 'fa-solid fa-pause';
+              if (heading) heading.textContent = 'إيقاف المقطع مؤقتاً';
+              if (sub) sub.textContent = 'انقر للعودة لصورة فرع الهفوف';
             }).catch(function() {
               v.muted = true;
               v.play();
               isPlaying = true;
-              icon.className = 'fa-solid fa-pause';
-              heading.textContent = 'إيقاف المقطع مؤقتاً';
-              sub.textContent = 'انقر للعودة لصورة فرع الهفوف';
+              if (icon) icon.className = 'fa-solid fa-pause';
+              if (heading) heading.textContent = 'إيقاف المقطع مؤقتاً';
+              if (sub) sub.textContent = 'انقر للعودة لصورة فرع الهفوف';
             });
           }
         } else {
           v.pause();
           v.classList.remove('video-active');
           isPlaying = false;
-          icon.className = 'fa-solid fa-play';
-          heading.textContent = 'تشغيل مقطع الغسيل الحي';
-          sub.textContent = 'اضغط للمشاهدة فوق صورة فرع الهفوف';
+          if (icon) icon.className = 'fa-solid fa-play';
+          if (heading) heading.textContent = 'تشغيل مقطع الغسيل الحي';
+          if (sub) sub.textContent = 'اضغط للمشاهدة فوق صورة فرع الهفوف';
         }
       });
 
       v.addEventListener('ended', function() {
         v.classList.remove('video-active');
         isPlaying = false;
-        icon.className = 'fa-solid fa-play';
-        heading.textContent = 'إعادة تشغيل المقطع';
-        sub.textContent = 'اضغط للمشاهدة فوق صورة فرع الهفوف';
+        if (icon) icon.className = 'fa-solid fa-play';
+        if (heading) heading.textContent = 'إعادة تشغيل المقطع';
+        if (sub) sub.textContent = 'اضغط للمشاهدة فوق صورة فرع الهفوف';
       });
     })();
   </script>
