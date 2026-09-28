@@ -6,15 +6,7 @@
   <title>مغسلة ناين قو | NINE GO CAR WASH - الأحساء</title>
   <meta name="description" content="مغسلة ناين قو بالأحساء (فرع المبرز بمحاسن / فرع الهفوف بالنايفية). غسيل واكس، غسيل ملوكي، وبخار. أوقات العمل: 8 ص - 1 م / 3 م - 3 ص. 0564927977">
 
-  <!-- التحميل المسبق الفوري للفيديو الجديد والصور -->
-  <link rel="preload" as="video" href="assets/hero-video.mp4%20.MP4" type="video/mp4">
-  <link rel="preload" as="image" href="assets/hero-bg.jpg.PNG" fetchpriority="high">
-  <link rel="preload" as="image" href="assets/logo.png%20.JPEG" fetchpriority="high">
-  <link rel="preload" as="image" href="assets/classic-bay.jpg%20.PNG" fetchpriority="high">
-  <link rel="preload" as="image" href="assets/branch-1.jpg%20.PNG">
-  <link rel="preload" as="image" href="assets/branch-2.jpg%20.PNG">
-
-  <!-- الخطوط والأيقونات -->
+  <!-- الخطوط والأيقونات السريعة -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -111,7 +103,7 @@
       font-size: 0.9rem;
     }
 
-    /* واجهة الهيرو */
+    /* واجهة الهيرو الفورية */
     .hero-banner {
       position: relative;
       width: 100%;
@@ -133,6 +125,7 @@
       background-color: #111318;
     }
 
+    /* الصورة تظهر فوراً في أول أجزاء من الثانية */
     .hero-backdrop-img {
       position: absolute;
       top: 0;
@@ -145,6 +138,7 @@
       display: block;
     }
 
+    /* الفيديو يعمل بانسيابية فوق الصورة فور جهوزيته */
     .hero-bg-visual video {
       position: absolute;
       top: 0;
@@ -155,7 +149,7 @@
       object-position: center 60%;
       z-index: 2;
       opacity: 0;
-      transition: opacity 0.5s ease-in;
+      transition: opacity 0.6s ease;
     }
 
     .hero-bg-visual video.video-active {
@@ -303,7 +297,7 @@
       color: var(--gray);
     }
 
-    /* الأقسام */
+    /* الأقسام العامة */
     .section-block {
       padding: 65px 0;
     }
@@ -330,7 +324,7 @@
       font-size: 1rem;
     }
 
-    /* لائحة الأسعار حسب فئات السيارات */
+    /* قائمة الأسعار */
     .official-pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -718,7 +712,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#hero">
-        <img src="assets/logo.png%20.JPEG" alt="مغسلة ناين قو" class="brand-logo-img" decoding="async" fetchpriority="high" onerror="this.src='https://placehold.co/140x44/0C0D11/E51E2B?text=NINE+GO'">
+        <img src="assets/logo.png%20.JPEG" alt="مغسلة ناين قو" class="brand-logo-img" decoding="async" onerror="this.src='https://placehold.co/140x44/0C0D11/E51E2B?text=NINE+GO'">
       </a>
       <a href="tel:0564927977" class="header-call-btn">
         <i class="fa-solid fa-phone"></i>
@@ -728,11 +722,11 @@
   </header>
 
   <main>
-    <!-- واجهة الهيرو: مقطع الفيديو الجديد (12 ثانية عالي الجودة) -->
+    <!-- واجهة الهيرو: عرض فوري لحظي للصورة مع تدفق خفيف للفيديو -->
     <section class="hero-banner" id="hero">
       <div class="hero-bg-visual">
-        <img src="assets/hero-bg.jpg.PNG" alt="خلفية ناين قو" class="hero-backdrop-img" decoding="async" fetchpriority="high">
-        <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="auto">
+        <img src="assets/hero-bg.jpg.PNG" alt="خلفية ناين قو" class="hero-backdrop-img" decoding="async">
+        <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="none">
           <source src="assets/hero-video.mp4%20.MP4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
@@ -883,7 +877,7 @@
           <!-- كرت 1: السيارة الكلاسيك في المنتصف -->
           <div class="service-box">
             <div class="service-cover">
-              <img src="assets/classic-bay.jpg%20.PNG" alt="السيارة الكلاسيكية في ناين قو" class="classic-car-view" decoding="async">
+              <img src="assets/classic-bay.jpg%20.PNG" alt="السيارة الكلاسيكية في ناين قو" class="classic-car-view" loading="lazy" decoding="async">
             </div>
             <div class="service-info">
               <h3>عناية السيارات الخاصة والكلاسيكية</h3>
@@ -897,7 +891,7 @@
           <!-- كرت 2: غسيل ناين الملوكي -->
           <div class="service-box">
             <div class="service-cover">
-              <img src="assets/hero-bg.jpg.PNG" alt="غسيل ناين الملوكي" decoding="async">
+              <img src="assets/hero-bg.jpg.PNG" alt="غسيل ناين الملوكي" loading="lazy" decoding="async">
             </div>
             <div class="service-info">
               <h3>غسيل ناين الملوكي المتكامل</h3>
@@ -911,7 +905,7 @@
           <!-- كرت 3: غسيل واكس -->
           <div class="service-box">
             <div class="service-cover">
-              <img src="assets/branch-1.jpg%20.PNG" alt="غسيل واكس وحماية الطلاء" decoding="async">
+              <img src="assets/branch-1.jpg%20.PNG" alt="غسيل واكس وحماية الطلاء" loading="lazy" decoding="async">
             </div>
             <div class="service-info">
               <h3>غسيل واكس وحماية الطلاء</h3>
@@ -938,7 +932,7 @@
           <!-- الفرع 1: فرع المبرز -->
           <div class="branch-card">
             <div class="branch-cover">
-              <img src="assets/branch-1.jpg%20.PNG" alt="فرع المبرز ناين GO" decoding="async">
+              <img src="assets/branch-1.jpg%20.PNG" alt="فرع المبرز ناين GO" loading="lazy" decoding="async">
             </div>
             <div class="branch-content">
               <h3>الفرع 1: مغسلة ناين GO (المبرز)</h3>
@@ -962,7 +956,7 @@
           <!-- الفرع 2: فرع الهفوف -->
           <div class="branch-card">
             <div class="branch-cover">
-              <img src="assets/branch-2.jpg%20.PNG" alt="فرع الهفوف ناين GO" decoding="async">
+              <img src="assets/branch-2.jpg%20.PNG" alt="فرع الهفوف ناين GO" loading="lazy" decoding="async">
             </div>
             <div class="branch-content">
               <h3>الفرع 2: مغسلة ناين GO (الهفوف)</h3>
@@ -1035,41 +1029,34 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- كود تشغيل الفيديو الفوري وتكراره بدون توقف وبدون شاشة سوداء -->
+  <!-- كود تشغيل الفيديو الخفيف بعد فتح الصفحة مباشرة -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('load', function() {
       var v = document.getElementById('heroVideo');
       if (v) {
+        v.preload = 'auto';
         v.muted = true;
         v.playsInline = true;
 
-        function showVideo() {
+        v.addEventListener('playing', function() {
           v.classList.add('video-active');
-        }
-
-        v.addEventListener('playing', showVideo);
-        v.addEventListener('canplay', showVideo);
-        v.addEventListener('loadeddata', showVideo);
-
-        var p = v.play();
-        if (p !== undefined) {
-          p.then(showVideo).catch(function() {
-            v.muted = true;
-            v.play().then(showVideo).catch(function() {});
-          });
-        }
+        });
 
         v.addEventListener('ended', function() {
           v.currentTime = 0;
           v.play();
         });
-      }
 
-      document.body.addEventListener('touchstart', function() {
-        if (v && v.paused) {
-          v.play().then(showVideo).catch(function() {});
-        }
-      }, { once: true });
+        setTimeout(function() {
+          var p = v.play();
+          if (p !== undefined) {
+            p.catch(function() {
+              v.muted = true;
+              v.play();
+            });
+          }
+        }, 300);
+      }
     });
   </script>
 </body>
