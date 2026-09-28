@@ -6,7 +6,7 @@
   <title>مغسلة ناين قو | NINE GO CAR WASH - الأحساء</title>
   <meta name="description" content="مغسلة ناين قو بالأحساء (فرع المبرز بمحاسن / فرع الهفوف بالنايفية). غسيل واكس، غسيل ملوكي، وبخار. أوقات العمل: 8 ص - 1 م / 3 م - 3 ص. 0564927977">
 
-  <!-- الخطوط والأيقونات السريعة -->
+  <!-- الخطوط والأيقونات -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -103,7 +103,7 @@
       font-size: 0.9rem;
     }
 
-    /* واجهة الهيرو الفورية */
+    /* واجهة الهيرو بالفيديو الحي والمباشر */
     .hero-banner {
       position: relative;
       width: 100%;
@@ -112,7 +112,7 @@
       align-items: center;
       padding: 40px 0 50px 0;
       overflow: hidden;
-      background-color: #111318;
+      background-color: #0c0d11;
     }
 
     .hero-bg-visual {
@@ -122,10 +122,9 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-      background-color: #111318;
     }
 
-    /* الصورة تظهر فوراً في أول أجزاء من الثانية */
+    /* خلفية صورة البورش موجودة دائماً خلف الفيديو */
     .hero-backdrop-img {
       position: absolute;
       top: 0;
@@ -138,7 +137,7 @@
       display: block;
     }
 
-    /* الفيديو يعمل بانسيابية فوق الصورة فور جهوزيته */
+    /* الفيديو ظاهر ويعمل مباشرة فوق الصورة */
     .hero-bg-visual video {
       position: absolute;
       top: 0;
@@ -148,12 +147,7 @@
       object-fit: cover;
       object-position: center 60%;
       z-index: 2;
-      opacity: 0;
-      transition: opacity 0.6s ease;
-    }
-
-    .hero-bg-visual video.video-active {
-      opacity: 1;
+      display: block;
     }
 
     .hero-overlay {
@@ -163,7 +157,7 @@
       width: 100%;
       height: 100%;
       z-index: 3;
-      background: linear-gradient(180deg, rgba(12, 13, 17, 0.35) 0%, rgba(12, 13, 17, 0.6) 65%, var(--dark-bg) 100%);
+      background: linear-gradient(180deg, rgba(12, 13, 17, 0.3) 0%, rgba(12, 13, 17, 0.55) 65%, var(--dark-bg) 100%);
     }
 
     .hero-content {
@@ -177,7 +171,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(12, 13, 17, 0.75);
+      background: rgba(12, 13, 17, 0.78);
       border: 1px solid var(--red);
       color: #fff;
       padding: 7px 18px;
@@ -324,7 +318,7 @@
       font-size: 1rem;
     }
 
-    /* قائمة الأسعار */
+    /* لائحة الأسعار حسب فئات السيارات */
     .official-pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -478,7 +472,7 @@
       border-color: var(--wa);
     }
 
-    /* الفروع */
+    /* الفروع: كلاهما بإطار أحمر وتوقيت العمل */
     .branches-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -722,11 +716,11 @@
   </header>
 
   <main>
-    <!-- واجهة الهيرو: عرض فوري لحظي للصورة مع تدفق خفيف للفيديو -->
+    <!-- واجهة الهيرو: الفيديو مباشر ويعمل تلقائياً -->
     <section class="hero-banner" id="hero">
       <div class="hero-bg-visual">
         <img src="assets/hero-bg.jpg.PNG" alt="خلفية ناين قو" class="hero-backdrop-img" decoding="async">
-        <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="none">
+        <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="auto">
           <source src="assets/hero-video.mp4%20.MP4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
@@ -1029,35 +1023,27 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- كود تشغيل الفيديو الخفيف بعد فتح الصفحة مباشرة -->
+  <!-- تشغيل الفيديو المباشر اللحظي -->
   <script>
-    window.addEventListener('load', function() {
+    (function() {
       var v = document.getElementById('heroVideo');
       if (v) {
-        v.preload = 'auto';
         v.muted = true;
+        v.defaultMuted = true;
         v.playsInline = true;
-
-        v.addEventListener('playing', function() {
-          v.classList.add('video-active');
-        });
-
+        var p = v.play();
+        if (p !== undefined) {
+          p.catch(function() {
+            v.muted = true;
+            v.play();
+          });
+        }
         v.addEventListener('ended', function() {
           v.currentTime = 0;
           v.play();
         });
-
-        setTimeout(function() {
-          var p = v.play();
-          if (p !== undefined) {
-            p.catch(function() {
-              v.muted = true;
-              v.play();
-            });
-          }
-        }, 300);
       }
-    });
+    })();
   </script>
 </body>
 </html>
