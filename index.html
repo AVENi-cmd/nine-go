@@ -1253,12 +1253,14 @@
       height: 32px;
     }
 
+    
     /* ==========================================================================
-       Responsive Breakpoints (Mobile First to Desktop)
+       Complete Mobile Luxury Overhaul (Max Width: 768px & 480px)
        ========================================================================== */
     @media (max-width: 992px) {
-      .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .loyalty-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
       }
       .official-pricing-grid,
       .services-grid,
@@ -1269,25 +1271,456 @@
     }
 
     @media (max-width: 768px) {
+      /* إيقاع المسافات والهيكل العام */
+      .container {
+        padding: 0 16px !important;
+      }
+
+      .section-block {
+        padding: 42px 0 !important;
+      }
+
+      .section-title {
+        margin-bottom: 24px !important;
+      }
+
+      .title-pill {
+        font-size: 0.78rem !important;
+        padding: 4px 12px !important;
+        margin-bottom: 8px !important;
+      }
+
+      .main-title {
+        font-size: 1.65rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 6px !important;
+      }
+
+      .sub-title {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+      }
+
+      /* الشريط العلوي */
+      .site-header {
+        padding: 10px 0 !important;
+      }
+
+      .brand-logo-img {
+        height: 36px !important;
+        max-width: 120px !important;
+      }
+
+      .header-call-btn {
+        padding: 8px 14px !important;
+        font-size: 0.82rem !important;
+        gap: 6px !important;
+      }
+
+      .header-call-btn .svg-icon {
+        width: 16px !important;
+        height: 16px !important;
+      }
+
+      /* واجهة الهيرو */
       .hero-banner {
-        min-height: auto;
-        padding: 35px 0 45px 0;
+        min-height: auto !important;
+        padding: 24px 0 34px 0 !important;
       }
+
+      .hero-tag {
+        font-size: 0.8rem !important;
+        padding: 6px 14px !important;
+        margin-bottom: 14px !important;
+        gap: 6px !important;
+      }
+
+      .hero-heading {
+        font-size: 2rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 12px !important;
+      }
+
+      .hero-subtext {
+        font-size: 0.94rem !important;
+        line-height: 1.65 !important;
+        margin-bottom: 20px !important;
+      }
+
+      .hero-play-controller {
+        width: 100% !important;
+        padding: 10px 16px !important;
+        margin-bottom: 22px !important;
+        justify-content: flex-start !important;
+      }
+
+      .play-icon-pulse {
+        width: 40px !important;
+        height: 40px !important;
+      }
+
+      .play-icon-pulse .svg-icon {
+        width: 20px !important;
+        height: 20px !important;
+      }
+
+      .play-text-wrap strong {
+        font-size: 0.88rem !important;
+      }
+
+      .play-text-wrap span {
+        font-size: 0.76rem !important;
+      }
+
+      /* كروت الفروع السريعة بالهيرو: جنباً إلى جنب بشكل أنيق */
       .branches-quick-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
       }
+
+      .quick-branch-item {
+        padding: 12px 10px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
+      }
+
+      .branch-meta h4 {
+        font-size: 0.88rem !important;
+        margin-bottom: 2px !important;
+      }
+
+      .branch-meta p {
+        font-size: 0.74rem !important;
+        line-height: 1.3 !important;
+      }
+
+      .map-chip {
+        padding: 6px 8px !important;
+        font-size: 0.76rem !important;
+        justify-content: center !important;
+      }
+
+      /* شريط المميزات: شبكة 2x2 ملمومة وفخمة */
+      .features-strip {
+        padding: 20px 0 !important;
+      }
+
       .features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
       }
+
+      .feature-card {
+        padding: 12px 10px !important;
+        gap: 10px !important;
+        align-items: flex-start !important;
+      }
+
+      .feature-icon-wrapper {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 8px !important;
+      }
+
+      .feature-icon-wrapper .svg-icon {
+        width: 18px !important;
+        height: 18px !important;
+      }
+
+      .feature-info strong {
+        font-size: 0.86rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 2px !important;
+      }
+
+      .feature-info span {
+        font-size: 0.74rem !important;
+        line-height: 1.3 !important;
+      }
+
+      /* كروت الأسعار */
+      .official-pricing-grid {
+        gap: 14px !important;
+      }
+
+      .official-price-card {
+        padding: 22px 18px !important;
+        border-radius: 16px !important;
+      }
+
+      .car-category-badge {
+        font-size: 0.75rem !important;
+        padding: 3px 12px !important;
+        margin-bottom: 8px !important;
+      }
+
+      .car-category-title {
+        font-size: 1.25rem !important;
+        margin-bottom: 4px !important;
+      }
+
+      .car-service-label {
+        font-size: 0.84rem !important;
+        margin-bottom: 8px !important;
+      }
+
+      .car-price-number {
+        font-size: 2.8rem !important;
+        margin-bottom: 16px !important;
+      }
+
+      .car-price-number span {
+        font-size: 1rem !important;
+      }
+
+      .btn-order-category {
+        padding: 11px !important;
+        font-size: 0.88rem !important;
+      }
+
+      /* قسم محفظة أبل */
+      .loyalty-section {
+        padding: 38px 0 !important;
+      }
+
+      .loyalty-grid {
+        gap: 24px !important;
+      }
+
+      .loyalty-details h3 {
+        font-size: 1.55rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 12px !important;
+      }
+
+      .loyalty-desc {
+        font-size: 0.92rem !important;
+        line-height: 1.65 !important;
+        margin-bottom: 18px !important;
+      }
+
+      .loyalty-perks {
+        gap: 12px !important;
+        margin-bottom: 22px !important;
+      }
+
+      .loyalty-perks li {
+        font-size: 0.88rem !important;
+        gap: 10px !important;
+      }
+
+      .perk-check {
+        width: 20px !important;
+        height: 20px !important;
+      }
+
+      .btn-apple-wallet {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 18px !important;
+        border-radius: 12px !important;
+      }
+
+      .apple-wallet-icon-svg {
+        width: 24px !important;
+        height: 24px !important;
+      }
+
+      .apple-wallet-title {
+        font-size: 0.94rem !important;
+      }
+
+      .loyalty-pass-card {
+        padding: 20px 16px !important;
+        border-radius: 18px !important;
+      }
+
+      .pass-header {
+        padding-bottom: 12px !important;
+        margin-bottom: 14px !important;
+      }
+
+      .pass-logo {
+        height: 26px !important;
+      }
+
+      .pass-type-badge {
+        font-size: 0.72rem !important;
+        padding: 3px 10px !important;
+      }
+
+      .stamps-title {
+        font-size: 0.84rem !important;
+        margin-bottom: 10px !important;
+      }
+
+      .stamps-grid {
+        gap: 6px !important;
+      }
+
+      .stamp-slot {
+        padding: 4px !important;
+        border-radius: 10px !important;
+      }
+
+      .stamp-slot .svg-icon {
+        width: 15px !important;
+        height: 15px !important;
+      }
+
+      .stamp-number {
+        font-size: 0.65rem !important;
+      }
+
+      .pass-footer-strip {
+        padding: 10px 12px !important;
+        font-size: 0.76rem !important;
+      }
+
+      /* كروت الخدمات */
+      .services-grid {
+        gap: 16px !important;
+      }
+
+      .service-box {
+        border-radius: 16px !important;
+      }
+
+      .service-cover {
+        height: 180px !important;
+      }
+
+      .service-info {
+        padding: 18px 16px !important;
+      }
+
+      .service-info h3 {
+        font-size: 1.18rem !important;
+        margin-bottom: 6px !important;
+      }
+
+      .service-info p {
+        font-size: 0.88rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 16px !important;
+      }
+
+      .service-btn {
+        padding: 11px !important;
+        font-size: 0.88rem !important;
+      }
+
+      /* قسم الفروع */
+      .branches-grid {
+        gap: 18px !important;
+      }
+
+      .branch-card {
+        border-radius: 16px !important;
+      }
+
+      .branch-cover {
+        height: 190px !important;
+      }
+
+      .branch-content {
+        padding: 20px 16px !important;
+      }
+
+      .branch-content h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 4px !important;
+      }
+
+      .branch-address {
+        font-size: 0.92rem !important;
+        margin-bottom: 14px !important;
+      }
+
+      .branch-data-list {
+        gap: 8px !important;
+        font-size: 0.86rem !important;
+        margin-bottom: 20px !important;
+      }
+
+      .branch-actions {
+        gap: 10px !important;
+      }
+
+      .btn-maps, .btn-wa {
+        padding: 11px !important;
+        font-size: 0.88rem !important;
+      }
+
+      /* البانر والفوتر */
+      .cta-banner {
+        padding: 42px 0 !important;
+      }
+
+      .cta-banner h2 {
+        font-size: 1.65rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 8px !important;
+      }
+
+      .cta-banner p {
+        font-size: 0.95rem !important;
+        margin-bottom: 24px !important;
+      }
+
       .banner-actions {
-        flex-direction: column;
+        flex-direction: column !important;
+        gap: 12px !important;
       }
+
       .btn-banner-wa,
       .btn-banner-phone {
-        width: 100%;
-        justify-content: center;
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 20px !important;
+        font-size: 0.92rem !important;
+      }
+
+      .footer {
+        padding: 38px 0 20px 0 !important;
+      }
+
+      .footer-grid {
+        gap: 24px !important;
+        padding-bottom: 24px !important;
+      }
+
+      .footer-logo {
+        max-height: 38px !important;
+      }
+
+      .footer h4 {
+        font-size: 1.05rem !important;
+        margin-bottom: 8px !important;
+      }
+
+      .footer p {
+        font-size: 0.86rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 6px !important;
+      }
+
+      /* زر واتساب العائم في الجوال: لا يحجب المحتوى */
+      .floating-wa {
+        bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+        left: 16px !important;
+        width: 52px !important;
+        height: 52px !important;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35) !important;
+      }
+
+      .floating-wa .svg-icon {
+        width: 26px !important;
+        height: 26px !important;
       }
     }
+
   </style>
 </head>
 <body>
