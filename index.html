@@ -298,7 +298,6 @@
   <main>
     <section class="hero-banner" id="hero">
       <div class="hero-bg-visual">
-        <!-- استخدام Streaming مع preload بدلاً من Blob لتشغيل فوري -->
         <video id="heroVideo" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture poster="assets/branch-hofuf.jpg.PNG" preload="auto">
           <source src="assets/hero-video.mp4.mp4" type="video/mp4">
         </video>
@@ -447,7 +446,10 @@
 
           <div class="loyalty-pass-card">
             <div class="pass-header">
-              <img src="assets/logo.png.JPEG" alt="NINE GO" style="height:28px; filter: brightness(0) invert(1);">
+              <!-- التعديل هنا: وضع الشعار في إطار أبيض أنيق لضمان بروزه وألوانه الأصلية -->
+              <div style="background: #FFFFFF; padding: 6px 14px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center;">
+                <img src="assets/logo.png.JPEG" alt="NINE GO" style="height:20px;">
+              </div>
               <span class="pass-type-badge">بطاقة ولاء</span>
             </div>
             <div class="stamps-title"><strong>أختام الغسيل</strong><span style="color:#38BDF8; font-weight:800;">4 = 1 مجاناً</span></div>
@@ -455,7 +457,7 @@
               <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
               <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
               <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
-              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3-1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
+              <div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9;" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
               <div class="stamp-slot gift active"><span style="font-size:1.4rem;">🎁</span></div>
             </div>
             <div class="pass-footer-strip">
@@ -522,7 +524,10 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:36px; margin-bottom:16px; filter: brightness(0) invert(1);">
+          <!-- التعديل هنا: وضع الشعار في إطار أبيض أنيق لضمان بروزه وألوانه الأصلية -->
+          <div style="background: #FFFFFF; padding: 8px 16px; border-radius: 12px; display: inline-block; margin-bottom: 16px;">
+            <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:26px;">
+          </div>
           <p>تجربة غسيل متطورة بأحدث المضخات وأجود مواد العناية الإيطالية.</p>
         </div>
         <div>
@@ -548,17 +553,15 @@
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // تشغيل الفيديو بالاعتماد على البث المباشر المدمج (لإنهاء التأخير)
     document.addEventListener('DOMContentLoaded', function() {
       var heroVideo = document.getElementById('heroVideo');
       if (heroVideo) {
-        heroVideo.muted = true; // التأكيد على كتم الصوت للسماح بالتشغيل التلقائي
+        heroVideo.muted = true; 
         
         var playPromise = heroVideo.play();
         
         if (playPromise !== undefined) {
           playPromise.catch(function(error) {
-            // في حال منع الآيفون للتشغيل بسبب وضع توفير الطاقة، سيتم تشغيله عند أول لمسة
             var forcePlay = function() {
               heroVideo.play();
               document.removeEventListener('touchstart', forcePlay);
