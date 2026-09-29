@@ -93,7 +93,6 @@
     .sub-title { color: var(--text-secondary); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
     .section-block { padding: 80px 0; position: relative; }
 
-    /* Header */
     .site-header {
       position: sticky; top: 0; width: 100%; background: rgba(241, 245, 249, 0.85);
       backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
@@ -110,14 +109,18 @@
     }
     .header-call-btn:hover { background: var(--brand-primary); color: var(--text-white); border-color: var(--brand-primary); }
 
-    /* Hero Banner */
     .hero-banner {
       position: relative; width: 100%; min-height: 85vh; display: flex; align-items: center;
       padding: 60px 0 80px 0; overflow: hidden;
     }
     .hero-bg-visual { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; background: var(--bg-dark); }
-    .hero-bg-visual video { width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0.6; pointer-events: none; }
-    .hero-overlay { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; background: linear-gradient(180deg, rgba(10, 15, 29, 0.5) 0%, rgba(10, 15, 29, 0.8) 70%, var(--bg-base) 100%); }
+    .hero-bg-visual video { width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; pointer-events: none; }
+    
+    /* تم إصلاح التدرج الأبيض المزعج بتعتم ثابت وراقي */
+    .hero-overlay { 
+      position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; 
+      background: rgba(10, 15, 29, 0.65); 
+    }
     
     .hero-content { position: relative; z-index: 3; width: 100%; max-width: 800px; }
     .hero-tag {
@@ -138,14 +141,12 @@
     .hero-branch-pill:hover { background: rgba(255,255,255,0.2); }
     .hero-branch-pill .mini-badge { background: var(--brand-primary); color: white; font-size: 0.75rem; padding: 2px 8px; border-radius: var(--radius-full); }
 
-    /* شريط تيك توك */
     .tiktok-strip { background: linear-gradient(90deg, #0F172A 0%, #1E293B 100%); padding: 18px 0; border-bottom: 1px solid var(--border-subtle); position: relative; z-index: 4; }
     .tiktok-container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .tiktok-content { display: flex; align-items: center; gap: 12px; }
     .tiktok-btn { background: linear-gradient(135deg, #FE2C55 0%, #E11D48 100%); color: #FFF; padding: 10px 24px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(254, 44, 85, 0.3); transition: var(--transition); }
     .tiktok-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(254, 44, 85, 0.5); }
 
-    /* Bento Grid */
     .bento-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .official-pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .loyalty-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
@@ -169,7 +170,7 @@
     .bento-card-compact p { color: var(--text-secondary); font-size: 0.95rem; }
     .bento-tag { font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); background: var(--bg-surface); color: var(--text-secondary); }
 
-    /* Pricing */
+    /* الأسعار */
     .official-price-card { padding: 30px 24px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
     .official-price-card.featured { 
       border: 2px solid var(--brand-primary); 
@@ -177,9 +178,8 @@
       box-shadow: 0 15px 35px var(--brand-glow); 
       transform: scale(1.02);
     }
-    .promo-banner { position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: var(--brand-primary); color: #FFF; padding: 4px 16px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 800; box-shadow: 0 4px 10px var(--brand-glow); }
     
-    .car-category-badge { display: inline-block; background: var(--brand-primary); color: var(--text-white); font-size: 0.85rem; font-weight: 700; padding: 4px 16px; border-radius: var(--radius-full); margin-bottom: 16px; }
+    .car-category-badge { display: inline-block; background: var(--brand-primary); color: var(--text-white); font-size: 0.85rem; font-weight: 700; padding: 6px 16px; border-radius: var(--radius-full); margin-bottom: 16px; }
     .car-category-title { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px; }
     
     .price-features-list { list-style: none; text-align: right; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; }
@@ -217,8 +217,8 @@
     .stamp-slot.active .stamp-number { color: #38BDF8; }
     .stamp-slot.gift .stamp-number { color: #FBBF24; font-size: 0.85rem; }
     
-    .pass-actions-wrap { display: flex; flex-direction: column; gap: 12px; }
-    .btn-apple-wallet { display: flex; align-items: center; justify-content: center; gap: 10px; background: #000; color: #fff; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; border: 1px solid rgba(255,255,255,0.2); transition: var(--transition); width: 100%; }
+    .pass-actions-wrap { display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 2; }
+    .btn-apple-wallet { display: flex; align-items: center; justify-content: center; gap: 10px; background: #000; color: #fff; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; border: 1px solid rgba(255,255,255,0.2); transition: var(--transition); width: 100%; text-decoration: none; }
     .btn-apple-wallet:hover { background: #111; box-shadow: 0 4px 15px rgba(255,255,255,0.1); }
     
     .loyalty-details h3 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; color: var(--text-primary); margin-bottom: 16px; }
@@ -233,7 +233,7 @@
       border: 1px solid var(--border-subtle); border-radius: var(--radius-full); 
       padding: 6px; display: flex; position: relative; box-shadow: var(--shadow-soft); 
     }
-    .segment-btn { flex: 1; padding: 12px; border-radius: var(--radius-full); font-size: 0.95rem; font-weight: 700; color: var(--text-secondary); text-align: center; position: relative; z-index: 2; transition: color 0.3s; }
+    .segment-btn { flex: 1; padding: 12px; border-radius: var(--radius-full); font-size: 0.95rem; font-weight: 700; color: var(--text-secondary); text-align: center; position: relative; z-index: 2; transition: color 0.3s; cursor: pointer; }
     .segment-btn.active { color: var(--text-white); }
     
     .tab-slider { position: absolute; top: 6px; bottom: 6px; width: calc(50% - 6px); background: var(--brand-primary); border-radius: var(--radius-full); transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1); z-index: 1; box-shadow: 0 4px 10px var(--brand-glow); }
@@ -254,7 +254,7 @@
     .period-line strong { color: var(--text-primary); }
     
     .branch-unified-actions { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 20px; }
-    .btn-branch-action { padding: 14px 10px; border-radius: var(--radius-md); font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 8px; text-align: center; transition: var(--transition); border: 1px solid var(--border-subtle); background: var(--bg-surface); color: var(--text-primary); }
+    .btn-branch-action { padding: 14px 10px; border-radius: var(--radius-md); font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 8px; text-align: center; transition: var(--transition); border: 1px solid var(--border-subtle); background: var(--bg-surface); color: var(--text-primary); text-decoration: none; }
     .btn-branch-action svg { width: 20px; height: 20px; }
     .btn-branch-action:hover { background: var(--brand-primary); color: white; border-color: var(--brand-primary); }
 
@@ -263,7 +263,8 @@
     .cta-banner h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 12px; }
     .cta-banner p { font-size: 1.05rem; margin-bottom: 24px; opacity: 0.9; }
     .banner-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
-    .btn-banner-wa { background: var(--wa-green); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    .btn-banner-wa { background: var(--wa-green); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-decoration: none; }
+    .btn-banner-phone { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.3); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
     
     .footer { background: #0A0F1D; color: white; padding: 50px 0 20px 0; }
     .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding-bottom: 30px; }
@@ -271,7 +272,7 @@
     .footer p { color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px; }
     .footer-copy { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #64748B; font-size: 0.9rem; }
 
-    /* Floating Dock (WhatsApp + TikTok) */
+    /* المنصة السفلية العائمة المنظفة */
     .nine-floating-dock {
       position: fixed; bottom: 20px; left: 20px; z-index: 9999;
       display: flex; align-items: center; gap: 12px; flex-direction: row-reverse;
@@ -288,12 +289,11 @@
       width: 56px; height: 56px; background: var(--wa-green); color: var(--text-white);
       border-radius: 50%; display: flex; align-items: center; justify-content: center;
       box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4); transition: transform var(--transition);
-      animation: waPulse 2s infinite; flex-shrink: 0;
+      animation: waPulse 2s infinite; flex-shrink: 0; text-decoration: none;
     }
     .dock-wa-btn:hover { transform: scale(1.1); animation: none; }
     @keyframes waPulse { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); } 70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
 
-    /* Responsive */
     @media (max-width: 900px) {
       .bento-hero { grid-template-columns: 1fr; }
     }
@@ -306,7 +306,7 @@
       .branch-photo-holder { min-height: 250px; }
       .tiktok-container { justify-content: center; text-align: center; flex-direction: column; }
       .banner-actions { flex-direction: column; width: 100%; }
-      .btn-banner-wa { width: 100%; justify-content: center; }
+      .btn-banner-wa, .btn-banner-phone { width: 100%; justify-content: center; }
       .bento-card, .official-price-card, .branch-unified-content, .loyalty-pass-card { padding: 24px 20px; }
     }
     @media (max-width: 480px) {
@@ -337,7 +337,9 @@
   <main>
     <section class="hero-banner" id="hero">
       <div class="hero-bg-visual">
-        <video id="heroVideo" loop muted playsinline webkit-playsinline disablePictureInPicture poster="assets/branch-hofuf.jpg.PNG"></video>
+        <video id="heroVideo" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture poster="assets/branch-hofuf.jpg.PNG" preload="auto">
+          <source src="assets/hero-video.mp4.mp4" type="video/mp4">
+        </video>
         <div class="hero-overlay"></div>
       </div>
       
@@ -361,7 +363,6 @@
       </div>
     </section>
 
-    <!-- شريط تيك توك -->
     <section class="tiktok-strip">
       <div class="container tiktok-container">
         <div class="tiktok-content">
@@ -428,7 +429,6 @@
       </div>
     </section>
 
-    <!-- الأسعار المميزة -->
     <section class="section-block" id="pricing" style="background:var(--neutral-100);">
       <div class="container">
         <div class="section-title">
@@ -451,12 +451,11 @@
             </div>
             <div>
               <div class="car-price-number-wrap"><span class="car-price-number ltr-data">25</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977?text=أرغب%20في%20طلب%20غسيل%20سيارة%20(صغيرة)%20بـ%2025%20ريال" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
+              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%BA%D8%B3%D9%8A%D9%84%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20(%D8%B5%D8%BA%D9%8A%D8%B1%D8%A9)%20%D8%A8%D9%80%2025%20%D8%B1%D9%8A%D8%A7%D9%84" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
             </div>
           </div>
 
           <div class="official-price-card featured">
-            <div class="promo-banner">الخيار الأكثر طلباً</div>
             <div>
               <span class="car-category-badge">متوسطة وكروس أوفر</span>
               <h3 class="car-category-title">السيارة المتوسطة</h3>
@@ -469,7 +468,7 @@
             </div>
             <div>
               <div class="car-price-number-wrap"><span class="car-price-number ltr-data">30</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977?text=أرغب%20في%20طلب%20غسيل%20سيارة%20(متوسطة)%20بـ%2030%20ريال" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
+              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%BA%D8%B3%D9%8A%D9%84%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20(%D9%85%D8%AA%D9%88%D8%B3%D8%B7%D8%A9)%20%D8%A8%D9%80%2030%20%D8%B1%D9%8A%D8%A7%D9%84" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
             </div>
           </div>
 
@@ -486,21 +485,20 @@
             </div>
             <div>
               <div class="car-price-number-wrap"><span class="car-price-number ltr-data">35</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977?text=أرغب%20في%20طلب%20غسيل%20سيارة%20(كبيرة)%20بـ%2035%20ريال" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
+              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%BA%D8%B3%D9%8A%D9%84%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20(%D9%83%D8%A8%D9%8A%D8%B1%D8%A9)%20%D8%A8%D9%80%2035%20%D8%B1%D9%8A%D8%A7%D9%84" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- بطاقة الولاء الأنيقة -->
     <section class="section-block loyalty-section">
       <div class="container">
         <div class="loyalty-grid">
           <div class="loyalty-details">
             <span class="title-pill" style="background:var(--bg-card); border:none;">ميزة حصرية لعملائنا</span>
             <h3>اغسل 4 مرات.. <br><span>والخامسة مجاناً!</span></h3>
-            <p class="loyalty-desc">أضف بطاقة ولاء ناين قو الرقمية مباشرة إلى محفظة Apple Wallet واجمع نقاطك بكل سهولة بدون تطبيقات إضافية.</p>
+            <p class="loyalty-desc">أضف بطاقة ولاء ناين قو الرقمية مباشرة إلى محفظة Apple Wallet واجمع نقاطك بكل سهولة بدون الحاجة لتطبيقات إضافية.</p>
             <ul class="loyalty-perks">
               <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>محفوظة في هاتفك:</strong><span style="display:block; font-size:0.85rem; color:var(--text-secondary);">تعمل مباشرة عبر تطبيق Wallet الرسمي.</span></div></li>
               <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>تنبيه مكاني ذكي:</strong><span style="display:block; font-size:0.85rem; color:var(--text-secondary);">تظهر البطاقة تلقائياً على الشاشة عند اقترابك للفرع.</span></div></li>
@@ -509,9 +507,9 @@
 
           <div class="loyalty-pass-card">
             <div class="pass-header">
-              <!-- الشعار باللون الأبيض للبطاقة الداكنة -->
-              <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 6px 14px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center;">
-                <img src="assets/logo.png.JPEG" alt="NINE GO" style="height:22px; filter: brightness(0) invert(1);">
+              <!-- عرض الشعار بإطار أسود ليحافظ على شكله وألوانه الأصلية الفاخرة بدون فلاتر -->
+              <div style="background: #000; padding: 6px 14px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
+                <img src="assets/logo.png.JPEG" alt="NINE GO" style="height:22px;">
               </div>
               <span class="pass-type-badge">بطاقة ولاء العميل - الأحساء</span>
             </div>
@@ -526,7 +524,7 @@
             </div>
             
             <div class="pass-actions-wrap">
-              <a href="https://wa.me/966564927977?text=أرغب%20في%20تفعيل%20بطاقة%20الولاء%20الرقمية%20(اغسل%204%20والخامسة%20مجاناً)" target="_blank" rel="noopener" class="btn-apple-wallet">
+              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AA%D9%81%D8%B9%D9%8A%D9%84%20%D8%A8%D8%B7%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20(%D8%A7%D8%BA%D8%B3%D9%84%204%20%D9%88%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D8%A7%D9%8B)" target="_blank" rel="noopener" class="btn-apple-wallet">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.31-.88 3.5-.8 1.19.04 2.26.43 2.98 1.2-3.15 1.83-2.6 6.07.5 7.35-.74 1.82-1.57 3.65-2.06 4.42zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.32 2.4-1.95 4.34-3.74 4.25z"/></svg>
                 أضف إلى محفظة Apple
               </a>
@@ -536,7 +534,6 @@
       </div>
     </section>
 
-    <!-- الفروع المحدثة -->
     <section class="section-block" id="branches">
       <div class="container">
         <div class="section-title">
@@ -563,7 +560,6 @@
                 <span id="branchDisplayAddress">المبرز – محاسن (محطة الفرسان)</span>
               </div>
               
-              <!-- تصحيح اتجاهات أوقات العمل -->
               <div class="hours-organized-box">
                 <div class="hours-title">
                   <svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary);" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -575,7 +571,6 @@
             </div>
             
             <div class="branch-unified-actions">
-              <!-- زر الخرائط العريض -->
               <a href="https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic" class="btn-branch-action" id="branchMapDirectLink" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 فتح عبر خرائط Google
@@ -602,9 +597,9 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <!-- إطار الشعار الفاخر للفوتر -->
-          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 8px 16px; border-radius: 8px; display: inline-block; margin-bottom: 16px;">
-            <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:26px; filter: brightness(0) invert(1);">
+          <!-- إطار الشعار في الفوتر بلونه الطبيعي -->
+          <div style="background: #000; padding: 8px 16px; border-radius: 8px; display: inline-block; margin-bottom: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
+            <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:26px;">
           </div>
           <p>تجربة غسيل متطورة بأحدث المضخات وأجود مواد العناية العالمية المعتمدة.</p>
         </div>
@@ -612,7 +607,7 @@
           <h4>الفروع وأوقات العمل</h4>
           <p>الفرع 1: محاسن (محطة الفرسان) – المبرز</p>
           <p>الفرع 2: النايفية (طريق الأمير نايف) – الهفوف</p>
-          <p>العمل: <span style="color:var(--text-white); font-weight:700;">8 ص - 1 م | 3 م - 3 ص</span></p>
+          <p>أوقات العمل: <span style="color:var(--text-white); font-weight:700;">من <b dir="ltr">8:00</b> ص حتى <b dir="ltr">3:00</b> فجراً</span></p>
         </div>
         <div>
           <h4>التواصل المباشر</h4>
@@ -626,7 +621,7 @@
     </div>
   </footer>
 
-  <!-- المنصة العائمة السفلية (TikTok + WhatsApp) -->
+  <!-- المنصة العائمة النظيفة (بدون أزرار متكررة) -->
   <div class="nine-floating-dock">
     <a href="https://wa.me/966564927977" target="_blank" rel="noopener" class="dock-wa-btn" aria-label="واتساب">
       <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
@@ -640,7 +635,7 @@
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // تشغيل الفيديو بشكل صامت وإجباري عبر Blob
+    // تشغيل الفيديو بشكل صامت وإجباري
     document.addEventListener('DOMContentLoaded', function() {
       var heroVideo = document.getElementById('heroVideo');
       var videoUrl = 'assets/hero-video.mp4.mp4'; 
@@ -680,7 +675,6 @@
       }
     });
 
-    // بيانات الفروع مع روابط جوجل فقط
     var branchData = {
       mubarraz: {
         title: 'مغسلة ناين GO (فرع المبرز)',
