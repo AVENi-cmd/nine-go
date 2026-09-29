@@ -27,7 +27,6 @@
   --silver:#94A3B8;
   --silver-light:#CBD5E1;
   --silver-muted:#64748B;
-  --silver-deep:#334155;
 
   --wa-green:#25D366;
   --tiktok-pink:#FE2C55;
@@ -50,7 +49,7 @@
   --shadow-hover:0 20px 40px -10px rgba(15,23,42,.12);
   --shadow-red:0 12px 30px -8px rgba(227,30,36,.35);
   --shadow-float:0 12px 30px rgba(0,0,0,.15);
-  --transition:.3s cubic-bezier(.2,.8,.2,1);
+  --transition:.35s cubic-bezier(.2,.8,.2,1);
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{width:100%;min-height:100vh;overflow-x:hidden;background:var(--bg-base);color:var(--text-primary);font-family:'Tajawal',system-ui,sans-serif;line-height:1.6;direction:rtl;text-align:right;-webkit-font-smoothing:antialiased}
@@ -68,39 +67,15 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .svg-icon{width:22px;height:22px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;display:inline-block;vertical-align:middle}
 .svg-icon-sm{width:18px;height:18px}
 
-/* ===== Pills موحدة - أبيض بحد رمادي وأكسنت أحمر ===== */
-.title-pill{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  color:var(--text-primary);
-  background:#FFF;
-  border:1px solid var(--border-subtle);
-  padding:8px 20px;
-  border-radius:var(--radius-full);
-  font-size:.88rem;
-  font-weight:800;
-  margin-bottom:18px;
-  letter-spacing:.2px;
-  box-shadow:0 6px 18px -6px rgba(15,23,42,.1),0 2px 4px rgba(15,23,42,.03);
-  position:relative;
-}
-.title-pill::before{
-  content:'';
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%);
-  box-shadow:0 0 10px rgba(227,30,36,.5);
-  flex-shrink:0;
-}
+.title-pill{display:inline-flex;align-items:center;gap:10px;color:var(--text-primary);background:#FFF;border:1px solid var(--border-subtle);padding:8px 20px;border-radius:var(--radius-full);font-size:.88rem;font-weight:800;margin-bottom:18px;letter-spacing:.2px;box-shadow:0 6px 18px -6px rgba(15,23,42,.1),0 2px 4px rgba(15,23,42,.03);position:relative}
+.title-pill::before{content:'';width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%);box-shadow:0 0 10px rgba(227,30,36,.5);flex-shrink:0}
 
 .section-title{text-align:center;margin-bottom:40px}
 .main-title{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:900;color:var(--text-primary);margin-bottom:12px;line-height:1.4;letter-spacing:-.5px}
 .sub-title{color:var(--text-secondary);font-size:1.05rem;max-width:600px;margin:0 auto}
 .section-block{padding:80px 0;position:relative}
 
-/* ===== Header - أبيض نظيف ===== */
+/* ===== Header ===== */
 .site-header{position:sticky;top:0;width:100%;background:rgba(255,255,255,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border-subtle);padding:14px 0;z-index:1000;box-shadow:0 4px 20px rgba(15,23,42,.03)}
 .site-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 0%,var(--red-primary) 50%,transparent 100%);opacity:.7}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
@@ -108,22 +83,22 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .header-call-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);border:none;color:#FFF;padding:10px 20px;border-radius:var(--radius-full);font-size:.95rem;font-weight:800;box-shadow:0 6px 18px rgba(227,30,36,.3)}
 .header-call-btn:hover{background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%);transform:translateY(-2px);box-shadow:0 8px 22px rgba(227,30,36,.45)}
 
-/* ===== Hero - فيديو داكن مع overlay + نص أبيض ===== */
+/* ===== Hero - فيديو أوضح ===== */
 .hero-banner{position:relative;width:100%;min-height:85vh;display:flex;align-items:center;padding:60px 0 80px;overflow:hidden}
 .hero-bg-visual{position:absolute;inset:0;width:100%;height:100%;z-index:1;background:var(--bg-dark)}
-.hero-bg-visual video{width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;filter:brightness(.65) contrast(1.1)}
-.hero-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(135deg,rgba(10,10,10,.88) 0%,rgba(10,10,10,.65) 50%,rgba(10,10,10,.9) 100%)}
+.hero-bg-visual video{width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none}
+.hero-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(10,10,10,.4) 0%,rgba(10,10,10,.55) 50%,rgba(10,10,10,.85) 100%)}
 .hero-content{position:relative;z-index:3;width:100%;max-width:800px}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(227,30,36,.15);border:1px solid rgba(227,30,36,.4);color:#FFA8AB;padding:8px 18px;border-radius:var(--radius-full);font-size:.88rem;font-weight:800;margin-bottom:24px;backdrop-filter:blur(12px)}
-.hero-heading{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.15;margin-bottom:20px;color:#FFF;letter-spacing:-1px;text-shadow:0 4px 30px rgba(0,0,0,.6)}
-.hero-heading span{background:linear-gradient(135deg,#F43F44 0%,#E31E24 50%,#B91419 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 20px rgba(227,30,36,.5))}
-.hero-subtext{font-size:1.15rem;color:#E2E8F0;margin-bottom:32px;line-height:1.75;max-width:650px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(227,30,36,.2);border:1px solid rgba(227,30,36,.5);color:#FFD1D3;padding:8px 18px;border-radius:var(--radius-full);font-size:.88rem;font-weight:800;margin-bottom:24px;backdrop-filter:blur(12px)}
+.hero-heading{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.15;margin-bottom:20px;color:#FFF;letter-spacing:-1px;text-shadow:0 4px 30px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.7)}
+.hero-heading span{background:linear-gradient(135deg,#FF5C61 0%,#E31E24 50%,#B91419 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 20px rgba(227,30,36,.6))}
+.hero-subtext{font-size:1.15rem;color:#F1F5F9;margin-bottom:32px;line-height:1.75;max-width:650px;text-shadow:0 2px 8px rgba(0,0,0,.7)}
 .hero-branch-strip{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.hero-branch-pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-full);padding:10px 20px;display:inline-flex;align-items:center;gap:10px;backdrop-filter:blur(12px);color:#FFF;font-size:.95rem;font-weight:700;cursor:pointer}
-.hero-branch-pill:hover{background:rgba(227,30,36,.2);border-color:rgba(227,30,36,.5)}
+.hero-branch-pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius-full);padding:10px 20px;display:inline-flex;align-items:center;gap:10px;backdrop-filter:blur(12px);color:#FFF;font-size:.95rem;font-weight:700;cursor:pointer}
+.hero-branch-pill:hover{background:rgba(227,30,36,.3);border-color:rgba(227,30,36,.6)}
 .hero-branch-pill .mini-badge{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;font-size:.72rem;padding:2px 10px;border-radius:var(--radius-full);font-weight:800;box-shadow:0 2px 8px rgba(227,30,36,.4)}
 
-/* ===== TikTok Strip - أسود أنيق ===== */
+/* ===== TikTok Strip ===== */
 .tiktok-strip{background:linear-gradient(135deg,#0A0A0A 0%,#1F1F1F 50%,#0A0A0A 100%);padding:20px 0;position:relative;z-index:4;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:20px}
 .tiktok-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .tiktok-content{display:flex;align-items:center;gap:12px}
@@ -133,45 +108,193 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 /* ===== Grids ===== */
 .bento-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .official-pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
-.loyalty-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.loyalty-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
 
-.bento-card,.branch-unified-card{background:var(--bg-card);border:1px solid var(--border-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);overflow:hidden;transition:var(--transition);position:relative}
-.bento-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:var(--border-red)}
-.bento-card{padding:30px;display:flex;flex-direction:column;justify-content:space-between}
-.bento-hero{grid-column:1/-1;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center;padding:0}
-.bento-hero-info{padding:35px}
-.bento-hero-info h3{font-size:1.8rem;font-weight:900;color:var(--text-primary);margin-bottom:14px;letter-spacing:-.5px}
-.bento-hero-info p{color:var(--text-secondary);font-size:.95rem;margin-bottom:22px;line-height:1.7}
-.bento-features-list{display:flex;gap:18px;flex-wrap:wrap}
-.bento-feature-item{display:flex;align-items:center;gap:8px;font-size:.92rem;font-weight:700;color:var(--text-primary)}
-.bento-hero-image-wrap{height:100%;min-height:280px;border-radius:0;overflow:hidden}
-.bento-hero-image-wrap img{transition:transform .6s ease}
-.bento-hero:hover .bento-hero-image-wrap img{transform:scale(1.05)}
+/* =================================================== */
+/* ===== بطاقات Bento - تصميم موحد حديث وفخم ===== */
+/* =================================================== */
+.bento-card{
+  position:relative;
+  background:#FFF;
+  border:1px solid var(--border-card);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-soft);
+  overflow:hidden;
+  transition:var(--transition);
+}
+.bento-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 25px 50px -15px rgba(227,30,36,.15),0 8px 20px rgba(15,23,42,.06);
+  border-color:var(--border-red);
+}
 
-/* ===== بطاقات Bento المدمجة - بيضاء بحد أحمر عند الهوفر ===== */
-.bento-card-compact{
+/* الشريط الأحمر العلوي - يظهر دائم للبطلة، ويظهر عند الهوفر للباقي */
+.bento-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:4px;
+  background:linear-gradient(90deg,#E31E24 0%,#F43F44 50%,#E31E24 100%);
+  transform:scaleX(0);
+  transform-origin:right;
+  transition:transform .4s cubic-bezier(.2,.8,.2,1);
+  z-index:5;
+}
+.bento-card:hover::before{transform:scaleX(1)}
+
+/* البطلة - شريط أحمر دائم */
+.bento-hero::before{transform:scaleX(1)}
+
+/* رقم كبير في الخلفية */
+.bento-card-compact .bg-number{
+  position:absolute;
+  bottom:-30px;
+  left:10px;
+  font-size:8rem;
+  font-weight:900;
+  color:rgba(227,30,36,.05);
+  line-height:1;
+  z-index:0;
+  pointer-events:none;
+  font-family:system-ui,sans-serif;
+  transition:var(--transition);
+}
+.bento-card-compact:hover .bg-number{
+  color:rgba(227,30,36,.1);
+  transform:translateY(-10px);
+}
+
+/* البطلة - نفس البنية */
+.bento-hero{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:0;
+  align-items:center;
+  padding:0;
+  min-height:320px;
+}
+.bento-hero-info{padding:40px;position:relative;z-index:2}
+.bento-hero-info h3{font-size:1.8rem;font-weight:900;color:var(--text-primary);margin-bottom:14px;letter-spacing:-.5px;line-height:1.3}
+.bento-hero-info p{color:var(--text-secondary);font-size:.95rem;margin-bottom:24px;line-height:1.75}
+.bento-features-list{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.bento-feature-item{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:.85rem;
+  font-weight:700;
+  color:var(--text-primary);
+  background:var(--bg-base);
+  padding:6px 12px;
+  border-radius:var(--radius-full);
+  border:1px solid var(--border-subtle);
+}
+.bento-feature-item svg{width:14px;height:14px}
+.bento-hero-image-wrap{
+  height:100%;
+  min-height:320px;
   position:relative;
   overflow:hidden;
-  border-radius:var(--radius-lg);
-  padding:28px 26px;
+}
+.bento-hero-image-wrap::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(255,255,255,.15) 0%,transparent 30%);
+  pointer-events:none;
+}
+.bento-hero-image-wrap img{
+  transition:transform .7s cubic-bezier(.2,.8,.2,1);
+}
+.bento-hero:hover .bento-hero-image-wrap img{transform:scale(1.06)}
+
+/* الأيقونة الدائرية المتدرجة */
+.icon-premium{
+  width:56px;
+  height:56px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);
+  color:#FFF;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  box-shadow:0 10px 25px -8px rgba(227,30,36,.5),inset 0 1px 0 rgba(255,255,255,.2);
+  position:relative;
+  overflow:hidden;
+}
+.icon-premium::after{
+  content:'';
+  position:absolute;
+  top:0;left:0;
+  width:100%;height:50%;
+  background:linear-gradient(180deg,rgba(255,255,255,.15) 0%,transparent 100%);
+}
+.icon-premium svg{width:26px;height:26px;position:relative;z-index:1}
+
+/* بطاقات Bento المدمجة */
+.bento-card-compact{
+  padding:32px 28px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-  min-height:220px;
-  background:#FFF;
-  border:1px solid var(--border-card);
-  box-shadow:var(--shadow-soft);
-  transition:var(--transition);
+  min-height:250px;
+  position:relative;
+  overflow:hidden;
 }
-.bento-card-compact:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover);border-color:var(--border-red)}
-.bento-card-compact h4{font-size:1.3rem;font-weight:900;color:var(--text-primary);margin:18px 0 10px;line-height:1.35;letter-spacing:-.3px}
-.bento-card-compact p{color:var(--text-secondary);font-size:.92rem;line-height:1.65}
-.bento-card-compact .bento-tag{background:var(--red-subtle);color:var(--red-primary);border:1px solid var(--border-red);font-weight:800}
+.bento-card-compact .card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  position:relative;
+  z-index:2;
+  margin-bottom:auto;
+}
+.bento-card-compact h4{
+  font-size:1.35rem;
+  font-weight:900;
+  color:var(--text-primary);
+  margin:20px 0 10px;
+  line-height:1.3;
+  letter-spacing:-.3px;
+  position:relative;
+  z-index:2;
+}
+.bento-card-compact p{
+  color:var(--text-secondary);
+  font-size:.92rem;
+  line-height:1.7;
+  position:relative;
+  z-index:2;
+}
 
-.bento-tag{font-size:.75rem;font-weight:800;padding:6px 14px;border-radius:var(--radius-full);letter-spacing:.3px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
-.bento-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}
+/* شارة bento-tag جديدة */
+.bento-tag{
+  font-size:.75rem;
+  font-weight:800;
+  padding:6px 14px;
+  border-radius:var(--radius-full);
+  letter-spacing:.3px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  white-space:nowrap;
+  background:rgba(227,30,36,.08);
+  color:var(--red-primary);
+  border:1px solid rgba(227,30,36,.15);
+}
+.bento-tag::before{
+  content:'';
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:currentColor;
+  box-shadow:0 0 8px currentColor;
+  flex-shrink:0;
+}
 
-/* ===== Pricing Section - خلفية فاتحة ===== */
+/* ===== Pricing Section ===== */
 #pricing{background:linear-gradient(180deg,#F5F5F7 0%,#EDEDF0 100%);position:relative}
 
 .official-price-card{
@@ -219,38 +342,223 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .btn-order-category{background:#0A0A0A;color:#FFF;padding:14px 20px;border-radius:var(--radius-full);font-weight:900;font-size:.95rem;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:1px solid transparent;box-shadow:0 8px 20px rgba(10,10,10,.2);letter-spacing:.2px}
 .btn-order-category:hover{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);transform:translateY(-2px);box-shadow:0 12px 28px rgba(227,30,36,.4)}
 
-/* ===== Loyalty Section ===== */
+/* =================================================== */
+/* ===== بطاقة الولاء - Apple Wallet Pass حقيقي ===== */
+/* =================================================== */
 .loyalty-section{background:linear-gradient(180deg,#EDEDF0 0%,#E2E2E7 100%);border-top:1px solid rgba(15,23,42,.05);border-bottom:1px solid rgba(15,23,42,.05)}
-.loyalty-pass-card{
-  background:linear-gradient(145deg,#0A0A0A 0%,#1F1F1F 100%);
-  border:1px solid rgba(227,30,36,.3);
-  border-radius:var(--radius-lg);
-  padding:26px;
-  box-shadow:0 30px 60px -15px rgba(0,0,0,.5);
-  color:#FFF;
-  position:relative;
-  overflow:hidden;
+
+.wallet-pass-wrap{
   width:100%;
-  max-width:420px;
+  max-width:400px;
   margin:0 auto;
+  perspective:1000px;
 }
-.loyalty-pass-card::before{content:'';position:absolute;top:-50%;right:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(227,30,36,.15) 0%,transparent 60%);pointer-events:none}
-.pass-header{display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px dashed rgba(227,30,36,.3);padding-bottom:16px;margin-bottom:18px;flex-wrap:wrap;position:relative;z-index:2}
-.pass-type-badge{background:rgba(227,30,36,.15);color:#FFA8AB;padding:5px 14px;border-radius:var(--radius-full);font-size:.72rem;font-weight:800;border:1px solid rgba(227,30,36,.4);white-space:nowrap;backdrop-filter:blur(8px)}
-.stamps-title{font-size:.9rem;color:#94A3B8;margin-bottom:12px;display:flex;justify-content:space-between;gap:8px;position:relative;z-index:2}
-.stamps-title strong{color:#FFF}
-.stamps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:22px;position:relative;z-index:2}
-.stamp-slot{aspect-ratio:1;background:rgba(0,0,0,.4);border:1px dashed rgba(255,255,255,.15);border-radius:var(--radius-sm);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2px;min-width:0;transition:var(--transition)}
-.stamp-slot.active{border-style:solid;border-color:var(--red-primary);background:rgba(227,30,36,.15);box-shadow:0 0 15px rgba(227,30,36,.3)}
-.stamp-slot.active svg{color:#FFA8AB!important}
-.stamp-slot.gift{border:2px solid var(--red-primary);background:rgba(227,30,36,.2);animation:redPulse 2s infinite}
-@keyframes redPulse{0%{box-shadow:0 0 0 0 rgba(227,30,36,.5)}70%{box-shadow:0 0 0 12px rgba(227,30,36,0)}100%{box-shadow:0 0 0 0 rgba(227,30,36,0)}}
-.stamp-number{font-size:.7rem;font-weight:800;color:#94A3B8;margin-top:2px}
-.stamp-slot.active .stamp-number{color:#FFA8AB}
-.stamp-slot.gift .stamp-number{color:#FFA8AB;font-size:.78rem}
-.pass-actions-wrap{display:flex;flex-direction:column;gap:12px;position:relative;z-index:2}
-.btn-apple-wallet{display:flex;align-items:center;justify-content:center;gap:10px;background:#FFF;color:#0A0A0A;padding:14px;border-radius:12px;font-weight:900;font-size:.98rem;border:1px solid rgba(255,255,255,.2);width:100%;cursor:pointer}
-.btn-apple-wallet:hover{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;transform:translateY(-2px);box-shadow:0 12px 28px rgba(227,30,36,.5)}
+
+.wallet-pass{
+  background:#FFF;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.25),0 8px 20px -8px rgba(0,0,0,.1);
+  position:relative;
+  transition:var(--transition);
+}
+.wallet-pass:hover{
+  transform:translateY(-6px) rotateX(2deg);
+  box-shadow:0 40px 80px -20px rgba(227,30,36,.25),0 10px 25px -8px rgba(0,0,0,.15);
+}
+
+/* رأس البطاقة - أسود مع شعار */
+.wallet-pass-header{
+  background:linear-gradient(135deg,#0A0A0A 0%,#1F1F1F 100%);
+  padding:20px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:3px solid var(--red-primary);
+  position:relative;
+}
+.wallet-pass-header::after{
+  content:'';
+  position:absolute;
+  bottom:-3px;left:0;right:0;
+  height:3px;
+  background:linear-gradient(90deg,transparent 0%,var(--red-primary) 20%,var(--red-light) 50%,var(--red-primary) 80%,transparent 100%);
+}
+.wallet-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.wallet-logo-box{
+  background:#000;
+  padding:6px 12px;
+  border-radius:8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(227,30,36,.3);
+}
+.wallet-logo-box img{height:24px;width:auto}
+.wallet-brand-text{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.wallet-brand-name{
+  color:#FFF;
+  font-weight:900;
+  font-size:.95rem;
+  letter-spacing:-.2px;
+  line-height:1.2;
+}
+.wallet-brand-sub{
+  color:var(--red-light);
+  font-weight:700;
+  font-size:.7rem;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+
+/* أيقونة Apple Wallet */
+.wallet-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.15);
+  padding:5px 10px;
+  border-radius:var(--radius-full);
+  color:#FFF;
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:.3px;
+  backdrop-filter:blur(8px);
+}
+.wallet-badge svg{width:14px;height:14px;fill:#FFF}
+
+/* جسم البطاقة - منطقة QR */
+.wallet-pass-body{
+  padding:28px 24px 20px;
+  text-align:center;
+  background:linear-gradient(180deg,#FFFFFF 0%,#F8FAFC 100%);
+  position:relative;
+}
+.wallet-pass-title{
+  font-size:1.15rem;
+  font-weight:900;
+  color:var(--text-primary);
+  letter-spacing:-.3px;
+  margin-bottom:4px;
+}
+.wallet-pass-desc{
+  font-size:.82rem;
+  color:var(--text-muted);
+  font-weight:500;
+  margin-bottom:20px;
+}
+
+/* QR Code */
+.wallet-qr-wrap{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#FFF;
+  padding:14px;
+  border-radius:16px;
+  box-shadow:0 8px 25px -10px rgba(0,0,0,.15),0 0 0 1px rgba(15,23,42,.05);
+  position:relative;
+  margin-bottom:16px;
+}
+.wallet-qr-wrap::before,
+.wallet-qr-wrap::after,
+.wallet-qr-inner::before,
+.wallet-qr-inner::after{
+  content:'';
+  position:absolute;
+  width:12px;height:12px;
+  border-color:var(--red-primary);
+  border-style:solid;
+  border-width:0;
+}
+.wallet-qr-wrap::before{top:-2px;right:-2px;border-top-width:3px;border-right-width:3px;border-top-right-radius:8px}
+.wallet-qr-wrap::after{bottom:-2px;left:-2px;border-bottom-width:3px;border-left-width:3px;border-bottom-left-radius:8px}
+.wallet-qr-inner{position:relative;display:inline-block}
+.wallet-qr-inner::before{top:-2px;left:-2px;border-top-width:3px;border-left-width:3px;border-top-left-radius:8px}
+.wallet-qr-inner::after{bottom:-2px;right:-2px;border-bottom-width:3px;border-right-width:3px;border-bottom-right-radius:8px}
+.wallet-qr-inner img,.wallet-qr-inner svg{display:block;width:160px;height:160px}
+
+.wallet-pass-number{
+  font-family:'Courier New',monospace;
+  font-size:.85rem;
+  font-weight:700;
+  color:var(--text-secondary);
+  letter-spacing:2px;
+  margin-bottom:6px;
+  direction:ltr;
+}
+.wallet-pass-note{
+  font-size:.72rem;
+  color:var(--text-muted);
+  font-weight:500;
+}
+
+/* شريط أسفل البطاقة - معلومات */
+.wallet-pass-footer{
+  background:#F1F5F9;
+  padding:16px 24px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  border-top:1px dashed rgba(15,23,42,.1);
+}
+.wallet-info-item{
+  text-align:right;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.wallet-info-label{
+  font-size:.68rem;
+  color:var(--text-muted);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+.wallet-info-value{
+  font-size:.85rem;
+  color:var(--text-primary);
+  font-weight:800;
+  direction:ltr;
+  text-align:right;
+}
+
+/* زر Apple Wallet */
+.btn-add-wallet{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:#000;
+  color:#FFF;
+  padding:14px 20px;
+  border-radius:14px;
+  font-weight:800;
+  font-size:.98rem;
+  border:none;
+  width:100%;
+  cursor:pointer;
+  box-shadow:0 10px 25px -8px rgba(0,0,0,.4);
+  margin-top:20px;
+  transition:var(--transition);
+}
+.btn-add-wallet:hover{
+  background:#1F1F1F;
+  transform:translateY(-2px);
+  box-shadow:0 15px 30px -8px rgba(0,0,0,.5);
+}
+.btn-add-wallet svg{width:22px;height:22px;fill:#FFF}
+
+/* تفاصيل قسم الولاء */
 .loyalty-details h3{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;color:var(--text-primary);margin-bottom:16px;letter-spacing:-.5px;line-height:1.3}
 .loyalty-details h3 span{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .loyalty-desc{font-size:1.05rem;color:var(--text-secondary);margin-bottom:24px;line-height:1.7}
@@ -265,7 +573,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .tab-slider{position:absolute;top:6px;bottom:6px;width:calc(50% - 6px);background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);border-radius:var(--radius-full);transition:transform .3s cubic-bezier(.25,1,.5,1);z-index:1;box-shadow:0 4px 15px rgba(227,30,36,.4)}
 .slider-left{transform:translateX(0)}
 .slider-right{transform:translateX(-100%)}
-.branch-unified-card{display:grid;grid-template-columns:1fr 1fr;background:#FFF;position:relative;border:1px solid var(--border-card)}
+.branch-unified-card{display:grid;grid-template-columns:1fr 1fr;background:#FFF;position:relative;border:1px solid var(--border-card);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-soft)}
 .branch-speed-badge{position:absolute;top:20px;right:20px;background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;padding:8px 18px;border-radius:var(--radius-full);font-size:.82rem;font-weight:800;z-index:10;box-shadow:0 6px 20px rgba(227,30,36,.5)}
 .branch-photo-holder{min-height:380px;position:relative;overflow:hidden}
 .branch-photo-holder img{width:100%;height:100%;object-fit:cover;transition:opacity .3s ease,transform .6s ease}
@@ -282,7 +590,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .btn-branch-action svg{width:20px;height:20px}
 .btn-branch-action:hover{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);box-shadow:0 8px 22px rgba(227,30,36,.5);transform:translateY(-2px)}
 
-/* ===== CTA Banner - أسود فخم ===== */
+/* ===== CTA Banner ===== */
 .cta-banner{background:linear-gradient(135deg,#0A0A0A 0%,#1F1F1F 50%,#0A0A0A 100%);color:#FFF;padding:90px 0 70px;text-align:center;position:relative;z-index:2;overflow:hidden;border-top:4px solid var(--red-primary)}
 .cta-banner::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(227,30,36,.2) 0%,transparent 60%);pointer-events:none}
 .cta-banner h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;margin-bottom:14px;letter-spacing:-.5px;position:relative;z-index:2}
@@ -291,7 +599,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .btn-banner-phone{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;padding:16px 42px;border-radius:var(--radius-full);font-weight:900;font-size:1.1rem;display:inline-flex;align-items:center;gap:10px;box-shadow:0 10px 30px rgba(227,30,36,.5);letter-spacing:.3px}
 .btn-banner-phone:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(227,30,36,.65);background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%)}
 
-/* ===== Footer - أسود ===== */
+/* ===== Footer ===== */
 .footer{background:#0A0A0A;color:#FFF;padding:40px 0 30px;position:relative;z-index:1}
 .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding-bottom:35px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:25px}
 .footer h4{font-size:1.15rem;color:#FFA8AB;font-weight:800;margin-bottom:16px}
@@ -320,14 +628,15 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .tiktok-container{justify-content:center;text-align:center;flex-direction:column}
 .banner-actions{flex-direction:column;width:100%}
 .btn-banner-phone{width:100%;justify-content:center}
-.bento-card,.branch-unified-content{padding:24px 20px}
-.bento-card-compact{min-height:190px;padding:24px 20px}
-.loyalty-pass-card{max-width:100%;padding:20px 16px;border-radius:20px}
-.stamps-grid{gap:6px}
-.stamp-slot{border-radius:10px}
-.pass-header{flex-direction:column;align-items:flex-start;gap:8px}
-.pass-type-badge{font-size:.68rem;padding:3px 10px}
+.bento-hero-info{padding:26px 22px}
+.bento-card-compact{padding:26px 22px;min-height:220px}
+.wallet-pass-wrap{max-width:100%}
+.wallet-pass-body{padding:24px 20px 18px}
+.wallet-qr-inner img,.wallet-qr-inner svg{width:140px;height:140px}
+.wallet-pass-footer{padding:14px 20px}
+.loyalty-grid{gap:30px}
 .brand-logo-img{height:38px}
+.branch-unified-content{padding:26px 22px}
 }
 @media(max-width:480px){
 .car-category-title{font-size:1.3rem}
@@ -336,19 +645,35 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .price-features-list{gap:11px}
 .price-features-list li{font-size:.86rem;gap:9px}
 .price-features-list li .check-icon{width:20px;height:20px}
-.loyalty-pass-card{padding:18px 14px;border-radius:18px}
-.stamps-grid{gap:5px}
-.stamp-slot{border-radius:8px}
-.stamp-slot svg{width:14px;height:14px}
-.stamp-number{font-size:.65rem}
-.stamp-slot.gift .stamp-number{font-size:.7rem}
-.btn-apple-wallet{font-size:.9rem;padding:12px;border-radius:10px}
+.wallet-pass-header{padding:16px 18px}
+.wallet-logo-box img{height:20px}
+.wallet-brand-name{font-size:.85rem}
+.wallet-brand-sub{font-size:.65rem}
+.wallet-badge{padding:4px 8px;font-size:.65rem}
+.wallet-badge svg{width:12px;height:12px}
+.wallet-pass-body{padding:20px 16px 16px}
+.wallet-pass-title{font-size:1rem}
+.wallet-qr-inner img,.wallet-qr-inner svg{width:120px;height:120px}
+.wallet-qr-wrap{padding:10px;margin-bottom:12px}
+.wallet-pass-number{font-size:.78rem}
+.wallet-pass-footer{grid-template-columns:1fr 1fr;padding:12px 16px;gap:10px}
+.wallet-info-label{font-size:.62rem}
+.wallet-info-value{font-size:.78rem}
+.btn-add-wallet{font-size:.9rem;padding:12px;margin-top:16px}
+.bento-card-compact{padding:22px 18px;min-height:200px}
+.bento-card-compact h4{font-size:1.15rem}
+.icon-premium{width:48px;height:48px;border-radius:14px}
+.icon-premium svg{width:22px;height:22px}
 .dock-tiktok-pill .tiktok-text{display:none}
 .dock-tiktok-pill{padding:10px;border-radius:50%;width:44px;height:44px;justify-content:center}
 .dock-wa-btn{width:50px;height:50px}
 .nine-floating-dock{bottom:16px;left:16px}
 .title-pill{padding:6px 16px;font-size:.82rem}
 .brand-logo-img{height:34px}
+.bento-hero-info{padding:22px 18px}
+.bento-hero-info h3{font-size:1.35rem}
+.bento-feature-item{font-size:.78rem;padding:5px 10px}
+.branch-unified-content{padding:22px 18px}
 }
 </style>
 </head>
@@ -376,7 +701,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 <div class="container hero-content">
 <div class="hero-tag">
-<svg class="svg-icon svg-icon-sm" style="color:#FFA8AB" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+<svg class="svg-icon svg-icon-sm" style="color:#FFD1D3" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
 <span>الأحساء: وين ما كنت.. ناين أقرب لك!</span>
 </div>
 <h1 class="hero-heading">غسيل باهتمام <br><span>يليق بسيارتك</span></h1>
@@ -398,6 +723,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </section>
 
+<!-- ===== قسم المزايا - بطاقات موحدة حديثة ===== -->
 <section class="section-block" id="features">
 <div class="container">
 <div class="section-title">
@@ -406,24 +732,32 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <p class="sub-title">نجمع بين تقنيات المواد العالمية الفاخرة وسرعة الخدمة المتقنة</p>
 </div>
 <div class="bento-grid">
-<div class="bento-card bento-hero" style="padding:0">
+
+<!-- البطلة -->
+<div class="bento-card bento-hero">
 <div class="bento-hero-info">
-<div class="icon-glass-box red-glow" style="margin-bottom:18px"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+<div class="icon-premium" style="margin-bottom:20px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+</div>
 <h3>رغوة ثلجية وواكس فاخر لحماية النانو</h3>
 <p>نستخدم تركيبة شامبو وواكس عالمية معتمدة تعزل الغبار والأتربة عن الطلاء بفعالية، مع حماية فائقة لطبقات النانو سيراميك وطرد دائم لمياه الأمطار.</p>
 <div class="bento-features-list">
-<div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--red-primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>عزل جزيئات الغبار</div>
-<div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--red-primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>لمعان زجاجي عميق</div>
-<div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--red-primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>آمن 100% على النانو</div>
+<div class="bento-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>عزل جزيئات الغبار</div>
+<div class="bento-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>لمعان زجاجي عميق</div>
+<div class="bento-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>آمن 100% على النانو</div>
 </div>
 </div>
-<div class="bento-hero-image-wrap"><img src="assets/royal-wash.jpg.PNG" alt="عناية فائقة" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div class="bento-hero-image-wrap">
+<img src="assets/royal-wash.jpg.PNG" alt="عناية فائقة" style="width:100%;height:100%;object-fit:cover;display:block">
+</div>
 </div>
 
+<!-- بطاقة 15 دقيقة -->
 <div class="bento-card bento-card-compact">
-<div style="display:flex;justify-content:space-between;align-items:center">
-<div class="icon-glass-box red-glow">
-<svg class="svg-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span class="bg-number">01</span>
+<div class="card-top">
+<div class="icon-premium">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
 </div>
 <span class="bento-tag">15 دقيقة فقط</span>
 </div>
@@ -433,10 +767,12 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </div>
 
+<!-- بطاقة مايكروفايبر -->
 <div class="bento-card bento-card-compact">
-<div style="display:flex;justify-content:space-between;align-items:center">
-<div class="icon-glass-box red-glow">
-<svg class="svg-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M12 3l1.912 5.813a2 2 0 001.275 1.275L21 12l-5.813 1.912a2 2 0 00-1.275 1.275L12 21l-1.912-5.813a2 2 0 00-1.275-1.275L3 12l5.813-1.912a2 2 0 001.275-1.275z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span class="bg-number">02</span>
+<div class="card-top">
+<div class="icon-premium">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.912 5.813a2 2 0 001.275 1.275L21 12l-5.813 1.912a2 2 0 00-1.275 1.275L12 21l-1.912-5.813a2 2 0 00-1.275-1.275L3 12l5.813-1.912a2 2 0 001.275-1.275z"/></svg>
 </div>
 <span class="bento-tag">مايكروفايبر ناعم</span>
 </div>
@@ -445,10 +781,12 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <p>مناشف مايكروفايبر فائقة الكثافة والنعومة مخصصة للبودي لضمان تجفيف زجاجي بدون دوائر.</p>
 </div>
 </div>
+
 </div>
 </div>
 </section>
 
+<!-- ===== قسم الأسعار ===== -->
 <section class="section-block" id="pricing">
 <div class="container">
 <div class="section-title">
@@ -522,42 +860,165 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </section>
 
+<!-- ===== بطاقة الولاء - Apple Wallet Pass ===== -->
 <section class="section-block loyalty-section">
 <div class="container">
 <div class="loyalty-grid">
 <div class="loyalty-details">
 <span class="title-pill">ميزة حصرية لعملائنا</span>
-<h3>اغسل 4 مرات.. <br><span>والخامسة مجاناً!</span></h3>
-<p class="loyalty-desc">أضف بطاقة ولاء ناين قو الرقمية مباشرة إلى محفظة Apple Wallet واجمع نقاطك بكل سهولة بدون تطبيقات إضافية.</p>
+<h3>بطاقتك في <br><span>محفظة Apple</span></h3>
+<p class="loyalty-desc">احصل على بطاقة ولاء ناين قو الرقمية مباشرة في محفظة Apple Wallet. عند كل زيارة، امسح رمز QR ليتم إضافة ختم تلقائياً. بعد 4 زيارات، غسلة مجانية!</p>
 <ul class="loyalty-perks">
 <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>محفوظة في هاتفك:</strong><span style="display:block;font-size:.85rem;color:var(--text-secondary)">تعمل مباشرة عبر تطبيق Wallet الرسمي.</span></div></li>
 <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>تنبيه مكاني ذكي:</strong><span style="display:block;font-size:.85rem;color:var(--text-secondary)">تظهر البطاقة تلقائياً على الشاشة عند اقترابك للفرع.</span></div></li>
+<li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>تحديث فوري للأختام:</strong><span style="display:block;font-size:.85rem;color:var(--text-secondary)">الكاشير يمسح الكود ويضيف الختم فوراً بدون انتظار.</span></div></li>
 </ul>
 </div>
-<div class="loyalty-pass-card">
-<div class="pass-header">
-<div style="background:#000;padding:6px 14px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.5);border:1px solid rgba(227,30,36,.3)"><img src="assets/logo.png.JPEG" alt="NINE GO" style="height:24px"></div>
-<span class="pass-type-badge">بطاقة ولاء العميل</span>
+
+<div class="wallet-pass-wrap">
+<div class="wallet-pass">
+<!-- رأس البطاقة -->
+<div class="wallet-pass-header">
+<div class="wallet-brand">
+<div class="wallet-logo-box">
+<img src="assets/logo.png.JPEG" alt="NINE GO">
 </div>
-<div class="stamps-title"><strong>أختام الغسيل</strong><span style="color:#FFA8AB;font-weight:800">4 = 1 مجاناً</span></div>
-<div class="stamps-grid">
-<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">1</span></div>
-<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">2</span></div>
-<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">3</span></div>
-<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">4</span></div>
-<div class="stamp-slot gift"><span style="font-size:1.3rem">🎁</span><span class="stamp-number">مجاناً</span></div>
+<div class="wallet-brand-text">
+<span class="wallet-brand-name">NAIN GO</span>
+<span class="wallet-brand-sub">CAR WASH</span>
 </div>
-<div class="pass-actions-wrap">
-<a href="javascript:void(0)" onclick="alert('تفضل بزيارة الكاشير في الفرع لتفعيل البطاقة مباشرة عبر مسح الرمز الذكي (QR Code).')" class="btn-apple-wallet">
-<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.31-.88 3.5-.8 1.19.04 2.26.43 2.98 1.2-3.15 1.83-2.6 6.07.5 7.35-.74 1.82-1.57 3.65-2.06 4.42zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.32 2.4-1.95 4.34-3.74 4.25z"/></svg>
-أضف إلى محفظة Apple
+</div>
+<div class="wallet-badge">
+<svg viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.31-.88 3.5-.8 1.19.04 2.26.43 2.98 1.2-3.15 1.83-2.6 6.07.5 7.35-.74 1.82-1.57 3.65-2.06 4.42zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.32 2.4-1.95 4.34-3.74 4.25z"/></svg>
+WALLET
+</div>
+</div>
+
+<!-- جسم البطاقة - QR -->
+<div class="wallet-pass-body">
+<div class="wallet-pass-title">بطاقة الولاء الرقمية</div>
+<div class="wallet-pass-desc">امسح الرمز عند الكاشير لإضافة ختم</div>
+
+<div class="wallet-qr-wrap">
+<div class="wallet-qr-inner">
+<!-- QR Code SVG - يمثل الرمز (يمكنك استبداله بـ QR حقيقي) -->
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" fill="#FFF"/>
+<!-- QR نمطي (placeholder) -->
+<g fill="#0A0A0A">
+<!-- المربعات الأربعة في الزوايا -->
+<rect x="0" y="0" width="22" height="22"/>
+<rect x="4" y="4" width="14" height="14" fill="#FFF"/>
+<rect x="7" y="7" width="8" height="8" fill="#0A0A0A"/>
+<rect x="78" y="0" width="22" height="22"/>
+<rect x="82" y="4" width="14" height="14" fill="#FFF"/>
+<rect x="85" y="7" width="8" height="8" fill="#0A0A0A"/>
+<rect x="0" y="78" width="22" height="22"/>
+<rect x="4" y="82" width="14" height="14" fill="#FFF"/>
+<rect x="7" y="85" width="8" height="8" fill="#0A0A0A"/>
+<!-- بيانات عشوائية تحاكي QR -->
+<rect x="28" y="4" width="4" height="4"/>
+<rect x="36" y="4" width="4" height="4"/>
+<rect x="44" y="4" width="4" height="4"/>
+<rect x="56" y="4" width="4" height="4"/>
+<rect x="64" y="4" width="4" height="4"/>
+<rect x="28" y="12" width="4" height="4"/>
+<rect x="48" y="12" width="4" height="4"/>
+<rect x="60" y="12" width="4" height="4"/>
+<rect x="28" y="20" width="4" height="4"/>
+<rect x="36" y="20" width="4" height="4"/>
+<rect x="52" y="20" width="4" height="4"/>
+<rect x="64" y="20" width="4" height="4"/>
+<rect x="4" y="28" width="4" height="4"/>
+<rect x="16" y="28" width="4" height="4"/>
+<rect x="28" y="28" width="4" height="4"/>
+<rect x="36" y="28" width="4" height="4"/>
+<rect x="48" y="28" width="4" height="4"/>
+<rect x="56" y="28" width="4" height="4"/>
+<rect x="68" y="28" width="4" height="4"/>
+<rect x="80" y="28" width="4" height="4"/>
+<rect x="88" y="28" width="4" height="4"/>
+<rect x="4" y="36" width="4" height="4"/>
+<rect x="24" y="36" width="4" height="4"/>
+<rect x="40" y="36" width="4" height="4"/>
+<rect x="52" y="36" width="4" height="4"/>
+<rect x="72" y="36" width="4" height="4"/>
+<rect x="92" y="36" width="4" height="4"/>
+<rect x="12" y="44" width="4" height="4"/>
+<rect x="28" y="44" width="4" height="4"/>
+<rect x="44" y="44" width="4" height="4"/>
+<rect x="60" y="44" width="4" height="4"/>
+<rect x="76" y="44" width="4" height="4"/>
+<rect x="88" y="44" width="4" height="4"/>
+<rect x="4" y="52" width="4" height="4"/>
+<rect x="20" y="52" width="4" height="4"/>
+<rect x="36" y="52" width="4" height="4"/>
+<rect x="48" y="52" width="4" height="4"/>
+<rect x="64" y="52" width="4" height="4"/>
+<rect x="80" y="52" width="4" height="4"/>
+<rect x="28" y="60" width="4" height="4"/>
+<rect x="44" y="60" width="4" height="4"/>
+<rect x="56" y="60" width="4" height="4"/>
+<rect x="72" y="60" width="4" height="4"/>
+<rect x="88" y="60" width="4" height="4"/>
+<rect x="4" y="68" width="4" height="4"/>
+<rect x="24" y="68" width="4" height="4"/>
+<rect x="40" y="68" width="4" height="4"/>
+<rect x="56" y="68" width="4" height="4"/>
+<rect x="76" y="68" width="4" height="4"/>
+<rect x="92" y="68" width="4" height="4"/>
+<rect x="28" y="76" width="4" height="4"/>
+<rect x="48" y="76" width="4" height="4"/>
+<rect x="64" y="76" width="4" height="4"/>
+<rect x="80" y="76" width="4" height="4"/>
+<rect x="28" y="88" width="4" height="4"/>
+<rect x="40" y="88" width="4" height="4"/>
+<rect x="52" y="88" width="4" height="4"/>
+<rect x="68" y="88" width="4" height="4"/>
+<rect x="88" y="88" width="4" height="4"/>
+<rect x="4" y="92" width="4" height="4"/>
+<rect x="24" y="92" width="4" height="4"/>
+<rect x="44" y="92" width="4" height="4"/>
+<rect x="60" y="92" width="4" height="4"/>
+<rect x="76" y="92" width="4" height="4"/>
+</g>
+<!-- شعار صغير في الوسط -->
+<circle cx="50" cy="50" r="12" fill="#FFF"/>
+<circle cx="50" cy="50" r="10" fill="#E31E24"/>
+<text x="50" y="55" text-anchor="middle" fill="#FFF" font-weight="900" font-size="12" font-family="system-ui">9</text>
+</svg>
+</div>
+</div>
+
+<div class="wallet-pass-number" dir="ltr">NG-2026-04821</div>
+<div class="wallet-pass-note">بطاقة العميل · صالحة في جميع الفروع</div>
+</div>
+
+<!-- ذيل البطاقة -->
+<div class="wallet-pass-footer">
+<div class="wallet-info-item">
+<span class="wallet-info-label">الأختام</span>
+<span class="wallet-info-value" style="color:#E31E24">1 من 4</span>
+</div>
+<div class="wallet-info-item">
+<span class="wallet-info-label">الحالة</span>
+<span class="wallet-info-value" style="color:#25D366">نشط</span>
+</div>
+</div>
+
+</div>
+
+<a href="javascript:void(0)" onclick="alert('سيتم فتح بطاقة Apple Wallet عند تفعيل النظام في الفرع. تفضل بزيارة الكاشير للحصول على البطاقة الرقمية.')" class="btn-add-wallet" style="margin-top:20px">
+<svg viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.31-.88 3.5-.8 1.19.04 2.26.43 2.98 1.2-3.15 1.83-2.6 6.07.5 7.35-.74 1.82-1.57 3.65-2.06 4.42zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.32 2.4-1.95 4.34-3.74 4.25z"/></svg>
+أضف إلى Apple Wallet
 </a>
-</div>
+
 </div>
 </div>
 </div>
 </section>
 
+<!-- ===== قسم الفروع ===== -->
 <section class="section-block" id="branches">
 <div class="container">
 <div class="section-title">
