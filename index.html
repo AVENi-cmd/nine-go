@@ -173,41 +173,35 @@
     .bento-hero-info p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; }
     .bento-features-list { display: flex; gap: 16px; flex-wrap: wrap; }
     .bento-feature-item { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
-    .bento-hero-image-wrap { height: 100%; min-height: 250px; overflow: hidden; }
+    .bento-hero-image-wrap { height: 100%; min-height: 250px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-soft); }
     
-    /* تصميم المربعات الصغيرة (15 دقيقة / مايكروفايبر) بتصميم حديث */
-    .bento-card-compact { background: linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%); padding: 24px; border: 1px solid rgba(2, 132, 199, 0.1); }
-    .bento-card-compact h4 { font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin: 16px 0 8px 0; }
-    .bento-card-compact p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; }
-    .bento-tag { font-size: 0.8rem; font-weight: 800; padding: 4px 14px; border-radius: var(--radius-full); background: rgba(2, 132, 199, 0.08); color: var(--brand-primary); }
+    .bento-card-compact h4 { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 16px 0 8px 0; }
+    .bento-card-compact p { color: var(--text-secondary); font-size: 0.95rem; }
+    .bento-tag { font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); background: var(--bg-surface); color: var(--text-secondary); }
 
-    /* تصميم بطاقات الأسعار بحجم أنيق ومصغر */
-    .official-price-card { padding: 24px 20px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; position: relative; border-radius: var(--radius-lg); }
+    /* الأسعار */
+    .official-price-card { padding: 30px 24px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
     .official-price-card.featured { 
       border: 2px solid var(--brand-primary); 
       background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%); 
-      box-shadow: 0 10px 25px var(--brand-glow); 
+      box-shadow: 0 15px 35px var(--brand-glow); 
     }
     
-    .car-category-badge { display: inline-block; background: var(--brand-primary); color: var(--text-white); font-size: 0.8rem; font-weight: 700; padding: 4px 14px; border-radius: var(--radius-full); margin-bottom: 12px; }
-    .car-category-title { font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px; }
+    .car-category-badge { display: inline-block; background: var(--brand-primary); color: var(--text-white); font-size: 0.85rem; font-weight: 700; padding: 6px 16px; border-radius: var(--radius-full); margin-bottom: 16px; }
+    .car-category-title { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px; }
     
-    /* قائمة المميزات للأسعار (شكل حديث) */
-    .price-features-list { list-style: none; text-align: right; margin-bottom: 24px; display: flex; flex-direction: column; }
-    .price-features-list li { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); font-weight: 500; padding: 8px 0; border-bottom: 1px dashed var(--border-subtle); }
-    .price-features-list li:last-child { border-bottom: none; }
-    .price-features-list li svg { width: 14px; height: 14px; color: var(--brand-primary); flex-shrink: 0; }
+    .price-features-list { list-style: none; text-align: right; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; }
+    .price-features-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.9rem; color: var(--text-secondary); font-weight: 500; }
+    .price-features-list li svg { width: 16px; height: 16px; color: var(--brand-primary); flex-shrink: 0; margin-top: 4px; }
     
-    .car-price-number-wrap { display: flex; align-items: baseline; justify-content: center; gap: 4px; margin-bottom: 20px; }
-    .car-price-number { font-size: 2.8rem; font-weight: 900; color: var(--text-primary); line-height: 1; }
-    .car-price-currency { font-size: 1rem; font-weight: 700; color: var(--brand-primary); }
+    .car-price-number-wrap { display: flex; align-items: baseline; justify-content: center; gap: 6px; margin-bottom: 24px; }
+    .car-price-number { font-size: 3.2rem; font-weight: 900; color: var(--text-primary); line-height: 1; }
+    .car-price-currency { font-size: 1.1rem; font-weight: 700; color: var(--brand-primary); }
     
-    .btn-order-category { background: var(--bg-surface); color: var(--text-primary); padding: 10px 20px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; transition: var(--transition); width: 100%; text-decoration: none; }
-    .official-price-card.featured .btn-order-category { background: var(--brand-primary); color: var(--text-white); box-shadow: 0 4px 10px var(--brand-glow); }
-    .btn-order-category:hover { background: var(--brand-primary-hover); color: #fff; transform: translateY(-2px); }
+    .btn-order-category { background: var(--brand-primary); color: var(--text-white); padding: 12px 20px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: var(--transition); width: 100%; box-shadow: 0 4px 12px var(--brand-glow); text-decoration: none; }
+    .btn-order-category:hover { background: var(--brand-primary-hover); transform: translateY(-2px); }
 
     .loyalty-section { background: var(--bg-surface); border-top: 1px solid #CBD5E1; border-bottom: 1px solid #CBD5E1; }
-    /* ضمان عدم انقطاع البطاقة في الجوال وضبط التباعد */
     .loyalty-pass-card { 
       background: linear-gradient(145deg, #131B2E 0%, #0B101D 100%); 
       border: 1px solid rgba(255,255,255,0.08); 
@@ -219,7 +213,7 @@
     .loyalty-pass-card::after { content: ''; position: absolute; top: 0; left: -50%; width: 200%; height: 100%; background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0) 100%); transform: skewX(-25deg); pointer-events: none; }
     
     .pass-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed rgba(255, 255, 255, 0.15); padding-bottom: 16px; margin-bottom: 20px; }
-    .pass-type-badge { background: rgba(14, 165, 233, 0.15); color: #7DD3FC; padding: 4px 10px; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 700; border: 1px solid rgba(14, 165, 233, 0.3); }
+    .pass-type-badge { background: rgba(14, 165, 233, 0.15); color: #7DD3FC; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(14, 165, 233, 0.3); }
     .stamps-title { font-size: 0.95rem; color: #94A3B8; margin-bottom: 12px; display: flex; justify-content: space-between; }
     .stamps-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 24px; }
     .stamp-slot { aspect-ratio: 1; background: rgba(0,0,0,0.3); border: 1px dashed rgba(255, 255, 255, 0.15); border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4px; }
@@ -232,7 +226,7 @@
     .stamp-slot.gift .stamp-number { color: #FBBF24; font-size: 0.85rem; }
     
     .pass-actions-wrap { display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 2; }
-    .btn-apple-wallet { display: flex; align-items: center; justify-content: center; gap: 10px; background: #000; color: #fff; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; border: 1px solid rgba(255,255,255,0.2); transition: var(--transition); width: 100%; text-decoration: none; }
+    .btn-apple-wallet { display: flex; align-items: center; justify-content: center; gap: 10px; background: #000; color: #fff; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; border: 1px solid rgba(255,255,255,0.2); transition: var(--transition); width: 100%; text-decoration: none; cursor: pointer; }
     .btn-apple-wallet:hover { background: #111; box-shadow: 0 4px 15px rgba(255,255,255,0.1); }
     
     .loyalty-details h3 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; color: var(--text-primary); margin-bottom: 16px; }
@@ -267,18 +261,10 @@
     .period-line strong { color: var(--text-primary); }
     
     .branch-unified-actions { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 20px; }
-    
-    /* تحديث شكل أزرار الفروع لتكون أنيقة وحديثة */
-    .btn-branch-action { 
-      padding: 12px 20px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; 
-      display: flex; align-items: center; justify-content: center; gap: 8px; text-align: center; 
-      transition: var(--transition); border: 1px solid rgba(2, 132, 199, 0.2); 
-      background: rgba(2, 132, 199, 0.05); color: var(--brand-primary); text-decoration: none; 
-    }
+    .btn-branch-action { padding: 12px 20px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 8px; text-align: center; transition: var(--transition); border: 1px solid rgba(2, 132, 199, 0.2); background: rgba(2, 132, 199, 0.05); color: var(--brand-primary); text-decoration: none; }
     .btn-branch-action svg { width: 20px; height: 20px; }
     .btn-branch-action:hover { background: var(--brand-primary); color: white; box-shadow: 0 4px 15px var(--brand-glow); border-color: var(--brand-primary); }
 
-    /* بانر النهاية الزجاجي اللامع والمتناسق تماماً */
     .cta-banner { 
       background: linear-gradient(180deg, var(--bg-base) 0%, rgba(10, 15, 29, 0.8) 45%, #0A0F1D 100%); 
       color: white; padding: 80px 0 60px 0; text-align: center; 
@@ -291,16 +277,15 @@
     .cta-banner h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 12px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
     .cta-banner p { font-size: 1.05rem; margin-bottom: 24px; opacity: 0.9; }
     .banner-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; position: relative; z-index: 3; }
-    .btn-banner-phone { background: #FFFFFF; color: var(--text-primary); padding: 12px 32px; border-radius: var(--radius-full); font-weight: 800; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; transition: var(--transition); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-    .btn-banner-phone:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
+    .btn-banner-phone { background: #FFFFFF; color: var(--text-primary); padding: 14px 36px; border-radius: var(--radius-full); font-weight: 800; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; transition: var(--transition); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+    .btn-banner-phone:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
     
-    .footer { background: #0A0F1D; color: white; padding: 20px 0 30px 0; position: relative; z-index: 1; }
+    .footer { background: #0A0F1D; color: white; padding: 20px 0 30px 0; position: relative; z-index: 1; margin-top: -10px; }
     .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding-bottom: 30px; }
     .footer h4 { font-size: 1.15rem; color: #7DD3FC; font-weight: 700; margin-bottom: 14px; }
     .footer p { color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px; }
     .footer-copy { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #64748B; font-size: 0.9rem; }
 
-    /* المنصة العائمة السفلية النظيفة (فقط تيك توك وواتساب الأساسية) */
     .nine-floating-dock {
       position: fixed; bottom: 20px; left: 20px; z-index: 9999;
       display: flex; align-items: center; gap: 12px; flex-direction: row-reverse;
@@ -330,14 +315,30 @@
       .hero-banner { min-height: 70vh; padding: 40px 0 60px 0; }
       .bento-grid, .official-pricing-grid, .loyalty-grid, .branch-unified-card, .footer-grid { grid-template-columns: 1fr; }
       
+      /* تصغير بطاقات الأسعار في الجوال */
+      .official-price-card { padding: 20px 16px; border-radius: var(--radius-md); }
+      .car-category-title { font-size: 1.4rem; margin-bottom: 12px; }
+      .car-price-number { font-size: 2.6rem; }
+      .price-features-list li { font-size: 0.85rem; padding: 6px 0; }
+
       .branch-photo-holder { min-height: 250px; }
       .tiktok-container { justify-content: center; text-align: center; flex-direction: column; }
       .banner-actions { flex-direction: column; width: 100%; }
       .btn-banner-phone { width: 100%; justify-content: center; }
-      .bento-card, .official-price-card, .branch-unified-content { padding: 24px 20px; }
+      .bento-card, .branch-unified-content { padding: 24px 20px; }
     }
     @media (max-width: 480px) {
-      /* إصلاح انقطاع بطاقة الولاء في الجوال */
+      /* إصلاح انقطاع بطاقة الولاء وتصغير كروت الأسعار بحد أقصى */
+      .official-price-card { padding: 16px; }
+      .car-category-badge { font-size: 0.75rem; padding: 4px 12px; margin-bottom: 10px; }
+      .car-category-title { font-size: 1.25rem; }
+      .price-features-list { margin-bottom: 16px; }
+      .price-features-list li { font-size: 0.8rem; gap: 6px; padding: 5px 0; }
+      .price-features-list li svg { width: 14px; height: 14px; }
+      .car-price-number-wrap { margin-bottom: 16px; }
+      .car-price-number { font-size: 2.2rem; }
+      .btn-order-category { font-size: 0.9rem; padding: 10px 16px; }
+
       .loyalty-pass-card { padding: 20px 14px; }
       .stamps-grid { gap: 6px; }
       .stamp-slot { border-radius: var(--radius-sm); padding: 2px; }
@@ -437,7 +438,6 @@
 
           <div class="bento-card bento-card-compact">
             <div style="display:flex; justify-content:space-between; align-items:center;">
-              <!-- أيقونة البرق للسرعة بدلاً من الأيقونة السابقة -->
               <div class="icon-glass-box"><svg class="svg-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <span class="bento-tag">15 دقيقة فقط</span>
             </div>
@@ -449,7 +449,6 @@
 
           <div class="bento-card bento-card-compact">
             <div style="display:flex; justify-content:space-between; align-items:center;">
-              <!-- أيقونة النجوم للتجفيف الناعم بدلاً من الأيقونة السابقة -->
               <div class="icon-glass-box"><svg class="svg-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M12 3l1.912 5.813a2 2 0 001.275 1.275L21 12l-5.813 1.912a2 2 0 00-1.275 1.275L12 21l-1.912-5.813a2 2 0 00-1.275-1.275L3 12l5.813-1.912a2 2 0 001.275-1.275z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <span class="bento-tag">مايكروفايبر ناعم</span>
             </div>
@@ -462,7 +461,7 @@
       </div>
     </section>
 
-    <!-- قائمة الأسعار المصغرة والحديثة -->
+    <!-- قائمة الأسعار المصغرة والحديثة مع تعميم الإطار -->
     <section class="section-block" id="pricing" style="background:var(--neutral-100);">
       <div class="container">
         <div class="section-title">
@@ -471,7 +470,8 @@
         </div>
 
         <div class="official-pricing-grid">
-          <div class="official-price-card">
+          
+          <div class="official-price-card featured">
             <div>
               <span class="car-category-badge">اقتصادية</span>
               <h3 class="car-category-title">السيارة الصغيرة</h3>
@@ -505,7 +505,7 @@
             </div>
           </div>
 
-          <div class="official-price-card">
+          <div class="official-price-card featured">
             <div>
               <span class="car-category-badge">جيوب وعائلية</span>
               <h3 class="car-category-title">السيارة الكبيرة</h3>
@@ -525,7 +525,7 @@
       </div>
     </section>
 
-    <!-- قسم الولاء المضبوط لشاشات الجوال بدون تقطيع -->
+    <!-- قسم الولاء المضبوط لشاشات الجوال -->
     <section class="section-block loyalty-section">
       <div class="container">
         <div class="loyalty-grid">
@@ -606,9 +606,8 @@
             </div>
             
             <div class="branch-unified-actions">
-              <!-- زر خرائط جوجل الحديث -->
               <a href="https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic" class="btn-branch-action" id="branchMapDirectLink" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 موقعنا في Google map
               </a>
             </div>
@@ -633,7 +632,6 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <!-- إطار الشعار في الفوتر بلونه الطبيعي بدون أي تأثيرات أو فلاتر -->
           <div style="background: #000; padding: 8px 16px; border-radius: 8px; display: inline-block; margin-bottom: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
             <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:26px;">
           </div>
@@ -657,7 +655,7 @@
     </div>
   </footer>
 
-  <!-- المنصة العائمة السفلية النظيفة (بدون أزرار متكررة) -->
+  <!-- المنصة العائمة السفلية النظيفة -->
   <div class="nine-floating-dock">
     <a href="https://wa.me/966564927977" target="_blank" rel="noopener" class="dock-wa-btn" aria-label="واتساب">
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
@@ -675,40 +673,23 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       var heroVideo = document.getElementById('heroVideo');
-      var videoUrl = 'assets/hero-video.mp4.mp4'; 
-
       if (heroVideo) {
-        heroVideo.muted = true;
-        heroVideo.setAttribute('muted', '');
-        heroVideo.setAttribute('playsinline', '');
-
-        fetch(videoUrl)
-          .then(function(response) {
-            if (!response.ok) throw new Error('Network error');
-            return response.blob();
-          })
-          .then(function(blob) {
-            var blobUrl = URL.createObjectURL(blob);
-            heroVideo.src = blobUrl;
-            
-            var playPromise = heroVideo.play();
-            if (playPromise !== undefined) {
-              playPromise.catch(function(error) {
-                var forcePlay = function() {
-                  heroVideo.play();
-                  document.removeEventListener('touchstart', forcePlay);
-                  document.removeEventListener('scroll', forcePlay);
-                  document.removeEventListener('click', forcePlay);
-                };
-                document.addEventListener('touchstart', forcePlay, { passive: true });
-                document.addEventListener('scroll', forcePlay, { passive: true });
-                document.addEventListener('click', forcePlay, { passive: true });
-              });
-            }
-          })
-          .catch(function(error) {
-            console.log('Video fetch skipped, using poster.');
+        heroVideo.muted = true; 
+        
+        var playPromise = heroVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function(error) {
+            var forcePlay = function() {
+              heroVideo.play();
+              document.removeEventListener('touchstart', forcePlay);
+              document.removeEventListener('scroll', forcePlay);
+              document.removeEventListener('click', forcePlay);
+            };
+            document.addEventListener('touchstart', forcePlay, { passive: true });
+            document.addEventListener('scroll', forcePlay, { passive: true });
+            document.addEventListener('click', forcePlay, { passive: true });
           });
+        }
       }
     });
 
