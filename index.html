@@ -140,15 +140,16 @@
     .hero-branch-pill:hover { background: rgba(255,255,255,0.2); }
     .hero-branch-pill .mini-badge { background: var(--brand-primary); color: white; font-size: 0.75rem; padding: 2px 8px; border-radius: var(--radius-full); }
 
-    /* شريط تيك توك بخلفية سوداء لماعة زجاجية */
+    /* تم دمج ألوان القسم بشكل تدريجي لمنع الخطوط الحادة */
     .tiktok-strip { 
       background: linear-gradient(180deg, #1E1E1E 0%, #000000 40%, #000000 100%); 
       padding: 18px 0; 
       position: relative; 
       z-index: 4; 
-      border-top: 1px solid rgba(255,255,255,0.15); /* إضاءة علوية لانعكاس الزجاج */
+      border-top: 1px solid rgba(255,255,255,0.15);
       border-bottom: 1px solid #000;
-      box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 10px 20px rgba(0,0,0,0.3);
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 20px 40px rgba(0,0,0,0.5); /* ظل ناعم يدمج القسم مع ما تحته */
+      margin-bottom: 20px; /* مسافة بسيطة لفصل التدرج */
     }
     .tiktok-container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .tiktok-content { display: flex; align-items: center; gap: 12px; }
@@ -263,20 +264,25 @@
     .btn-branch-action svg { width: 20px; height: 20px; }
     .btn-branch-action:hover { background: var(--brand-primary); color: white; border-color: var(--brand-primary); }
 
-    .cta-banner { background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); color: white; padding: 60px 0; text-align: center; }
+    /* تم دمج قسم الدعوة والفوتر بتدرج لوني لمنع الفواصل الحادة */
+    .cta-banner { 
+      background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); 
+      color: white; padding: 60px 0; text-align: center; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2); position: relative; z-index: 2;
+    }
     .cta-banner h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 12px; }
     .cta-banner p { font-size: 1.05rem; margin-bottom: 24px; opacity: 0.9; }
     .banner-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
     .btn-banner-wa { background: var(--wa-green); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-decoration: none; }
     .btn-banner-phone { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.3); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
     
-    .footer { background: #0A0F1D; color: white; padding: 50px 0 20px 0; }
+    .footer { background: #0A0F1D; color: white; padding: 50px 0 20px 0; position: relative; z-index: 1; margin-top: -10px; }
     .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding-bottom: 30px; }
     .footer h4 { font-size: 1.15rem; color: #7DD3FC; font-weight: 700; margin-bottom: 14px; }
     .footer p { color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px; }
     .footer-copy { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #64748B; font-size: 0.9rem; }
 
-    /* المنصة العائمة السفلية النظيفة */
+    /* المنصة العائمة النظيفة بدون تكرار للواتساب */
     .nine-floating-dock {
       position: fixed; bottom: 20px; left: 20px; z-index: 9999;
       display: flex; align-items: center; gap: 12px; flex-direction: row-reverse;
@@ -367,7 +373,7 @@
       </div>
     </section>
 
-    <!-- شريط تيك توك بخلفيته الزجاجية السوداء اللماعة الفخمة -->
+    <!-- شريط تيك توك بخلفيته الزجاجية السوداء اللماعة الفخمة المتدرجة -->
     <section class="tiktok-strip">
       <div class="container tiktok-container">
         <div class="tiktok-content">
@@ -640,7 +646,7 @@
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // تشغيل الفيديو بشكل صامت وإجباري
+    // تشغيل الفيديو بالبث المباشر لضمان السرعة والعمل على الجوال
     document.addEventListener('DOMContentLoaded', function() {
       var heroVideo = document.getElementById('heroVideo');
       if (heroVideo) {
