@@ -167,11 +167,13 @@
     .bento-card:hover, .official-price-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: rgba(2, 132, 199, 0.2); }
     
     .bento-card { padding: 30px; display: flex; flex-direction: column; justify-content: space-between; }
-    .bento-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; align-items: center; background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%); border: 1px solid rgba(2, 132, 199, 0.15); }
+    .bento-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; align-items: center; background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%); border: 1px solid rgba(2, 132, 199, 0.15); padding: 0; }
+    .bento-hero-info { padding: 30px; }
     .bento-hero-info h3 { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px; }
     .bento-hero-info p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; }
     .bento-features-list { display: flex; gap: 16px; flex-wrap: wrap; }
     .bento-feature-item { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
+    .bento-hero-image-wrap { height: 100%; min-height: 250px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-soft); }
     
     .bento-card-compact h4 { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 16px 0 8px 0; }
     .bento-card-compact p { color: var(--text-secondary); font-size: 0.95rem; }
@@ -196,7 +198,8 @@
     .car-price-number { font-size: 3.2rem; font-weight: 900; color: var(--text-primary); line-height: 1; }
     .car-price-currency { font-size: 1.1rem; font-weight: 700; color: var(--brand-primary); }
     
-    .btn-order-category { background: var(--brand-primary); color: var(--text-white); padding: 12px 20px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: var(--transition); width: 100%; box-shadow: 0 4px 12px var(--brand-glow); }
+    /* أزرار الأسعار المحدثة للزيارة بدلاً من الواتس */
+    .btn-order-category { background: var(--brand-primary); color: var(--text-white); padding: 12px 20px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: var(--transition); width: 100%; box-shadow: 0 4px 12px var(--brand-glow); text-decoration: none; }
     .btn-order-category:hover { background: var(--brand-primary-hover); transform: translateY(-2px); }
 
     .loyalty-section { background: var(--bg-surface); border-top: 1px solid #CBD5E1; border-bottom: 1px solid #CBD5E1; }
@@ -223,7 +226,7 @@
     .stamp-slot.gift .stamp-number { color: #FBBF24; font-size: 0.85rem; }
     
     .pass-actions-wrap { display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 2; }
-    .btn-apple-wallet { display: flex; align-items: center; justify-content: center; gap: 10px; background: #000; color: #fff; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; border: 1px solid rgba(255,255,255,0.2); transition: var(--transition); width: 100%; text-decoration: none; }
+    .btn-apple-wallet { display: flex; align-items: center; justify-content: center; gap: 10px; background: #000; color: #fff; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; border: 1px solid rgba(255,255,255,0.2); transition: var(--transition); width: 100%; text-decoration: none; cursor: pointer; }
     .btn-apple-wallet:hover { background: #111; box-shadow: 0 4px 15px rgba(255,255,255,0.1); }
     
     .loyalty-details h3 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; color: var(--text-primary); margin-bottom: 16px; }
@@ -262,6 +265,7 @@
     .btn-branch-action svg { width: 20px; height: 20px; }
     .btn-branch-action:hover { background: var(--brand-primary); color: white; border-color: var(--brand-primary); }
 
+    /* تم التعديل لإزالة زر الواتساب من البانر واستخدام زر اتصال هاتفي مميز */
     .cta-banner { 
       background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); 
       color: white; padding: 60px 0; text-align: center; 
@@ -270,8 +274,14 @@
     .cta-banner h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 12px; }
     .cta-banner p { font-size: 1.05rem; margin-bottom: 24px; opacity: 0.9; }
     .banner-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
-    .btn-banner-wa { background: var(--wa-green); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-decoration: none; }
-    .btn-banner-phone { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.3); color: var(--text-white); padding: 12px 28px; border-radius: var(--radius-full); font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+    
+    .btn-banner-phone { 
+      background: #FFFFFF; color: var(--brand-primary); 
+      padding: 14px 36px; border-radius: var(--radius-full); 
+      font-weight: 800; font-size: 1.15rem; display: inline-flex; align-items: center; gap: 10px; 
+      text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: var(--transition);
+    }
+    .btn-banner-phone:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
     
     .footer { background: #0A0F1D; color: white; padding: 50px 0 20px 0; position: relative; z-index: 1; margin-top: -10px; }
     .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding-bottom: 30px; }
@@ -279,7 +289,7 @@
     .footer p { color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px; }
     .footer-copy { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #64748B; font-size: 0.9rem; }
 
-    /* المنصة العائمة السفلية مع أيقونة واتساب رسمية ومحدثة */
+    /* المنصة العائمة السفلية النظيفة (فقط تيك توك وواتساب الأساسية) */
     .nine-floating-dock {
       position: fixed; bottom: 20px; left: 20px; z-index: 9999;
       display: flex; align-items: center; gap: 12px; flex-direction: row-reverse;
@@ -313,7 +323,7 @@
       .branch-photo-holder { min-height: 250px; }
       .tiktok-container { justify-content: center; text-align: center; flex-direction: column; }
       .banner-actions { flex-direction: column; width: 100%; }
-      .btn-banner-wa, .btn-banner-phone { width: 100%; justify-content: center; }
+      .btn-banner-phone { width: 100%; justify-content: center; }
       .bento-card, .official-price-card, .branch-unified-content, .loyalty-pass-card { padding: 24px 20px; }
     }
     @media (max-width: 480px) {
@@ -370,6 +380,7 @@
       </div>
     </section>
 
+    <!-- شريط تيك توك -->
     <section class="tiktok-strip">
       <div class="container tiktok-container">
         <div class="tiktok-content">
@@ -404,7 +415,6 @@
                 <div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary);" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>آمن 100% على النانو</div>
               </div>
             </div>
-            <!-- استبدال المربع بالصورة المرفقة للبورش -->
             <div class="bento-hero-image-wrap" style="height: 100%; min-height: 250px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-soft);">
               <img src="assets/royal-wash.jpg.PNG" alt="عناية فائقة لسيارتك" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
@@ -435,6 +445,7 @@
       </div>
     </section>
 
+    <!-- الأسعار خالية من أزرار الواتساب (لأن الحجز بالحضور المباشر) -->
     <section class="section-block" id="pricing" style="background:var(--neutral-100);">
       <div class="container">
         <div class="section-title">
@@ -456,7 +467,7 @@
             </div>
             <div>
               <div class="car-price-number-wrap"><span class="car-price-number ltr-data">25</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%BA%D8%B3%D9%8A%D9%84%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20(%D8%B5%D8%BA%D9%8A%D8%B1%D8%A9)%20%D8%A8%D9%80%2025%20%D8%B1%D9%8A%D8%A7%D9%84" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
+              <a href="#branches" class="btn-order-category">تفضل بزيارة الفرع</a>
             </div>
           </div>
 
@@ -473,7 +484,7 @@
             </div>
             <div>
               <div class="car-price-number-wrap"><span class="car-price-number ltr-data">30</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%BA%D8%B3%D9%8A%D9%84%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20(%D9%85%D8%AA%D9%88%D8%B3%D8%B7%D8%A9)%20%D8%A8%D9%80%2030%20%D8%B1%D9%8A%D8%A7%D9%84" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
+              <a href="#branches" class="btn-order-category">تفضل بزيارة الفرع</a>
             </div>
           </div>
 
@@ -490,13 +501,14 @@
             </div>
             <div>
               <div class="car-price-number-wrap"><span class="car-price-number ltr-data">35</span><span class="car-price-currency">ر.س</span></div>
-              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%BA%D8%B3%D9%8A%D9%84%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20(%D9%83%D8%A8%D9%8A%D8%B1%D8%A9)%20%D8%A8%D9%80%2035%20%D8%B1%D9%8A%D8%A7%D9%84" class="btn-order-category" target="_blank" rel="noopener">طلب عبر واتساب</a>
+              <a href="#branches" class="btn-order-category">تفضل بزيارة الفرع</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- الولاء الرقمي وتصحيح الزر ليكون رسالة مساعدة فقط بدون واتساب -->
     <section class="section-block loyalty-section">
       <div class="container">
         <div class="loyalty-grid">
@@ -512,6 +524,7 @@
 
           <div class="loyalty-pass-card">
             <div class="pass-header">
+              <!-- عرض الشعار بإطار أسود نقي ليبرز بألوانه الأصلية الجميلة في البطاقة المظلمة -->
               <div style="background: #000; padding: 6px 14px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
                 <img src="assets/logo.png.JPEG" alt="NINE GO" style="height:22px;">
               </div>
@@ -528,7 +541,8 @@
             </div>
             
             <div class="pass-actions-wrap">
-              <a href="https://wa.me/966564927977?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AA%D9%81%D8%B9%D9%8A%D9%84%20%D8%A8%D8%B7%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9%20(%D8%A7%D8%BA%D8%B3%D9%84%204%20%D9%88%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D8%A7%D9%8B)" target="_blank" rel="noopener" class="btn-apple-wallet">
+              <!-- إزالة الواتساب واستخدام Alert يخبر العميل بزيارة الكاشير -->
+              <a href="javascript:void(0)" onclick="alert('تفضل بزيارة الكاشير في الفرع لتفعيل البطاقة مباشرة عبر مسح الرمز الذكي (QR Code).')" class="btn-apple-wallet">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.31-.88 3.5-.8 1.19.04 2.26.43 2.98 1.2-3.15 1.83-2.6 6.07.5 7.35-.74 1.82-1.57 3.65-2.06 4.42zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.32 2.4-1.95 4.34-3.74 4.25z"/></svg>
                 أضف إلى محفظة Apple
               </a>
@@ -575,6 +589,7 @@
             </div>
             
             <div class="branch-unified-actions">
+              <!-- الاعتماد فقط على جوجل ماب كما تم التوجيه -->
               <a href="https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic" class="btn-branch-action" id="branchMapDirectLink" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 فتح عبر خرائط Google
@@ -586,12 +601,12 @@
     </section>
   </main>
 
+  <!-- إزالة زر الواتساب من التذييل وترك الاتصال الهاتفي كخيار وحيد -->
   <section class="cta-banner">
     <div class="container">
       <h2>جاهز لتجربة غسيل استثنائية؟</h2>
       <p>فريقنا في خدمتكم يومياً في فرعي المبرز والهفوف بأرقى المواد العناية المتطورة.</p>
       <div class="banner-actions">
-        <a href="https://wa.me/966564927977" class="btn-banner-wa" target="_blank" rel="noopener">تواصل فوري عبر واتساب</a>
         <a href="tel:0564927977" class="btn-banner-phone"><span class="ltr-data" dir="ltr">056 492 7977</span></a>
       </div>
     </div>
@@ -601,6 +616,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
+          <!-- إطار الشعار في الفوتر بلونه الطبيعي -->
           <div style="background: #000; padding: 8px 16px; border-radius: 8px; display: inline-block; margin-bottom: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
             <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:26px;">
           </div>
@@ -624,7 +640,7 @@
     </div>
   </footer>
 
-  <!-- المنصة العائمة السفلية مع أيقونة الواتساب الصحيحة والمعتمدة عالمياً -->
+  <!-- المنصة العائمة السفلية (زر واحد للتيك توك وزر واحد للواتساب) -->
   <div class="nine-floating-dock">
     <a href="https://wa.me/966564927977" target="_blank" rel="noopener" class="dock-wa-btn" aria-label="واتساب">
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
