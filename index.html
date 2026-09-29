@@ -83,20 +83,98 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .header-call-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);border:none;color:#FFF;padding:10px 20px;border-radius:var(--radius-full);font-size:.95rem;font-weight:800;box-shadow:0 6px 18px rgba(227,30,36,.3)}
 .header-call-btn:hover{background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%);transform:translateY(-2px);box-shadow:0 8px 22px rgba(227,30,36,.45)}
 
-/* ===== Hero - فيديو أوضح ===== */
-.hero-banner{position:relative;width:100%;min-height:85vh;display:flex;align-items:center;padding:60px 0 80px;overflow:hidden}
+/* ===== Hero ===== */
+.hero-banner{position:relative;width:100%;min-height:80vh;display:flex;align-items:center;padding:70px 0 80px;overflow:hidden}
 .hero-bg-visual{position:absolute;inset:0;width:100%;height:100%;z-index:1;background:var(--bg-dark)}
-.hero-bg-visual video{width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none}
-.hero-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(10,10,10,.4) 0%,rgba(10,10,10,.55) 50%,rgba(10,10,10,.85) 100%)}
-.hero-content{position:relative;z-index:3;width:100%;max-width:800px}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(227,30,36,.2);border:1px solid rgba(227,30,36,.5);color:#FFD1D3;padding:8px 18px;border-radius:var(--radius-full);font-size:.88rem;font-weight:800;margin-bottom:24px;backdrop-filter:blur(12px)}
-.hero-heading{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.15;margin-bottom:20px;color:#FFF;letter-spacing:-1px;text-shadow:0 4px 30px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.7)}
-.hero-heading span{background:linear-gradient(135deg,#FF5C61 0%,#E31E24 50%,#B91419 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 20px rgba(227,30,36,.6))}
-.hero-subtext{font-size:1.15rem;color:#F1F5F9;margin-bottom:32px;line-height:1.75;max-width:650px;text-shadow:0 2px 8px rgba(0,0,0,.7)}
-.hero-branch-strip{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.hero-branch-pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius-full);padding:10px 20px;display:inline-flex;align-items:center;gap:10px;backdrop-filter:blur(12px);color:#FFF;font-size:.95rem;font-weight:700;cursor:pointer}
-.hero-branch-pill:hover{background:rgba(227,30,36,.3);border-color:rgba(227,30,36,.6)}
-.hero-branch-pill .mini-badge{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;font-size:.72rem;padding:2px 10px;border-radius:var(--radius-full);font-weight:800;box-shadow:0 2px 8px rgba(227,30,36,.4)}
+.hero-bg-visual video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 30%;
+  pointer-events:none;
+  filter:blur(4px) brightness(.7) saturate(1.15) contrast(1.05);
+  transform:scale(1.1);
+}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  background:
+    radial-gradient(ellipse at 50% 55%,rgba(10,10,10,.35) 0%,rgba(10,10,10,.55) 50%,rgba(10,10,10,.75) 100%),
+    linear-gradient(180deg,rgba(10,10,10,.55) 0%,rgba(10,10,10,.4) 40%,rgba(10,10,10,.9) 100%);
+}
+.hero-content{position:relative;z-index:3;width:100%;max-width:780px}
+
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:rgba(10,10,10,.5);
+  border:1px solid rgba(255,255,255,.2);
+  color:#FFF;
+  padding:6px 14px;
+  border-radius:var(--radius-full);
+  font-size:.82rem;
+  font-weight:700;
+  margin-bottom:22px;
+  backdrop-filter:blur(12px);
+  letter-spacing:.3px;
+}
+.hero-tag svg{width:14px;height:14px}
+
+.hero-heading{
+  font-size:clamp(2rem,5.5vw,3.6rem);
+  font-weight:900;
+  line-height:1.25;
+  margin-bottom:20px;
+  color:#FFF;
+  letter-spacing:-1px;
+  text-shadow:0 4px 20px rgba(0,0,0,.8),0 2px 6px rgba(0,0,0,.6);
+}
+.hero-highlight{
+  color:#FFF;
+  position:relative;
+  display:inline-block;
+  text-shadow:0 4px 24px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.7);
+}
+.hero-highlight::after{
+  content:'';
+  position:absolute;
+  bottom:6px;
+  left:0;
+  right:0;
+  height:6px;
+  background:linear-gradient(90deg,transparent 0%,#E31E24 15%,#F43F44 50%,#E31E24 85%,transparent 100%);
+  border-radius:3px;
+  z-index:-1;
+  opacity:.85;
+  filter:blur(.5px);
+}
+.hero-subtext{
+  font-size:clamp(1rem,2vw,1.15rem);
+  color:#E2E8F0;
+  margin-bottom:28px;
+  line-height:1.7;
+  max-width:620px;
+  font-weight:500;
+  text-shadow:0 2px 8px rgba(0,0,0,.7);
+}
+.hero-branches-line{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  color:#FFF;
+  padding:10px 18px;
+  border-radius:var(--radius-full);
+  font-size:.9rem;
+  font-weight:600;
+  backdrop-filter:blur(12px);
+  letter-spacing:.2px;
+}
+.hero-branches-line svg{color:#F43F44;flex-shrink:0}
+.hero-branches-line strong{color:#F43F44;font-weight:800}
 
 /* ===== TikTok Strip ===== */
 .tiktok-strip{background:linear-gradient(135deg,#0A0A0A 0%,#1F1F1F 50%,#0A0A0A 100%);padding:20px 0;position:relative;z-index:4;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:20px}
@@ -110,9 +188,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .official-pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
 .loyalty-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
 
-/* =================================================== */
-/* ===== بطاقات Bento - تصميم موحد حديث وفخم ===== */
-/* =================================================== */
+/* ===== بطاقات Bento موحدة ===== */
 .bento-card{
   position:relative;
   background:#FFF;
@@ -127,8 +203,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   box-shadow:0 25px 50px -15px rgba(227,30,36,.15),0 8px 20px rgba(15,23,42,.06);
   border-color:var(--border-red);
 }
-
-/* الشريط الأحمر العلوي - يظهر دائم للبطلة، ويظهر عند الهوفر للباقي */
 .bento-card::before{
   content:'';
   position:absolute;
@@ -141,11 +215,8 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   z-index:5;
 }
 .bento-card:hover::before{transform:scaleX(1)}
-
-/* البطلة - شريط أحمر دائم */
 .bento-hero::before{transform:scaleX(1)}
 
-/* رقم كبير في الخلفية */
 .bento-card-compact .bg-number{
   position:absolute;
   bottom:-30px;
@@ -164,7 +235,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   transform:translateY(-10px);
 }
 
-/* البطلة - نفس البنية */
 .bento-hero{
   grid-column:1/-1;
   display:grid;
@@ -209,7 +279,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 }
 .bento-hero:hover .bento-hero-image-wrap img{transform:scale(1.06)}
 
-/* الأيقونة الدائرية المتدرجة */
 .icon-premium{
   width:56px;
   height:56px;
@@ -233,7 +302,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 }
 .icon-premium svg{width:26px;height:26px;position:relative;z-index:1}
 
-/* بطاقات Bento المدمجة */
 .bento-card-compact{
   padding:32px 28px;
   display:flex;
@@ -268,8 +336,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   position:relative;
   z-index:2;
 }
-
-/* شارة bento-tag جديدة */
 .bento-tag{
   font-size:.75rem;
   font-weight:800;
@@ -294,7 +360,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   flex-shrink:0;
 }
 
-/* ===== Pricing Section ===== */
+/* ===== Pricing ===== */
 #pricing{background:linear-gradient(180deg,#F5F5F7 0%,#EDEDF0 100%);position:relative}
 
 .official-price-card{
@@ -342,9 +408,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .btn-order-category{background:#0A0A0A;color:#FFF;padding:14px 20px;border-radius:var(--radius-full);font-weight:900;font-size:.95rem;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:1px solid transparent;box-shadow:0 8px 20px rgba(10,10,10,.2);letter-spacing:.2px}
 .btn-order-category:hover{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);transform:translateY(-2px);box-shadow:0 12px 28px rgba(227,30,36,.4)}
 
-/* =================================================== */
-/* ===== بطاقة الولاء - Apple Wallet Pass حقيقي ===== */
-/* =================================================== */
+/* ===== Loyalty ===== */
 .loyalty-section{background:linear-gradient(180deg,#EDEDF0 0%,#E2E2E7 100%);border-top:1px solid rgba(15,23,42,.05);border-bottom:1px solid rgba(15,23,42,.05)}
 
 .wallet-pass-wrap{
@@ -367,7 +431,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   box-shadow:0 40px 80px -20px rgba(227,30,36,.25),0 10px 25px -8px rgba(0,0,0,.15);
 }
 
-/* رأس البطاقة - أسود مع شعار */
 .wallet-pass-header{
   background:linear-gradient(135deg,#0A0A0A 0%,#1F1F1F 100%);
   padding:20px 24px;
@@ -418,8 +481,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   letter-spacing:.5px;
   text-transform:uppercase;
 }
-
-/* أيقونة Apple Wallet */
 .wallet-badge{
   display:inline-flex;
   align-items:center;
@@ -436,7 +497,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 }
 .wallet-badge svg{width:14px;height:14px;fill:#FFF}
 
-/* جسم البطاقة - منطقة QR */
 .wallet-pass-body{
   padding:28px 24px 20px;
   text-align:center;
@@ -456,8 +516,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   font-weight:500;
   margin-bottom:20px;
 }
-
-/* QR Code */
 .wallet-qr-wrap{
   display:inline-flex;
   align-items:center;
@@ -501,8 +559,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   color:var(--text-muted);
   font-weight:500;
 }
-
-/* شريط أسفل البطاقة - معلومات */
 .wallet-pass-footer{
   background:#F1F5F9;
   padding:16px 24px;
@@ -531,8 +587,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   direction:ltr;
   text-align:right;
 }
-
-/* زر Apple Wallet */
 .btn-add-wallet{
   display:flex;
   align-items:center;
@@ -558,7 +612,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 }
 .btn-add-wallet svg{width:22px;height:22px;fill:#FFF}
 
-/* تفاصيل قسم الولاء */
 .loyalty-details h3{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;color:var(--text-primary);margin-bottom:16px;letter-spacing:-.5px;line-height:1.3}
 .loyalty-details h3 span{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .loyalty-desc{font-size:1.05rem;color:var(--text-secondary);margin-bottom:24px;line-height:1.7}
@@ -618,7 +671,11 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 @media(max-width:900px){.bento-hero{grid-template-columns:1fr}}
 @media(max-width:768px){
 .section-block{padding:55px 0}
-.hero-banner{min-height:70vh;padding:40px 0 60px}
+.hero-banner{min-height:70vh;padding:50px 0 60px}
+.hero-heading{font-size:clamp(1.8rem,7vw,2.6rem);line-height:1.3}
+.hero-highlight::after{height:4px;bottom:4px}
+.hero-subtext{font-size:.98rem;margin-bottom:24px}
+.hero-branches-line{font-size:.82rem;padding:8px 14px}
 .bento-grid,.official-pricing-grid,.loyalty-grid,.branch-unified-card,.footer-grid{grid-template-columns:1fr}
 .car-price-number{font-size:2.6rem}
 .card-head{padding:26px 20px 18px}
@@ -702,13 +759,22 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <div class="container hero-content">
 <div class="hero-tag">
 <svg class="svg-icon svg-icon-sm" style="color:#FFD1D3" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-<span>الأحساء: وين ما كنت.. ناين أقرب لك!</span>
+<span>الأحساء</span>
 </div>
-<h1 class="hero-heading">غسيل باهتمام <br><span>يليق بسيارتك</span></h1>
-<p class="hero-subtext">تفاصيل النظافة تصنع الفرق. نعتني بمركبتك عبر مسارات مجهزة بأحدث المضخات ورغوة ثلجية آمنة في فرعي المبرز والهفوف.</p>
-<div class="hero-branch-strip">
-<a href="#branches" onclick="switchBranchTab('mubarraz');" class="hero-branch-pill"><span class="mini-badge">الفرع 1</span> <span>المبرز – محاسن</span></a>
-<a href="#branches" onclick="switchBranchTab('hofuf');" class="hero-branch-pill"><span class="mini-badge">الفرع 2</span> <span>الهفوف – النايفية</span></a>
+
+<h1 class="hero-heading">
+غسيل باهتمام
+<br>
+<span class="hero-highlight">يليق بسيارتك</span>
+</h1>
+
+<p class="hero-subtext">
+تفاصيل النظافة تصنع الفرق — نعتني بمركبتك برغوة ثلجية آمنة وواكس فاخر.
+</p>
+
+<div class="hero-branches-line">
+<svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+<span><strong>فرعان</strong> في الأحساء · المبرز والهفوف</span>
 </div>
 </div>
 </section>
@@ -723,7 +789,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </section>
 
-<!-- ===== قسم المزايا - بطاقات موحدة حديثة ===== -->
 <section class="section-block" id="features">
 <div class="container">
 <div class="section-title">
@@ -733,7 +798,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 <div class="bento-grid">
 
-<!-- البطلة -->
 <div class="bento-card bento-hero">
 <div class="bento-hero-info">
 <div class="icon-premium" style="margin-bottom:20px">
@@ -752,7 +816,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </div>
 
-<!-- بطاقة 15 دقيقة -->
 <div class="bento-card bento-card-compact">
 <span class="bg-number">01</span>
 <div class="card-top">
@@ -767,7 +830,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </div>
 
-<!-- بطاقة مايكروفايبر -->
 <div class="bento-card bento-card-compact">
 <span class="bg-number">02</span>
 <div class="card-top">
@@ -786,7 +848,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </section>
 
-<!-- ===== قسم الأسعار ===== -->
 <section class="section-block" id="pricing">
 <div class="container">
 <div class="section-title">
@@ -860,7 +921,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </section>
 
-<!-- ===== بطاقة الولاء - Apple Wallet Pass ===== -->
 <section class="section-block loyalty-section">
 <div class="container">
 <div class="loyalty-grid">
@@ -877,7 +937,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 
 <div class="wallet-pass-wrap">
 <div class="wallet-pass">
-<!-- رأس البطاقة -->
 <div class="wallet-pass-header">
 <div class="wallet-brand">
 <div class="wallet-logo-box">
@@ -894,19 +953,15 @@ WALLET
 </div>
 </div>
 
-<!-- جسم البطاقة - QR -->
 <div class="wallet-pass-body">
 <div class="wallet-pass-title">بطاقة الولاء الرقمية</div>
 <div class="wallet-pass-desc">امسح الرمز عند الكاشير لإضافة ختم</div>
 
 <div class="wallet-qr-wrap">
 <div class="wallet-qr-inner">
-<!-- QR Code SVG - يمثل الرمز (يمكنك استبداله بـ QR حقيقي) -->
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 <rect width="100" height="100" fill="#FFF"/>
-<!-- QR نمطي (placeholder) -->
 <g fill="#0A0A0A">
-<!-- المربعات الأربعة في الزوايا -->
 <rect x="0" y="0" width="22" height="22"/>
 <rect x="4" y="4" width="14" height="14" fill="#FFF"/>
 <rect x="7" y="7" width="8" height="8" fill="#0A0A0A"/>
@@ -916,7 +971,6 @@ WALLET
 <rect x="0" y="78" width="22" height="22"/>
 <rect x="4" y="82" width="14" height="14" fill="#FFF"/>
 <rect x="7" y="85" width="8" height="8" fill="#0A0A0A"/>
-<!-- بيانات عشوائية تحاكي QR -->
 <rect x="28" y="4" width="4" height="4"/>
 <rect x="36" y="4" width="4" height="4"/>
 <rect x="44" y="4" width="4" height="4"/>
@@ -982,7 +1036,6 @@ WALLET
 <rect x="60" y="92" width="4" height="4"/>
 <rect x="76" y="92" width="4" height="4"/>
 </g>
-<!-- شعار صغير في الوسط -->
 <circle cx="50" cy="50" r="12" fill="#FFF"/>
 <circle cx="50" cy="50" r="10" fill="#E31E24"/>
 <text x="50" y="55" text-anchor="middle" fill="#FFF" font-weight="900" font-size="12" font-family="system-ui">9</text>
@@ -994,7 +1047,6 @@ WALLET
 <div class="wallet-pass-note">بطاقة العميل · صالحة في جميع الفروع</div>
 </div>
 
-<!-- ذيل البطاقة -->
 <div class="wallet-pass-footer">
 <div class="wallet-info-item">
 <span class="wallet-info-label">الأختام</span>
@@ -1018,7 +1070,6 @@ WALLET
 </div>
 </section>
 
-<!-- ===== قسم الفروع ===== -->
 <section class="section-block" id="branches">
 <div class="container">
 <div class="section-title">
