@@ -117,13 +117,31 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 /* ===== Pricing ===== */
 #pricing{background:linear-gradient(180deg,#F5F5F7 0%,#EDEDF0 100%);position:relative}
 .official-price-card{position:relative;text-align:center;display:flex;flex-direction:column;background:#FFF;border:1px solid var(--border-card);border-radius:26px;overflow:hidden;transition:var(--transition);box-shadow:0 12px 30px -10px rgba(15,23,42,.1),0 2px 6px rgba(15,23,42,.03)}
-.official-price-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#F43F44 0%,#E31E24 50%,#B91419 100%);opacity:0;transition:var(--transition);z-index:3}
-.official-price-card:hover{transform:translateY(-8px);border-color:var(--border-red);box-shadow:0 25px 55px -12px rgba(227,30,36,.2),0 4px 12px rgba(15,23,42,.05)}
-.official-price-card:hover::before{opacity:1}
+.official-price-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg,transparent 0%,#E31E24 15%,#F43F44 50%,#E31E24 85%,transparent 100%);
+  opacity:.85;
+  transition:var(--transition);
+  z-index:3;
+  border-radius:26px 26px 0 0;
+}
+.official-price-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--border-red);
+  box-shadow:0 25px 55px -12px rgba(227,30,36,.2),0 4px 12px rgba(15,23,42,.05);
+}
+.official-price-card:hover::before{
+  height:3px;
+  opacity:1;
+  background:linear-gradient(90deg,transparent 0%,#E31E24 10%,#F43F44 50%,#E31E24 90%,transparent 100%);
+  box-shadow:0 3px 12px rgba(227,30,36,.4);
+}
 .card-head{padding:34px 24px 22px;position:relative;z-index:2;background:linear-gradient(180deg,rgba(227,30,36,.03) 0%,transparent 100%);border-bottom:1px dashed rgba(15,23,42,.08)}
 .car-category-badge{display:inline-flex;align-items:center;gap:6px;background:var(--red-subtle);color:var(--red-primary);font-size:.78rem;font-weight:800;padding:6px 16px;border-radius:var(--radius-full);margin-bottom:16px;border:1px solid var(--border-red);letter-spacing:.3px}
-.car-category-title{font-size:1.55rem;font-weight:900;color:var(--text-primary);margin-bottom:6px;line-height:1.3;letter-spacing:-.5px}
-.card-subtext{font-size:.82rem;color:var(--text-muted);font-weight:500}
+.car-category-title{font-size:1.55rem;font-weight:900;color:var(--text-primary);margin-bottom:0;line-height:1.3;letter-spacing:-.5px}
 .card-body{padding:24px 22px 20px;position:relative;z-index:2}
 .price-features-list{list-style:none;text-align:right;display:flex;flex-direction:column;gap:13px}
 .price-features-list li{display:flex;align-items:flex-start;gap:11px;font-size:.92rem;color:var(--text-secondary);font-weight:500;line-height:1.5}
@@ -259,7 +277,8 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 /* ===== Footer ===== */
 .footer{background:#0A0A0A;color:#FFF;padding:40px 0 80px;position:relative;z-index:1}
 .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding-bottom:35px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:25px}
-.footer h4{font-size:1.15rem;color:#FFA8AB;font-weight:800;margin-bottom:16px}
+.footer h4{font-size:1.15rem;color:var(--red-primary);font-weight:800;margin-bottom:16px;position:relative;padding-bottom:10px}
+.footer h4::after{content:'';position:absolute;bottom:0;right:0;width:32px;height:2px;background:linear-gradient(90deg,var(--red-primary),transparent);border-radius:2px}
 .footer p{color:#94A3B8;font-size:.95rem;margin-bottom:10px;line-height:1.6}
 .footer-copy{text-align:center;color:#64748B;font-size:.9rem}
 
@@ -281,7 +300,8 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .back-to-top{
   position:fixed;
   bottom:90px;
-  left:20px;
+  right:20px;
+  left:auto;
   width:50px;
   height:50px;
   border-radius:50%;
@@ -329,7 +349,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   100%{transform:scale(1.2);opacity:0}
 }
 
-/* ===== Mobile Bottom Bar - شكل بيضاوي ===== */
+/* ===== Mobile Bottom Bar ===== */
 .mobile-bottom-bar{
   display:none;
   position:fixed;
@@ -461,7 +481,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .header-call-btn .ltr-data{display:none}
 .header-call-btn{padding:10px;border-radius:50%;width:42px;height:42px;justify-content:center}
 .mobile-bottom-bar{display:grid}
-.back-to-top{bottom:80px;left:14px;width:46px;height:46px}
+.back-to-top{bottom:80px;right:14px;left:auto;width:46px;height:46px}
 .nine-floating-dock{bottom:100px;left:14px;gap:8px}
 .dock-wa-btn{width:52px;height:52px}
 .dock-wa-btn svg{width:26px;height:26px}
@@ -509,7 +529,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .mobile-bar-btn{font-size:.68rem;padding:10px 6px;min-height:42px;gap:5px}
 .mobile-bar-btn svg{width:16px;height:16px}
 .mobile-bar-btn > span{font-size:.68rem}
-.back-to-top{bottom:75px;left:12px;width:42px;height:42px}
+.back-to-top{bottom:75px;right:12px;left:auto;width:42px;height:42px}
 }
 </style>
 </head>
@@ -634,11 +654,11 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <p class="sub-title">أسعار موحّدة في جميع الفروع — جودة ثابتة بدون مفاجآت</p>
 </div>
 <div class="official-pricing-grid">
+
 <div class="official-price-card">
 <div class="card-head">
 <span class="car-category-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/></svg>اقتصادية</span>
 <h3 class="car-category-title">السيارة الصغيرة</h3>
-<p class="card-subtext">سيدان صغيرة · 4 سلندر</p>
 </div>
 <div class="card-body">
 <ul class="price-features-list">
@@ -653,11 +673,11 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <a href="https://wa.me/966564927977?text=أبغى%20أحجز%20غسيل%20سيارة%20صغيرة" target="_blank" rel="noopener" class="btn-order-category"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>احجز الآن</a>
 </div>
 </div>
+
 <div class="official-price-card">
 <div class="card-head">
 <span class="car-category-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>متوسطة وكروس أوفر</span>
 <h3 class="car-category-title">السيارة المتوسطة</h3>
-<p class="card-subtext">كروس أوفر · دفع رباعي</p>
 </div>
 <div class="card-body">
 <ul class="price-features-list">
@@ -672,11 +692,11 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <a href="https://wa.me/966564927977?text=أبغى%20أحجز%20غسيل%20سيارة%20متوسطة" target="_blank" rel="noopener" class="btn-order-category"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>احجز الآن</a>
 </div>
 </div>
+
 <div class="official-price-card">
 <div class="card-head">
 <span class="car-category-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="8" width="18" height="10" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>جيوب وعائلية</span>
 <h3 class="car-category-title">السيارة الكبيرة</h3>
-<p class="card-subtext">جيوب · عائلية · 7 مقاعد</p>
 </div>
 <div class="card-body">
 <ul class="price-features-list">
@@ -691,6 +711,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <a href="https://wa.me/966564927977?text=أبغى%20أحجز%20غسيل%20سيارة%20كبيرة" target="_blank" rel="noopener" class="btn-order-category"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>احجز الآن</a>
 </div>
 </div>
+
 </div>
 </div>
 </section>
