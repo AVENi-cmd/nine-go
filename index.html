@@ -12,37 +12,15 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg-base:#F5F5F7;
-  --bg-elevated:#FFFFFF;
-  --bg-card:#FFFFFF;
-  --bg-soft:#EFEFF2;
-  --bg-dark:#0A0A0A;
-  --red-primary:#E31E24;
-  --red-light:#F43F44;
-  --red-dark:#B91419;
-  --red-glow:rgba(227,30,36,.2);
-  --red-subtle:rgba(227,30,36,.08);
-  --silver:#94A3B8;
-  --silver-light:#CBD5E1;
-  --silver-muted:#64748B;
-  --wa-green:#25D366;
-  --tiktok-pink:#FE2C55;
-  --ig-pink:#E1306C;
-  --text-white:#FFF;
-  --text-primary:#0A0A0A;
-  --text-secondary:#475569;
-  --text-muted:#94A3B8;
-  --border-subtle:rgba(15,23,42,.08);
-  --border-red:rgba(227,30,36,.2);
-  --border-card:rgba(15,23,42,.06);
-  --radius-sm:12px;
-  --radius-md:18px;
-  --radius-lg:24px;
-  --radius-full:9999px;
-  --shadow-soft:0 10px 30px -5px rgba(15,23,42,.08);
-  --shadow-hover:0 20px 40px -10px rgba(15,23,42,.12);
-  --shadow-red:0 12px 30px -8px rgba(227,30,36,.35);
-  --shadow-float:0 12px 30px rgba(0,0,0,.15);
+  --bg-base:#F5F5F7;--bg-elevated:#FFFFFF;--bg-card:#FFFFFF;--bg-soft:#EFEFF2;--bg-dark:#0A0A0A;
+  --red-primary:#E31E24;--red-light:#F43F44;--red-dark:#B91419;--red-glow:rgba(227,30,36,.2);--red-subtle:rgba(227,30,36,.08);
+  --silver:#94A3B8;--silver-light:#CBD5E1;--silver-muted:#64748B;
+  --wa-green:#25D366;--tiktok-pink:#FE2C55;--ig-pink:#E1306C;
+  --text-white:#FFF;--text-primary:#0A0A0A;--text-secondary:#475569;--text-muted:#94A3B8;
+  --border-subtle:rgba(15,23,42,.08);--border-red:rgba(227,30,36,.2);--border-card:rgba(15,23,42,.06);
+  --radius-sm:12px;--radius-md:18px;--radius-lg:24px;--radius-full:9999px;
+  --shadow-soft:0 10px 30px -5px rgba(15,23,42,.08);--shadow-hover:0 20px 40px -10px rgba(15,23,42,.12);
+  --shadow-red:0 12px 30px -8px rgba(227,30,36,.35);--shadow-float:0 12px 30px rgba(0,0,0,.15);
   --transition:.35s cubic-bezier(.2,.8,.2,1);
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -52,18 +30,14 @@ a{text-decoration:none;color:inherit;transition:var(--transition)}
 button{font-family:inherit;border:none;cursor:pointer;background:none;transition:var(--transition)}
 .container{width:100%;max-width:1280px;margin:0 auto;padding:0 20px}
 .ltr-data{direction:ltr!important;unicode-bidi:isolate!important;display:inline-block;font-weight:700;font-family:system-ui,sans-serif}
-
 .icon-glass-box{width:50px;height:50px;border-radius:var(--radius-md);background:#FFF;border:1px solid var(--border-subtle);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--red-primary);box-shadow:0 4px 10px rgba(15,23,42,.04)}
 .icon-glass-box.sm{width:40px;height:40px;border-radius:var(--radius-sm)}
 .icon-glass-box.red-glow{background:var(--red-subtle);border-color:var(--border-red);color:var(--red-primary)}
 .icon-glass-box.green-glow{background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.25);color:var(--wa-green)}
-
 .svg-icon{width:22px;height:22px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;display:inline-block;vertical-align:middle}
 .svg-icon-sm{width:18px;height:18px}
-
 .title-pill{display:inline-flex;align-items:center;gap:10px;color:var(--text-primary);background:#FFF;border:1px solid var(--border-subtle);padding:8px 20px;border-radius:var(--radius-full);font-size:.88rem;font-weight:800;margin-bottom:18px;letter-spacing:.2px;box-shadow:0 6px 18px -6px rgba(15,23,42,.1),0 2px 4px rgba(15,23,42,.03);position:relative}
 .title-pill::before{content:'';width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%);box-shadow:0 0 10px rgba(227,30,36,.5);flex-shrink:0}
-
 .section-title{text-align:center;margin-bottom:40px}
 .main-title{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:900;color:var(--text-primary);margin-bottom:12px;line-height:1.4;letter-spacing:-.5px}
 .sub-title{color:var(--text-secondary);font-size:1.05rem;max-width:600px;margin:0 auto}
@@ -104,12 +78,10 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .tiktok-btn{background:linear-gradient(135deg,#FE2C55 0%,#E11D48 100%);color:#FFF;padding:10px 24px;border-radius:50px;font-weight:800;font-size:.95rem;box-shadow:0 6px 20px rgba(254,44,85,.35)}
 .tiktok-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(254,44,85,.55)}
 
-/* ===== Grids ===== */
 .bento-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .official-pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
 .loyalty-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
 
-/* ===== Bento Cards ===== */
 .bento-card{position:relative;background:#FFF;border:1px solid var(--border-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);overflow:hidden;transition:var(--transition)}
 .bento-card:hover{transform:translateY(-6px);box-shadow:0 25px 50px -15px rgba(227,30,36,.15),0 8px 20px rgba(15,23,42,.06);border-color:var(--border-red)}
 .bento-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E31E24 0%,#F43F44 50%,#E31E24 100%);transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.2,.8,.2,1);z-index:5}
@@ -138,7 +110,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .bento-tag{font-size:.75rem;font-weight:800;padding:6px 14px;border-radius:var(--radius-full);letter-spacing:.3px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;background:rgba(227,30,36,.08);color:var(--red-primary);border:1px solid rgba(227,30,36,.15)}
 .bento-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor;flex-shrink:0}
 
-/* ===== Pricing ===== */
 #pricing{background:linear-gradient(180deg,#F5F5F7 0%,#EDEDF0 100%);position:relative}
 .official-price-card{position:relative;text-align:center;display:flex;flex-direction:column;background:#FFF;border:1px solid var(--border-card);border-radius:26px;overflow:hidden;transition:var(--transition);box-shadow:0 12px 30px -10px rgba(15,23,42,.1),0 2px 6px rgba(15,23,42,.03)}
 .official-price-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#F43F44 0%,#E31E24 50%,#B91419 100%);opacity:0;transition:var(--transition);z-index:3}
@@ -160,7 +131,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .btn-order-category{background:#0A0A0A;color:#FFF;padding:14px 20px;border-radius:var(--radius-full);font-weight:900;font-size:.95rem;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:1px solid transparent;box-shadow:0 8px 20px rgba(10,10,10,.2);letter-spacing:.2px}
 .btn-order-category:hover{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);transform:translateY(-2px);box-shadow:0 12px 28px rgba(227,30,36,.4)}
 
-/* ===== Loyalty ===== */
 .loyalty-section{background:linear-gradient(180deg,#EDEDF0 0%,#E2E2E7 100%);border-top:1px solid rgba(15,23,42,.05);border-bottom:1px solid rgba(15,23,42,.05)}
 .wallet-pass-wrap{width:100%;max-width:400px;margin:0 auto;perspective:1000px}
 .wallet-pass{background:#FFF;border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.25),0 8px 20px -8px rgba(0,0,0,.1);position:relative;transition:var(--transition)}
@@ -202,7 +172,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .loyalty-perks li{display:flex;align-items:flex-start;gap:14px;font-size:1rem;color:var(--text-primary)}
 .loyalty-perks li strong{color:var(--text-primary)}
 
-/* ===== Gallery ===== */
 .gallery-section{background:linear-gradient(180deg,#F5F5F7 0%,#EDEDF0 100%)}
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,200px);gap:16px}
 .gallery-item{position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;box-shadow:var(--shadow-soft);transition:var(--transition)}
@@ -214,7 +183,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .gallery-item:hover .gallery-overlay{transform:translateY(0)}
 .gallery-overlay::before{content:'';display:inline-block;width:20px;height:2px;background:var(--red-primary);margin-left:8px;vertical-align:middle;border-radius:2px}
 
-/* ===== Reviews ===== */
 .reviews-section{background:linear-gradient(180deg,#EDEDF0 0%,#E2E2E7 100%)}
 .reviews-summary{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#FFF;border:1px solid var(--border-card);border-radius:var(--radius-lg);padding:24px 28px;box-shadow:var(--shadow-soft);margin-bottom:30px;flex-wrap:wrap;position:relative;overflow:hidden}
 .reviews-summary::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(227,30,36,.06) 0%,transparent 70%);pointer-events:none}
@@ -228,7 +196,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .reviews-score-info span{font-size:.82rem;color:var(--text-muted);font-weight:500}
 .reviews-google-btn{display:inline-flex;align-items:center;gap:8px;background:var(--bg-base);border:1px solid var(--border-subtle);color:var(--text-primary);padding:11px 20px;border-radius:var(--radius-full);font-weight:800;font-size:.9rem;position:relative;z-index:2}
 .reviews-google-btn:hover{background:#FFF;border-color:var(--red-primary);color:var(--red-primary);transform:translateY(-2px);box-shadow:0 8px 20px rgba(227,30,36,.15)}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.reviews-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .review-card{background:#FFF;border:1px solid var(--border-card);border-radius:var(--radius-lg);padding:24px 22px;box-shadow:var(--shadow-soft);transition:var(--transition);position:relative;overflow:hidden;display:flex;flex-direction:column}
 .review-card::before{content:'"';position:absolute;top:-15px;left:14px;font-size:6rem;font-weight:900;color:rgba(227,30,36,.06);line-height:1;font-family:Georgia,serif;pointer-events:none}
 .review-card:hover{transform:translateY(-4px);border-color:var(--border-red);box-shadow:0 20px 40px -10px rgba(227,30,36,.15)}
@@ -240,7 +208,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .review-badge{font-size:.65rem;font-weight:700;background:rgba(227,30,36,.08);color:var(--red-primary);padding:2px 8px;border-radius:var(--radius-full);border:1px solid rgba(227,30,36,.15);white-space:nowrap}
 .review-text{color:var(--text-secondary);font-size:.9rem;line-height:1.75;position:relative;z-index:2;flex:1}
 
-/* ===== Branches ===== */
 .branch-tabs-wrapper{max-width:500px;margin:0 auto 30px;background:#FFF;border:1px solid var(--border-subtle);border-radius:var(--radius-full);padding:6px;display:flex;position:relative;box-shadow:var(--shadow-soft)}
 .segment-btn{flex:1;padding:12px;border-radius:var(--radius-full);font-size:.95rem;font-weight:800;color:var(--text-secondary);text-align:center;position:relative;z-index:2;transition:color .3s;cursor:pointer}
 .segment-btn.active{color:#FFF}
@@ -271,7 +238,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .btn-branch-action svg{width:20px;height:20px}
 .btn-branch-action:hover{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);box-shadow:0 8px 22px rgba(227,30,36,.5);transform:translateY(-2px)}
 
-/* ===== CTA Banner ===== */
 .cta-banner{background:linear-gradient(135deg,#0A0A0A 0%,#1F1F1F 50%,#0A0A0A 100%);color:#FFF;padding:90px 0 70px;text-align:center;position:relative;z-index:2;overflow:hidden;border-top:4px solid var(--red-primary)}
 .cta-banner::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(227,30,36,.2) 0%,transparent 60%);pointer-events:none}
 .cta-banner h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;margin-bottom:14px;letter-spacing:-.5px;position:relative;z-index:2}
@@ -280,31 +246,26 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .btn-banner-phone{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;padding:16px 42px;border-radius:var(--radius-full);font-weight:900;font-size:1.1rem;display:inline-flex;align-items:center;gap:10px;box-shadow:0 10px 30px rgba(227,30,36,.5);letter-spacing:.3px}
 .btn-banner-phone:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(227,30,36,.65);background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%)}
 
-/* ===== Footer ===== */
 .footer{background:#0A0A0A;color:#FFF;padding:40px 0 80px;position:relative;z-index:1}
 .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding-bottom:35px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:25px}
 .footer h4{font-size:1.15rem;color:#FFA8AB;font-weight:800;margin-bottom:16px}
 .footer p{color:#94A3B8;font-size:.95rem;margin-bottom:10px;line-height:1.6}
 .footer-copy{text-align:center;color:#64748B;font-size:.9rem}
 
-/* ===== Floating Dock ===== */
-.nine-floating-dock{position:fixed;bottom:20px;left:20px;z-index:9999;display:flex;align-items:center;gap:12px;flex-direction:row-reverse}
-.dock-tiktok-pill{background:#FFF;color:var(--text-primary);border:1px solid var(--border-subtle);display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:var(--radius-full);font-weight:800;font-size:.9rem;box-shadow:var(--shadow-float)}
+.nine-floating-dock{position:fixed;bottom:20px;left:20px;z-index:9999;display:flex;align-items:center;gap:10px;flex-direction:row-reverse}
+.dock-tiktok-pill{background:#FFF;color:var(--text-primary);border:1px solid var(--border-subtle);display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:var(--radius-full);font-weight:800;font-size:.9rem;box-shadow:var(--shadow-float);text-decoration:none}
 .dock-tiktok-pill:hover{transform:translateY(-3px);border-color:var(--tiktok-pink);color:var(--tiktok-pink)}
 .dock-tiktok-pill svg{width:20px;height:20px;fill:currentColor}
 .dock-wa-btn{width:56px;height:56px;background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);color:#FFF;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.5);animation:waPulse 2s infinite;flex-shrink:0}
 .dock-wa-btn:hover{transform:scale(1.1);animation:none}
 @keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 
-/* ===== Back to Top ===== */
 .back-to-top{position:fixed;bottom:90px;left:20px;width:48px;height:48px;border-radius:50%;background:#FFF;color:var(--red-primary);border:1px solid var(--border-subtle);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(15,23,42,.12);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(20px);transition:var(--transition);z-index:9998}
 .back-to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
 .back-to-top:hover{background:var(--red-primary);color:#FFF;border-color:var(--red-primary);transform:translateY(-3px);box-shadow:0 15px 35px rgba(227,30,36,.4)}
 .back-to-top svg{width:22px;height:22px}
 
-/* ===== Mobile Bottom Bar ===== */
-.mobile-bottom-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--border-subtle);z-index:9997;padding:8px 12px;padding-bottom:calc(8px + env(safe-area-inset-bottom));box-shadow:0 -10px 30px rgba(15,23,42,.08)}
-.mobile-bottom-bar{grid-template-columns:repeat(3,1fr);gap:8px}
+.mobile-bottom-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--border-subtle);z-index:9997;padding:8px 12px;padding-bottom:calc(8px + env(safe-area-inset-bottom));box-shadow:0 -10px 30px rgba(15,23,42,.08);grid-template-columns:repeat(3,1fr);gap:8px}
 .mobile-bar-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:8px 4px;border-radius:var(--radius-md);font-weight:800;font-size:.72rem;color:var(--text-secondary);transition:var(--transition);text-decoration:none}
 .mobile-bar-btn svg{width:20px;height:20px;fill:currentColor}
 .mobile-bar-btn:active{transform:scale(.95)}
@@ -312,7 +273,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .mobile-bar-call{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF}
 .mobile-bar-wa{background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);color:#FFF}
 
-/* ===== Media Queries ===== */
 @media(max-width:900px){.bento-hero{grid-template-columns:1fr}}
 @media(max-width:1024px){.reviews-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
@@ -618,79 +578,21 @@ WALLET
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 <rect width="100" height="100" fill="#FFF"/>
 <g fill="#0A0A0A">
-<rect x="0" y="0" width="22" height="22"/>
-<rect x="4" y="4" width="14" height="14" fill="#FFF"/>
-<rect x="7" y="7" width="8" height="8" fill="#0A0A0A"/>
-<rect x="78" y="0" width="22" height="22"/>
-<rect x="82" y="4" width="14" height="14" fill="#FFF"/>
-<rect x="85" y="7" width="8" height="8" fill="#0A0A0A"/>
-<rect x="0" y="78" width="22" height="22"/>
-<rect x="4" y="82" width="14" height="14" fill="#FFF"/>
-<rect x="7" y="85" width="8" height="8" fill="#0A0A0A"/>
-<rect x="28" y="4" width="4" height="4"/>
-<rect x="36" y="4" width="4" height="4"/>
-<rect x="44" y="4" width="4" height="4"/>
-<rect x="56" y="4" width="4" height="4"/>
-<rect x="64" y="4" width="4" height="4"/>
-<rect x="28" y="12" width="4" height="4"/>
-<rect x="48" y="12" width="4" height="4"/>
-<rect x="60" y="12" width="4" height="4"/>
-<rect x="28" y="20" width="4" height="4"/>
-<rect x="36" y="20" width="4" height="4"/>
-<rect x="52" y="20" width="4" height="4"/>
-<rect x="64" y="20" width="4" height="4"/>
-<rect x="4" y="28" width="4" height="4"/>
-<rect x="16" y="28" width="4" height="4"/>
-<rect x="28" y="28" width="4" height="4"/>
-<rect x="36" y="28" width="4" height="4"/>
-<rect x="48" y="28" width="4" height="4"/>
-<rect x="56" y="28" width="4" height="4"/>
-<rect x="68" y="28" width="4" height="4"/>
-<rect x="80" y="28" width="4" height="4"/>
-<rect x="88" y="28" width="4" height="4"/>
-<rect x="4" y="36" width="4" height="4"/>
-<rect x="24" y="36" width="4" height="4"/>
-<rect x="40" y="36" width="4" height="4"/>
-<rect x="52" y="36" width="4" height="4"/>
-<rect x="72" y="36" width="4" height="4"/>
-<rect x="92" y="36" width="4" height="4"/>
-<rect x="12" y="44" width="4" height="4"/>
-<rect x="28" y="44" width="4" height="4"/>
-<rect x="44" y="44" width="4" height="4"/>
-<rect x="60" y="44" width="4" height="4"/>
-<rect x="76" y="44" width="4" height="4"/>
-<rect x="88" y="44" width="4" height="4"/>
-<rect x="4" y="52" width="4" height="4"/>
-<rect x="20" y="52" width="4" height="4"/>
-<rect x="36" y="52" width="4" height="4"/>
-<rect x="48" y="52" width="4" height="4"/>
-<rect x="64" y="52" width="4" height="4"/>
-<rect x="80" y="52" width="4" height="4"/>
-<rect x="28" y="60" width="4" height="4"/>
-<rect x="44" y="60" width="4" height="4"/>
-<rect x="56" y="60" width="4" height="4"/>
-<rect x="72" y="60" width="4" height="4"/>
-<rect x="88" y="60" width="4" height="4"/>
-<rect x="4" y="68" width="4" height="4"/>
-<rect x="24" y="68" width="4" height="4"/>
-<rect x="40" y="68" width="4" height="4"/>
-<rect x="56" y="68" width="4" height="4"/>
-<rect x="76" y="68" width="4" height="4"/>
-<rect x="92" y="68" width="4" height="4"/>
-<rect x="28" y="76" width="4" height="4"/>
-<rect x="48" y="76" width="4" height="4"/>
-<rect x="64" y="76" width="4" height="4"/>
-<rect x="80" y="76" width="4" height="4"/>
-<rect x="28" y="88" width="4" height="4"/>
-<rect x="40" y="88" width="4" height="4"/>
-<rect x="52" y="88" width="4" height="4"/>
-<rect x="68" y="88" width="4" height="4"/>
-<rect x="88" y="88" width="4" height="4"/>
-<rect x="4" y="92" width="4" height="4"/>
-<rect x="24" y="92" width="4" height="4"/>
-<rect x="44" y="92" width="4" height="4"/>
-<rect x="60" y="92" width="4" height="4"/>
-<rect x="76" y="92" width="4" height="4"/>
+<rect x="0" y="0" width="22" height="22"/><rect x="4" y="4" width="14" height="14" fill="#FFF"/><rect x="7" y="7" width="8" height="8" fill="#0A0A0A"/>
+<rect x="78" y="0" width="22" height="22"/><rect x="82" y="4" width="14" height="14" fill="#FFF"/><rect x="85" y="7" width="8" height="8" fill="#0A0A0A"/>
+<rect x="0" y="78" width="22" height="22"/><rect x="4" y="82" width="14" height="14" fill="#FFF"/><rect x="7" y="85" width="8" height="8" fill="#0A0A0A"/>
+<rect x="28" y="4" width="4" height="4"/><rect x="36" y="4" width="4" height="4"/><rect x="44" y="4" width="4" height="4"/><rect x="56" y="4" width="4" height="4"/><rect x="64" y="4" width="4" height="4"/>
+<rect x="28" y="12" width="4" height="4"/><rect x="48" y="12" width="4" height="4"/><rect x="60" y="12" width="4" height="4"/>
+<rect x="28" y="20" width="4" height="4"/><rect x="36" y="20" width="4" height="4"/><rect x="52" y="20" width="4" height="4"/><rect x="64" y="20" width="4" height="4"/>
+<rect x="4" y="28" width="4" height="4"/><rect x="16" y="28" width="4" height="4"/><rect x="28" y="28" width="4" height="4"/><rect x="36" y="28" width="4" height="4"/><rect x="48" y="28" width="4" height="4"/><rect x="56" y="28" width="4" height="4"/><rect x="68" y="28" width="4" height="4"/><rect x="80" y="28" width="4" height="4"/><rect x="88" y="28" width="4" height="4"/>
+<rect x="4" y="36" width="4" height="4"/><rect x="24" y="36" width="4" height="4"/><rect x="40" y="36" width="4" height="4"/><rect x="52" y="36" width="4" height="4"/><rect x="72" y="36" width="4" height="4"/><rect x="92" y="36" width="4" height="4"/>
+<rect x="12" y="44" width="4" height="4"/><rect x="28" y="44" width="4" height="4"/><rect x="44" y="44" width="4" height="4"/><rect x="60" y="44" width="4" height="4"/><rect x="76" y="44" width="4" height="4"/><rect x="88" y="44" width="4" height="4"/>
+<rect x="4" y="52" width="4" height="4"/><rect x="20" y="52" width="4" height="4"/><rect x="36" y="52" width="4" height="4"/><rect x="48" y="52" width="4" height="4"/><rect x="64" y="52" width="4" height="4"/><rect x="80" y="52" width="4" height="4"/>
+<rect x="28" y="60" width="4" height="4"/><rect x="44" y="60" width="4" height="4"/><rect x="56" y="60" width="4" height="4"/><rect x="72" y="60" width="4" height="4"/><rect x="88" y="60" width="4" height="4"/>
+<rect x="4" y="68" width="4" height="4"/><rect x="24" y="68" width="4" height="4"/><rect x="40" y="68" width="4" height="4"/><rect x="56" y="68" width="4" height="4"/><rect x="76" y="68" width="4" height="4"/><rect x="92" y="68" width="4" height="4"/>
+<rect x="28" y="76" width="4" height="4"/><rect x="48" y="76" width="4" height="4"/><rect x="64" y="76" width="4" height="4"/><rect x="80" y="76" width="4" height="4"/>
+<rect x="28" y="88" width="4" height="4"/><rect x="40" y="88" width="4" height="4"/><rect x="52" y="88" width="4" height="4"/><rect x="68" y="88" width="4" height="4"/><rect x="88" y="88" width="4" height="4"/>
+<rect x="4" y="92" width="4" height="4"/><rect x="24" y="92" width="4" height="4"/><rect x="44" y="92" width="4" height="4"/><rect x="60" y="92" width="4" height="4"/><rect x="76" y="92" width="4" height="4"/>
 </g>
 <circle cx="50" cy="50" r="12" fill="#FFF"/>
 <circle cx="50" cy="50" r="10" fill="#E31E24"/>
@@ -712,7 +614,7 @@ WALLET
 </div>
 </div>
 </div>
-<a href="https://wallet.passkit.net/NINEGO" target="_blank" rel="noopener" class="btn-add-wallet">
+<a href="https://9jo.hozma.tech/ar/web/loyalty/dxfy0fszB2B0K41Bv1VB" target="_blank" rel="noopener" class="btn-add-wallet">
 <svg viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.31-.88 3.5-.8 1.19.04 2.26.43 2.98 1.2-3.15 1.83-2.6 6.07.5 7.35-.74 1.82-1.57 3.65-2.06 4.42zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.32 2.4-1.95 4.34-3.74 4.25z"/></svg>
 أضف البطاقة إلى Apple Wallet
 </a>
@@ -783,6 +685,7 @@ WALLET
 </a>
 </div>
 <div class="reviews-grid">
+
 <div class="review-card">
 <div class="review-head">
 <div class="review-avatar" style="background:linear-gradient(135deg,#E31E24 0%,#B91419 100%)">B</div>
@@ -796,6 +699,7 @@ WALLET
 </div>
 <p class="review-text">"من أفضل مغاسل السيارات اللي زرتها مؤخرًا. التنظيم والنظافة وترتيب المكان مع التصميم العصري يعطي انطباعًا بالاحترافية. فريق العمل متعاون، والاستقبال راقٍ وسريع."</p>
 </div>
+
 <div class="review-card">
 <div class="review-head">
 <div class="review-avatar" style="background:linear-gradient(135deg,#0A0A0A 0%,#1F1F1F 100%)">م</div>
@@ -809,6 +713,7 @@ WALLET
 </div>
 <p class="review-text">"صراحة يستحق التقييم، مغسلة من أفضل المغاسل في الأحساء. خدماتهم ممتازة والعمال تعاملهم ما شاء الله، ما تطلع منهم إلا سيارتك جاهزة كاملة. والأفضل من هذا كله أحسن سعر في الأحساء ٢٥ ريال غسيل كامل."</p>
 </div>
+
 <div class="review-card">
 <div class="review-head">
 <div class="review-avatar" style="background:linear-gradient(135deg,#0284C7 0%,#075985 100%)">M</div>
@@ -822,6 +727,7 @@ WALLET
 </div>
 <p class="review-text">"والله مغسلة ممتازة جداً، وسعر ٢٠ ريال للغسيل الخارجي يعتبر معقول. العمال حريصين على السيارة أكثر مني، أبي أمشي السيارة خلاص نظيفة يقولون احنا ما خلصنا."</p>
 </div>
+
 <div class="review-card">
 <div class="review-head">
 <div class="review-avatar" style="background:linear-gradient(135deg,#0D9488 0%,#065F5A 100%)">M</div>
@@ -835,6 +741,7 @@ WALLET
 </div>
 <p class="review-text">"شغلهم ولا غلطة وأسعارهم تفوز. وأربع غسلات والخامسة مجاناً. تستحق التجربة وبقوة."</p>
 </div>
+
 <div class="review-card">
 <div class="review-head">
 <div class="review-avatar" style="background:linear-gradient(135deg,#7C3AED 0%,#5B21B6 100%)">S</div>
@@ -848,6 +755,7 @@ WALLET
 </div>
 <p class="review-text">"ما شاء الله تبارك الله، أنا أراهن أنها أفضل مغسلة شفتها في الهفوف. أتمنى من صاحب المغسلة يستمر على نفس الجودة وبنفس الأسعار."</p>
 </div>
+
 <div class="review-card">
 <div class="review-head">
 <div class="review-avatar" style="background:linear-gradient(135deg,#D97706 0%,#92400E 100%)">A</div>
@@ -861,6 +769,35 @@ WALLET
 </div>
 <p class="review-text">"من أفضل غسيل السيارات اللي غسلت عندهم. بالنسبة لي كان أفضل غسيل من ناحية النظافة والسرعة في التعامل ولا غلطة، وريحة زكية طلعت السيارة!"</p>
 </div>
+
+<div class="review-card">
+<div class="review-head">
+<div class="review-avatar" style="background:linear-gradient(135deg,#0891B2 0%,#155E75 100%)">J</div>
+<div>
+<div class="review-name">Jon will So</div>
+<div class="review-meta">
+<span class="review-stars-sm">⭐⭐⭐⭐⭐</span>
+<span class="review-badge">مرشد محلي · المبرز</span>
+</div>
+</div>
+</div>
+<p class="review-text">"صراحه مغسله السيارات روعه 😎👌 شغاله نظيف، عمال محترم يقدر زبون 🌹 يعطيك العافيه على خدمة مميزة 🚗"</p>
+</div>
+
+<div class="review-card">
+<div class="review-head">
+<div class="review-avatar" style="background:linear-gradient(135deg,#BE185D 0%,#831843 100%)">M</div>
+<div>
+<div class="review-name">Memo Meshal</div>
+<div class="review-meta">
+<span class="review-stars-sm">⭐⭐⭐⭐⭐</span>
+<span class="review-badge">3 مراجعات</span>
+</div>
+</div>
+</div>
+<p class="review-text">"إذا مو أطلق مغسله يعني حتى بالاستقبال يحسسونك انك مالك المغسله. شكرا مغسله ناين شكرا عبد المنان وجميع طاقم العمل انجزتو"</p>
+</div>
+
 </div>
 </div>
 </section>
@@ -932,12 +869,9 @@ WALLET
 <p>أوقات العمل: <span style="color:#FFF;font-weight:700">من <b dir="ltr">8:00</b> ص حتى <b dir="ltr">3:00</b> فجراً</span></p>
 </div>
 <div>
-<h4>تابعنا وتواصل</h4>
-<p style="display:flex;align-items:center;gap:8px">
-<svg viewBox="0 0 24 24" width="18" height="18" fill="#E1306C"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg>
-<a href="https://www.instagram.com/nine_go9" target="_blank" rel="noopener" style="color:#94A3B8;font-weight:700">@nine_go9</a>
-</p>
+<h4>التواصل المباشر</h4>
 <p>هاتف: <span class="ltr-data" dir="ltr">056 492 7977</span></p>
+<p>تيك توك: <span style="color:#94A3B8;font-weight:700">@nine_go9</span></p>
 <p>الأحساء، المملكة العربية السعودية</p>
 </div>
 </div>
@@ -950,8 +884,8 @@ WALLET
 </button>
 
 <div class="mobile-bottom-bar">
-<a href="https://wallet.passkit.net/NINEGO" target="_blank" rel="noopener" class="mobile-bar-btn mobile-bar-wallet">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+<a href="https://9jo.hozma.tech/ar/web/loyalty/dxfy0fszB2B0K41Bv1VB" target="_blank" rel="noopener" class="mobile-bar-btn mobile-bar-wallet">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M3 11h18M7 15h3"/></svg>
 <span>بطاقتي</span>
 </a>
 <a href="tel:0564927977" class="mobile-bar-btn mobile-bar-call">
@@ -967,9 +901,6 @@ WALLET
 <div class="nine-floating-dock">
 <a href="https://wa.me/966564927977" target="_blank" rel="noopener" class="dock-wa-btn" aria-label="واتساب">
 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-</a>
-<a href="https://www.instagram.com/nine_go9" target="_blank" rel="noopener" class="dock-tiktok-pill" aria-label="انستقرام" style="background:linear-gradient(135deg,#E1306C 0%,#C13584 50%,#833AB4 100%);color:#FFF;border-color:transparent">
-<svg viewBox="0 0 24 24" fill="currentColor" style="fill:#FFF"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg>
 </a>
 <a href="https://www.tiktok.com/@nine_go9?_r=1&_t=ZS-9A7VZogYGPf" target="_blank" rel="noopener" class="dock-tiktok-pill" aria-label="تيك توك">
 <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
