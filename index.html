@@ -244,7 +244,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .btn-banner-phone{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;padding:16px 42px;border-radius:var(--radius-full);font-weight:900;font-size:1.1rem;display:inline-flex;align-items:center;gap:10px;box-shadow:0 10px 30px rgba(227,30,36,.5);letter-spacing:.3px}
 .btn-banner-phone:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(227,30,36,.65);background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%)}
 
-.footer{background:#0A0A0A;color:#FFF;padding:40px 0 80px;position:relative;z-index:1}
+.footer{background:#0A0A0A;color:#FFF;padding:40px 0 130px;position:relative;z-index:1}
 .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding-bottom:35px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:25px}
 .footer h4{font-size:1.15rem;color:var(--red-primary);font-weight:800;margin-bottom:16px;position:relative;padding-bottom:10px}
 .footer h4::after{content:'';position:absolute;bottom:0;right:0;width:32px;height:2px;background:linear-gradient(90deg,var(--red-primary),transparent);border-radius:2px}
@@ -264,12 +264,58 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .dock-wa-btn svg{width:28px;height:28px;fill:#FFF;position:relative;z-index:2}
 @keyframes waPulse{0%{transform:scale(1);opacity:.8}70%{transform:scale(1.4);opacity:0}100%{transform:scale(1.4);opacity:0}}
 
-.back-to-top{position:fixed;bottom:90px;right:20px;left:auto;width:50px;height:50px;border-radius:50%;background:#0A0A0A;color:#FFF;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(10,10,10,.35),0 0 0 2px rgba(227,30,36,.4);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(20px);transition:var(--transition);z-index:9997}
+/* ===== Back to Top ===== */
+.back-to-top{
+  position:fixed;
+  bottom:110px;
+  right:20px;
+  left:auto;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:#0A0A0A;
+  color:#FFF;
+  border:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 30px rgba(10,10,10,.35),0 0 0 2px rgba(227,30,36,.4);
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(20px);
+  transition:var(--transition);
+  z-index:9997;
+}
 .back-to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
-.back-to-top:hover{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);transform:translateY(-3px);box-shadow:0 15px 35px rgba(227,30,36,.55),0 0 0 2px rgba(227,30,36,.6)}
-.back-to-top svg{width:22px;height:22px;stroke:#FFF;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.back-to-top::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(227,30,36,.4);animation:backPulse 2.5s infinite;pointer-events:none}
-@keyframes backPulse{0%{transform:scale(1);opacity:.7}70%{transform:scale(1.2);opacity:0}100%{transform:scale(1.2);opacity:0}}
+.back-to-top:hover{
+  background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);
+  transform:translateY(-3px);
+  box-shadow:0 15px 35px rgba(227,30,36,.55),0 0 0 2px rgba(227,30,36,.6);
+}
+.back-to-top svg{
+  width:22px;
+  height:22px;
+  stroke:#FFF;
+  stroke-width:2.5;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.back-to-top::before{
+  content:'';
+  position:absolute;
+  inset:-6px;
+  border-radius:50%;
+  border:2px solid rgba(227,30,36,.4);
+  animation:backPulse 2.5s infinite;
+  pointer-events:none;
+}
+@keyframes backPulse{
+  0%{transform:scale(1);opacity:.7}
+  70%{transform:scale(1.2);opacity:0}
+  100%{transform:scale(1.2);opacity:0}
+}
 
 .mobile-bottom-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(245,245,247,.98);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-top:1px solid rgba(15,23,42,.05);z-index:9999;padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom));box-shadow:0 -10px 30px rgba(15,23,42,.05);grid-template-columns:repeat(3,1fr);gap:8px}
 .mobile-bar-btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 8px;border-radius:9999px;font-weight:800;font-size:.72rem;color:var(--text-primary);transition:var(--transition);text-decoration:none;position:relative;overflow:hidden;letter-spacing:.1px;min-height:44px;box-shadow:0 2px 8px rgba(15,23,42,.06)}
@@ -324,11 +370,11 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .header-call-btn .ltr-data{display:none}
 .header-call-btn{padding:10px;border-radius:50%;width:42px;height:42px;justify-content:center}
 .mobile-bottom-bar{display:grid}
-.back-to-top{bottom:80px;right:14px;left:auto;width:46px;height:46px}
+.back-to-top{bottom:100px;right:14px;left:auto;width:46px;height:46px}
 .nine-floating-dock{bottom:100px;left:14px;gap:8px}
 .dock-wa-btn{width:52px;height:52px}
 .dock-wa-btn svg{width:26px;height:26px}
-.footer{padding-bottom:110px}
+.footer{padding-bottom:130px}
 }
 @media(max-width:480px){
 .car-category-title{font-size:1.3rem}
@@ -372,7 +418,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .mobile-bar-btn{font-size:.68rem;padding:10px 6px;min-height:42px;gap:5px}
 .mobile-bar-btn svg{width:16px;height:16px}
 .mobile-bar-btn > span{font-size:.68rem}
-.back-to-top{bottom:75px;right:12px;left:auto;width:42px;height:42px}
+.back-to-top{bottom:95px;right:12px;left:auto;width:42px;height:42px}
 }
 </style>
 </head>
