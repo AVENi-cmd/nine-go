@@ -1,6 +1,3 @@
-تفضل الكود كامل بعد دمج كل التعديلات (البطاقات + المتغير الناقص + تحسينات الجوال):
-
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -98,6 +95,7 @@
     .sub-title { color: var(--text-secondary); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
     .section-block { padding: 80px 0; position: relative; }
 
+    /* ===== Header ===== */
     .site-header {
       position: sticky; top: 0; width: 100%; background: rgba(241, 245, 249, 0.85);
       backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
@@ -114,6 +112,7 @@
     }
     .header-call-btn:hover { background: var(--brand-primary); color: var(--text-white); border-color: var(--brand-primary); }
 
+    /* ===== Hero ===== */
     .hero-banner {
       position: relative; width: 100%; min-height: 85vh; display: flex; align-items: center;
       padding: 60px 0 80px 0; overflow: hidden;
@@ -145,6 +144,7 @@
     .hero-branch-pill:hover { background: rgba(255,255,255,0.2); }
     .hero-branch-pill .mini-badge { background: var(--brand-primary); color: white; font-size: 0.75rem; padding: 2px 8px; border-radius: var(--radius-full); }
 
+    /* ===== TikTok Strip ===== */
     .tiktok-strip { 
       background: linear-gradient(180deg, #1E1E1E 0%, #000000 40%, #000000 100%); 
       padding: 18px 0; 
@@ -160,6 +160,7 @@
     .tiktok-btn { background: linear-gradient(135deg, #FE2C55 0%, #E11D48 100%); color: #FFF; padding: 10px 24px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(254, 44, 85, 0.3); transition: var(--transition); }
     .tiktok-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(254, 44, 85, 0.5); }
 
+    /* ===== Grids ===== */
     .bento-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .official-pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
     .loyalty-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
@@ -169,12 +170,12 @@
       border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);
       overflow: hidden; transition: var(--transition);
     }
-    .bento-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: rgba(2, 132, 199, 0.2); }
+    .bento-card:hover { transform: translateY(--size4px); box-shadow: var(--shadow-hover); border-color: rgba(2, 132, 199, 0.2); }
     
     .bento-card { padding: 30px; display: flex; flex-direction: column; justify-content: space-between; }
     .bento-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; align-items: center; background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%); border: 1px solid rgba(2, 132, 199, 0.15); padding: 0; }
     .bento-hero-info { padding: 30px; }
-    .bento-hero-info h3 { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px; }
+    .bento-hero-info h3 { font: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px; }
     .bento-hero-info p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; }
     .bento-features-list { display: flex; gap: 16px; flex-wrap: wrap; }
     .bento-feature-item { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
@@ -223,7 +224,6 @@
 
     .official-price-card:hover::before { opacity: 1; }
 
-    /* البطاقة المميزة (الوسطى) */
     .official-price-card.featured {
       border: 2px solid var(--brand-primary);
       background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%);
@@ -255,7 +255,6 @@
       box-shadow: 0 25px 55px -10px rgba(2, 132, 199, 0.35);
     }
 
-    /* رأس البطاقة */
     .card-head {
       padding: 28px 22px 18px;
       background: linear-gradient(180deg, rgba(2, 132, 199, 0.04) 0%, transparent 100%);
@@ -301,7 +300,6 @@
       font-weight: 500;
     }
 
-    /* جسم البطاقة */
     .card-body { padding: 22px 22px 20px; }
 
     .price-features-list { 
@@ -343,7 +341,6 @@
       fill: none;
     }
 
-    /* ذيل البطاقة */
     .card-footer {
       padding: 0 22px 26px;
     }
@@ -418,6 +415,7 @@
     }
     /* ============ نهاية الأسعار ============ */
 
+    /* ===== Loyalty ===== */
     .loyalty-section { background: var(--bg-surface); border-top: 1px solid #CBD5E1; border-bottom: 1px solid #CBD5E1; }
     .loyalty-pass-card { 
       background: linear-gradient(145deg, #131B2E 0%, #0B101D 100%); 
@@ -452,6 +450,7 @@
     .loyalty-perks { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
     .loyalty-perks li { display: flex; align-items: flex-start; gap: 12px; font-size: 1rem; color: var(--text-primary); }
 
+    /* ===== Branch Tabs ===== */
     .branch-tabs-wrapper { 
       max-width: 500px; margin: 0 auto 30px auto; background: var(--bg-card); 
       border: 1px solid var(--border-subtle); border-radius: var(--radius-full); 
@@ -472,15 +471,9 @@
     .branch-title { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px; }
     .branch-location-text { color: var(--brand-primary); font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
     
-    .hours-organized-box { background: var(--bg-base); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin-bottom: 20px; }
-    .hours-title { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; }
-    .period-line { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 0.9rem; color: var(--text-secondary); }
-    .period-line strong { color: var(--text-primary); }
+    .branch-status-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(16, 185, 129, 0.1); color: #059669; padding: 5px 14px; border-radius: var(--radius-full); font-size: 0.82rem; font-weight: 700; margin-bottom: 14px; border: 1px solid rgba(16, 185, 129, 0.2); }
+    .status-dot-pulse { width: 8px; height: 8px; border-radius: 50%; background: #10B981; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); animation: dotPulse 1.8s infinite; }
+    @keyframes dotPulse { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); } 70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
     
-    .branch-unified-actions { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 20px; }
-    .btn-branch-action { padding: 12px 20px; border-radius: var(--radius-full); font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 8px; text-align: center; transition: var(--transition); border: 1px solid rgba(2, 132, 199, 0.2); background: rgba(2, 132, 199, 0.05); color: var(--brand-primary); text-decoration: none; }
-    .btn-branch-action svg { width: 20px; height: 20px; }
-    .btn-branch-action:hover { background: var(--brand-primary); color: white; box-shadow: 0 4px 15px var(--brand-glow); border-color: var(--brand-primary); }
-
-    .branch-status-badge { display: inline-flex; align-items: center
-```
+    .hours-organized-box { background: var(--bg-base); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin-bottom: 20px; }
+    .hours-title { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; font-weight: 700; color: var(--text-primary);
