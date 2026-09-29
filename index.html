@@ -17,34 +17,28 @@
   --bg-card:#FFFFFF;
   --bg-soft:#EFEFF2;
   --bg-dark:#0A0A0A;
-
   --red-primary:#E31E24;
   --red-light:#F43F44;
   --red-dark:#B91419;
   --red-glow:rgba(227,30,36,.2);
   --red-subtle:rgba(227,30,36,.08);
-
   --silver:#94A3B8;
   --silver-light:#CBD5E1;
   --silver-muted:#64748B;
-
   --wa-green:#25D366;
   --tiktok-pink:#FE2C55;
-
+  --ig-pink:#E1306C;
   --text-white:#FFF;
   --text-primary:#0A0A0A;
   --text-secondary:#475569;
   --text-muted:#94A3B8;
-
   --border-subtle:rgba(15,23,42,.08);
   --border-red:rgba(227,30,36,.2);
   --border-card:rgba(15,23,42,.06);
-
   --radius-sm:12px;
   --radius-md:18px;
   --radius-lg:24px;
   --radius-full:9999px;
-
   --shadow-soft:0 10px 30px -5px rgba(15,23,42,.08);
   --shadow-hover:0 20px 40px -10px rgba(15,23,42,.12);
   --shadow-red:0 12px 30px -8px rgba(227,30,36,.35);
@@ -80,99 +74,26 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .site-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 0%,var(--red-primary) 50%,transparent 100%);opacity:.7}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
 .brand-logo-img{height:44px;width:auto;max-width:180px;object-fit:contain}
-.header-call-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);border:none;color:#FFF;padding:10px 20px;border-radius:var(--radius-full);font-size:.95rem;font-weight:800;box-shadow:0 6px 18px rgba(227,30,36,.3)}
+.header-actions{display:flex;align-items:center;gap:8px}
+.header-wa-btn{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);border:none;color:#FFF;padding:10px 18px;border-radius:var(--radius-full);font-size:.9rem;font-weight:800;box-shadow:0 6px 18px rgba(37,211,102,.35);white-space:nowrap}
+.header-wa-btn svg{width:16px;height:16px;fill:#FFF}
+.header-wa-btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(37,211,102,.5)}
+.header-call-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);border:none;color:#FFF;padding:10px 20px;border-radius:var(--radius-full);font-size:.9rem;font-weight:800;box-shadow:0 6px 18px rgba(227,30,36,.3)}
 .header-call-btn:hover{background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%);transform:translateY(-2px);box-shadow:0 8px 22px rgba(227,30,36,.45)}
 
 /* ===== Hero ===== */
 .hero-banner{position:relative;width:100%;min-height:80vh;display:flex;align-items:center;padding:70px 0 80px;overflow:hidden}
 .hero-bg-visual{position:absolute;inset:0;width:100%;height:100%;z-index:1;background:var(--bg-dark)}
-.hero-bg-visual video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center 30%;
-  pointer-events:none;
-  filter:blur(4px) brightness(.7) saturate(1.15) contrast(1.05);
-  transform:scale(1.1);
-}
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  z-index:2;
-  background:
-    radial-gradient(ellipse at 50% 55%,rgba(10,10,10,.35) 0%,rgba(10,10,10,.55) 50%,rgba(10,10,10,.75) 100%),
-    linear-gradient(180deg,rgba(10,10,10,.55) 0%,rgba(10,10,10,.4) 40%,rgba(10,10,10,.9) 100%);
-}
+.hero-bg-visual video{width:100%;height:100%;object-fit:cover;object-position:center 30%;pointer-events:none;filter:blur(4px) brightness(.7) saturate(1.15) contrast(1.05);transform:scale(1.1)}
+.hero-overlay{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 50% 55%,rgba(10,10,10,.35) 0%,rgba(10,10,10,.55) 50%,rgba(10,10,10,.75) 100%),linear-gradient(180deg,rgba(10,10,10,.55) 0%,rgba(10,10,10,.4) 40%,rgba(10,10,10,.9) 100%)}
 .hero-content{position:relative;z-index:3;width:100%;max-width:780px}
-
-.hero-tag{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  background:rgba(10,10,10,.5);
-  border:1px solid rgba(255,255,255,.2);
-  color:#FFF;
-  padding:6px 14px;
-  border-radius:var(--radius-full);
-  font-size:.82rem;
-  font-weight:700;
-  margin-bottom:22px;
-  backdrop-filter:blur(12px);
-  letter-spacing:.3px;
-}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(10,10,10,.5);border:1px solid rgba(255,255,255,.2);color:#FFF;padding:6px 14px;border-radius:var(--radius-full);font-size:.82rem;font-weight:700;margin-bottom:22px;backdrop-filter:blur(12px);letter-spacing:.3px}
 .hero-tag svg{width:14px;height:14px}
-
-.hero-heading{
-  font-size:clamp(2rem,5.5vw,3.6rem);
-  font-weight:900;
-  line-height:1.25;
-  margin-bottom:20px;
-  color:#FFF;
-  letter-spacing:-1px;
-  text-shadow:0 4px 20px rgba(0,0,0,.8),0 2px 6px rgba(0,0,0,.6);
-}
-.hero-highlight{
-  color:#FFF;
-  position:relative;
-  display:inline-block;
-  text-shadow:0 4px 24px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.7);
-}
-.hero-highlight::after{
-  content:'';
-  position:absolute;
-  bottom:6px;
-  left:0;
-  right:0;
-  height:6px;
-  background:linear-gradient(90deg,transparent 0%,#E31E24 15%,#F43F44 50%,#E31E24 85%,transparent 100%);
-  border-radius:3px;
-  z-index:-1;
-  opacity:.85;
-  filter:blur(.5px);
-}
-.hero-subtext{
-  font-size:clamp(1rem,2vw,1.15rem);
-  color:#E2E8F0;
-  margin-bottom:28px;
-  line-height:1.7;
-  max-width:620px;
-  font-weight:500;
-  text-shadow:0 2px 8px rgba(0,0,0,.7);
-}
-.hero-branches-line{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.18);
-  color:#FFF;
-  padding:10px 18px;
-  border-radius:var(--radius-full);
-  font-size:.9rem;
-  font-weight:600;
-  backdrop-filter:blur(12px);
-  letter-spacing:.2px;
-}
+.hero-heading{font-size:clamp(2rem,5.5vw,3.6rem);font-weight:900;line-height:1.25;margin-bottom:20px;color:#FFF;letter-spacing:-1px;text-shadow:0 4px 20px rgba(0,0,0,.8),0 2px 6px rgba(0,0,0,.6)}
+.hero-highlight{color:#FFF;position:relative;display:inline-block;text-shadow:0 4px 24px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.7)}
+.hero-highlight::after{content:'';position:absolute;bottom:6px;left:0;right:0;height:6px;background:linear-gradient(90deg,transparent 0%,#E31E24 15%,#F43F44 50%,#E31E24 85%,transparent 100%);border-radius:3px;z-index:-1;opacity:.85;filter:blur(.5px)}
+.hero-subtext{font-size:clamp(1rem,2vw,1.15rem);color:#E2E8F0;margin-bottom:28px;line-height:1.7;max-width:620px;font-weight:500;text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.hero-branches-line{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#FFF;padding:10px 18px;border-radius:var(--radius-full);font-size:.9rem;font-weight:600;backdrop-filter:blur(12px);letter-spacing:.2px}
 .hero-branches-line svg{color:#F43F44;flex-shrink:0}
 .hero-branches-line strong{color:#F43F44;font-weight:800}
 
@@ -188,210 +109,41 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .official-pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
 .loyalty-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
 
-/* ===== بطاقات Bento موحدة ===== */
-.bento-card{
-  position:relative;
-  background:#FFF;
-  border:1px solid var(--border-card);
-  border-radius:var(--radius-lg);
-  box-shadow:var(--shadow-soft);
-  overflow:hidden;
-  transition:var(--transition);
-}
-.bento-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 25px 50px -15px rgba(227,30,36,.15),0 8px 20px rgba(15,23,42,.06);
-  border-color:var(--border-red);
-}
-.bento-card::before{
-  content:'';
-  position:absolute;
-  top:0;left:0;right:0;
-  height:4px;
-  background:linear-gradient(90deg,#E31E24 0%,#F43F44 50%,#E31E24 100%);
-  transform:scaleX(0);
-  transform-origin:right;
-  transition:transform .4s cubic-bezier(.2,.8,.2,1);
-  z-index:5;
-}
+/* ===== Bento Cards ===== */
+.bento-card{position:relative;background:#FFF;border:1px solid var(--border-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);overflow:hidden;transition:var(--transition)}
+.bento-card:hover{transform:translateY(-6px);box-shadow:0 25px 50px -15px rgba(227,30,36,.15),0 8px 20px rgba(15,23,42,.06);border-color:var(--border-red)}
+.bento-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E31E24 0%,#F43F44 50%,#E31E24 100%);transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.2,.8,.2,1);z-index:5}
 .bento-card:hover::before{transform:scaleX(1)}
 .bento-hero::before{transform:scaleX(1)}
-
-.bento-card-compact .bg-number{
-  position:absolute;
-  bottom:-30px;
-  left:10px;
-  font-size:8rem;
-  font-weight:900;
-  color:rgba(227,30,36,.05);
-  line-height:1;
-  z-index:0;
-  pointer-events:none;
-  font-family:system-ui,sans-serif;
-  transition:var(--transition);
-}
-.bento-card-compact:hover .bg-number{
-  color:rgba(227,30,36,.1);
-  transform:translateY(-10px);
-}
-
-.bento-hero{
-  grid-column:1/-1;
-  display:grid;
-  grid-template-columns:1.4fr 1fr;
-  gap:0;
-  align-items:center;
-  padding:0;
-  min-height:320px;
-}
+.bento-card-compact .bg-number{position:absolute;bottom:-30px;left:10px;font-size:8rem;font-weight:900;color:rgba(227,30,36,.05);line-height:1;z-index:0;pointer-events:none;font-family:system-ui,sans-serif;transition:var(--transition)}
+.bento-card-compact:hover .bg-number{color:rgba(227,30,36,.1);transform:translateY(-10px)}
+.bento-hero{grid-column:1/-1;display:grid;grid-template-columns:1.4fr 1fr;gap:0;align-items:center;padding:0;min-height:320px}
 .bento-hero-info{padding:40px;position:relative;z-index:2}
 .bento-hero-info h3{font-size:1.8rem;font-weight:900;color:var(--text-primary);margin-bottom:14px;letter-spacing:-.5px;line-height:1.3}
 .bento-hero-info p{color:var(--text-secondary);font-size:.95rem;margin-bottom:24px;line-height:1.75}
 .bento-features-list{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
-.bento-feature-item{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  font-size:.85rem;
-  font-weight:700;
-  color:var(--text-primary);
-  background:var(--bg-base);
-  padding:6px 12px;
-  border-radius:var(--radius-full);
-  border:1px solid var(--border-subtle);
-}
+.bento-feature-item{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:700;color:var(--text-primary);background:var(--bg-base);padding:6px 12px;border-radius:var(--radius-full);border:1px solid var(--border-subtle)}
 .bento-feature-item svg{width:14px;height:14px}
-.bento-hero-image-wrap{
-  height:100%;
-  min-height:320px;
-  position:relative;
-  overflow:hidden;
-}
-.bento-hero-image-wrap::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(90deg,rgba(255,255,255,.15) 0%,transparent 30%);
-  pointer-events:none;
-}
-.bento-hero-image-wrap img{
-  transition:transform .7s cubic-bezier(.2,.8,.2,1);
-}
+.bento-hero-image-wrap{height:100%;min-height:320px;position:relative;overflow:hidden}
+.bento-hero-image-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.15) 0%,transparent 30%);pointer-events:none}
+.bento-hero-image-wrap img{transition:transform .7s cubic-bezier(.2,.8,.2,1)}
 .bento-hero:hover .bento-hero-image-wrap img{transform:scale(1.06)}
-
-.icon-premium{
-  width:56px;
-  height:56px;
-  border-radius:18px;
-  background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);
-  color:#FFF;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  flex-shrink:0;
-  box-shadow:0 10px 25px -8px rgba(227,30,36,.5),inset 0 1px 0 rgba(255,255,255,.2);
-  position:relative;
-  overflow:hidden;
-}
-.icon-premium::after{
-  content:'';
-  position:absolute;
-  top:0;left:0;
-  width:100%;height:50%;
-  background:linear-gradient(180deg,rgba(255,255,255,.15) 0%,transparent 100%);
-}
+.icon-premium{width:56px;height:56px;border-radius:18px;background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 10px 25px -8px rgba(227,30,36,.5),inset 0 1px 0 rgba(255,255,255,.2);position:relative;overflow:hidden}
+.icon-premium::after{content:'';position:absolute;top:0;left:0;width:100%;height:50%;background:linear-gradient(180deg,rgba(255,255,255,.15) 0%,transparent 100%)}
 .icon-premium svg{width:26px;height:26px;position:relative;z-index:1}
-
-.bento-card-compact{
-  padding:32px 28px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  min-height:250px;
-  position:relative;
-  overflow:hidden;
-}
-.bento-card-compact .card-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  position:relative;
-  z-index:2;
-  margin-bottom:auto;
-}
-.bento-card-compact h4{
-  font-size:1.35rem;
-  font-weight:900;
-  color:var(--text-primary);
-  margin:20px 0 10px;
-  line-height:1.3;
-  letter-spacing:-.3px;
-  position:relative;
-  z-index:2;
-}
-.bento-card-compact p{
-  color:var(--text-secondary);
-  font-size:.92rem;
-  line-height:1.7;
-  position:relative;
-  z-index:2;
-}
-.bento-tag{
-  font-size:.75rem;
-  font-weight:800;
-  padding:6px 14px;
-  border-radius:var(--radius-full);
-  letter-spacing:.3px;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  white-space:nowrap;
-  background:rgba(227,30,36,.08);
-  color:var(--red-primary);
-  border:1px solid rgba(227,30,36,.15);
-}
-.bento-tag::before{
-  content:'';
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  background:currentColor;
-  box-shadow:0 0 8px currentColor;
-  flex-shrink:0;
-}
+.bento-card-compact{padding:32px 28px;display:flex;flex-direction:column;justify-content:space-between;min-height:250px;position:relative;overflow:hidden}
+.bento-card-compact .card-top{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2;margin-bottom:auto}
+.bento-card-compact h4{font-size:1.35rem;font-weight:900;color:var(--text-primary);margin:20px 0 10px;line-height:1.3;letter-spacing:-.3px;position:relative;z-index:2}
+.bento-card-compact p{color:var(--text-secondary);font-size:.92rem;line-height:1.7;position:relative;z-index:2}
+.bento-tag{font-size:.75rem;font-weight:800;padding:6px 14px;border-radius:var(--radius-full);letter-spacing:.3px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;background:rgba(227,30,36,.08);color:var(--red-primary);border:1px solid rgba(227,30,36,.15)}
+.bento-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor;flex-shrink:0}
 
 /* ===== Pricing ===== */
 #pricing{background:linear-gradient(180deg,#F5F5F7 0%,#EDEDF0 100%);position:relative}
-
-.official-price-card{
-  position:relative;
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  background:#FFF;
-  border:1px solid var(--border-card);
-  border-radius:26px;
-  overflow:hidden;
-  transition:var(--transition);
-  box-shadow:0 12px 30px -10px rgba(15,23,42,.1),0 2px 6px rgba(15,23,42,.03);
-}
-.official-price-card::before{
-  content:'';
-  position:absolute;
-  top:0;left:0;right:0;
-  height:4px;
-  background:linear-gradient(90deg,#F43F44 0%,#E31E24 50%,#B91419 100%);
-  opacity:0;
-  transition:var(--transition);
-  z-index:3;
-}
-.official-price-card:hover{
-  transform:translateY(-8px);
-  border-color:var(--border-red);
-  box-shadow:0 25px 55px -12px rgba(227,30,36,.2),0 4px 12px rgba(15,23,42,.05);
-}
+.official-price-card{position:relative;text-align:center;display:flex;flex-direction:column;background:#FFF;border:1px solid var(--border-card);border-radius:26px;overflow:hidden;transition:var(--transition);box-shadow:0 12px 30px -10px rgba(15,23,42,.1),0 2px 6px rgba(15,23,42,.03)}
+.official-price-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#F43F44 0%,#E31E24 50%,#B91419 100%);opacity:0;transition:var(--transition);z-index:3}
+.official-price-card:hover{transform:translateY(-8px);border-color:var(--border-red);box-shadow:0 25px 55px -12px rgba(227,30,36,.2),0 4px 12px rgba(15,23,42,.05)}
 .official-price-card:hover::before{opacity:1}
-
 .card-head{padding:34px 24px 22px;position:relative;z-index:2;background:linear-gradient(180deg,rgba(227,30,36,.03) 0%,transparent 100%);border-bottom:1px dashed rgba(15,23,42,.08)}
 .car-category-badge{display:inline-flex;align-items:center;gap:6px;background:var(--red-subtle);color:var(--red-primary);font-size:.78rem;font-weight:800;padding:6px 16px;border-radius:var(--radius-full);margin-bottom:16px;border:1px solid var(--border-red);letter-spacing:.3px}
 .car-category-title{font-size:1.55rem;font-weight:900;color:var(--text-primary);margin-bottom:6px;line-height:1.3;letter-spacing:-.5px}
@@ -410,214 +162,83 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 
 /* ===== Loyalty ===== */
 .loyalty-section{background:linear-gradient(180deg,#EDEDF0 0%,#E2E2E7 100%);border-top:1px solid rgba(15,23,42,.05);border-bottom:1px solid rgba(15,23,42,.05)}
-
-.wallet-pass-wrap{
-  width:100%;
-  max-width:400px;
-  margin:0 auto;
-  perspective:1000px;
-}
-
-.wallet-pass{
-  background:#FFF;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 30px 60px -20px rgba(0,0,0,.25),0 8px 20px -8px rgba(0,0,0,.1);
-  position:relative;
-  transition:var(--transition);
-}
-.wallet-pass:hover{
-  transform:translateY(-6px) rotateX(2deg);
-  box-shadow:0 40px 80px -20px rgba(227,30,36,.25),0 10px 25px -8px rgba(0,0,0,.15);
-}
-
-.wallet-pass-header{
-  background:linear-gradient(135deg,#0A0A0A 0%,#1F1F1F 100%);
-  padding:20px 24px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  border-bottom:3px solid var(--red-primary);
-  position:relative;
-}
-.wallet-pass-header::after{
-  content:'';
-  position:absolute;
-  bottom:-3px;left:0;right:0;
-  height:3px;
-  background:linear-gradient(90deg,transparent 0%,var(--red-primary) 20%,var(--red-light) 50%,var(--red-primary) 80%,transparent 100%);
-}
-.wallet-brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-.wallet-logo-box{
-  background:#000;
-  padding:6px 12px;
-  border-radius:8px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border:1px solid rgba(227,30,36,.3);
-}
+.wallet-pass-wrap{width:100%;max-width:400px;margin:0 auto;perspective:1000px}
+.wallet-pass{background:#FFF;border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.25),0 8px 20px -8px rgba(0,0,0,.1);position:relative;transition:var(--transition)}
+.wallet-pass:hover{transform:translateY(-6px) rotateX(2deg);box-shadow:0 40px 80px -20px rgba(227,30,36,.25),0 10px 25px -8px rgba(0,0,0,.15)}
+.wallet-pass-header{background:linear-gradient(135deg,#0A0A0A 0%,#1F1F1F 100%);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--red-primary);position:relative}
+.wallet-pass-header::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--red-primary) 20%,var(--red-light) 50%,var(--red-primary) 80%,transparent 100%)}
+.wallet-brand{display:flex;align-items:center;gap:12px}
+.wallet-logo-box{background:#000;padding:6px 12px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(227,30,36,.3)}
 .wallet-logo-box img{height:24px;width:auto}
-.wallet-brand-text{
-  display:flex;
-  flex-direction:column;
-  gap:2px;
-}
-.wallet-brand-name{
-  color:#FFF;
-  font-weight:900;
-  font-size:.95rem;
-  letter-spacing:-.2px;
-  line-height:1.2;
-}
-.wallet-brand-sub{
-  color:var(--red-light);
-  font-weight:700;
-  font-size:.7rem;
-  letter-spacing:.5px;
-  text-transform:uppercase;
-}
-.wallet-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:5px;
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.15);
-  padding:5px 10px;
-  border-radius:var(--radius-full);
-  color:#FFF;
-  font-size:.7rem;
-  font-weight:800;
-  letter-spacing:.3px;
-  backdrop-filter:blur(8px);
-}
+.wallet-brand-text{display:flex;flex-direction:column;gap:2px}
+.wallet-brand-name{color:#FFF;font-weight:900;font-size:.95rem;letter-spacing:-.2px;line-height:1.2}
+.wallet-brand-sub{color:var(--red-light);font-weight:700;font-size:.7rem;letter-spacing:.5px;text-transform:uppercase}
+.wallet-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:5px 10px;border-radius:var(--radius-full);color:#FFF;font-size:.7rem;font-weight:800;letter-spacing:.3px;backdrop-filter:blur(8px)}
 .wallet-badge svg{width:14px;height:14px;fill:#FFF}
-
-.wallet-pass-body{
-  padding:28px 24px 20px;
-  text-align:center;
-  background:linear-gradient(180deg,#FFFFFF 0%,#F8FAFC 100%);
-  position:relative;
-}
-.wallet-pass-title{
-  font-size:1.15rem;
-  font-weight:900;
-  color:var(--text-primary);
-  letter-spacing:-.3px;
-  margin-bottom:4px;
-}
-.wallet-pass-desc{
-  font-size:.82rem;
-  color:var(--text-muted);
-  font-weight:500;
-  margin-bottom:20px;
-}
-.wallet-qr-wrap{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  background:#FFF;
-  padding:14px;
-  border-radius:16px;
-  box-shadow:0 8px 25px -10px rgba(0,0,0,.15),0 0 0 1px rgba(15,23,42,.05);
-  position:relative;
-  margin-bottom:16px;
-}
-.wallet-qr-wrap::before,
-.wallet-qr-wrap::after,
-.wallet-qr-inner::before,
-.wallet-qr-inner::after{
-  content:'';
-  position:absolute;
-  width:12px;height:12px;
-  border-color:var(--red-primary);
-  border-style:solid;
-  border-width:0;
-}
+.wallet-pass-body{padding:28px 24px 20px;text-align:center;background:linear-gradient(180deg,#FFFFFF 0%,#F8FAFC 100%);position:relative}
+.wallet-pass-title{font-size:1.15rem;font-weight:900;color:var(--text-primary);letter-spacing:-.3px;margin-bottom:4px}
+.wallet-pass-desc{font-size:.82rem;color:var(--text-muted);font-weight:500;margin-bottom:20px}
+.wallet-qr-wrap{display:inline-flex;align-items:center;justify-content:center;background:#FFF;padding:14px;border-radius:16px;box-shadow:0 8px 25px -10px rgba(0,0,0,.15),0 0 0 1px rgba(15,23,42,.05);position:relative;margin-bottom:16px}
+.wallet-qr-wrap::before,.wallet-qr-wrap::after,.wallet-qr-inner::before,.wallet-qr-inner::after{content:'';position:absolute;width:12px;height:12px;border-color:var(--red-primary);border-style:solid;border-width:0}
 .wallet-qr-wrap::before{top:-2px;right:-2px;border-top-width:3px;border-right-width:3px;border-top-right-radius:8px}
 .wallet-qr-wrap::after{bottom:-2px;left:-2px;border-bottom-width:3px;border-left-width:3px;border-bottom-left-radius:8px}
 .wallet-qr-inner{position:relative;display:inline-block}
 .wallet-qr-inner::before{top:-2px;left:-2px;border-top-width:3px;border-left-width:3px;border-top-left-radius:8px}
 .wallet-qr-inner::after{bottom:-2px;right:-2px;border-bottom-width:3px;border-right-width:3px;border-bottom-right-radius:8px}
 .wallet-qr-inner img,.wallet-qr-inner svg{display:block;width:160px;height:160px}
-
-.wallet-pass-number{
-  font-family:'Courier New',monospace;
-  font-size:.85rem;
-  font-weight:700;
-  color:var(--text-secondary);
-  letter-spacing:2px;
-  margin-bottom:6px;
-  direction:ltr;
-}
-.wallet-pass-note{
-  font-size:.72rem;
-  color:var(--text-muted);
-  font-weight:500;
-}
-.wallet-pass-footer{
-  background:#F1F5F9;
-  padding:16px 24px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-  border-top:1px dashed rgba(15,23,42,.1);
-}
-.wallet-info-item{
-  text-align:right;
-  display:flex;
-  flex-direction:column;
-  gap:2px;
-}
-.wallet-info-label{
-  font-size:.68rem;
-  color:var(--text-muted);
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:.5px;
-}
-.wallet-info-value{
-  font-size:.85rem;
-  color:var(--text-primary);
-  font-weight:800;
-  direction:ltr;
-  text-align:right;
-}
-.btn-add-wallet{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  background:#000;
-  color:#FFF;
-  padding:14px 20px;
-  border-radius:14px;
-  font-weight:800;
-  font-size:.98rem;
-  border:none;
-  width:100%;
-  cursor:pointer;
-  box-shadow:0 10px 25px -8px rgba(0,0,0,.4);
-  margin-top:20px;
-  transition:var(--transition);
-}
-.btn-add-wallet:hover{
-  background:#1F1F1F;
-  transform:translateY(-2px);
-  box-shadow:0 15px 30px -8px rgba(0,0,0,.5);
-}
+.wallet-pass-number{font-family:'Courier New',monospace;font-size:.85rem;font-weight:700;color:var(--text-secondary);letter-spacing:2px;margin-bottom:6px;direction:ltr}
+.wallet-pass-note{font-size:.72rem;color:var(--text-muted);font-weight:500}
+.wallet-pass-footer{background:#F1F5F9;padding:16px 24px;display:grid;grid-template-columns:1fr 1fr;gap:14px;border-top:1px dashed rgba(15,23,42,.1)}
+.wallet-info-item{text-align:right;display:flex;flex-direction:column;gap:2px}
+.wallet-info-label{font-size:.68rem;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.wallet-info-value{font-size:.85rem;color:var(--text-primary);font-weight:800;direction:ltr;text-align:right}
+.btn-add-wallet{display:flex;align-items:center;justify-content:center;gap:10px;background:#000;color:#FFF;padding:14px 20px;border-radius:14px;font-weight:800;font-size:.98rem;border:none;width:100%;cursor:pointer;box-shadow:0 10px 25px -8px rgba(0,0,0,.4);margin-top:20px;transition:var(--transition)}
+.btn-add-wallet:hover{background:#1F1F1F;transform:translateY(-2px);box-shadow:0 15px 30px -8px rgba(0,0,0,.5)}
 .btn-add-wallet svg{width:22px;height:22px;fill:#FFF}
-
 .loyalty-details h3{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;color:var(--text-primary);margin-bottom:16px;letter-spacing:-.5px;line-height:1.3}
 .loyalty-details h3 span{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .loyalty-desc{font-size:1.05rem;color:var(--text-secondary);margin-bottom:24px;line-height:1.7}
 .loyalty-perks{list-style:none;display:flex;flex-direction:column;gap:18px;margin-bottom:24px}
 .loyalty-perks li{display:flex;align-items:flex-start;gap:14px;font-size:1rem;color:var(--text-primary)}
 .loyalty-perks li strong{color:var(--text-primary)}
+
+/* ===== Gallery ===== */
+.gallery-section{background:linear-gradient(180deg,#F5F5F7 0%,#EDEDF0 100%)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,200px);gap:16px}
+.gallery-item{position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;box-shadow:var(--shadow-soft);transition:var(--transition)}
+.gallery-item-large{grid-column:span 2;grid-row:span 2}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item:hover{box-shadow:0 25px 50px -12px rgba(227,30,36,.25);z-index:2}
+.gallery-overlay{position:absolute;inset:auto 0 0 0;padding:20px 16px 14px;background:linear-gradient(180deg,transparent 0%,rgba(10,10,10,.85) 100%);color:#FFF;font-weight:800;font-size:.9rem;letter-spacing:.3px;transform:translateY(100%);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.gallery-item:hover .gallery-overlay{transform:translateY(0)}
+.gallery-overlay::before{content:'';display:inline-block;width:20px;height:2px;background:var(--red-primary);margin-left:8px;vertical-align:middle;border-radius:2px}
+
+/* ===== Reviews ===== */
+.reviews-section{background:linear-gradient(180deg,#EDEDF0 0%,#E2E2E7 100%)}
+.reviews-summary{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#FFF;border:1px solid var(--border-card);border-radius:var(--radius-lg);padding:24px 28px;box-shadow:var(--shadow-soft);margin-bottom:30px;flex-wrap:wrap;position:relative;overflow:hidden}
+.reviews-summary::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(227,30,36,.06) 0%,transparent 70%);pointer-events:none}
+.reviews-score{display:flex;align-items:center;gap:18px;flex-wrap:wrap;position:relative;z-index:2}
+.reviews-score-left{display:flex;flex-direction:column;gap:6px}
+.reviews-score-num{font-size:3.2rem;font-weight:900;color:var(--text-primary);letter-spacing:-2px;line-height:1}
+.reviews-stars{display:flex;gap:2px}
+.reviews-stars svg{width:18px;height:18px}
+.reviews-score-info{display:flex;flex-direction:column;gap:3px}
+.reviews-score-info strong{font-size:1.05rem;font-weight:900;color:var(--text-primary);letter-spacing:-.3px}
+.reviews-score-info span{font-size:.82rem;color:var(--text-muted);font-weight:500}
+.reviews-google-btn{display:inline-flex;align-items:center;gap:8px;background:var(--bg-base);border:1px solid var(--border-subtle);color:var(--text-primary);padding:11px 20px;border-radius:var(--radius-full);font-weight:800;font-size:.9rem;position:relative;z-index:2}
+.reviews-google-btn:hover{background:#FFF;border-color:var(--red-primary);color:var(--red-primary);transform:translateY(-2px);box-shadow:0 8px 20px rgba(227,30,36,.15)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review-card{background:#FFF;border:1px solid var(--border-card);border-radius:var(--radius-lg);padding:24px 22px;box-shadow:var(--shadow-soft);transition:var(--transition);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.review-card::before{content:'"';position:absolute;top:-15px;left:14px;font-size:6rem;font-weight:900;color:rgba(227,30,36,.06);line-height:1;font-family:Georgia,serif;pointer-events:none}
+.review-card:hover{transform:translateY(-4px);border-color:var(--border-red);box-shadow:0 20px 40px -10px rgba(227,30,36,.15)}
+.review-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;position:relative;z-index:2}
+.review-avatar{width:46px;height:46px;border-radius:50%;color:#FFF;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:1.2rem;flex-shrink:0;box-shadow:0 6px 15px -5px rgba(0,0,0,.25);font-family:system-ui,sans-serif}
+.review-name{font-weight:900;color:var(--text-primary);font-size:.95rem;margin-bottom:4px;letter-spacing:-.2px}
+.review-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.review-stars-sm{font-size:.72rem;letter-spacing:0px;line-height:1}
+.review-badge{font-size:.65rem;font-weight:700;background:rgba(227,30,36,.08);color:var(--red-primary);padding:2px 8px;border-radius:var(--radius-full);border:1px solid rgba(227,30,36,.15);white-space:nowrap}
+.review-text{color:var(--text-secondary);font-size:.9rem;line-height:1.75;position:relative;z-index:2;flex:1}
 
 /* ===== Branches ===== */
 .branch-tabs-wrapper{max-width:500px;margin:0 auto 30px;background:#FFF;border:1px solid var(--border-subtle);border-radius:var(--radius-full);padding:6px;display:flex;position:relative;box-shadow:var(--shadow-soft)}
@@ -632,6 +253,13 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .branch-photo-holder img{width:100%;height:100%;object-fit:cover;transition:opacity .3s ease,transform .6s ease}
 .branch-unified-card:hover .branch-photo-holder img{transform:scale(1.05)}
 .branch-unified-content{padding:38px;display:flex;flex-direction:column;justify-content:space-between;background:#FFF}
+.branch-status-live{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:var(--radius-full);font-size:.85rem;font-weight:800;margin-bottom:14px;border:1px solid;letter-spacing:.2px;transition:var(--transition);width:fit-content}
+.branch-status-live.open{background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.3);color:#059669}
+.branch-status-live.closed{background:rgba(227,30,36,.08);border-color:rgba(227,30,36,.25);color:var(--red-primary)}
+.status-dot-live{width:8px;height:8px;border-radius:50%;background:currentColor;flex-shrink:0;position:relative}
+.branch-status-live.open .status-dot-live{background:#10B981;animation:livePulse 1.8s infinite}
+.branch-status-live.closed .status-dot-live{background:var(--red-primary)}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(16,185,129,.6)}70%{box-shadow:0 0 0 8px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
 .branch-title{font-size:1.6rem;font-weight:900;color:var(--text-primary);margin-bottom:8px;letter-spacing:-.3px}
 .branch-location-text{color:var(--red-primary);font-size:1rem;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:22px}
 .hours-organized-box{background:var(--bg-base);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:18px;margin-bottom:20px}
@@ -653,7 +281,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .btn-banner-phone:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(227,30,36,.65);background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%)}
 
 /* ===== Footer ===== */
-.footer{background:#0A0A0A;color:#FFF;padding:40px 0 30px;position:relative;z-index:1}
+.footer{background:#0A0A0A;color:#FFF;padding:40px 0 80px;position:relative;z-index:1}
 .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding-bottom:35px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:25px}
 .footer h4{font-size:1.15rem;color:#FFA8AB;font-weight:800;margin-bottom:16px}
 .footer p{color:#94A3B8;font-size:.95rem;margin-bottom:10px;line-height:1.6}
@@ -668,7 +296,25 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .dock-wa-btn:hover{transform:scale(1.1);animation:none}
 @keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 
+/* ===== Back to Top ===== */
+.back-to-top{position:fixed;bottom:90px;left:20px;width:48px;height:48px;border-radius:50%;background:#FFF;color:var(--red-primary);border:1px solid var(--border-subtle);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(15,23,42,.12);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(20px);transition:var(--transition);z-index:9998}
+.back-to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.back-to-top:hover{background:var(--red-primary);color:#FFF;border-color:var(--red-primary);transform:translateY(-3px);box-shadow:0 15px 35px rgba(227,30,36,.4)}
+.back-to-top svg{width:22px;height:22px}
+
+/* ===== Mobile Bottom Bar ===== */
+.mobile-bottom-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--border-subtle);z-index:9997;padding:8px 12px;padding-bottom:calc(8px + env(safe-area-inset-bottom));box-shadow:0 -10px 30px rgba(15,23,42,.08)}
+.mobile-bottom-bar{grid-template-columns:repeat(3,1fr);gap:8px}
+.mobile-bar-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:8px 4px;border-radius:var(--radius-md);font-weight:800;font-size:.72rem;color:var(--text-secondary);transition:var(--transition);text-decoration:none}
+.mobile-bar-btn svg{width:20px;height:20px;fill:currentColor}
+.mobile-bar-btn:active{transform:scale(.95)}
+.mobile-bar-wallet{background:linear-gradient(135deg,#0A0A0A 0%,#1F1F1F 100%);color:#FFF}
+.mobile-bar-call{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF}
+.mobile-bar-wa{background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);color:#FFF}
+
+/* ===== Media Queries ===== */
 @media(max-width:900px){.bento-hero{grid-template-columns:1fr}}
+@media(max-width:1024px){.reviews-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
 .section-block{padding:55px 0}
 .hero-banner{min-height:70vh;padding:50px 0 60px}
@@ -694,6 +340,21 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .loyalty-grid{gap:30px}
 .brand-logo-img{height:38px}
 .branch-unified-content{padding:26px 22px}
+.gallery-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,160px);gap:12px}
+.gallery-item-large{grid-column:span 2;grid-row:span 1}
+.gallery-overlay{transform:translateY(0);padding:14px 12px 10px;font-size:.8rem}
+.reviews-summary{padding:20px;gap:16px;flex-direction:column;align-items:flex-start}
+.reviews-score-num{font-size:2.6rem}
+.reviews-google-btn{width:100%;justify-content:center}
+.reviews-grid{grid-template-columns:1fr;gap:14px}
+.header-wa-text{display:none}
+.header-wa-btn{padding:10px;border-radius:50%;width:42px;height:42px;justify-content:center}
+.header-call-btn .ltr-data{display:none}
+.header-call-btn{padding:10px;border-radius:50%;width:42px;height:42px;justify-content:center}
+.mobile-bottom-bar{display:grid}
+.back-to-top{bottom:100px}
+.nine-floating-dock{bottom:90px}
+.footer{padding-bottom:100px}
 }
 @media(max-width:480px){
 .car-category-title{font-size:1.3rem}
@@ -724,13 +385,16 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .dock-tiktok-pill .tiktok-text{display:none}
 .dock-tiktok-pill{padding:10px;border-radius:50%;width:44px;height:44px;justify-content:center}
 .dock-wa-btn{width:50px;height:50px}
-.nine-floating-dock{bottom:16px;left:16px}
 .title-pill{padding:6px 16px;font-size:.82rem}
 .brand-logo-img{height:34px}
 .bento-hero-info{padding:22px 18px}
 .bento-hero-info h3{font-size:1.35rem}
 .bento-feature-item{font-size:.78rem;padding:5px 10px}
 .branch-unified-content{padding:22px 18px}
+.reviews-score-num{font-size:2.2rem}
+.review-avatar{width:42px;height:42px;font-size:1.05rem}
+.review-card{padding:20px 18px}
+.review-text{font-size:.86rem}
 }
 </style>
 </head>
@@ -741,10 +405,16 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <a href="#hero" aria-label="الرئيسية">
 <img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" class="brand-logo-img" width="180" height="44">
 </a>
+<div class="header-actions">
+<a href="https://wa.me/966564927977?text=السلام%20عليكم%2C%20أبغى%20أستفسر%20عن%20خدمات%20ناين%20قو" target="_blank" rel="noopener" class="header-wa-btn">
+<svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+<span class="header-wa-text">احجز الآن</span>
+</a>
 <a href="tel:0564927977" class="header-call-btn">
 <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 <span class="ltr-data" dir="ltr">056 492 7977</span>
 </a>
+</div>
 </div>
 </header>
 
@@ -761,17 +431,14 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <svg class="svg-icon svg-icon-sm" style="color:#FFD1D3" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
 <span>الأحساء</span>
 </div>
-
 <h1 class="hero-heading">
 غسيل باهتمام
 <br>
 <span class="hero-highlight">يليق بسيارتك</span>
 </h1>
-
 <p class="hero-subtext">
 تفاصيل النظافة تصنع الفرق — نعتني بمركبتك برغوة ثلجية آمنة وواكس فاخر.
 </p>
-
 <div class="hero-branches-line">
 <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
 <span><strong>فرعان</strong> في الأحساء · المبرز والهفوف</span>
@@ -797,7 +464,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <p class="sub-title">نجمع بين تقنيات المواد العالمية الفاخرة وسرعة الخدمة المتقنة</p>
 </div>
 <div class="bento-grid">
-
 <div class="bento-card bento-hero">
 <div class="bento-hero-info">
 <div class="icon-premium" style="margin-bottom:20px">
@@ -815,7 +481,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <img src="assets/royal-wash.jpg.PNG" alt="عناية فائقة" style="width:100%;height:100%;object-fit:cover;display:block">
 </div>
 </div>
-
 <div class="bento-card bento-card-compact">
 <span class="bg-number">01</span>
 <div class="card-top">
@@ -829,7 +494,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <p>مسارات مدروسة وفريق عمل مدرب لإنهاء غسيل سيارتك بدقة متناهية خلال 15 دقيقة فقط.</p>
 </div>
 </div>
-
 <div class="bento-card bento-card-compact">
 <span class="bg-number">02</span>
 <div class="card-top">
@@ -843,7 +507,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <p>مناشف مايكروفايبر فائقة الكثافة والنعومة مخصصة للبودي لضمان تجفيف زجاجي بدون دوائر.</p>
 </div>
 </div>
-
 </div>
 </div>
 </section>
@@ -856,7 +519,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <p class="sub-title">أسعار موحّدة في جميع الفروع — جودة ثابتة بدون مفاجآت</p>
 </div>
 <div class="official-pricing-grid">
-
 <div class="official-price-card">
 <div class="card-head">
 <span class="car-category-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/></svg>اقتصادية</span>
@@ -873,10 +535,9 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 <div class="card-footer">
 <div class="car-price-number-wrap"><span class="car-price-number ltr-data">25</span><span class="car-price-currency">ر.س</span></div>
-<a href="#branches" class="btn-order-category"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>تفضل بزيارتنا</a>
+<a href="https://wa.me/966564927977?text=أبغى%20أحجز%20غسيل%20سيارة%20صغيرة" target="_blank" rel="noopener" class="btn-order-category"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>احجز الآن</a>
 </div>
 </div>
-
 <div class="official-price-card">
 <div class="card-head">
 <span class="car-category-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>متوسطة وكروس أوفر</span>
@@ -893,10 +554,9 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 <div class="card-footer">
 <div class="car-price-number-wrap"><span class="car-price-number ltr-data">30</span><span class="car-price-currency">ر.س</span></div>
-<a href="#branches" class="btn-order-category"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>تفضل بزيارتنا</a>
+<a href="https://wa.me/966564927977?text=أبغى%20أحجز%20غسيل%20سيارة%20متوسطة" target="_blank" rel="noopener" class="btn-order-category"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>احجز الآن</a>
 </div>
 </div>
-
 <div class="official-price-card">
 <div class="card-head">
 <span class="car-category-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="8" width="18" height="10" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>جيوب وعائلية</span>
@@ -913,28 +573,26 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 <div class="card-footer">
 <div class="car-price-number-wrap"><span class="car-price-number ltr-data">35</span><span class="car-price-currency">ر.س</span></div>
-<a href="#branches" class="btn-order-category"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>تفضل بزيارتنا</a>
+<a href="https://wa.me/966564927977?text=أبغى%20أحجز%20غسيل%20سيارة%20كبيرة" target="_blank" rel="noopener" class="btn-order-category"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>احجز الآن</a>
 </div>
 </div>
-
 </div>
 </div>
 </section>
 
-<section class="section-block loyalty-section">
+<section class="section-block loyalty-section" id="loyalty">
 <div class="container">
 <div class="loyalty-grid">
 <div class="loyalty-details">
 <span class="title-pill">ميزة حصرية لعملائنا</span>
-<h3>بطاقتك في <br><span>محفظة Apple</span></h3>
-<p class="loyalty-desc">احصل على بطاقة ولاء ناين قو الرقمية مباشرة في محفظة Apple Wallet. عند كل زيارة، امسح رمز QR ليتم إضافة ختم تلقائياً. بعد 4 زيارات، غسلة مجانية!</p>
+<h3>كن صديقنا.. <br><span>اغسل 4 والخامسة مجاناً!</span></h3>
+<p class="loyalty-desc">امسح الباركود، سجّل اسمك ورقم جوالك، وستظهر لك بطاقة الولاء مباشرة. أضفها إلى محفظة Apple Wallet وابدأ بجمع الغسلات.</p>
 <ul class="loyalty-perks">
 <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>محفوظة في هاتفك:</strong><span style="display:block;font-size:.85rem;color:var(--text-secondary)">تعمل مباشرة عبر تطبيق Wallet الرسمي.</span></div></li>
 <li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>تنبيه مكاني ذكي:</strong><span style="display:block;font-size:.85rem;color:var(--text-secondary)">تظهر البطاقة تلقائياً على الشاشة عند اقترابك للفرع.</span></div></li>
-<li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>تحديث فوري للأختام:</strong><span style="display:block;font-size:.85rem;color:var(--text-secondary)">الكاشير يمسح الكود ويضيف الختم فوراً بدون انتظار.</span></div></li>
+<li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>سهلة الاستخدام:</strong><span style="display:block;font-size:.85rem;color:var(--text-secondary)">الكاشير يمسح الباركود ويضيف الختم فوراً.</span></div></li>
 </ul>
 </div>
-
 <div class="wallet-pass-wrap">
 <div class="wallet-pass">
 <div class="wallet-pass-header">
@@ -943,7 +601,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <img src="assets/logo.png.JPEG" alt="NINE GO">
 </div>
 <div class="wallet-brand-text">
-<span class="wallet-brand-name">NAIN GO</span>
+<span class="wallet-brand-name">NINE GO</span>
 <span class="wallet-brand-sub">CAR WASH</span>
 </div>
 </div>
@@ -952,11 +610,9 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 WALLET
 </div>
 </div>
-
 <div class="wallet-pass-body">
 <div class="wallet-pass-title">بطاقة الولاء الرقمية</div>
 <div class="wallet-pass-desc">امسح الرمز عند الكاشير لإضافة ختم</div>
-
 <div class="wallet-qr-wrap">
 <div class="wallet-qr-inner">
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -1042,11 +698,9 @@ WALLET
 </svg>
 </div>
 </div>
-
 <div class="wallet-pass-number" dir="ltr">NG-2026-04821</div>
 <div class="wallet-pass-note">بطاقة العميل · صالحة في جميع الفروع</div>
 </div>
-
 <div class="wallet-pass-footer">
 <div class="wallet-info-item">
 <span class="wallet-info-label">الأختام</span>
@@ -1057,14 +711,155 @@ WALLET
 <span class="wallet-info-value" style="color:#25D366">نشط</span>
 </div>
 </div>
-
 </div>
-
-<a href="javascript:void(0)" onclick="alert('سيتم فتح بطاقة Apple Wallet عند تفعيل النظام في الفرع. تفضل بزيارة الكاشير للحصول على البطاقة الرقمية.')" class="btn-add-wallet" style="margin-top:20px">
+<a href="https://wallet.passkit.net/NINEGO" target="_blank" rel="noopener" class="btn-add-wallet">
 <svg viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.31-.88 3.5-.8 1.19.04 2.26.43 2.98 1.2-3.15 1.83-2.6 6.07.5 7.35-.74 1.82-1.57 3.65-2.06 4.42zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.32 2.4-1.95 4.34-3.74 4.25z"/></svg>
-أضف إلى Apple Wallet
+أضف البطاقة إلى Apple Wallet
 </a>
+</div>
+</div>
+</div>
+</section>
 
+<section class="section-block gallery-section" id="gallery">
+<div class="container">
+<div class="section-title">
+<span class="title-pill">من داخل المغسلة</span>
+<h2 class="main-title">جودة تبان من التفاصيل</h2>
+<p class="sub-title">لقطات حقيقية من فروعنا ولحظات العناية بسيارتك</p>
+</div>
+<div class="gallery-grid">
+<div class="gallery-item gallery-item-large">
+<img src="assets/gallery-1.jpg" alt="رغوة ثلجية على السيارة" loading="lazy">
+<div class="gallery-overlay"><span>رغوة ثلجية</span></div>
+</div>
+<div class="gallery-item">
+<img src="assets/gallery-2.jpg" alt="غسيل خارجي احترافي" loading="lazy">
+<div class="gallery-overlay"><span>غسيل خارجي</span></div>
+</div>
+<div class="gallery-item">
+<img src="assets/gallery-3.jpg" alt="تنظيف داخلي دقيق" loading="lazy">
+<div class="gallery-overlay"><span>تنظيف داخلي</span></div>
+</div>
+<div class="gallery-item">
+<img src="assets/gallery-4.jpg" alt="لمعان نهائي" loading="lazy">
+<div class="gallery-overlay"><span>لمعان نهائي</span></div>
+</div>
+<div class="gallery-item">
+<img src="assets/classic-carjpg.PNG" alt="عناية بالسيارات الكلاسيكية" loading="lazy">
+<div class="gallery-overlay"><span>سيارات كلاسيكية</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-block reviews-section" id="reviews">
+<div class="container">
+<div class="section-title">
+<span class="title-pill">رأي عملائنا</span>
+<h2 class="main-title">ثقة تُبنى بالتجربة</h2>
+<p class="sub-title">تقييمات حقيقية من زوار فروع ناين قو في الأحساء</p>
+</div>
+<div class="reviews-summary">
+<div class="reviews-score">
+<div class="reviews-score-left">
+<span class="reviews-score-num">4.9</span>
+<div class="reviews-stars">
+<svg viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<svg viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<svg viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<svg viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<svg viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+</div>
+</div>
+<div class="reviews-score-info">
+<strong>ممتاز</strong>
+<span>بناءً على تقييمات عملائنا على Google</span>
+</div>
+</div>
+<a href="https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic" target="_blank" rel="noopener" class="reviews-google-btn">
+<svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+شاهد جميع التقييمات
+</a>
+</div>
+<div class="reviews-grid">
+<div class="review-card">
+<div class="review-head">
+<div class="review-avatar" style="background:linear-gradient(135deg,#E31E24 0%,#B91419 100%)">B</div>
+<div>
+<div class="review-name">Bo_kamish</div>
+<div class="review-meta">
+<span class="review-stars-sm">⭐⭐⭐⭐⭐</span>
+<span class="review-badge">مرشد محلي</span>
+</div>
+</div>
+</div>
+<p class="review-text">"من أفضل مغاسل السيارات اللي زرتها مؤخرًا. التنظيم والنظافة وترتيب المكان مع التصميم العصري يعطي انطباعًا بالاحترافية. فريق العمل متعاون، والاستقبال راقٍ وسريع."</p>
+</div>
+<div class="review-card">
+<div class="review-head">
+<div class="review-avatar" style="background:linear-gradient(135deg,#0A0A0A 0%,#1F1F1F 100%)">م</div>
+<div>
+<div class="review-name">مبارك القحطاني</div>
+<div class="review-meta">
+<span class="review-stars-sm">⭐⭐⭐⭐⭐</span>
+<span class="review-badge">12 مراجعة</span>
+</div>
+</div>
+</div>
+<p class="review-text">"صراحة يستحق التقييم، مغسلة من أفضل المغاسل في الأحساء. خدماتهم ممتازة والعمال تعاملهم ما شاء الله، ما تطلع منهم إلا سيارتك جاهزة كاملة. والأفضل من هذا كله أحسن سعر في الأحساء ٢٥ ريال غسيل كامل."</p>
+</div>
+<div class="review-card">
+<div class="review-head">
+<div class="review-avatar" style="background:linear-gradient(135deg,#0284C7 0%,#075985 100%)">M</div>
+<div>
+<div class="review-name">Mohammed Aldriweesh</div>
+<div class="review-meta">
+<span class="review-stars-sm">⭐⭐⭐⭐⭐</span>
+<span class="review-badge">مرشد محلي</span>
+</div>
+</div>
+</div>
+<p class="review-text">"والله مغسلة ممتازة جداً، وسعر ٢٠ ريال للغسيل الخارجي يعتبر معقول. العمال حريصين على السيارة أكثر مني، أبي أمشي السيارة خلاص نظيفة يقولون احنا ما خلصنا."</p>
+</div>
+<div class="review-card">
+<div class="review-head">
+<div class="review-avatar" style="background:linear-gradient(135deg,#0D9488 0%,#065F5A 100%)">M</div>
+<div>
+<div class="review-name">Mousa Almomen</div>
+<div class="review-meta">
+<span class="review-stars-sm">⭐⭐⭐⭐⭐</span>
+<span class="review-badge">مرشد محلي</span>
+</div>
+</div>
+</div>
+<p class="review-text">"شغلهم ولا غلطة وأسعارهم تفوز. وأربع غسلات والخامسة مجاناً. تستحق التجربة وبقوة."</p>
+</div>
+<div class="review-card">
+<div class="review-head">
+<div class="review-avatar" style="background:linear-gradient(135deg,#7C3AED 0%,#5B21B6 100%)">S</div>
+<div>
+<div class="review-name">Sam Bdour</div>
+<div class="review-meta">
+<span class="review-stars-sm">⭐⭐⭐⭐⭐</span>
+<span class="review-badge">مرشد محلي</span>
+</div>
+</div>
+</div>
+<p class="review-text">"ما شاء الله تبارك الله، أنا أراهن أنها أفضل مغسلة شفتها في الهفوف. أتمنى من صاحب المغسلة يستمر على نفس الجودة وبنفس الأسعار."</p>
+</div>
+<div class="review-card">
+<div class="review-head">
+<div class="review-avatar" style="background:linear-gradient(135deg,#D97706 0%,#92400E 100%)">A</div>
+<div>
+<div class="review-name">ABDULSALAM ALMASS</div>
+<div class="review-meta">
+<span class="review-stars-sm">⭐⭐⭐⭐⭐</span>
+<span class="review-badge">3 مراجعات</span>
+</div>
+</div>
+</div>
+<p class="review-text">"من أفضل غسيل السيارات اللي غسلت عندهم. بالنسبة لي كان أفضل غسيل من ناحية النظافة والسرعة في التعامل ولا غلطة، وريحة زكية طلعت السيارة!"</p>
 </div>
 </div>
 </div>
@@ -1082,10 +877,14 @@ WALLET
 <button type="button" class="segment-btn" id="tabBtnHofuf" onclick="switchBranchTab('hofuf')">الهفوف (النايفية)</button>
 </div>
 <div class="branch-unified-card">
-<div class="branch-speed-badge">15 دقيقة مسار غسيل سريع</div>
+<div class="branch-speed-badge">15 دقيقة مسار سريع</div>
 <div class="branch-photo-holder"><img src="assets/branch-mubarraz.jpg.PNG" alt="فرع مغسلة ناين قو" id="branchDisplayImage" loading="lazy"></div>
 <div class="branch-unified-content">
 <div>
+<div class="branch-status-live" id="branchStatusLive">
+<span class="status-dot-live"></span>
+<span id="branchStatusText">جاري التحديث...</span>
+</div>
 <h3 class="branch-title" id="branchDisplayName">مغسلة ناين GO (فرع المبرز)</h3>
 <div class="branch-location-text">
 <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1133,7 +932,11 @@ WALLET
 <p>أوقات العمل: <span style="color:#FFF;font-weight:700">من <b dir="ltr">8:00</b> ص حتى <b dir="ltr">3:00</b> فجراً</span></p>
 </div>
 <div>
-<h4>التواصل المباشر</h4>
+<h4>تابعنا وتواصل</h4>
+<p style="display:flex;align-items:center;gap:8px">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="#E1306C"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg>
+<a href="https://www.instagram.com/nine_go9" target="_blank" rel="noopener" style="color:#94A3B8;font-weight:700">@nine_go9</a>
+</p>
 <p>هاتف: <span class="ltr-data" dir="ltr">056 492 7977</span></p>
 <p>الأحساء، المملكة العربية السعودية</p>
 </div>
@@ -1142,24 +945,134 @@ WALLET
 </div>
 </footer>
 
+<button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="mobile-bottom-bar">
+<a href="https://wallet.passkit.net/NINEGO" target="_blank" rel="noopener" class="mobile-bar-btn mobile-bar-wallet">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+<span>بطاقتي</span>
+</a>
+<a href="tel:0564927977" class="mobile-bar-btn mobile-bar-call">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+<span>اتصال</span>
+</a>
+<a href="https://wa.me/966564927977" target="_blank" rel="noopener" class="mobile-bar-btn mobile-bar-wa">
+<svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+<span>واتساب</span>
+</a>
+</div>
+
 <div class="nine-floating-dock">
 <a href="https://wa.me/966564927977" target="_blank" rel="noopener" class="dock-wa-btn" aria-label="واتساب">
 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
 </a>
+<a href="https://www.instagram.com/nine_go9" target="_blank" rel="noopener" class="dock-tiktok-pill" aria-label="انستقرام" style="background:linear-gradient(135deg,#E1306C 0%,#C13584 50%,#833AB4 100%);color:#FFF;border-color:transparent">
+<svg viewBox="0 0 24 24" fill="currentColor" style="fill:#FFF"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg>
+</a>
 <a href="https://www.tiktok.com/@nine_go9?_r=1&_t=ZS-9A7VZogYGPf" target="_blank" rel="noopener" class="dock-tiktok-pill" aria-label="تيك توك">
 <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
-<span class="tiktok-text">عروض تيك توك</span>
+<span class="tiktok-text">تيك توك</span>
 </a>
 </div>
 
 <script>
 document.getElementById('currentYear').textContent=new Date().getFullYear();
-document.addEventListener('DOMContentLoaded',function(){var v=document.getElementById('heroVideo');if(v){v.muted=true;var p=v.play();if(p!==undefined){p.catch(function(){var f=function(){v.play();document.removeEventListener('touchstart',f);document.removeEventListener('scroll',f);document.removeEventListener('click',f)};document.addEventListener('touchstart',f,{passive:true});document.addEventListener('scroll',f,{passive:true});document.addEventListener('click',f,{passive:true})})}}});
+
+document.addEventListener('DOMContentLoaded',function(){
+  var v=document.getElementById('heroVideo');
+  if(v){
+    v.muted=true;
+    var p=v.play();
+    if(p!==undefined){
+      p.catch(function(){
+        var f=function(){
+          v.play();
+          document.removeEventListener('touchstart',f);
+          document.removeEventListener('scroll',f);
+          document.removeEventListener('click',f);
+        };
+        document.addEventListener('touchstart',f,{passive:true});
+        document.addEventListener('scroll',f,{passive:true});
+        document.addEventListener('click',f,{passive:true});
+      });
+    }
+  }
+});
+
 var branchData={
-mubarraz:{title:'مغسلة ناين GO (فرع المبرز)',address:'المبرز – محاسن (محطة الفرسان)',image:'assets/branch-mubarraz.jpg.PNG',mapUrl:'https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic'},
-hofuf:{title:'مغسلة ناين GO (فرع الهفوف)',address:'الهفوف – النايفية (طريق الأمير نايف)',image:'assets/branch-hofuf.jpg.PNG',mapUrl:'https://maps.app.goo.gl/9rNaJa47Uy6F3JWRA?g_st=ic'}
+  mubarraz:{title:'مغسلة ناين GO (فرع المبرز)',address:'المبرز – محاسن (محطة الفرسان)',image:'assets/branch-mubarraz.jpg.PNG',mapUrl:'https://maps.app.goo.gl/MToz5jx3ymXtLPw86?g_st=ic'},
+  hofuf:{title:'مغسلة ناين GO (فرع الهفوف)',address:'الهفوف – النايفية (طريق الأمير نايف)',image:'assets/branch-hofuf.jpg.PNG',mapUrl:'https://maps.app.goo.gl/9rNaJa47Uy6F3JWRA?g_st=ic'}
 };
-function switchBranchTab(k){var d=branchData[k];if(!d)return;var bm=document.getElementById('tabBtnMubarraz'),bh=document.getElementById('tabBtnHofuf'),s=document.getElementById('tabSliderIndicator');if(k==='mubarraz'){bm.classList.add('active');bh.classList.remove('active');s.className='tab-slider slider-left'}else{bh.classList.add('active');bm.classList.remove('active');s.className='tab-slider slider-right'}var img=document.getElementById('branchDisplayImage');img.style.opacity='0.3';setTimeout(function(){img.src=d.image;img.style.opacity='1'},150);document.getElementById('branchDisplayName').textContent=d.title;document.getElementById('branchDisplayAddress').textContent=d.address;document.getElementById('branchMapDirectLink').href=d.mapUrl}
+
+function switchBranchTab(k){
+  var d=branchData[k];
+  if(!d)return;
+  var bm=document.getElementById('tabBtnMubarraz'),bh=document.getElementById('tabBtnHofuf'),s=document.getElementById('tabSliderIndicator');
+  if(k==='mubarraz'){bm.classList.add('active');bh.classList.remove('active');s.className='tab-slider slider-left'}
+  else{bh.classList.add('active');bm.classList.remove('active');s.className='tab-slider slider-right'}
+  var img=document.getElementById('branchDisplayImage');
+  img.style.opacity='0.3';
+  setTimeout(function(){img.src=d.image;img.style.opacity='1'},150);
+  document.getElementById('branchDisplayName').textContent=d.title;
+  document.getElementById('branchDisplayAddress').textContent=d.address;
+  document.getElementById('branchMapDirectLink').href=d.mapUrl;
+}
+
+function updateBranchStatus(){
+  var now=new Date();
+  var hours=now.getHours();
+  var minutes=now.getMinutes();
+  var totalMin=hours*60+minutes;
+  var morningOpen=8*60;
+  var morningClose=13*60;
+  var eveningOpen=15*60;
+  var isOpen=false;
+  var nextChange='';
+  var currentMinutes=totalMin;
+  if(hours<3)currentMinutes=totalMin+24*60;
+  if(currentMinutes>=morningOpen&&currentMinutes<morningClose){
+    isOpen=true;
+    nextChange='يقفل الساعة <b dir="ltr">1:00</b> ظهراً';
+  }else if(currentMinutes>=eveningOpen&&currentMinutes<(24*60+3*60)){
+    isOpen=true;
+    nextChange='يقفل الساعة <b dir="ltr">3:00</b> فجراً';
+  }else{
+    isOpen=false;
+    if(currentMinutes<morningOpen){
+      nextChange='يفتح الساعة <b dir="ltr">8:00</b> صباحاً';
+    }else if(currentMinutes>=morningClose&&currentMinutes<eveningOpen){
+      nextChange='يفتح الساعة <b dir="ltr">3:00</b> عصراً';
+    }else{
+      nextChange='يفتح الساعة <b dir="ltr">8:00</b> صباحاً';
+    }
+  }
+  var statusEl=document.getElementById('branchStatusLive');
+  var textEl=document.getElementById('branchStatusText');
+  if(!statusEl||!textEl)return;
+  if(isOpen){
+    statusEl.className='branch-status-live open';
+    textEl.innerHTML='<strong>مفتوح الآن</strong> · '+nextChange;
+  }else{
+    statusEl.className='branch-status-live closed';
+    textEl.innerHTML='<strong>مغلق حالياً</strong> · '+nextChange;
+  }
+}
+updateBranchStatus();
+setInterval(updateBranchStatus,60000);
+
+var backBtn=document.getElementById('backToTop');
+window.addEventListener('scroll',function(){
+  if(window.pageYOffset>500){
+    backBtn.classList.add('show');
+  }else{
+    backBtn.classList.remove('show');
+  }
+});
+backBtn.addEventListener('click',function(){
+  window.scrollTo({top:0,behavior:'smooth'});
+});
 </script>
 </body>
 </html>
