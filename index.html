@@ -5,42 +5,84 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>مغسلة ناين قو | NINE GO CAR WASH - الأحساء</title>
 <meta name="description" content="مغسلة ناين قو بالأحساء. رغوة ثلجية، واكس فاخر، وغسيل سريع. هاتف: 0564927977">
-<meta name="theme-color" content="#F1F5F9">
+<meta name="theme-color" content="#0A0A0A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg-base:#F1F5F9;--bg-surface:#E2E8F0;--bg-card:#FFF;--bg-dark:#0A0F1D;--brand-primary:#0284C7;--brand-light:#38BDF8;--brand-dark:#075985;--brand-navy:#0C4A6E;--brand-glow:rgba(2,132,199,.25);--accent-gold:#D97706;--wa-green:#10B981;--text-white:#FFF;--text-primary:#0F172A;--text-secondary:#475569;--text-muted:#94A3B8;--border-subtle:rgba(15,23,42,.08);--border-card:rgba(15,23,42,.05);--radius-sm:12px;--radius-md:18px;--radius-lg:24px;--radius-full:9999px;--shadow-soft:0 10px 30px -5px rgba(15,23,42,.05);--shadow-hover:0 15px 35px -5px rgba(15,23,42,.08);--shadow-float:0 12px 30px rgba(0,0,0,.15);--transition:.3s cubic-bezier(.2,.8,.2,1)}
+:root{
+  --bg-base:#0A0A0A;
+  --bg-elevated:#141414;
+  --bg-card:#141414;
+  --bg-glass:rgba(20,20,20,.72);
+  --bg-dark:#000;
+
+  --red-primary:#E31E24;
+  --red-light:#F43F44;
+  --red-dark:#B91419;
+  --red-glow:rgba(227,30,36,.35);
+  --red-subtle:rgba(227,30,36,.12);
+
+  --silver:#94A3B8;
+  --silver-light:#CBD5E1;
+  --silver-muted:#64748B;
+
+  --wa-green:#25D366;
+  --tiktok-pink:#FE2C55;
+
+  --text-white:#FFF;
+  --text-primary:#F8FAFC;
+  --text-secondary:#94A3B8;
+  --text-muted:#64748B;
+
+  --border-subtle:rgba(255,255,255,.08);
+  --border-red:rgba(227,30,36,.25);
+  --border-card:rgba(255,255,255,.06);
+
+  --radius-sm:12px;
+  --radius-md:18px;
+  --radius-lg:24px;
+  --radius-full:9999px;
+
+  --shadow-soft:0 10px 30px -5px rgba(0,0,0,.5);
+  --shadow-hover:0 15px 40px -5px rgba(0,0,0,.7);
+  --shadow-red:0 15px 40px -10px rgba(227,30,36,.4);
+  --shadow-float:0 12px 30px rgba(0,0,0,.5);
+  --transition:.3s cubic-bezier(.2,.8,.2,1);
+}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{width:100%;min-height:100vh;overflow-x:hidden;background:var(--bg-base);color:var(--text-primary);font-family:'Tajawal',system-ui,sans-serif;line-height:1.6;direction:rtl;text-align:right;-webkit-font-smoothing:antialiased}
+body{width:100%;min-height:100vh;overflow-x:hidden;background:var(--bg-base);color:var(--text-primary);font-family:'Tajawal',system-ui,sans-serif;line-height:1.6;direction:rtl;text-align:right;-webkit-font-smoothing:antialiased;background-image:radial-gradient(circle at 15% 10%,rgba(227,30,36,.06) 0%,transparent 40%),radial-gradient(circle at 85% 90%,rgba(227,30,36,.04) 0%,transparent 40%)}
 img,video{max-width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit;transition:var(--transition)}
 button{font-family:inherit;border:none;cursor:pointer;background:none;transition:var(--transition)}
 .container{width:100%;max-width:1280px;margin:0 auto;padding:0 20px}
 .ltr-data{direction:ltr!important;unicode-bidi:isolate!important;display:inline-block;font-weight:700;font-family:system-ui,sans-serif}
-.icon-glass-box{width:50px;height:50px;border-radius:var(--radius-md);background:#FFF;border:1px solid var(--border-subtle);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand-primary);box-shadow:0 4px 10px rgba(0,0,0,.03)}
+
+.icon-glass-box{width:50px;height:50px;border-radius:var(--radius-md);background:rgba(255,255,255,.04);border:1px solid var(--border-subtle);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--red-primary);box-shadow:0 4px 10px rgba(0,0,0,.3);backdrop-filter:blur(8px)}
 .icon-glass-box.sm{width:40px;height:40px;border-radius:var(--radius-sm)}
-.icon-glass-box.primary-glow{background:rgba(2,132,199,.1);border-color:rgba(2,132,199,.2);color:var(--brand-primary)}
-.icon-glass-box.green-glow{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.2);color:var(--wa-green)}
+.icon-glass-box.red-glow{background:var(--red-subtle);border-color:var(--border-red);color:var(--red-primary);box-shadow:0 4px 15px rgba(227,30,36,.15)}
+.icon-glass-box.green-glow{background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.25);color:var(--wa-green)}
+
 .svg-icon{width:22px;height:22px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;display:inline-block;vertical-align:middle}
 .svg-icon-sm{width:18px;height:18px}
 
-/* ===== Pills موحدة: أبيض بنص أسود ===== */
+/* ===== Pills موحدة - زجاج داكن مع حد أحمر ===== */
 .title-pill{
   display:inline-flex;
   align-items:center;
   gap:10px;
-  color:var(--text-primary);
-  background:#FFFFFF;
-  border:1px solid rgba(15,23,42,.08);
+  color:var(--red-light);
+  background:rgba(227,30,36,.08);
+  border:1px solid var(--border-red);
   padding:8px 20px;
   border-radius:var(--radius-full);
   font-size:.88rem;
   font-weight:800;
   margin-bottom:18px;
-  letter-spacing:.2px;
-  box-shadow:0 6px 18px -6px rgba(15,23,42,.12),0 2px 4px rgba(15,23,42,.04);
+  letter-spacing:.3px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 6px 18px -6px rgba(227,30,36,.25),inset 0 1px 0 rgba(255,255,255,.06);
   position:relative;
 }
 .title-pill::before{
@@ -48,244 +90,141 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   width:8px;
   height:8px;
   border-radius:50%;
-  background:linear-gradient(135deg,#0284C7 0%,#38BDF8 100%);
-  box-shadow:0 0 10px rgba(2,132,199,.6);
+  background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%);
+  box-shadow:0 0 12px rgba(227,30,36,.8);
   flex-shrink:0;
 }
 
 .section-title{text-align:center;margin-bottom:40px}
-.main-title{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:800;color:var(--text-primary);margin-bottom:12px;line-height:1.4}
+.main-title{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:900;color:var(--text-primary);margin-bottom:12px;line-height:1.4;letter-spacing:-.5px}
 .sub-title{color:var(--text-secondary);font-size:1.05rem;max-width:600px;margin:0 auto}
 .section-block{padding:80px 0;position:relative}
-.site-header{position:sticky;top:0;width:100%;background:rgba(241,245,249,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border-subtle);padding:12px 0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.02)}
+
+/* ===== Header ===== */
+.site-header{position:sticky;top:0;width:100%;background:rgba(10,10,10,.72);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border-subtle);padding:14px 0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+.site-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 0%,rgba(227,30,36,.5) 50%,transparent 100%)}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
-.brand-logo-img{height:36px;width:auto;max-width:130px;object-fit:contain}
-.header-call-btn{display:inline-flex;align-items:center;gap:8px;background:#FFF;border:1px solid var(--border-subtle);color:var(--brand-primary);padding:8px 16px;border-radius:var(--radius-full);font-size:.95rem;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.03)}
-.header-call-btn:hover{background:var(--brand-primary);color:var(--text-white);border-color:var(--brand-primary)}
+.brand-logo-img{height:44px;width:auto;max-width:180px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(227,30,36,.2))}
+.header-call-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(227,30,36,.08);border:1px solid var(--border-red);color:var(--red-light);padding:9px 18px;border-radius:var(--radius-full);font-size:.95rem;font-weight:800;box-shadow:0 4px 12px rgba(227,30,36,.1)}
+.header-call-btn:hover{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;border-color:transparent;box-shadow:0 6px 20px rgba(227,30,36,.45)}
+
+/* ===== Hero ===== */
 .hero-banner{position:relative;width:100%;min-height:85vh;display:flex;align-items:center;padding:60px 0 80px;overflow:hidden}
 .hero-bg-visual{position:absolute;inset:0;width:100%;height:100%;z-index:1;background:var(--bg-dark)}
-.hero-bg-visual video{width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none}
-.hero-overlay{position:absolute;inset:0;z-index:2;background:rgba(10,15,29,.65)}
+.hero-bg-visual video{width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;filter:brightness(.65) contrast(1.1)}
+.hero-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(135deg,rgba(10,10,10,.9) 0%,rgba(10,10,10,.7) 50%,rgba(10,10,10,.95) 100%)}
 .hero-content{position:relative;z-index:3;width:100%;max-width:800px}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);color:var(--text-white);padding:6px 16px;border-radius:var(--radius-full);font-size:.9rem;font-weight:700;margin-bottom:20px;backdrop-filter:blur(10px)}
-.hero-heading{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.2;margin-bottom:16px;color:var(--text-white)}
-.hero-heading span{background:linear-gradient(135deg,#7DD3FC 0%,var(--brand-light) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-subtext{font-size:1.15rem;color:#E2E8F0;margin-bottom:30px;line-height:1.7;max-width:650px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(227,30,36,.1);border:1px solid var(--border-red);color:var(--red-light);padding:8px 18px;border-radius:var(--radius-full);font-size:.88rem;font-weight:800;margin-bottom:24px;backdrop-filter:blur(12px);box-shadow:0 4px 15px rgba(227,30,36,.15)}
+.hero-heading{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.15;margin-bottom:20px;color:#FFF;letter-spacing:-1px;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.hero-heading span{background:linear-gradient(135deg,#F43F44 0%,#E31E24 50%,#B91419 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 20px rgba(227,30,36,.4))}
+.hero-subtext{font-size:1.15rem;color:var(--silver-light);margin-bottom:32px;line-height:1.75;max-width:650px}
 .hero-branch-strip{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.hero-branch-pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-full);padding:10px 18px;display:inline-flex;align-items:center;gap:10px;backdrop-filter:blur(10px);color:var(--text-white);font-size:.95rem;font-weight:700;cursor:pointer}
-.hero-branch-pill:hover{background:rgba(255,255,255,.2)}
-.hero-branch-pill .mini-badge{background:var(--brand-primary);color:#fff;font-size:.75rem;padding:2px 8px;border-radius:var(--radius-full)}
-.tiktok-strip{background:linear-gradient(180deg,#1E1E1E 0%,#000 40%,#000 100%);padding:18px 0;position:relative;z-index:4;border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid #000;box-shadow:inset 0 1px 1px rgba(255,255,255,.05),0 20px 40px rgba(0,0,0,.5);margin-bottom:20px}
+.hero-branch-pill{background:rgba(255,255,255,.04);border:1px solid var(--border-subtle);border-radius:var(--radius-full);padding:10px 20px;display:inline-flex;align-items:center;gap:10px;backdrop-filter:blur(12px);color:#FFF;font-size:.95rem;font-weight:700;cursor:pointer}
+.hero-branch-pill:hover{background:rgba(227,30,36,.1);border-color:var(--border-red)}
+.hero-branch-pill .mini-badge{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;font-size:.72rem;padding:2px 10px;border-radius:var(--radius-full);font-weight:800;box-shadow:0 2px 8px rgba(227,30,36,.3)}
+
+/* ===== TikTok Strip ===== */
+.tiktok-strip{background:linear-gradient(180deg,#0A0A0A 0%,#000 100%);padding:20px 0;position:relative;z-index:4;border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);margin-bottom:20px}
 .tiktok-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .tiktok-content{display:flex;align-items:center;gap:12px}
-.tiktok-btn{background:linear-gradient(135deg,#FE2C55 0%,#E11D48 100%);color:#FFF;padding:10px 24px;border-radius:50px;font-weight:700;font-size:.95rem;box-shadow:0 4px 15px rgba(254,44,85,.3)}
-.tiktok-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(254,44,85,.5)}
+.tiktok-btn{background:linear-gradient(135deg,#FE2C55 0%,#E11D48 100%);color:#FFF;padding:10px 24px;border-radius:50px;font-weight:800;font-size:.95rem;box-shadow:0 6px 20px rgba(254,44,85,.35)}
+.tiktok-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(254,44,85,.55)}
 
-/* ===== Bento Grid ===== */
+/* ===== Grids ===== */
 .bento-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .official-pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
 .loyalty-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
-.bento-card,.branch-unified-card{background:var(--bg-card);border:1px solid var(--border-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);overflow:hidden;transition:var(--transition)}
-.bento-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:rgba(2,132,199,.2)}
-.bento-card{padding:30px;display:flex;flex-direction:column;justify-content:space-between}
-.bento-hero{grid-column:1/-1;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center;background:linear-gradient(135deg,#FFF 0%,#F8FAFC 100%);border:1px solid rgba(2,132,199,.15);padding:0}
-.bento-hero-info{padding:30px}
-.bento-hero-info h3{font-size:1.8rem;font-weight:800;color:var(--text-primary);margin-bottom:12px}
-.bento-hero-info p{color:var(--text-secondary);font-size:.95rem;margin-bottom:20px}
-.bento-features-list{display:flex;gap:16px;flex-wrap:wrap}
-.bento-feature-item{display:flex;align-items:center;gap:8px;font-size:.95rem;font-weight:700;color:var(--text-primary)}
-.bento-hero-image-wrap{height:100%;min-height:250px;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-subtle);box-shadow:var(--shadow-soft)}
 
-/* ===== بطاقات Bento المدمجة - كلها بنفس اللون الأزرق الداكن ===== */
+.bento-card,.branch-unified-card{background:var(--bg-card);border:1px solid var(--border-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);overflow:hidden;transition:var(--transition);position:relative}
+.bento-card::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(227,30,36,.2) 0%,transparent 50%,rgba(227,30,36,.1) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:0;transition:var(--transition)}
+.bento-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.bento-card:hover::before{opacity:1}
+
+.bento-card{padding:30px;display:flex;flex-direction:column;justify-content:space-between}
+.bento-hero{grid-column:1/-1;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center;padding:0}
+.bento-hero-info{padding:35px}
+.bento-hero-info h3{font-size:1.8rem;font-weight:900;color:#FFF;margin-bottom:14px;letter-spacing:-.5px}
+.bento-hero-info p{color:var(--silver);font-size:.95rem;margin-bottom:22px;line-height:1.7}
+.bento-features-list{display:flex;gap:18px;flex-wrap:wrap}
+.bento-feature-item{display:flex;align-items:center;gap:8px;font-size:.92rem;font-weight:700;color:var(--silver-light)}
+.bento-hero-image-wrap{height:100%;min-height:280px;border-radius:0;overflow:hidden}
+.bento-hero-image-wrap img{transition:transform .6s ease}
+.bento-hero:hover .bento-hero-image-wrap img{transform:scale(1.05)}
+
+/* ===== بطاقات Bento المدمجة ===== */
 .bento-card-compact{
   position:relative;
   overflow:hidden;
   border-radius:var(--radius-lg);
-  padding:26px 24px;
+  padding:28px 26px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
   min-height:220px;
   color:#FFF;
-  background:linear-gradient(160deg,#0C4A6E 0%,#075985 50%,#0C4A6E 100%);
-  border:1px solid rgba(56,189,248,.2);
-  box-shadow:0 20px 45px -12px rgba(2,132,199,.35),0 0 0 1px rgba(56,189,248,.08);
+  background:linear-gradient(160deg,#1A1A1A 0%,#0F0F0F 100%);
+  border:1px solid rgba(227,30,36,.18);
+  box-shadow:0 20px 45px -12px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.04);
   transition:var(--transition);
 }
-.bento-card-compact::before{
-  content:'';
-  position:absolute;
-  inset:10px;
-  border:1px dashed rgba(255,255,255,.18);
-  border-radius:16px;
-  pointer-events:none;
-  transition:var(--transition);
-}
-.bento-card-compact:hover{
-  transform:translateY(-6px);
-  box-shadow:0 30px 60px -12px rgba(2,132,199,.5),0 0 0 1px rgba(56,189,248,.2);
-}
-.bento-card-compact:hover::before{border-color:rgba(255,255,255,.35);border-style:solid;inset:8px}
+.bento-card-compact::before{content:'';position:absolute;inset:10px;border:1px dashed rgba(227,30,36,.22);border-radius:16px;pointer-events:none;transition:var(--transition)}
+.bento-card-compact::after{content:'';position:absolute;top:-50%;right:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(227,30,36,.08) 0%,transparent 50%);pointer-events:none}
+.bento-card-compact:hover{transform:translateY(-6px);border-color:rgba(227,30,36,.4);box-shadow:0 30px 60px -12px rgba(227,30,36,.3),inset 0 1px 0 rgba(255,255,255,.06)}
+.bento-card-compact:hover::before{border-color:rgba(227,30,36,.5);border-style:solid;inset:8px}
+.bento-card-compact h4{font-size:1.3rem;font-weight:900;color:#FFF;margin:18px 0 10px;line-height:1.35;position:relative;z-index:2;letter-spacing:-.3px}
+.bento-card-compact p{color:var(--silver);font-size:.92rem;line-height:1.65;position:relative;z-index:2}
+.bento-card-compact .icon-glass-box{background:rgba(227,30,36,.12);border:1px solid rgba(227,30,36,.3);color:var(--red-light);backdrop-filter:blur(8px);box-shadow:0 4px 12px rgba(227,30,36,.2)}
+.bento-card-compact .bento-tag{background:rgba(227,30,36,.15);color:var(--red-light);border:1px solid rgba(227,30,36,.3);backdrop-filter:blur(8px)}
 
-.bento-card-compact h4{font-size:1.3rem;font-weight:800;color:#FFF;margin:18px 0 8px;line-height:1.35;position:relative;z-index:2;text-shadow:0 2px 8px rgba(0,0,0,.2)}
-.bento-card-compact p{color:rgba(226,232,240,.88);font-size:.92rem;line-height:1.6;position:relative;z-index:2}
-.bento-card-compact .icon-glass-box{
-  background:rgba(255,255,255,.15);
-  border:1px solid rgba(255,255,255,.25);
-  color:#FFF;
-  box-shadow:0 4px 12px rgba(0,0,0,.15);
-  backdrop-filter:blur(8px);
-}
-.bento-card-compact .bento-tag{
-  background:rgba(255,255,255,.15);
-  color:#FFF;
-  border:1px solid rgba(255,255,255,.25);
-  backdrop-filter:blur(8px);
-}
+.bento-tag{font-size:.75rem;font-weight:800;padding:6px 14px;border-radius:var(--radius-full);letter-spacing:.3px;position:relative;z-index:2;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.bento-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;box-shadow:0 0 8px currentColor}
 
-/* شارة tag */
-.bento-tag{font-size:.78rem;font-weight:800;padding:5px 12px;border-radius:var(--radius-full);letter-spacing:.3px;position:relative;z-index:2;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
-.bento-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.9;flex-shrink:0}
-
-/* ============================================ */
-/* ===== بطاقات الأسعار - كلها بنفس التصميم ===== */
-/* ============================================ */
-#pricing{background:linear-gradient(180deg,#F8FAFC 0%,#EEF2F7 100%);position:relative}
-#pricing::before{content:'';position:absolute;top:0;left:0;right:0;height:100%;background-image:radial-gradient(circle at 15% 20%,rgba(2,132,199,.05) 0%,transparent 40%),radial-gradient(circle at 85% 80%,rgba(2,132,199,.05) 0%,transparent 40%);pointer-events:none}
+/* ===== Pricing Section ===== */
+#pricing{background:linear-gradient(180deg,#0A0A0A 0%,#0F0F0F 50%,#0A0A0A 100%);position:relative}
+#pricing::before{content:'';position:absolute;top:0;left:0;right:0;height:100%;background-image:radial-gradient(circle at 20% 30%,rgba(227,30,36,.1) 0%,transparent 40%),radial-gradient(circle at 80% 70%,rgba(227,30,36,.07) 0%,transparent 40%);pointer-events:none}
 
 .official-price-card{
   position:relative;
   text-align:center;
   display:flex;
   flex-direction:column;
-  background:linear-gradient(160deg,#0C4A6E 0%,#075985 50%,#0C4A6E 100%);
-  border:1px solid rgba(56,189,248,.2);
+  background:linear-gradient(160deg,#1A1A1A 0%,#0F0F0F 50%,#1A1A1A 100%);
+  border:1px solid rgba(227,30,36,.2);
   border-radius:26px;
   overflow:hidden;
   transition:var(--transition);
-  box-shadow:0 20px 45px -12px rgba(2,132,199,.35),0 0 0 1px rgba(56,189,248,.08);
+  box-shadow:0 20px 45px -12px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.04);
   color:#FFF;
 }
+.official-price-card::before{content:'';position:absolute;inset:10px;border-radius:18px;border:1px dashed rgba(227,30,36,.22);pointer-events:none;transition:var(--transition);z-index:1}
+.official-price-card::after{content:'';position:absolute;top:-50%;right:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(227,30,36,.07) 0%,transparent 50%);pointer-events:none}
+.official-price-card:hover{transform:translateY(-8px);border-color:rgba(227,30,36,.45);box-shadow:0 30px 65px -12px rgba(227,30,36,.4),inset 0 1px 0 rgba(255,255,255,.06)}
+.official-price-card:hover::before{border-color:rgba(227,30,36,.5);inset:8px;border-style:solid}
 
-/* الإطار المزدوج الجميل */
-.official-price-card::before{
-  content:'';
-  position:absolute;
-  inset:10px;
-  border-radius:18px;
-  border:1px dashed rgba(255,255,255,.18);
-  pointer-events:none;
-  transition:var(--transition);
-  z-index:1;
-}
-
-.official-price-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 30px 60px -12px rgba(2,132,199,.5),0 0 0 1px rgba(56,189,248,.2);
-}
-.official-price-card:hover::before{border-color:rgba(255,255,255,.35);inset:8px;border-style:solid}
-
-/* رأس البطاقة */
-.card-head{padding:32px 22px 22px;position:relative;z-index:2;background:transparent;border-bottom:1px dashed rgba(255,255,255,.15)}
-
-/* شارة الفئة */
-.car-category-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  background:rgba(255,255,255,.15);
-  color:#7DD3FC;
-  font-size:.78rem;
-  font-weight:800;
-  padding:6px 14px;
-  border-radius:var(--radius-full);
-  margin-bottom:16px;
-  border:1px solid rgba(125,211,252,.35);
-  letter-spacing:.3px;
-  box-shadow:0 3px 10px rgba(0,0,0,.2);
-  backdrop-filter:blur(8px);
-}
-
-.car-category-title{font-size:1.55rem;font-weight:900;color:#FFF;margin-bottom:6px;line-height:1.3;letter-spacing:-.3px;text-shadow:0 2px 8px rgba(0,0,0,.2)}
-.card-subtext{font-size:.82rem;color:rgba(226,232,240,.75);font-weight:500}
-
-/* جسم البطاقة */
+.card-head{padding:34px 24px 24px;position:relative;z-index:2;background:transparent;border-bottom:1px dashed rgba(227,30,36,.18)}
+.car-category-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(227,30,36,.12);color:var(--red-light);font-size:.78rem;font-weight:800;padding:7px 16px;border-radius:var(--radius-full);margin-bottom:16px;border:1px solid rgba(227,30,36,.35);letter-spacing:.3px;backdrop-filter:blur(8px);box-shadow:0 4px 12px rgba(227,30,36,.15)}
+.car-category-title{font-size:1.55rem;font-weight:900;color:#FFF;margin-bottom:6px;line-height:1.3;letter-spacing:-.5px}
+.card-subtext{font-size:.82rem;color:var(--silver-muted);font-weight:500}
 .card-body{padding:24px 22px 20px;position:relative;z-index:2}
 .price-features-list{list-style:none;text-align:right;display:flex;flex-direction:column;gap:13px}
-.price-features-list li{display:flex;align-items:flex-start;gap:11px;font-size:.92rem;color:rgba(226,232,240,.92);font-weight:500;line-height:1.5}
-
-.price-features-list li .check-icon{
-  width:22px;
-  height:22px;
-  flex-shrink:0;
-  border-radius:50%;
-  background:rgba(56,189,248,.2);
-  color:#7DD3FC;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  margin-top:1px;
-  border:1px solid rgba(125,211,252,.3);
-}
+.price-features-list li{display:flex;align-items:flex-start;gap:11px;font-size:.92rem;color:var(--silver-light);font-weight:500;line-height:1.5}
+.price-features-list li .check-icon{width:22px;height:22px;flex-shrink:0;border-radius:50%;background:rgba(227,30,36,.15);color:var(--red-light);display:inline-flex;align-items:center;justify-content:center;margin-top:1px;border:1px solid rgba(227,30,36,.35)}
 .price-features-list li .check-icon svg{width:12px;height:12px;stroke:currentColor;stroke-width:3.5;fill:none}
+.card-footer{padding:0 22px 30px;position:relative;z-index:2}
+.car-price-number-wrap{display:flex;align-items:baseline;justify-content:center;gap:6px;margin-bottom:22px;padding:22px 0 18px;border-top:1px dashed rgba(227,30,36,.18)}
+.car-price-number{font-size:3.2rem;font-weight:900;line-height:1;letter-spacing:-1.5px;background:linear-gradient(135deg,#F43F44 0%,#E31E24 50%,#B91419 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 15px rgba(227,30,36,.5))}
+.car-price-currency{font-size:1.15rem;font-weight:800;color:var(--red-light)}
+.btn-order-category{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;padding:14px 20px;border-radius:var(--radius-full);font-weight:900;font-size:.95rem;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:1px solid rgba(255,255,255,.1);box-shadow:0 8px 22px rgba(227,30,36,.4);letter-spacing:.2px}
+.btn-order-category:hover{background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%);transform:translateY(-2px);box-shadow:0 12px 28px rgba(227,30,36,.6)}
 
-/* ذيل البطاقة */
-.card-footer{padding:0 22px 28px;position:relative;z-index:2}
-.car-price-number-wrap{
-  display:flex;
-  align-items:baseline;
-  justify-content:center;
-  gap:6px;
-  margin-bottom:20px;
-  padding:20px 0 16px;
-  border-top:1px dashed rgba(255,255,255,.15);
-}
-
-.car-price-number{
-  font-size:3.2rem;
-  font-weight:900;
-  line-height:1;
-  letter-spacing:-1.5px;
-  background:linear-gradient(135deg,#FFFFFF 0%,#7DD3FC 100%);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  filter:drop-shadow(0 2px 8px rgba(125,211,252,.3));
-}
-.car-price-currency{font-size:1.15rem;font-weight:800;color:#7DD3FC}
-
-/* زر الحجز - بنفس التصميم للكل */
-.btn-order-category{
-  background:linear-gradient(135deg,#38BDF8 0%,#0EA5E9 100%);
-  color:#0A0F1D;
-  padding:14px 20px;
-  border-radius:var(--radius-full);
-  font-weight:900;
-  font-size:.95rem;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  width:100%;
-  border:1px solid rgba(255,255,255,.3);
-  box-shadow:0 8px 20px rgba(14,165,233,.4);
-}
-.btn-order-category:hover{
-  background:linear-gradient(135deg,#FFF 0%,#E0F2FE 100%);
-  color:#0A0F1D;
-  transform:translateY(-2px);
-  box-shadow:0 12px 28px rgba(255,255,255,.4);
-}
-/* ============ نهاية الأسعار ============ */
-
-/* ===== Loyalty Section ===== */
-.loyalty-section{background:var(--bg-surface);border-top:1px solid #CBD5E1;border-bottom:1px solid #CBD5E1}
+/* ===== Loyalty ===== */
+.loyalty-section{background:linear-gradient(180deg,#0A0A0A 0%,#141414 100%);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)}
 .loyalty-pass-card{
-  background:linear-gradient(145deg,#131B2E 0%,#0B101D 100%);
-  border:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(145deg,#1A1A1A 0%,#0A0A0A 100%);
+  border:1px solid rgba(227,30,36,.22);
   border-radius:var(--radius-lg);
-  padding:24px;
-  box-shadow:0 25px 50px -12px rgba(0,0,0,.4);
+  padding:26px;
+  box-shadow:0 30px 60px -15px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.05);
   color:#FFF;
   position:relative;
   overflow:hidden;
@@ -293,75 +232,89 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   max-width:420px;
   margin:0 auto;
 }
-.pass-header{display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px dashed rgba(255,255,255,.15);padding-bottom:14px;margin-bottom:16px;flex-wrap:wrap}
-.pass-type-badge{background:rgba(14,165,233,.15);color:#7DD3FC;padding:4px 12px;border-radius:var(--radius-full);font-size:.72rem;font-weight:700;border:1px solid rgba(14,165,233,.3);white-space:nowrap}
-.stamps-title{font-size:.9rem;color:#94A3B8;margin-bottom:10px;display:flex;justify-content:space-between;gap:8px}
-.stamps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:20px}
-.stamp-slot{aspect-ratio:1;background:rgba(0,0,0,.3);border:1px dashed rgba(255,255,255,.15);border-radius:var(--radius-sm);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2px;min-width:0}
-.stamp-slot.active{border-style:solid;border-color:#0EA5E9;background:rgba(14,165,233,.15)}
-.stamp-slot.gift{border:2px solid #F59E0B;background:rgba(245,158,11,.15);animation:goldPulse 2s infinite}
-@keyframes goldPulse{0%{box-shadow:0 0 0 0 rgba(245,158,11,.4)}70%{box-shadow:0 0 0 10px rgba(245,158,11,0)}100%{box-shadow:0 0 0 0 rgba(245,158,11,0)}}
-.stamp-number{font-size:.7rem;font-weight:700;color:#94A3B8;margin-top:2px}
-.stamp-slot.active .stamp-number{color:#38BDF8}
-.stamp-slot.gift .stamp-number{color:#FBBF24;font-size:.78rem}
+.loyalty-pass-card::before{content:'';position:absolute;top:-50%;right:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(227,30,36,.1) 0%,transparent 60%);pointer-events:none}
+.pass-header{display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px dashed rgba(227,30,36,.22);padding-bottom:16px;margin-bottom:18px;flex-wrap:wrap;position:relative;z-index:2}
+.pass-type-badge{background:rgba(227,30,36,.12);color:var(--red-light);padding:5px 14px;border-radius:var(--radius-full);font-size:.72rem;font-weight:800;border:1px solid rgba(227,30,36,.35);white-space:nowrap;backdrop-filter:blur(8px)}
+.stamps-title{font-size:.9rem;color:var(--silver);margin-bottom:12px;display:flex;justify-content:space-between;gap:8px;position:relative;z-index:2}
+.stamps-title strong{color:#FFF}
+.stamps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:22px;position:relative;z-index:2}
+.stamp-slot{aspect-ratio:1;background:rgba(0,0,0,.4);border:1px dashed rgba(255,255,255,.12);border-radius:var(--radius-sm);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2px;min-width:0;transition:var(--transition)}
+.stamp-slot.active{border-style:solid;border-color:var(--red-primary);background:rgba(227,30,36,.14);box-shadow:0 0 15px rgba(227,30,36,.25)}
+.stamp-slot.active svg{color:var(--red-light)!important}
+.stamp-slot.gift{border:2px solid var(--red-primary);background:rgba(227,30,36,.18);animation:redPulse 2s infinite}
+@keyframes redPulse{0%{box-shadow:0 0 0 0 rgba(227,30,36,.5)}70%{box-shadow:0 0 0 12px rgba(227,30,36,0)}100%{box-shadow:0 0 0 0 rgba(227,30,36,0)}}
+.stamp-number{font-size:.7rem;font-weight:800;color:var(--silver-muted);margin-top:2px}
+.stamp-slot.active .stamp-number{color:var(--red-light)}
+.stamp-slot.gift .stamp-number{color:var(--red-primary);font-size:.78rem}
 .pass-actions-wrap{display:flex;flex-direction:column;gap:12px;position:relative;z-index:2}
-.btn-apple-wallet{display:flex;align-items:center;justify-content:center;gap:10px;background:#000;color:#fff;padding:13px;border-radius:12px;font-weight:700;font-size:.98rem;border:1px solid rgba(255,255,255,.2);width:100%;cursor:pointer}
-.btn-apple-wallet:hover{background:#111;box-shadow:0 4px 15px rgba(255,255,255,.1)}
-.loyalty-details h3{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;color:var(--text-primary);margin-bottom:16px}
-.loyalty-details h3 span{color:var(--brand-primary)}
-.loyalty-desc{font-size:1.05rem;color:var(--text-secondary);margin-bottom:24px}
-.loyalty-perks{list-style:none;display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
-.loyalty-perks li{display:flex;align-items:flex-start;gap:12px;font-size:1rem;color:var(--text-primary)}
+.btn-apple-wallet{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#FFF 0%,#E2E8F0 100%);color:#0A0A0A;padding:14px;border-radius:12px;font-weight:900;font-size:.98rem;border:1px solid rgba(255,255,255,.2);width:100%;cursor:pointer;box-shadow:0 8px 20px rgba(255,255,255,.15)}
+.btn-apple-wallet:hover{background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%);color:#FFF;transform:translateY(-2px);box-shadow:0 12px 28px rgba(227,30,36,.5)}
+.loyalty-details h3{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;color:#FFF;margin-bottom:16px;letter-spacing:-.5px;line-height:1.3}
+.loyalty-details h3 span{background:linear-gradient(135deg,#F43F44 0%,#E31E24 50%,#B91419 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.loyalty-desc{font-size:1.05rem;color:var(--silver);margin-bottom:24px;line-height:1.7}
+.loyalty-perks{list-style:none;display:flex;flex-direction:column;gap:18px;margin-bottom:24px}
+.loyalty-perks li{display:flex;align-items:flex-start;gap:14px;font-size:1rem;color:var(--text-primary)}
+.loyalty-perks li strong{color:#FFF}
 
 /* ===== Branches ===== */
-.branch-tabs-wrapper{max-width:500px;margin:0 auto 30px;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-full);padding:6px;display:flex;position:relative;box-shadow:var(--shadow-soft)}
-.segment-btn{flex:1;padding:12px;border-radius:var(--radius-full);font-size:.95rem;font-weight:700;color:var(--text-secondary);text-align:center;position:relative;z-index:2;transition:color .3s;cursor:pointer}
-.segment-btn.active{color:var(--text-white)}
-.tab-slider{position:absolute;top:6px;bottom:6px;width:calc(50% - 6px);background:var(--brand-primary);border-radius:var(--radius-full);transition:transform .3s cubic-bezier(.25,1,.5,1);z-index:1;box-shadow:0 4px 10px var(--brand-glow)}
+.branch-tabs-wrapper{max-width:500px;margin:0 auto 30px;background:var(--bg-elevated);border:1px solid var(--border-subtle);border-radius:var(--radius-full);padding:6px;display:flex;position:relative;box-shadow:var(--shadow-soft)}
+.segment-btn{flex:1;padding:12px;border-radius:var(--radius-full);font-size:.95rem;font-weight:800;color:var(--silver);text-align:center;position:relative;z-index:2;transition:color .3s;cursor:pointer}
+.segment-btn.active{color:#FFF}
+.tab-slider{position:absolute;top:6px;bottom:6px;width:calc(50% - 6px);background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);border-radius:var(--radius-full);transition:transform .3s cubic-bezier(.25,1,.5,1);z-index:1;box-shadow:0 4px 15px rgba(227,30,36,.5)}
 .slider-left{transform:translateX(0)}
 .slider-right{transform:translateX(-100%)}
-.branch-unified-card{display:grid;grid-template-columns:1fr 1fr;background:var(--bg-card);position:relative}
-.branch-speed-badge{position:absolute;top:20px;right:20px;background:rgba(10,15,29,.8);color:#FCD34D;padding:6px 16px;border-radius:var(--radius-full);font-size:.85rem;font-weight:700;backdrop-filter:blur(8px);z-index:10;border:1px solid rgba(255,255,255,.1)}
+.branch-unified-card{display:grid;grid-template-columns:1fr 1fr;background:var(--bg-card);position:relative;border:1px solid var(--border-card)}
+.branch-speed-badge{position:absolute;top:20px;right:20px;background:rgba(10,10,10,.85);color:var(--red-light);padding:8px 18px;border-radius:var(--radius-full);font-size:.82rem;font-weight:800;backdrop-filter:blur(10px);z-index:10;border:1px solid rgba(227,30,36,.35);box-shadow:0 6px 20px rgba(0,0,0,.5)}
 .branch-photo-holder{min-height:380px;position:relative;overflow:hidden}
-.branch-photo-holder img{width:100%;height:100%;object-fit:cover;transition:opacity .3s ease}
-.branch-unified-content{padding:35px;display:flex;flex-direction:column;justify-content:space-between}
-.branch-title{font-size:1.6rem;font-weight:800;color:var(--text-primary);margin-bottom:6px}
-.branch-location-text{color:var(--brand-primary);font-size:1rem;font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:20px}
-.hours-organized-box{background:var(--bg-base);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:16px;margin-bottom:20px}
-.hours-title{display:flex;align-items:center;gap:8px;font-size:.95rem;font-weight:700;color:var(--text-primary);margin-bottom:10px}
-.period-line{display:flex;justify-content:space-between;margin-bottom:4px;font-size:.9rem;color:var(--text-secondary)}
-.period-line strong{color:var(--text-primary)}
+.branch-photo-holder img{width:100%;height:100%;object-fit:cover;transition:opacity .3s ease,transform .6s ease}
+.branch-unified-card:hover .branch-photo-holder img{transform:scale(1.05)}
+.branch-unified-content{padding:38px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(160deg,#1A1A1A 0%,#0F0F0F 100%)}
+.branch-title{font-size:1.6rem;font-weight:900;color:#FFF;margin-bottom:8px;letter-spacing:-.3px}
+.branch-location-text{color:var(--red-light);font-size:1rem;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:22px}
+.hours-organized-box{background:rgba(0,0,0,.35);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:18px;margin-bottom:20px;backdrop-filter:blur(8px)}
+.hours-title{display:flex;align-items:center;gap:8px;font-size:.95rem;font-weight:800;color:#FFF;margin-bottom:12px}
+.period-line{display:flex;justify-content:space-between;margin-bottom:6px;font-size:.9rem;color:var(--silver)}
+.period-line strong{color:var(--silver-light)}
 .branch-unified-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:20px}
-.btn-branch-action{padding:12px 20px;border-radius:var(--radius-full);font-weight:700;font-size:1rem;display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;border:1px solid rgba(2,132,199,.2);background:rgba(2,132,199,.05);color:var(--brand-primary)}
+.btn-branch-action{padding:14px 22px;border-radius:var(--radius-full);font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;border:1px solid var(--border-red);background:rgba(227,30,36,.08);color:var(--red-light);letter-spacing:.2px}
 .btn-branch-action svg{width:20px;height:20px}
-.btn-branch-action:hover{background:var(--brand-primary);color:#fff;box-shadow:0 4px 15px var(--brand-glow);border-color:var(--brand-primary)}
-.cta-banner{background:linear-gradient(180deg,var(--bg-base) 0%,rgba(10,15,29,.8) 45%,#0A0F1D 100%);color:#fff;padding:80px 0 60px;text-align:center;position:relative;z-index:2}
-.cta-banner h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;margin-bottom:12px}
-.cta-banner p{font-size:1.05rem;margin-bottom:24px;opacity:.9}
+.btn-branch-action:hover{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;box-shadow:0 8px 22px rgba(227,30,36,.5);border-color:transparent}
+
+/* ===== CTA Banner ===== */
+.cta-banner{background:linear-gradient(180deg,#0A0A0A 0%,#000 100%);color:#FFF;padding:90px 0 70px;text-align:center;position:relative;z-index:2;border-top:1px solid var(--border-subtle);overflow:hidden}
+.cta-banner::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(227,30,36,.18) 0%,transparent 60%);pointer-events:none}
+.cta-banner h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;margin-bottom:14px;letter-spacing:-.5px;position:relative;z-index:2}
+.cta-banner p{font-size:1.05rem;margin-bottom:28px;color:var(--silver);position:relative;z-index:2}
 .banner-actions{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;position:relative;z-index:3}
-.btn-banner-phone{background:#FFF;color:var(--text-primary);padding:14px 36px;border-radius:var(--radius-full);font-weight:800;font-size:1.1rem;display:inline-flex;align-items:center;gap:10px;box-shadow:0 4px 15px rgba(0,0,0,.3)}
-.btn-banner-phone:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
-.footer{background:#0A0F1D;color:#fff;padding:20px 0 30px;position:relative;z-index:1;margin-top:-10px}
-.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding-bottom:30px}
-.footer h4{font-size:1.15rem;color:#7DD3FC;font-weight:700;margin-bottom:14px}
-.footer p{color:#94A3B8;font-size:.95rem;margin-bottom:8px}
-.footer-copy{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;color:#64748B;font-size:.9rem}
+.btn-banner-phone{background:linear-gradient(135deg,#E31E24 0%,#B91419 100%);color:#FFF;padding:16px 42px;border-radius:var(--radius-full);font-weight:900;font-size:1.1rem;display:inline-flex;align-items:center;gap:10px;box-shadow:0 10px 30px rgba(227,30,36,.5);letter-spacing:.3px}
+.btn-banner-phone:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(227,30,36,.65);background:linear-gradient(135deg,#F43F44 0%,#E31E24 100%)}
+
+/* ===== Footer ===== */
+.footer{background:#000;color:#FFF;padding:30px 0 35px;position:relative;z-index:1;border-top:1px solid var(--border-subtle)}
+.footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 0%,rgba(227,30,36,.5) 50%,transparent 100%)}
+.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding-bottom:35px;border-bottom:1px solid var(--border-subtle);margin-bottom:25px}
+.footer h4{font-size:1.15rem;color:var(--red-light);font-weight:800;margin-bottom:16px}
+.footer p{color:var(--silver);font-size:.95rem;margin-bottom:10px;line-height:1.6}
+.footer-copy{text-align:center;color:var(--silver-muted);font-size:.9rem}
+
+/* ===== Floating Dock ===== */
 .nine-floating-dock{position:fixed;bottom:20px;left:20px;z-index:9999;display:flex;align-items:center;gap:12px;flex-direction:row-reverse}
-.dock-tiktok-pill{background:var(--bg-card);color:var(--text-primary);border:1px solid var(--border-subtle);display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:var(--radius-full);font-weight:700;font-size:.9rem;box-shadow:var(--shadow-float)}
-.dock-tiktok-pill:hover{transform:translateY(-3px);border-color:#000}
-.dock-tiktok-pill svg{width:20px;height:20px;fill:#000}
-.dock-wa-btn{width:56px;height:56px;background:var(--wa-green);color:var(--text-white);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(16,185,129,.4);animation:waPulse 2s infinite;flex-shrink:0}
+.dock-tiktok-pill{background:var(--bg-card);color:#FFF;border:1px solid var(--border-subtle);display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:var(--radius-full);font-weight:800;font-size:.9rem;box-shadow:var(--shadow-float);backdrop-filter:blur(12px)}
+.dock-tiktok-pill:hover{transform:translateY(-3px);border-color:var(--tiktok-pink);color:var(--tiktok-pink)}
+.dock-tiktok-pill svg{width:20px;height:20px;fill:currentColor}
+.dock-wa-btn{width:56px;height:56px;background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);color:#FFF;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.5);animation:waPulse 2s infinite;flex-shrink:0}
 .dock-wa-btn:hover{transform:scale(1.1);animation:none}
-@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(16,185,129,.6)}70%{box-shadow:0 0 0 15px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
 @media(max-width:900px){.bento-hero{grid-template-columns:1fr}}
 @media(max-width:768px){
-.section-block{padding:50px 0}
+.section-block{padding:55px 0}
 .hero-banner{min-height:70vh;padding:40px 0 60px}
 .bento-grid,.official-pricing-grid,.loyalty-grid,.branch-unified-card,.footer-grid{grid-template-columns:1fr}
 .car-price-number{font-size:2.6rem}
 .card-head{padding:26px 20px 18px}
 .card-body{padding:20px 20px 16px}
-.card-footer{padding:0 20px 24px}
+.card-footer{padding:0 20px 26px}
 .branch-photo-holder{min-height:250px}
 .tiktok-container{justify-content:center;text-align:center;flex-direction:column}
 .banner-actions{flex-direction:column;width:100%}
@@ -373,6 +326,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .stamp-slot{border-radius:10px}
 .pass-header{flex-direction:column;align-items:flex-start;gap:8px}
 .pass-type-badge{font-size:.68rem;padding:3px 10px}
+.brand-logo-img{height:38px}
 }
 @media(max-width:480px){
 .car-category-title{font-size:1.3rem}
@@ -388,12 +342,12 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .stamp-number{font-size:.65rem}
 .stamp-slot.gift .stamp-number{font-size:.7rem}
 .btn-apple-wallet{font-size:.9rem;padding:12px;border-radius:10px}
-.pass-type-badge{font-size:.65rem;padding:3px 8px}
 .dock-tiktok-pill .tiktok-text{display:none}
 .dock-tiktok-pill{padding:10px;border-radius:50%;width:44px;height:44px;justify-content:center}
 .dock-wa-btn{width:50px;height:50px}
 .nine-floating-dock{bottom:16px;left:16px}
 .title-pill{padding:6px 16px;font-size:.82rem}
+.brand-logo-img{height:34px}
 }
 </style>
 </head>
@@ -402,7 +356,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <header class="site-header">
 <div class="container header-inner">
 <a href="#hero" aria-label="الرئيسية">
-<img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" class="brand-logo-img" width="130" height="36">
+<img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" class="brand-logo-img" width="180" height="44">
 </a>
 <a href="tel:0564927977" class="header-call-btn">
 <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -421,7 +375,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 <div class="container hero-content">
 <div class="hero-tag">
-<svg class="svg-icon svg-icon-sm" style="color:#7DD3FC" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+<svg class="svg-icon svg-icon-sm" style="color:#F43F44" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
 <span>الأحساء: وين ما كنت.. ناين أقرب لك!</span>
 </div>
 <h1 class="hero-heading">غسيل باهتمام <br><span>يليق بسيارتك</span></h1>
@@ -443,7 +397,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </section>
 
-<!-- ===== قسم المزايا ===== -->
 <section class="section-block" id="features">
 <div class="container">
 <div class="section-title">
@@ -453,20 +406,19 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 <div class="bento-grid">
 <div class="bento-card bento-hero" style="padding:0">
-<div class="bento-hero-info" style="padding:30px">
-<div class="icon-glass-box primary-glow" style="margin-bottom:16px"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+<div class="bento-hero-info">
+<div class="icon-glass-box red-glow" style="margin-bottom:18px"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
 <h3>رغوة ثلجية وواكس فاخر لحماية النانو</h3>
 <p>نستخدم تركيبة شامبو وواكس عالمية معتمدة تعزل الغبار والأتربة عن الطلاء بفعالية، مع حماية فائقة لطبقات النانو سيراميك وطرد دائم لمياه الأمطار.</p>
 <div class="bento-features-list">
-<div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>عزل جزيئات الغبار</div>
-<div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>لمعان زجاجي عميق</div>
-<div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>آمن 100% على النانو</div>
+<div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--red-primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>عزل جزيئات الغبار</div>
+<div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--red-primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>لمعان زجاجي عميق</div>
+<div class="bento-feature-item"><svg class="svg-icon svg-icon-sm" style="color:var(--red-primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>آمن 100% على النانو</div>
 </div>
 </div>
 <div class="bento-hero-image-wrap"><img src="assets/royal-wash.jpg.PNG" alt="عناية فائقة" style="width:100%;height:100%;object-fit:cover;display:block"></div>
 </div>
 
-<!-- كرت 15 دقيقة -->
 <div class="bento-card bento-card-compact">
 <div style="display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2">
 <div class="icon-glass-box">
@@ -480,7 +432,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </div>
 
-<!-- كرت مايكروفايبر - نفس اللون الأزرق -->
 <div class="bento-card bento-card-compact">
 <div style="display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2">
 <div class="icon-glass-box">
@@ -497,7 +448,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </section>
 
-<!-- ===== قسم الأسعار - كل البطاقات بنفس التصميم الأزرق ===== -->
 <section class="section-block" id="pricing">
 <div class="container">
 <div class="section-title">
@@ -571,7 +521,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </section>
 
-<!-- ===== بطاقة الولاء ===== -->
 <section class="section-block loyalty-section">
 <div class="container">
 <div class="loyalty-grid">
@@ -580,21 +529,21 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <h3>اغسل 4 مرات.. <br><span>والخامسة مجاناً!</span></h3>
 <p class="loyalty-desc">أضف بطاقة ولاء ناين قو الرقمية مباشرة إلى محفظة Apple Wallet واجمع نقاطك بكل سهولة بدون تطبيقات إضافية.</p>
 <ul class="loyalty-perks">
-<li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>محفوظة في هاتفك:</strong><span style="display:block;font-size:.85rem;color:var(--text-secondary)">تعمل مباشرة عبر تطبيق Wallet الرسمي.</span></div></li>
-<li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>تنبيه مكاني ذكي:</strong><span style="display:block;font-size:.85rem;color:var(--text-secondary)">تظهر البطاقة تلقائياً على الشاشة عند اقترابك للفرع.</span></div></li>
+<li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>محفوظة في هاتفك:</strong><span style="display:block;font-size:.85rem;color:var(--silver)">تعمل مباشرة عبر تطبيق Wallet الرسمي.</span></div></li>
+<li><div class="icon-glass-box sm green-glow"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>تنبيه مكاني ذكي:</strong><span style="display:block;font-size:.85rem;color:var(--silver)">تظهر البطاقة تلقائياً على الشاشة عند اقترابك للفرع.</span></div></li>
 </ul>
 </div>
 <div class="loyalty-pass-card">
 <div class="pass-header">
-<div style="background:#000;padding:6px 14px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.1)"><img src="assets/logo.png.JPEG" alt="NINE GO" style="height:22px"></div>
+<div style="background:#000;padding:6px 14px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.5);border:1px solid rgba(227,30,36,.3)"><img src="assets/logo.png.JPEG" alt="NINE GO" style="height:24px"></div>
 <span class="pass-type-badge">بطاقة ولاء العميل</span>
 </div>
-<div class="stamps-title"><strong>أختام الغسيل</strong><span style="color:#38BDF8;font-weight:800">4 = 1 مجاناً</span></div>
+<div class="stamps-title"><strong>أختام الغسيل</strong><span style="color:#F43F44;font-weight:800">4 = 1 مجاناً</span></div>
 <div class="stamps-grid">
-<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">1</span></div>
-<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">2</span></div>
-<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">3</span></div>
-<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" style="color:#0EA5E9" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">4</span></div>
+<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">1</span></div>
+<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">2</span></div>
+<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">3</span></div>
+<div class="stamp-slot active"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg><span class="stamp-number">4</span></div>
 <div class="stamp-slot gift"><span style="font-size:1.3rem">🎁</span><span class="stamp-number">مجاناً</span></div>
 </div>
 <div class="pass-actions-wrap">
@@ -608,7 +557,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </section>
 
-<!-- ===== قسم الفروع - بدون شارة "متاح وسالك" ===== -->
 <section class="section-block" id="branches">
 <div class="container">
 <div class="section-title">
@@ -631,7 +579,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <span id="branchDisplayAddress">المبرز – محاسن (محطة الفرسان)</span>
 </div>
 <div class="hours-organized-box">
-<div class="hours-title"><svg class="svg-icon svg-icon-sm" style="color:var(--brand-primary)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>أوقات العمل اليومية</div>
+<div class="hours-title"><svg class="svg-icon svg-icon-sm" style="color:var(--red-primary)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>أوقات العمل اليومية</div>
 <div class="period-line"><span>الفترة الصباحية:</span><strong>من <b dir="ltr">8:00</b> صباحاً حتى <b dir="ltr">1:00</b> ظهراً</strong></div>
 <div class="period-line"><span>الفترة المسائية:</span><strong>من <b dir="ltr">3:00</b> عصراً حتى <b dir="ltr">3:00</b> فجراً</strong></div>
 </div>
@@ -662,14 +610,14 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <div class="container">
 <div class="footer-grid">
 <div>
-<div style="background:#000;padding:8px 16px;border-radius:8px;display:inline-block;margin-bottom:16px;box-shadow:0 4px 10px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.1)"><img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:26px"></div>
+<div style="background:#000;padding:8px 16px;border-radius:8px;display:inline-block;margin-bottom:16px;border:1px solid rgba(227,30,36,.3)"><img src="assets/logo.png.JPEG" alt="مغسلة ناين قو" style="height:30px"></div>
 <p>تجربة غسيل متطورة بأحدث المضخات وأجود مواد العناية العالمية المعتمدة.</p>
 </div>
 <div>
 <h4>الفروع وأوقات العمل</h4>
 <p>الفرع 1: محاسن (محطة الفرسان) – المبرز</p>
 <p>الفرع 2: النايفية (طريق الأمير نايف) – الهفوف</p>
-<p>أوقات العمل: <span style="color:var(--text-white);font-weight:700">من <b dir="ltr">8:00</b> ص حتى <b dir="ltr">3:00</b> فجراً</span></p>
+<p>أوقات العمل: <span style="color:#FFF;font-weight:700">من <b dir="ltr">8:00</b> ص حتى <b dir="ltr">3:00</b> فجراً</span></p>
 </div>
 <div>
 <h4>التواصل المباشر</h4>
